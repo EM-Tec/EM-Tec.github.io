@@ -1,0 +1,9 @@
+[zh-tw]
+  title = "毛哥EM資訊密技"
+  LanguageName = "繁體中文"
+  weight = 1
+
+[en]
+  title = "EM Tec Secret" # just for the sake of showing this is possible
+  LanguageName = "English"
+  weight = 2
