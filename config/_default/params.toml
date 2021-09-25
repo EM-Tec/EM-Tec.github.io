@@ -53,7 +53,7 @@ enforceLightMode = false
 # enforceDarkMode = false
 
 # customize footer icon. see issue https://github.com/chipzoller/hugo-clarity/issues/77
-# footerLogo = "static/logoes/logo.png"
+footerLogo = "logoes/logo.png"
 
 # Text for the languages menu.
 languageMenuName = "🌐"
