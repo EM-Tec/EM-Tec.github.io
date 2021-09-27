@@ -1,6 +1,6 @@
 +++
 title = "關於"
-description = "The "
+description = "關於我"
 date = "2021-09-27"
 aliases = ["about"]
 author = "毛哥EM"
