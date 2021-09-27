@@ -9,9 +9,9 @@ author = "Edit Mr.毛哥EM"
 Yo, this is EM, also known as Elvis Mao or Edit Mr., a Jr. high student who loves technology. <br />
 I like to use technology to create stuff, including programming, music, electronic drawing, graphic design, etc.
 
-## 💻 &nbsp;目前工作
-- 🤔 &nbsp; 探索新技術並開發解決生活中的問題。用科技使人們的生活更方便
-- 🎓 &nbsp; 就讀衛道中學並且在Google學習各種科技知識
+## 💻 &nbsp;目前工作 
+- 🤔 Exploring new technologies and developing software solutions to our worlds tech problems.
+- 🎓 &nbsp; Studying at Viator junior high school and Software Engineering at google.com (You should try. It's free)
 
 ## 🛠 &nbsp; 
 - 🌐 &nbsp; Languages
