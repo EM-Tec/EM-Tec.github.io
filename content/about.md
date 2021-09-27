@@ -2,7 +2,7 @@
 title = "關於"
 description = "關於我"
 date = "2021-09-27"
-aliases = ["about"]
+aliases = ["關於"]
 author = "毛哥EM"
 +++
 
