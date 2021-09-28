@@ -33,7 +33,7 @@ mainSections = ["post"] # see config details here https://gohugo.io/functions/wh
 # center logo on navbar
 centerLogo = false # Set to "true" for centering or "false" for left aligned.
 
-logo = "logoes/logoword.png"
+logo = "icons/logoword.png"
 
 # Label Non inline images on an article body
 figurePositionShow = false # toggle on or off globally
@@ -84,7 +84,7 @@ iconsDir = "icons/" # without a leading forward slash
 # website author
 [author]
 name = "毛哥EM"
-# photo = "logoes/EMprofile.png" #include this if you would like to show the author photo on the sidebar
+# photo = "icons/EMprofile.png" #include this if you would like to show the author photo on the sidebar
 
 [plausible_analytics]
 enable = false # to enable plausible analytics set to true.
