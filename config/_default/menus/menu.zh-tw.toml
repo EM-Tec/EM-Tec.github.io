@@ -5,7 +5,7 @@
 
 [[main]]
   name = "關於"
-  url = "post/about/"
+  url = "about/"
   weight = -109
 
 # Submenus are done this way: parent -> identifier
@@ -21,11 +21,6 @@
   parent = "Links"
   name = "官方IG"
   url = "https://www.instagram.com/em.tec.blog/"
-
-[[main]]
-  name = "About"
-  url = "about/"
-  weight = -107
 
 # social menu links
 
