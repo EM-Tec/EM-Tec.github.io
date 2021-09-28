@@ -5,22 +5,22 @@
 
 [[main]]
   name = "關於"
-  url = "post/rich-content/"
+  url = "post/about/"
   weight = -109
 
 # Submenus are done this way: parent -> identifier
 [[main]]
-  name = "連結"
+  name = "相關連結"
   identifier = "Links"
   weight = -108
 [[main]]
   parent = "Links"
-  name = "LinkedIn"
+  name = "本站Github"
   url = "https://www.linkedin.com/"
 [[main]]
   parent = "Links"
-  name = "Twitter"
-  url = "https://twitter.com/"
+  name = "官方IG"
+  url = "https://www.instagram.com/em.tec.blog/"
 
 [[main]]
   name = "About"
@@ -33,18 +33,14 @@
   name = "github"
   type = "social"
   weight = 1
-  url = "https://github.com/#"
+  url = "https://github.com/Edit-Mr/"
 [[social]]
-  name = "twitter"
+  name = "instagram"
   weight = 2
-  url = "https://twitter.com/#"
-[[social]]
-  name = "linkedin"
-  weight = 3
-  url = "https://www.linkedin.com/in/#"
+  url = "https://www.instagram.com/elvisdragonmao/"
 [[social]]
   name = "rss"
-  weight = 4
+  weight = 3
   url = "index.xml"
 
 # other supported social links
