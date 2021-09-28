@@ -1,4 +1,4 @@
-twitter = "@EM01902595"
+# twitter = "@EM01902595"
 largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
 introDescription = "Technologist, perpetual student, teacher, continual incremental improvement."
 # introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
@@ -79,7 +79,7 @@ languageMenuName = "🌐"
 # since = 2021
 
 # tell hugo where you store your icons e.g favicons. This is useful if you're using an apache server and there are conflicts >> see issue https://github.com/chipzoller/hugo-clarity/issues/74. If this is applicable to you, be sure to copy the contents of https://github.com/chipzoller/hugo-clarity/tree/master/static/icons to your preferred icons directory 
-iconsDir = "logoes" # without a leading forward slash
+iconsDir = "icons/" # without a leading forward slash
 
 # website author
 [author]
