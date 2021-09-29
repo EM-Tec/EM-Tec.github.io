@@ -61,7 +61,31 @@ note in quotes as the second parameter. The inner body of the note can be whatev
 &lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>Close and save the settings.&lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Guia de Sintaxe Markdown</title><link>https://EM-Tec.github.io/post/markdown-syntax.pt/</link><pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/markdown-syntax.pt/</guid><description>
+&lt;/div></description></item><item><title>【捷徑】快速進入當節課堂的Meet（備份）</title><link>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</guid><description>
+&lt;p>透過這個捷徑快速進入當節課堂的Meet，再也不用怕忘記課表&lt;/p>
+&lt;p>記得在國二在家上課的時候常常忘記記課表及找不到Meet代碼，或著是來不及再去Classroom找，因此我做了這個捷徑。&lt;br />
+&lt;div class="notices info">
+&lt;div class="label">資訊&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>軟體類型:ios捷徑&lt;/li>
+&lt;li>下載位置:&lt;a href="https://www.icloud.com/shortcuts/154933bcaf8145dba8ec955f8695503d">iCloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+原理其實也很簡單，就是先Get一個我預先放在Github的JSON檔案來查看那一節是什麼課，再用Safari來打開它。Safari會自動開啟Google Meet並加入會議。有趣的是用Chrome開啟Google Meet連結並不會打開Google Meet
+我覺得以我當時的設計得不錯，所以把檔案保留下來。
+&lt;div class="notices warning">
+&lt;div class="label">warning&lt;/div>
+&lt;p>但是這是當時的課程所以現在無法運作，但你可以下載下來做修改。&lt;/p>
+&lt;/div>
+&lt;div class="notices tip">
+&lt;div class="label">Note&lt;/div>
+&lt;ul>
+&lt;li>如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。&lt;/li>
+&lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p></description></item><item><title>Guia de Sintaxe Markdown</title><link>https://EM-Tec.github.io/post/markdown-syntax.pt/</link><pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/markdown-syntax.pt/</guid><description>
 &lt;p>&lt;strong>Este artigo oferece um exemplo básico de uma tradução em Português. O restante conteúdo não foi traduzido.&lt;/strong>&lt;/p>
 &lt;p>Artigo original: https://EM-Tec.github.io/post/markdown-syntax/&lt;/p>
 &lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p>

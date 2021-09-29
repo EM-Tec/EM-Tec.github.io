@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>衛道中學 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/%E8%A1%9B%E9%81%93%E4%B8%AD%E5%AD%B8/</link><description>Recent content in 衛道中學 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/%E8%A1%9B%E9%81%93%E4%B8%AD%E5%AD%B8/index.xml" rel="self" type="application/rss+xml"/><item><title>【捷徑】快速進入當節課堂的Meet（備份）</title><link>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</guid><description>
+&lt;p>透過這個捷徑快速進入當節課堂的Meet，再也不用怕忘記課表&lt;/p>
+&lt;p>記得在國二在家上課的時候常常忘記記課表及找不到Meet代碼，或著是來不及再去Classroom找，因此我做了這個捷徑。&lt;br />
+&lt;div class="notices info">
+&lt;div class="label">資訊&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>軟體類型:ios捷徑&lt;/li>
+&lt;li>下載位置:&lt;a href="https://www.icloud.com/shortcuts/154933bcaf8145dba8ec955f8695503d">iCloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+原理其實也很簡單，就是先Get一個我預先放在Github的JSON檔案來查看那一節是什麼課，再用Safari來打開它。Safari會自動開啟Google Meet並加入會議。有趣的是用Chrome開啟Google Meet連結並不會打開Google Meet
+我覺得以我當時的設計得不錯，所以把檔案保留下來。
+&lt;div class="notices warning">
+&lt;div class="label">warning&lt;/div>
+&lt;p>但是這是當時的課程所以現在無法運作，但你可以下載下來做修改。&lt;/p>
+&lt;/div>
+&lt;div class="notices tip">
+&lt;div class="label">Note&lt;/div>
+&lt;ul>
+&lt;li>如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。&lt;/li>
+&lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p></description></item></channel></rss>
