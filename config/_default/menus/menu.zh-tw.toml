@@ -4,7 +4,7 @@
   weight = -110
 
 [[main]]
-  name = "關於"
+  name = "關於我"
   url = "about/"
   weight = -109
 
