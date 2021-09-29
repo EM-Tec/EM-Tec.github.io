@@ -14,7 +14,6 @@ categories = [
     "自製",
 ]
 series = ["線上教學"]
-aliases = ["shortcut-joinMeetDirectly"]
 thumbnail = "images/building.png"
 +++
 
