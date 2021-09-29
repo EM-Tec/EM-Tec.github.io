@@ -15,12 +15,16 @@
   weight = -108
 [[main]]
   parent = "Links"
-  name = "本站Github"
-  url = "https://www.linkedin.com/"
+  name = "EM's Base"
+  url = "https://edit-mr.github.io/"
 [[main]]
   parent = "Links"
-  name = "官方IG"
-  url = "https://www.instagram.com/em.tec.blog/"
+  name = "Github"
+  url = "https://github.com/Edit-Mr/"
+[[main]]
+  parent = "Links"
+  name = "instergram"
+  url = "https://www.instagram.com/elvisdragonmao/"
 
 # social menu links
 
@@ -28,11 +32,11 @@
   name = "github"
   type = "social"
   weight = 1
-  url = "https://github.com/Edit-Mr/"
+  url = "https://github.com/EM-Tec/EM-Tec.github.io"
 [[social]]
   name = "instagram"
   weight = 2
-  url = "https://www.instagram.com/elvisdragonmao/"
+  url = "https://www.instagram.com/em.tec.blog"
 [[social]]
   name = "rss"
   weight = 3
