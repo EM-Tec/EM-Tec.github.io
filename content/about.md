@@ -22,7 +22,7 @@ author = "毛哥EM"
   ![:inline](https://img.shields.io/badge/-ReactTypeScript-333333?style=flat&logo=typescript)
   ![:inline](https://img.shields.io/badge/-Discord.js-333333?style=flat&logo=discord.js)
   ![:inline](https://img.shields.io/badge/-PHP-333333?style=flat&logo=php)
-  !:inline](https://img.shields.io/badge/-C++-333333?style=flat&logo=C)
+  ![:inline](https://img.shields.io/badge/-C++-333333?style=flat&logo=C)
   ![:inline](https://img.shields.io/badge/-C%23-333333?style=flat&logo=c#)
   ![:inline](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
   ![:inline](https://img.shields.io/badge/-Go-333333?style=flat&logo=go)
