@@ -15,7 +15,7 @@ author = "毛哥EM"
 
 ## 🛠 &nbsp; 技術能力
 - 🌐 &nbsp; 我會使用的語言
-  ![inline](https://img.shields.io/badge/-HTML-333333?style=flat&logo=HTML5)
+  ![:inline](https://img.shields.io/badge/-HTML-333333?style=flat&logo=HTML5)
   ![:inline](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
   ![:inline](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
   ![:inline](https://img.shields.io/badge/-Node.js-333333?style=flat&logo=node.js)
