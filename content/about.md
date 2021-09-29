@@ -13,8 +13,8 @@ author = "毛哥EM"
 - 🤔 &nbsp; 探索新技術並開發解決生活中的問題。用科技使人們的生活更方便
 - 🎓 &nbsp; 就讀衛道中學並且在Google學習各種科技知識
 
-## 🛠 &nbsp; 我會使用的語言
-- 🌐 &nbsp;
+## 🛠 &nbsp; 技術能力
+- 🌐 &nbsp; 我會使用的語言
   ![inline](https://img.shields.io/badge/-HTML-333333?style=flat&logo=HTML5)
   ![:inline](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
   ![:inline](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
