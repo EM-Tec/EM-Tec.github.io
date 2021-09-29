@@ -7,7 +7,7 @@ copyright = "2021毛哥EM"
 paginate = 10
 theme = "hugo-clarity"
 disqusShortname = ""
-DefaultContentLanguage = "zh-TW"
+DefaultContentLanguage = "zh-tw"
 # [languages]
 # config/_default/languages.toml
 
