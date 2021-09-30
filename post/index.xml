@@ -19,4 +19,25 @@
 &lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
 &lt;/ul>
 &lt;/div>
+&lt;/p></description></item><item><title>【捷徑】衛道網頁書籤</title><link>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</guid><description>
+&lt;p>只須點一下即可快速連結到衛道的網頁或檔案&lt;/p>
+&lt;p>生為衛道的學生，不得不抱怨一下:頁面真的非常難找，都藏在非常深的目錄之下。因此我做了這個捷徑，讓你可以快速導航到你要的頁面。頁面也會隨時間進行更變，非常方便
+&lt;div class="notices info">
+&lt;div class="label">衛道網頁書籤&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>軟體類型:ios捷徑&lt;/li>
+&lt;li>下載位置:&lt;a href="https://www.icloud.com/shortcuts/19ea26ff47244258a6d9ff21a553659b">iCloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p>
+&lt;h2 id="原理">原理&lt;/h2>
+&lt;p>原理其實也很簡單，就是先Get一個我預先放在Github的JSON檔案來查看我設定好的連結，再用選單讓你選。如果你選擇的是網頁的話會用Chrome來打開它；如果是檔案的話會直接下再並開啟預覽。
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;ul>
+&lt;li>如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。&lt;/li>
+&lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
+&lt;/ul>
+&lt;/div>
 &lt;/p></description></item></channel></rss>
