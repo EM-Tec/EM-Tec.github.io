@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/post/</link><description>Recent content in Posts on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>【捷徑】快速進入當節課堂的Meet（備份）</title><link>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/post/</link><description>Recent content in Posts on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>【VB-CABLE】虛擬麥克風。無法分享聲音?不存在的</title><link>https://EM-Tec.github.io/post/vb-cable/</link><pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/vb-cable/</guid><description>
+&lt;p>VB-Cabke讓電腦聲音輸出成麥克風&lt;/p>
+&lt;p>生為衛道的學生，不得不抱怨一下:頁面真的非常難找，都藏在非常深的目錄之下。因此我做了這個捷徑，讓你可以快速導航到你要的頁面。頁面也會隨時間進行更變，非常方便
+&lt;div class="notices info">
+&lt;div class="label">衛道網頁書籤&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>軟體類型:ios捷徑&lt;/li>
+&lt;li>下載位置:&lt;a href="https://www.icloud.com/shortcuts/19ea26ff47244258a6d9ff21a553659b">iCloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p>
+&lt;h2 id="原理">原理&lt;/h2>
+&lt;p>原理其實也很簡單，就是先Get一個我預先放在Github的JSON檔案來查看我設定好的連結，再用選單讓你選。如果你選擇的是網頁的話會用Chrome來打開它；如果是檔案的話會直接下再並開啟預覽。
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;ul>
+&lt;li>如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。&lt;/li>
+&lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p></description></item><item><title>【捷徑】史上最快簡訊實名制</title><link>https://EM-Tec.github.io/post/shortcut-real_name_system/</link><pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-real_name_system/</guid><description>
+&lt;p>我保證這是史上最快的簡訊實名制方法&lt;/p>
+&lt;p>
+&lt;div class="notices info">
+&lt;div class="label">簡訊實名制&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>軟體類型:ios捷徑&lt;/li>
+&lt;li>下載位置:&lt;a href="https://www.icloud.com/shortcuts/19ea26ff47244258a6d9ff21a553659b">iCloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div class="notices info">
+&lt;div class="label">多人實名制&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>軟體類型:ios捷徑&lt;/li>
+&lt;li>下載位置:&lt;a href="https://www.icloud.com/shortcuts/19ea26ff47244258a6d9ff21a553659b">iCloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+建議將它訂選在主畫面。要使用它只需要點一下，掃描，就結束了。重頭到尾之需點一下開啟，連傳送都不用點。有沒有超方便~&lt;/p>
+&lt;h2 id="多人怎麼辦">多人怎麼辦？&lt;/h2>
+&lt;p>我有設計一個多人版的，但建議兩個都下載。因為如果只有一個人的話就不用再輸入人數了。
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;ul>
+&lt;li>如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。&lt;/li>
+&lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p></description></item><item><title>【Windows】賭你不知道的必記快捷鍵</title><link>https://EM-Tec.github.io/post/windows-hotkey/</link><pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/windows-hotkey/</guid><description>
+&lt;p>想要加快工作效率，減少滑鼠的使用是個最直接的方法。這裡我提供了一些我常用但是很少人知道的快捷鍵供大家參考。&lt;/p>
+&lt;h2 id="win數字---快速開啟應用">Win+數字 - 快速開啟應用&lt;/h2>
+&lt;p>Windows的工作列可以訂選軟體。使你快速找到並執行應用程式。但是你知道嗎，你可以使用快捷鍵Windows+數字鍵來快速開啟程式。像我是將調整各個音量比例的音量混音程式放在第一個。因此我只需要按下Windows+1就可以開啟，十分方便。&lt;/p>
+&lt;h2 id="winv---查看剪貼版歷史">Win+V - 查看剪貼版歷史&lt;/h2>
+&lt;p>使用這個快捷鍵即可教出之前複製過的項目。只需點選要使用的項目就可以直接貼上。對我來說常用於需要複製大量位置不同的文字時非常方便。
+需要注意的是，電腦第一次按下Windows+V之後才會開始記錄。因此不妨現在就按下吧。&lt;/p>
+&lt;h2 id="crlb-crli-crlu">Crl+B Crl+I Crl+U&lt;/h2>
+&lt;p>如果你正在進行文書處裡。想要將文字進行粗體必須要點又見或著是找上方的工作列。但是你知道嗎，你只需要反白文字後按下Crl+B就可以啦。同樣的，Crl+I是斜體(incline)，Crl+U是底線(Underline)。
+Shift+方向鍵
+如果你想要選取文字時，比起使用游標或著是手，使用快捷鍵Shift+方向鍵會方便精確許多。&lt;/p>
+&lt;h2 id="crlshift方向鍵">Crl+Shift+方向鍵&lt;/h2>
+&lt;p>與快捷鍵Shift+方向鍵不同的是他會直接選取整個段落&lt;/p>
+&lt;p>以上就是幾個我常用但很多人不知道的快捷鍵。若你知道其他快捷鍵也歡迎在下方分享&lt;/p></description></item><item><title>【捷徑】快速進入當節課堂的Meet（備份）</title><link>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</guid><description>
 &lt;p>透過這個捷徑快速進入當節課堂的Meet，再也不用怕忘記課表&lt;/p>
 &lt;p>記得在國二在家上課的時候常常忘記記課表及找不到Meet代碼，或著是來不及再去Classroom找，因此我做了這個捷徑。&lt;br />
 &lt;div class="notices info">
@@ -28,7 +91,18 @@
 &lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
 &lt;/ul>
 &lt;/div>
-&lt;/p></description></item><item><title>【捷徑】衛道網頁書籤</title><link>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</guid><description>
+&lt;/p></description></item><item><title>【捷徑】怎麼加入不受信任的捷徑?</title><link>https://EM-Tec.github.io/post/shortcut-untrusted_shortcut/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-untrusted_shortcut/</guid><description>
+&lt;p>不少人要下載Siri捷徑腳本時，都會因為捷徑的安全設定不允許不受信任的捷徑，導致無法順利下載此捷徑」那為什麼會變成這樣呢？難道都不能下載網頁上的捷徑腳本了嗎？&lt;/p>
+&lt;p>其實這只是一個官方的安全性調整，在本站下載的Siri捷徑腳本是完全，不用擔心有安全疑慮。不過如果碰見這問題，可以透過以下方法來解決。&lt;/p>
+&lt;h2 id="解決方法">解決方法&lt;/h2>
+&lt;p>之需要到「設定」&amp;gt;「捷徑」內，將「允許不受信任的捷徑」開啟即可。
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;ul>
+&lt;li>如果手機有設定密碼可能會要求輸入&lt;/li>
+&lt;/ul>
+&lt;/div>
+通常好用的捷徑腳本，是不會出現在官方捷徑資料庫內，這些都是由網友或我所製作而成，且本站所介紹過的捷徑腳本，也都會進行審核才會推薦分享，也歡迎大家可以分享，讓更多人看見。&lt;/p></description></item><item><title>【捷徑】衛道網頁書籤</title><link>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</guid><description>
 &lt;p>只須點一下即可快速連結到衛道的網頁或檔案&lt;/p>
 &lt;p>生為衛道的學生，不得不抱怨一下:頁面真的非常難找，都藏在非常深的目錄之下。因此我做了這個捷徑，讓你可以快速導航到你要的頁面。頁面也會隨時間進行更變，非常方便
 &lt;div class="notices info">
