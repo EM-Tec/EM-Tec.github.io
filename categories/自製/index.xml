@@ -1,25 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自製 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E8%87%AA%E8%A3%BD/</link><description>Recent content in 自製 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E8%87%AA%E8%A3%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>【VB-CABLE】虛擬麥克風。無法分享聲音?不存在的</title><link>https://EM-Tec.github.io/post/vb-cable/</link><pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/vb-cable/</guid><description>
-&lt;p>VB-Cabke讓電腦聲音輸出成麥克風&lt;/p>
-&lt;p>生為衛道的學生，不得不抱怨一下:頁面真的非常難找，都藏在非常深的目錄之下。因此我做了這個捷徑，讓你可以快速導航到你要的頁面。頁面也會隨時間進行更變，非常方便
-&lt;div class="notices info">
-&lt;div class="label">衛道網頁書籤&lt;/div>
-&lt;ul>
-&lt;li>開發者:毛哥EM(我)&lt;/li>
-&lt;li>軟體類型:ios捷徑&lt;/li>
-&lt;li>下載位置:&lt;a href="https://www.icloud.com/shortcuts/19ea26ff47244258a6d9ff21a553659b">iCloud&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;/p>
-&lt;h2 id="原理">原理&lt;/h2>
-&lt;p>原理其實也很簡單，就是先Get一個我預先放在Github的JSON檔案來查看我設定好的連結，再用選單讓你選。如果你選擇的是網頁的話會用Chrome來打開它；如果是檔案的話會直接下再並開啟預覽。
-&lt;div class="notices tip">
-&lt;div class="label">小提醒&lt;/div>
-&lt;ul>
-&lt;li>如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。&lt;/li>
-&lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;/p></description></item><item><title>【Windows】賭你不知道的必記快捷鍵</title><link>https://EM-Tec.github.io/post/windows-hotkey/</link><pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/windows-hotkey/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自製 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E8%87%AA%E8%A3%BD/</link><description>Recent content in 自製 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Thu, 12 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E8%87%AA%E8%A3%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>【Windows】賭你不知道的必記快捷鍵</title><link>https://EM-Tec.github.io/post/windows-hotkey/</link><pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/windows-hotkey/</guid><description>
 &lt;p>想要加快工作效率，減少滑鼠的使用是個最直接的方法。這裡我提供了一些我常用但是很少人知道的快捷鍵供大家參考。&lt;/p>
 &lt;h2 id="win數字---快速開啟應用">Win+數字 - 快速開啟應用&lt;/h2>
 &lt;p>Windows的工作列可以訂選軟體。使你快速找到並執行應用程式。但是你知道嗎，你可以使用快捷鍵Windows+數字鍵來快速開啟程式。像我是將調整各個音量比例的音量混音程式放在第一個。因此我只需要按下Windows+1就可以開啟，十分方便。&lt;/p>
