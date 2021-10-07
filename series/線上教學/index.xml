@@ -72,7 +72,18 @@ Shift+方向鍵
 &lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
 &lt;/ul>
 &lt;/div>
-&lt;/p></description></item><item><title>【捷徑】衛道網頁書籤</title><link>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</guid><description>
+&lt;/p></description></item><item><title>【捷徑】怎麼加入不受信任的捷徑?</title><link>https://EM-Tec.github.io/post/shortcut-untrusted_shortcut/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-untrusted_shortcut/</guid><description>
+&lt;p>不少人要下載Siri捷徑腳本時，都會因為捷徑的安全設定不允許不受信任的捷徑，導致無法順利下載此捷徑」那為什麼會變成這樣呢？難道都不能下載網頁上的捷徑腳本了嗎？&lt;/p>
+&lt;p>其實這只是一個官方的安全性調整，在本站下載的Siri捷徑腳本是完全，不用擔心有安全疑慮。不過如果碰見這問題，可以透過以下方法來解決。&lt;/p>
+&lt;h2 id="解決方法">解決方法&lt;/h2>
+&lt;p>之需要到「設定」&amp;gt;「捷徑」內，將「允許不受信任的捷徑」開啟即可。
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;ul>
+&lt;li>如果手機有設定密碼可能會要求輸入&lt;/li>
+&lt;/ul>
+&lt;/div>
+通常好用的捷徑腳本，是不會出現在官方捷徑資料庫內，這些都是由網友或我所製作而成，且本站所介紹過的捷徑腳本，也都會進行審核才會推薦分享，也歡迎大家可以分享，讓更多人看見。&lt;/p></description></item><item><title>【捷徑】衛道網頁書籤</title><link>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-viatorbookmark/</guid><description>
 &lt;p>只須點一下即可快速連結到衛道的網頁或檔案&lt;/p>
 &lt;p>生為衛道的學生，不得不抱怨一下:頁面真的非常難找，都藏在非常深的目錄之下。因此我做了這個捷徑，讓你可以快速導航到你要的頁面。頁面也會隨時間進行更變，非常方便
 &lt;div class="notices info">
