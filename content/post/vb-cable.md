@@ -10,6 +10,7 @@ tags = [
 ]
 categories = [
 ]
+series = ["線上教學"]
 thumbnail = ""
 +++
 VB-Cable讓電腦聲音輸出成麥克風
