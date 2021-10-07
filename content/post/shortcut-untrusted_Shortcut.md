@@ -7,6 +7,7 @@ tags = [
     "教學",
     "ios"
 ]
+series = ["線上教學"]
 categories = [
     "ios捷徑",
 ]
