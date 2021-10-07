@@ -7,35 +7,25 @@ featured = true
 draft = true
 tags = [
     "HTML",
-        "CSS",
-            "JavaScript",
+    "CSS",
+    "JavaScript",
     "Github",
+    "GAS"
 ]
 categories = [
     "自製",
 ]
 series = [""]
-thumbnail = "images/building.png"
+thumbnail = ""
 +++
-
-透過這個捷徑快速進入當節課堂的Meet，再也不用怕忘記課表
+大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。
 <!--more-->
-記得在國二在家上課的時候常常忘記記課表及找不到Meet代碼，或著是來不及再去Classroom找，因此我做了這個捷徑。<br />
-{{% notice info "203 Meet" %}}
+{{% notice info "大眼蛙教練點名系統" %}}
 * 開發者:毛哥EM(我)
-* 軟體類型:ios捷徑
-* 下載位置:[iCloud](https://www.icloud.com/shortcuts/154933bcaf8145dba8ec955f8695503d)
+* 類型:網站
+* 網址:[EM's Base](http://edit-mr.github.io/code/frog)
 {{% /notice %}}
-## 設定
-當成功將捷徑加入裝置後，他會請你設定幾個變數。
-- **注意事項**:直接按下一部即可
-- **英會班級**:衛道中學的英語會話課分成兩班，所以要在這裡輸入是A班還是B班。
-- **使用者編號**:如果沒有當堂課的Google Meet代碼，會連結到Classroom的畫面。如果這個裝置有多個帳號的話可以指定開啟哪一個帳號的Classroom。
-## 原理
-原理其實也很簡單，就是先Get一個我預先放在Github的JSON檔案來查看那一節是什麼課，再用Safari來打開它。Safari會自動開啟Google Meet並加入會議。有趣的是用Chrome開啟Google Meet連結並不會打開Google Meet
-我覺得以我當時的設計得不錯，所以把檔案保留下來。
-{{% notice tip "小提醒" %}}
-* 但是這是當時的課程所以現在無法運作，但你可以下載下來做修改。
-* 如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。
-* 你也可以用Siri執行這個捷徑。 
-{{% /notice %}}
+## 功能
+### 新增學生
+輸入名稱並按新增即可。<br />
+電腦會自動在Google Sheet建立好欄位。教練只需要到Sheet設定學生的課程數就好了
