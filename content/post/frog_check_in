@@ -19,6 +19,7 @@ thumbnail = ""
 +++
 大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。
 <!--more-->
+![首頁::round](images/frog_check_in-home.png)
 {{% notice info "大眼蛙教練點名系統" %}}
 * 開發者:毛哥EM(我)
 * 類型:網站
@@ -26,6 +27,7 @@ thumbnail = ""
 {{% /notice %}}
 ## 功能
 ### 新增學生
+![新增學生::round](images/frog_check_in-add.png)
 輸入名稱並按新增即可。<br />
 電腦會自動在Google Sheet建立好欄位。教練只需要到Sheet設定學生的課程數就好了
 {{% notice warning "超重要提醒" %}}
@@ -34,8 +36,9 @@ thumbnail = ""
 {{% /notice %}}
 
 ### 點名
+![點名畫面::round](images/frog_check_in-check.png)
 網站會從表單取得學生名單並顯示。只需要點擊名稱即可完成報到。<br />
-報到成功會提示你還剩下幾堂課。
+![報到成功會提示你還剩下幾堂課::round](images/frog_check_in-checked.png)
 {{% notice notice "提醒" %}}
 * 為了配合不同螢幕大小，沒有限制每行出現的學生數。盡可能多顯示一些，比較容易找到。
 * 為避免重複點名，報到後學生會隱藏。重新整理頁面即可顯現
@@ -47,4 +50,5 @@ thumbnail = ""
 {{% /notice %}}
 
 ### 查詢記錄
+![查詢毛宥恩的報到紀錄::round](images/frog_check_in-search.png)
 如果要查詢之前報到的紀錄，請到查詢頁面並輸入姓名。
