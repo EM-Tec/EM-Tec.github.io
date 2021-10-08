@@ -18,7 +18,7 @@
 &lt;div class="notices warning">
 &lt;div class="label">超重要提醒&lt;/div>
 &lt;ul>
-&lt;li>學生姓名不可以有空格。可接受中文、英文、及數字&lt;/li>
+&lt;li>學生姓名不可以有空格，如果有空格會自動刪除&lt;/li>
 &lt;li>要刪除學生請刪除整列，不可留一整列空白&lt;/li>
 &lt;/ul>
 &lt;/div>
