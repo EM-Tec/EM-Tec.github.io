@@ -39,7 +39,7 @@
 &lt;div class="notices warning">
 &lt;div class="label">超重要提醒&lt;/div>
 &lt;ul>
-&lt;li>如果要刪除記錄（如誤按到）請&amp;quot;&amp;quot;務必&amp;quot;&amp;quot;要「&amp;quot;&amp;quot;刪除整列&amp;quot;&amp;quot;」。不可留空&lt;/li>
+&lt;li>如果要刪除記錄（如誤按到）請&lt;strong>務必&lt;/strong>要「&lt;strong>刪除整列&lt;/strong>」。不可留空&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;/p>
