@@ -30,7 +30,7 @@ thumbnail = ""
 ![新增學生](https://EM-Tec.github.io/images/frog_check_in-add.png)
 輸入名稱並按新增即可。<br />
 電腦會自動在Google Sheet建立好欄位。教練只需要到試算表設定學生的課程數就好了。如果沒有課了會用紅色表示，而未設定會被判斷為沒有課程。
-![試算表中的學生列表](frog_check_in-student.PNG)
+![試算表中的學生列表](https://EM-Tec.github.io/images/frog_check_in-student.PNG)
 {{% notice warning "超重要提醒" %}}
 * 學生姓名不可以有空格，如果有空格會自動刪除
 * 要刪除學生請刪除整列，不可留一整列空白
@@ -48,7 +48,7 @@ thumbnail = ""
 在試算表的「紀錄」可以看到之前學生的報到紀錄。當天的會以綠色做標記。
 {{% notice warning "超重要提醒" %}}
 * 如果要刪除記錄（如誤按到）請**務必**要「**刪除整列**」。不可留空
-![報到紀錄](frog_check_in-record.png)
+![報到紀錄](https://EM-Tec.github.io/images/frog_check_in-record.png)
 {{% /notice %}}
 
 ### 查詢記錄
