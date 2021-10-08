@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HTML on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/html/</link><description>Recent content in HTML on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Thu, 07 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/html/index.xml" rel="self" type="application/rss+xml"/><item><title>【GAS】自製點名系統</title><link>https://EM-Tec.github.io/post/frog_check_in/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/frog_check_in/</guid><description>
 &lt;p>大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。&lt;/p>
-&lt;p>&lt;img src="images/frog_check_in-home.png" alt="首頁::round">
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-home.png" alt="首頁::round">
 &lt;div class="notices info">
 &lt;div class="label">大眼蛙教練點名系統&lt;/div>
 &lt;ul>
@@ -12,7 +12,7 @@
 &lt;/p>
 &lt;h2 id="功能">功能&lt;/h2>
 &lt;h3 id="新增學生">新增學生&lt;/h3>
-&lt;p>&lt;img src="images/frog_check_in-add.png" alt="新增學生::round">
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-add.png" alt="新增學生::round">
 輸入名稱並按新增即可。&lt;br />
 電腦會自動在Google Sheet建立好欄位。教練只需要到Sheet設定學生的課程數就好了
 &lt;div class="notices warning">
@@ -24,9 +24,9 @@
 &lt;/div>
 &lt;/p>
 &lt;h3 id="點名">點名&lt;/h3>
-&lt;p>&lt;img src="images/frog_check_in-check.png" alt="點名畫面::round">
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-check.png" alt="點名畫面::round">
 網站會從表單取得學生名單並顯示。只需要點擊名稱即可完成報到。&lt;br />
-&lt;img src="images/frog_check_in-checked.png" alt="報到成功會提示你還剩下幾堂課::round">
+&lt;img src="https://EM-Tec.github.io/images/frog_check_in-checked.png" alt="報到成功會提示你還剩下幾堂課::round">
 &lt;div class="notices notice">
 &lt;div class="label">提醒&lt;/div>
 &lt;ul>
@@ -44,5 +44,5 @@
 &lt;/div>
 &lt;/p>
 &lt;h3 id="查詢記錄">查詢記錄&lt;/h3>
-&lt;p>&lt;img src="images/frog_check_in-search.png" alt="查詢毛宥恩的報到紀錄::round">
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-search.png" alt="查詢毛宥恩的報到紀錄::round">
 如果要查詢之前報到的紀錄，請到查詢頁面並輸入姓名。&lt;/p></description></item></channel></rss>
