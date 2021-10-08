@@ -1,8 +1,8 @@
 +++
 author = "毛哥EM"
-title = "【自製】大眼蛙教練點名系統"
+title = "【GAS】自製點名系統"
 date = "2021-10-07"
-description = "介紹與使用說明"
+description = "使用Google sheet 試算表表單串接api<br />介紹、使用說明與製作教學"
 featured = true
 tags = [
     "HTML",
