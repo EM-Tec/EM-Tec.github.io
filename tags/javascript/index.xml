@@ -14,7 +14,7 @@
 &lt;h3 id="新增學生">新增學生&lt;/h3>
 &lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-add.png" alt="新增學生">
 輸入名稱並按新增即可。&lt;br />
-電腦會自動在Google Sheet建立好欄位。教練只需要到試算表設定學生的課程數就好了。如果沒有課了會用紅色表示。
+電腦會自動在Google Sheet建立好欄位。教練只需要到試算表設定學生的課程數就好了。如果沒有課了會用紅色表示，而未設定會被判斷為沒有課程。
 &lt;img src="frog_check_in-student.PNG" alt="試算表中的學生列表">
 &lt;div class="notices warning">
 &lt;div class="label">超重要提醒&lt;/div>
