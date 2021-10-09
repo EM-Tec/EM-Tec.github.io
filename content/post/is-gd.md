@@ -8,6 +8,8 @@ categories = [
     "網站分享",
 ]
 thumbnail = "images/thumbnails/is-gd.jpg"
+featureImage = "https://em-tec.github.io/images/thumbnails/is-gd.jpg"
+shareImage = "https://em-tec.github.io/images/thumbnails/is-gd.jpg"
 +++
 太長的網址常除了不好看占版面之外，也難以令人記住。因此所短網址是一個不錯的做法。而其中我最常用的就是is.gd，因為它is good~
 <!--more-->

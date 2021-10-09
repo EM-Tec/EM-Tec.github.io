@@ -11,7 +11,9 @@ series = ["線上教學"]
 categories = [
     "ios捷徑",
 ]
-thumbnail = ""
+thumbnail = "images/thumbnails/shortcut-untrusted_Shortcut.png"
+featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-untrusted_Shortcut.png"
+shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-untrusted_Shortcut.png"
 +++
 不少人要下載Siri捷徑腳本時，都會因為捷徑的安全設定不允許不受信任的捷徑，導致無法順利下載此捷徑」那為什麼會變成這樣呢？難道都不能下載網頁上的捷徑腳本了嗎？
 

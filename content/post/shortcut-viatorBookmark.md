@@ -14,7 +14,9 @@ categories = [
     "ios捷徑",
     "自製",
 ]
-thumbnail = ""
+thumbnail = "images/thumbnails/shortcut-untrusted_Shortcut.png"
+featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-untrusted_Shortcut.png"
+shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-untrusted_Shortcut.png"
 +++
 只須點一下即可快速連結到衛道的網頁或檔案
 
