@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>複製貼上教學 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E8%A4%87%E8%A3%BD%E8%B2%BC%E4%B8%8A%E6%95%99%E5%AD%B8/</link><description>Recent content in 複製貼上教學 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E8%A4%87%E8%A3%BD%E8%B2%BC%E4%B8%8A%E6%95%99%E5%AD%B8/index.xml" rel="self" type="application/rss+xml"/><item><title>【Zoom】是個超讚綠幕!輕鬆去背到OBS</title><link>https://EM-Tec.github.io/post/vb-cable/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/vb-cable/</guid><description>
+&lt;p>綠幕是拍片直播或視訊常用到的好幫手，因為它可以讓你輕鬆地去除掉背景。只需要在軟體中選擇綠幕顏色，並調整各種數據即可。但是如果沒有綠幕怎麼辦?這時可以使用電腦免費的視訊會議軟體Zoom達到一樣的效果。&lt;/p>
+&lt;h2 id="步驟">步驟&lt;/h2>
+&lt;h3 id="製作背景">製作背景&lt;/h3>
+&lt;p>我們需要一張只有一個顏色的圖片來作為Zoom的背景。以和人物最不相關為原則(通常使用綠色)。你可以使用小畫家來繪製。&lt;/p>
+&lt;p>用油漆塗滿你選的顏色&lt;/p>
+&lt;h3 id="設定zoom">設定Zoom&lt;/h3>
+&lt;p>請先到到官網下載並安裝。安裝方式和其他軟體差不多
+&lt;div class="notices info">
+&lt;div class="label">Zoom&lt;/div>
+&lt;ul>
+&lt;li>開發者:Zoom Video Communications&lt;/li>
+&lt;li>軟體類型:商業軟體&lt;/li>
+&lt;li>下載位置:&lt;a href="https://zoom.us/download">官網&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p>
+&lt;h4 id="登入zoom">登入Zoom&lt;/h4>
+&lt;p>根據你的習慣選擇登入方式，我是使用Google登入，其他也都可以。&lt;/p>
+&lt;h4 id="開啟一個新的視訊會議">開啟一個新的視訊會議&lt;/h4>
+&lt;p>在應用程式點選新會議&lt;/p>
+&lt;h4 id="不用讓程式獲取音訊">不用讓程式獲取音訊&lt;/h4>
+&lt;p>點X就好了&lt;/p>
+&lt;h4 id="設定">設定&lt;/h4>
+&lt;p>點擊左上方的會議資訊，並進入設定。我們需要改兩個項目：&lt;/p>
+&lt;p>取消勾選視訊下的一律在視訊上顯示參與者名稱(需要下滾)&lt;/p>
+&lt;p>更改背景成剛才製作的圖片。&lt;/p>
+&lt;h4 id="縮小畫面">縮小畫面&lt;/h4>
+&lt;p>回到視訊，點選最小化。視窗會小到你只能看到自己。
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;p>如果縮小畫面還是有名字的話，可以把視窗放大再縮小一次。&lt;/p>
+&lt;/div>
+&lt;/p>
+&lt;h3 id="obs設定">OBS設定&lt;/h3>
+&lt;p>進入OBS並攝取這個Zoom小視窗。我個人是使用Streamlabs OBS，因為介面好看。這裡提供我的作法。&lt;/p>
+&lt;h4 id="打開obs新增scene">打開OBS，新增Scene&lt;/h4>
+&lt;h4 id="增加window-capture">增加Window Capture&lt;/h4>
+&lt;h4 id="命名">命名&lt;/h4>
+&lt;p>可依你自己喜好。記得選擇新來源再按Add Source&lt;/p>
+&lt;h4 id="設定攝取來源">設定攝取來源&lt;/h4>
+&lt;p>圖片內為推薦設定，不同可能造成攝取失敗。&lt;/p>
+&lt;h4 id="放到最大">放到最大&lt;/h4>
+&lt;p>可視情況調整
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;p>要放到最大記得選「Fit to screen」而不是「Stretch to screen」，否則你的臉會變形。&lt;/p>
+&lt;/div>
+&lt;/p>
+&lt;p>6.新增色鍵
+色鍵(Color Key)可以去除指定的顏色。你可以根據情況調整參數，自己試試看&lt;/p>
+&lt;p>最後你也可以根據需求增加其他畫面。&lt;/p></description></item></channel></rss>
