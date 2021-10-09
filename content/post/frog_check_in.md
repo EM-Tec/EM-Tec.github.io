@@ -15,7 +15,7 @@ categories = [
     "自製",
 ]
 series = [""]
-thumbnail = ""
+thumbnail = "images/thumbnails/frog_check_in.jpg"
 +++
 大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。
 <!--more-->
