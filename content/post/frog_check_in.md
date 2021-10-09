@@ -58,7 +58,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 如果要查詢之前報到的紀錄，請到查詢頁面並輸入姓名。
 
 ## 教學
-這裡附上GAS
+這裡附上GAS。之後有空把完整的寫完
 ### 出缺席紀錄
 ```js
 function doGet(e) {
@@ -68,7 +68,7 @@ function doGet(e) {
   var time = params.time;
   var remain = params.remain;
   //將Sheet指定為"資料庫"試算表   SpreadSheet = 試算表 ，貼上excel那段參數
-  var SpreadSheet = SpreadsheetApp.openById("1fjX-prGU0hfb65LCQkrktWa-JavvjSW7tWMmYWAb7RA");
+  var SpreadSheet = SpreadsheetApp.openById("XXXXXXXXXXXXXXXXXXX");
   //取得頁籤:"工作表1"    Sheet = 頁籤
   var Sheet = SpreadSheet.getSheets()[0];
   //取得有資料的最後一行的"行數"(目的要在最後一行插入新資料)
@@ -93,7 +93,7 @@ function doGet(e) {
 ### 學生列表
 ```js
 function doGet(e){
-  var id = '1fjX-prGU0hfb65LCQkrktWa-JavvjSW7tWMmYWAb7RA'; //抓取表單
+  var id = 'XXXXXXXXXXXXXXXXXXX'; //抓取表單
   var spreadsheet = SpreadsheetApp.openById(id); // Sheet id
   var sheet = spreadsheet.getSheets()[1]; // 要第幾個sheet？ 1 就是第2個
   var rowLength = sheet.getLastRow()-1; //取行長度
@@ -121,7 +121,7 @@ function doPost(e) {
     var params = e.parameter;
       // 可以針對你帶入的資料變化   params.xxxxxx   xxxxx = 你帶進來的key值
     var name = params.name;
-    var SpreadSheet = SpreadsheetApp.openById('1fjX-prGU0hfb65LCQkrktWa-JavvjSW7tWMmYWAb7RA'); //抓取表單
+    var SpreadSheet = SpreadsheetApp.openById('XXXXXXXXXXXXXXXXXXX'); //抓取表單
     var Sheet = SpreadSheet.getSheets()[0];
     var LastRow = Sheet.getLastRow();
     var data = [];
@@ -146,7 +146,7 @@ function doGet(e) {
   // 可以針對你帶入的資料變化  params.xxxxxx      xxxxx = 你帶進來的key值  
   var name = params.name;
   //將Sheet指定為"資料庫"試算表   SpreadSheet = 試算表 ，貼上excel那段參數
-  var SpreadSheet = SpreadsheetApp.openById("1fjX-prGU0hfb65LCQkrktWa-JavvjSW7tWMmYWAb7RA");
+  var SpreadSheet = SpreadsheetApp.openById("XXXXXXXXXXXXXXXXXXX");
   //取得頁籤:"工作表1"              Sheet = 頁籤
   var Sheet = SpreadSheet.getSheets()[1];
   //取得有資料的最後一行的"行數"(目的要在最後一行插入新資料)
