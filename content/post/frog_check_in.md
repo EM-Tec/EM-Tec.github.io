@@ -23,26 +23,33 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 <!--more-->
 ![首頁](https://EM-Tec.github.io/images/frog_check_in-home.png)
 {{% notice info "大眼蛙教練點名系統" %}}
+
 * 開發者:毛哥EM(我)
 * 類型:網站
 * 網址:[EM's Base](http://edit-mr.github.io/code/frog)
 {{% /notice %}}
+
 ## 功能
+
 ### 新增學生
+
 ![新增學生](https://EM-Tec.github.io/images/frog_check_in-add.png)
 輸入名稱並按新增即可。<br />
 電腦會自動在Google Sheet建立好欄位。教練只需要到試算表設定學生的課程數就好了。如果沒有課了會用紅色表示，而未設定會被判斷為沒有課程。
 ![試算表中的學生列表](https://EM-Tec.github.io/images/frog_check_in-student.PNG)
 {{% notice warning "超重要提醒" %}}
+
 * 學生姓名不可以有空格，如果有空格會自動刪除
 * 要刪除學生請刪除整列，不可留一整列空白
 {{% /notice %}}
 
 ### 點名
+
 ![點名畫面](https://EM-Tec.github.io/images/frog_check_in-check.png)
 網站會從表單取得學生名單並顯示。只需要點擊名稱即可完成報到。<br />
 ![報到成功會提示你還剩下幾堂課](https://EM-Tec.github.io/images/frog_check_in-checked.png)
 {{% notice notice "提醒" %}}
+
 * 為了配合不同螢幕大小，沒有限制每行出現的學生數。盡可能多顯示一些，比較容易找到。
 * 為避免重複點名，報到後學生會隱藏。重新整理頁面即可顯現
 * 下方方框會顯示自開啟網頁後已完成報到的學生。
@@ -54,12 +61,50 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 {{% /notice %}}
 
 ### 查詢記錄
+
 ![查詢毛宥恩的報到紀錄](https://EM-Tec.github.io/images/frog_check_in-search.png)
 如果要查詢之前報到的紀錄，請到查詢頁面並輸入姓名。
 
 ## 教學
-這裡附上GAS。之後有空把完整的寫完
+
+我們分成三個步驟:
+
+1. 建立試算表(Google Sheet)
+2. 創建API(Google App Script)來處理資料並更新試算表
+3. 建立一個漂亮的網站方便操作
+
+### 建立試算表(Google Sheet)
+
+我分成兩個表格，分別叫做`紀錄`和`統計`。為了方便辨識第一排插入標題
+
+#### 紀錄
+
+編號 | 姓名 | 時間 |剩餘課堂數
+----|----|----|----|
+ | | |
+
+#### 紀錄
+
+學生 | 上課次數 | 剩餘課堂數 | 總課堂數
+----|----|----|----|
+ | | |
+
+接著請你複製這個試算表的ID，也就是網址`https://docs.google.com/spreadsheets/d/`和`/`之間那一串(如`1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA`)。等一下會用到。
+
+### 建立API(Google App Script)
+
+想要讓網站編輯試算表需要透過Google App Script(GAS)來完成。我們要建立四個API，分別用來:
+
+1. 紀錄出缺席
+2. 獲取學生列表(以進行報到)
+3. 查詢紀錄
+4. 新增學生
+
+到時候我們建立的網站會向這四個API發送請求來更新試算表或獲取資料
 ### 出缺席紀錄
+
+請建立一個新的專案並貼上以下內容。記得貼上excel那段ID
+
 ```js
 function doGet(e) {
   var params = e.parameter;
@@ -91,6 +136,7 @@ function doGet(e) {
 ```
 
 ### 學生列表
+
 ```js
 function doGet(e){
   var id = 'XXXXXXXXXXXXXXXXXXX'; //抓取表單
@@ -116,6 +162,7 @@ function doGet(e){
 ```
 
 ### 查詢紀錄
+
 ```js
 function doPost(e) {
     var params = e.parameter;
@@ -140,6 +187,7 @@ function doPost(e) {
 ```
 
 ### 新增學生
+
 ```js
 function doGet(e) {
   var params = e.parameter;

@@ -19,30 +19,37 @@ shareImage = "https://em-tec.github.io/images/thumbnails/vb-cable.png"
 <!--more-->
 
 ## 步驟
+
 ### 製作背景
+
 我們需要一張只有一個顏色的圖片來作為Zoom的背景。以和人物最不相關為原則(通常使用綠色)。你可以使用小畫家來繪製。
 
 用油漆塗滿你選的顏色
 
-
 ### 設定Zoom
+
 請先到到官網下載並安裝。安裝方式和其他軟體差不多
 {{% notice info "Zoom" %}}
+
 * 開發者:Zoom Video Communications
 * 軟體類型:商業軟體
 * 下載位置:[官網](https://zoom.us/download)
 {{% /notice %}}
 
 #### 登入Zoom
+
 根據你的習慣選擇登入方式，我是使用Google登入，其他也都可以。
 
 #### 開啟一個新的視訊會議
+
 在應用程式點選新會議
 
 #### 不用讓程式獲取音訊
+
 點X就好了
 
 #### 設定
+
 點擊左上方的會議資訊，並進入設定。我們需要改兩個項目：
 
 取消勾選視訊下的一律在視訊上顯示參與者名稱(需要下滾)
@@ -50,11 +57,14 @@ shareImage = "https://em-tec.github.io/images/thumbnails/vb-cable.png"
 更改背景成剛才製作的圖片。
 
 #### 縮小畫面
+
 回到視訊，點選最小化。視窗會小到你只能看到自己。
 {{% notice tip "小提醒" %}}
 如果縮小畫面還是有名字的話，可以把視窗放大再縮小一次。
 {{% /notice %}}
+
 ### OBS設定
+
 進入OBS並攝取這個Zoom小視窗。我個人是使用Streamlabs OBS，因為介面好看。這裡提供我的作法。
 
 #### 打開OBS，新增Scene
@@ -62,12 +72,15 @@ shareImage = "https://em-tec.github.io/images/thumbnails/vb-cable.png"
 #### 增加Window Capture
 
 #### 命名
+
 可依你自己喜好。記得選擇新來源再按Add Source
 
 #### 設定攝取來源
+
 圖片內為推薦設定，不同可能造成攝取失敗。
 
 #### 放到最大
+
 可視情況調整
 {{% notice tip "小提醒" %}}
 要放到最大記得選「Fit to screen」而不是「Stretch to screen」，否則你的臉會變形。

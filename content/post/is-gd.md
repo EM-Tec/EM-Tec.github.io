@@ -16,6 +16,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/is-gd.jpg"
 其實主要的原因是因為它很短，比bit.ly短了一個字母，而且頁面超簡單，載入速度快。而它也有可以API可以使用(Apple官方的縮短網址ios捷徑就是使用is.gd)
 
 {{% notice info "is.gd" %}}
+
 * 開發者:is.gd
 * 網站類型:免費網站
 * 網址:[is.gd](https://is.gd/)

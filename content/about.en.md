@@ -9,11 +9,13 @@ author = "Edit Mr."
 Yo, this is EM, also known as Elvis Mao or Edit Mr., a Jr. high student who loves technology. <br />
 I like to use technology to create stuff, including programming, music, electronic drawing, graphic design, etc.
 
-## 💻 &nbsp;目前工作 
+## 💻 &nbsp;目前工作
+
 - 🤔 Exploring new technologies and developing software solutions to our worlds tech problems.
 - 🎓 &nbsp; Studying at Viator junior high school and Software Engineering at google.com (You should try. It's free)
 
-## 🛠 &nbsp; 
+## 🛠 &nbsp;
+
 - 🌐 &nbsp; My Languages
   ![HTML:inline](https://img.shields.io/badge/-HTML-333333?style=flat&logo=HTML5)
   ![CSS:inline](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
@@ -38,6 +40,7 @@ I like to use technology to create stuff, including programming, music, electron
   ![Sublime Text:inline](https://img.shields.io/badge/-Sublime%20Text-333333?style=flat&logo=sublime-text)
 
 ## My Github Stat
+
 <a href="https://github.com/Edit-Mr">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Edit-Mr&show_icons=true&theme=radical" />
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Edit-Mr&theme=radical&layout=compact&exclude_lang=java+r" />
