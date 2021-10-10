@@ -10,9 +10,9 @@ tags = [
 categories = [
     "ios捷徑",
 ]
-thumbnail = "images/thumbnails/shortcut-real_name_system.png"
-featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-real_name_system.png"
-shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-real_name_system.png"
+thumbnail = "images/thumbnails/shortcut-real_name_system.jpg"
+featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-real_name_system.jpg"
+shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-real_name_system.jpg"
 +++
 我保證這是史上最快的簡訊實名制方法
 
