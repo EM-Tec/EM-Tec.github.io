@@ -14,9 +14,9 @@ categories = [
     "ios捷徑",
     "自製",
 ]
-thumbnail = "images/thumbnails/shortcut-viatorBookmark.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.jpg"
+thumbnail = "images/thumbnails/shortcut-viatorBookmark.md.jpg"
+featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.md.jpg"
+shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.md.jpg"
 +++
 只須點一下即可快速連結到衛道的網頁或檔案
 
