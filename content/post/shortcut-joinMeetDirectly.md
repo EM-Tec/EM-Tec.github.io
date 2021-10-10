@@ -14,9 +14,9 @@ categories = [
     "自製",
 ]
 series = ["線上教學"]
-thumbnail = "images/thumbnails/shortcut-joinMeetDirectly.png"
-featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.png"
-shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.png"
+thumbnail = "images/thumbnails/shortcut-joinMeetDirectly.jpg"
+featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg"
+shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg"
 +++
 
 透過這個捷徑快速進入當節課堂的Meet，再也不用怕忘記課表
