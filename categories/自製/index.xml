@@ -203,7 +203,7 @@
 &lt;span class="ln">23&lt;/span> &lt;span class="c1">// 被亂撞 會回吐這段文字給前端
 &lt;/span>&lt;span class="ln">24&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;別亂撞我～ :)&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">25&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>【Windows】賭你不知道的必記快捷鍵</title><link>https://EM-Tec.github.io/post/windows-hotkey/</link><pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/windows-hotkey/</guid><description>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>未完待續...&lt;/p></description></item><item><title>【Windows】賭你不知道的必記快捷鍵</title><link>https://EM-Tec.github.io/post/windows-hotkey/</link><pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/windows-hotkey/</guid><description>
 &lt;p>想要加快工作效率，減少滑鼠的使用是個最直接的方法。這裡我提供了一些我常用但是很少人知道的快捷鍵供大家參考。&lt;/p>
 &lt;h2 id="win數字---快速開啟應用">Win+數字 - 快速開啟應用&lt;/h2>
 &lt;p>Windows的工作列可以訂選軟體。使你快速找到並執行應用程式。但是你知道嗎，你可以使用快捷鍵Windows+數字鍵來快速開啟程式。像我是將調整各個音量比例的音量混音程式放在第一個。因此我只需要按下Windows+1就可以開啟，十分方便。&lt;/p>

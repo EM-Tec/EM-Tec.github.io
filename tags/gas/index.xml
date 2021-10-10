@@ -203,4 +203,4 @@
 &lt;span class="ln">23&lt;/span> &lt;span class="c1">// 被亂撞 會回吐這段文字給前端
 &lt;/span>&lt;span class="ln">24&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;別亂撞我～ :)&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">25&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>未完待續...&lt;/p></description></item></channel></rss>

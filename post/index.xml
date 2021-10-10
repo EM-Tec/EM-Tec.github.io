@@ -203,7 +203,7 @@
 &lt;span class="ln">23&lt;/span> &lt;span class="c1">// 被亂撞 會回吐這段文字給前端
 &lt;/span>&lt;span class="ln">24&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;別亂撞我～ :)&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">25&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>【is.gd】超好用網址縮短！連Apple都在用</title><link>https://EM-Tec.github.io/post/is-gd/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/is-gd/</guid><description>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>未完待續...&lt;/p></description></item><item><title>【is.gd】超好用網址縮短！連Apple都在用</title><link>https://EM-Tec.github.io/post/is-gd/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/is-gd/</guid><description>
 &lt;p>太長的網址常除了不好看占版面之外，也難以令人記住。因此所短網址是一個不錯的做法。而其中我最常用的就是is.gd，因為它is good~&lt;/p>
 &lt;p>其實主要的原因是因為它很短，比bit.ly短了一個字母，而且頁面超簡單，載入速度快。而它也有可以API可以使用(Apple官方的縮短網址ios捷徑就是使用is.gd)&lt;/p>
 &lt;p>
