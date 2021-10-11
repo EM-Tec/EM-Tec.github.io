@@ -184,18 +184,18 @@
 &lt;h4 id="學生列表">學生列表&lt;/h4>
 &lt;p>學生列表不需要輸入，直接讀取內容就好了。這裡使用的輸出格式是JSON。JSON就是ios捷徑APP裡的辭典，簡單來說就是一個對照表。比如說你想要紀錄一個人的基本資料如下&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 2&lt;/span> &lt;span class="err">姓:&lt;/span> &lt;span class="nt">&amp;#34;毛&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="ln"> 3&lt;/span> &lt;span class="err">名:&lt;/span> &lt;span class="nt">&amp;#34;宥鈞&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="ln"> 4&lt;/span> &lt;span class="err">性別:&lt;/span> &lt;span class="nt">&amp;#34;男&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="ln"> 5&lt;/span> &lt;span class="err">年齡:&lt;/span> &lt;span class="err">15,&lt;/span>
-&lt;span class="ln"> 6&lt;/span> &lt;span class="err">住址:&lt;/span>
-&lt;span class="ln"> 7&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="nt">&amp;#34;姓&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;毛&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="nt">&amp;#34;名&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;宥鈞&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="nt">&amp;#34;性別&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;男&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="nt">&amp;#34;年齡&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="nt">&amp;#34;住址&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="ln"> 8&lt;/span> &lt;span class="nt">&amp;#34;路名&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;大馬路&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="ln"> 9&lt;/span> &lt;span class="nt">&amp;#34;city&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;台中市&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="ln">10&lt;/span> &lt;span class="nt">&amp;#34;國家&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;台灣&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="ln">11&lt;/span> &lt;span class="nt">&amp;#34;郵遞區號&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;40763&amp;#34;&lt;/span>
 &lt;span class="ln">12&lt;/span> &lt;span class="p">}&lt;/span>
-&lt;span class="ln">13&lt;/span>&lt;span class="err">}&lt;/span>
+&lt;span class="ln">13&lt;/span>&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>我們可以輕鬆的讓JavaScript讀懂它。請以相同方式建立以下API&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">){&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;XXXXXXXXXXXXXXXXXXX&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//抓取表單

@@ -52,18 +52,18 @@
 <span class=ln>10</span>    <span class=nx>Logger</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;Result: %s&#39;</span><span class=p>,</span> <span class=nx>Result</span><span class=p>);</span>
 <span class=ln>11</span><span class=p>}</span>
 </code></pre></div><p>執行後你應該會看到底下顯示執行完畢，且表單多出了一列如下</p><table><thead><tr><th>編號</th><th>姓名</th><th>時間</th><th>剩餘課堂數</th></tr></thead><tbody><tr><td>1</td><td>測試先生</td><td>2021/10/10 22:46:00</td><td>10</td></tr></tbody></table><h4 id=學生列表>學生列表</h4><p>學生列表不需要輸入，直接讀取內容就好了。這裡使用的輸出格式是JSON。JSON就是ios捷徑APP裡的辭典，簡單來說就是一個對照表。比如說你想要紀錄一個人的基本資料如下</p><div class=highlight><pre class=chroma><code class=language-json data-lang=json><span class=ln> 1</span><span class=p>{</span>
-<span class=ln> 2</span>     <span class=err>姓:</span> <span class=nt>&#34;毛&#34;</span><span class=p>,</span>
-<span class=ln> 3</span>     <span class=err>名:</span> <span class=nt>&#34;宥鈞&#34;</span><span class=p>,</span>
-<span class=ln> 4</span>     <span class=err>性別:</span> <span class=nt>&#34;男&#34;</span><span class=p>,</span>
-<span class=ln> 5</span>     <span class=err>年齡:</span> <span class=err>15,</span>
-<span class=ln> 6</span>     <span class=err>住址:</span> 
-<span class=ln> 7</span>     <span class=err>{</span>
+<span class=ln> 2</span>     <span class=nt>&#34;姓&#34;</span><span class=p>:</span> <span class=s2>&#34;毛&#34;</span><span class=p>,</span>
+<span class=ln> 3</span>     <span class=nt>&#34;名&#34;</span><span class=p>:</span> <span class=s2>&#34;宥鈞&#34;</span><span class=p>,</span>
+<span class=ln> 4</span>     <span class=nt>&#34;性別&#34;</span><span class=p>:</span> <span class=s2>&#34;男&#34;</span><span class=p>,</span>
+<span class=ln> 5</span>     <span class=nt>&#34;年齡&#34;</span><span class=p>:</span> <span class=mi>15</span><span class=p>,</span>
+<span class=ln> 6</span>     <span class=nt>&#34;住址&#34;</span><span class=p>:</span> 
+<span class=ln> 7</span>     <span class=p>{</span>
 <span class=ln> 8</span>         <span class=nt>&#34;路名&#34;</span><span class=p>:</span> <span class=s2>&#34;大馬路&#34;</span><span class=p>,</span>
 <span class=ln> 9</span>         <span class=nt>&#34;city&#34;</span><span class=p>:</span> <span class=s2>&#34;台中市&#34;</span><span class=p>,</span>
 <span class=ln>10</span>         <span class=nt>&#34;國家&#34;</span><span class=p>:</span> <span class=s2>&#34;台灣&#34;</span><span class=p>,</span>
 <span class=ln>11</span>         <span class=nt>&#34;郵遞區號&#34;</span><span class=p>:</span> <span class=s2>&#34;40763&#34;</span>
 <span class=ln>12</span>     <span class=p>}</span>
-<span class=ln>13</span><span class=err>}</span>
+<span class=ln>13</span><span class=p>}</span>
 </code></pre></div><p>我們可以輕鬆的讓JavaScript讀懂它。請以相同方式建立以下API</p><div class=highlight><pre class=chroma><code class=language-js data-lang=js><span class=ln> 1</span><span class=kd>function</span> <span class=nx>doGet</span><span class=p>(</span><span class=nx>e</span><span class=p>){</span>
 <span class=ln> 2</span>  <span class=kd>var</span> <span class=nx>id</span> <span class=o>=</span> <span class=s1>&#39;XXXXXXXXXXXXXXXXXXX&#39;</span><span class=p>;</span> <span class=c1>//抓取表單
 </span><span class=ln> 3</span><span class=c1></span>  <span class=kd>var</span> <span class=nx>spreadsheet</span> <span class=o>=</span> <span class=nx>SpreadsheetApp</span><span class=p>.</span><span class=nx>openById</span><span class=p>(</span><span class=nx>id</span><span class=p>);</span> <span class=c1>// Sheet id
