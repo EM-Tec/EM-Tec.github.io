@@ -101,10 +101,18 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 4. 新增學生
 
 到時候我們建立的網站會向這四個API發送請求來更新試算表或獲取資料
+
+{{% notice tip "提示" %}}
+[google 官方文件 spreadsheet method](https://developers.google.com/apps-script/reference/spreadsheet/sheet)，裡面有非常詳盡的介紹，包括可以讀取欄位、讀取資料、排序資料、插入資料等等的功能，其實某方面來說算是功能齊全的類資料庫了。有興趣可以點開來看裡面文件。
+
+文件裡面 method 一大堆，還是直接實作比較快。
+{{% /notice %}}
 ### 出缺席紀錄
 
 請建立一個新的專案並貼上以下內容。記得貼上excel那段ID
-
+{{% notice notice "小叮嚀" %}}
+為避免程式碼站太多空間，可能會部分隱藏。請記得展開或直接複製。
+{{% /notice %}}
 ```js
 function doGet(e) {
   var params = e.parameter;
@@ -134,8 +142,47 @@ function doGet(e) {
   return ContentService.createTextOutput('別亂撞我～ :)');
 }
 ```
+貼上後請按執行。第一次執行時系統會要求你登入Google，請登入現在使用的帳號。
+完成後可能會看到紅色警告。因為我們直接執行了程式，沒有給資料（學生名稱）。因此請建立一個程式碼檔案叫做`debug`，並貼上以下內容：
+
+```js
+//呼叫
+function debug() {
+    var Result = doGet({
+        parameter: {
+            name: '測試先生',
+            time: '2021/10/10 22:46:00',
+            remain: 10
+        }
+    });
+    Logger.log('Result: %s', Result);
+}
+```
+執行後你應該會看到底下顯示執行完畢，且表單多出了一列如下
+
+編號 | 姓名 | 時間 |剩餘課堂數
+----|----|----|----|
+1 | 測試先生 | 2021/10/10 22:46:00 | 10
 
 ### 學生列表
+學生列表不需要輸入參數即會輸出。這裡使用的輸出格式是JSON。JSON就是ios捷徑APP裡的辭典，簡單來說就是一個對照表。比如說你想要紀錄一個人的基本資料如下
+
+```json
+{
+     "姓": "毛",
+     "名": "宥鈞",
+     "性別": "男",
+     "age": 15,
+     "住址": 
+     {
+         "路名": "***路",
+         "city": "台中市",
+         "國家": "台灣",
+         "郵遞區號": "40763"
+     }
+}
+```
+而我們可以輕鬆的讓JavaScript讀懂它。請以相同方式建立以下API
 
 ```js
 function doGet(e){
@@ -163,6 +210,7 @@ function doGet(e){
 
 ### 查詢紀錄
 
+這裡使用doPost。如果你喜歡用Get也可以
 ```js
 function doPost(e) {
     var params = e.parameter;
@@ -215,4 +263,16 @@ function doGet(e) {
   return ContentService.createTextOutput('別亂撞我～ :)');
 }
 ```
-未完待續...
+
+### 建立網站
+最後，讓我們來做一個的簡單漂亮的網站吧。
+請依照以下目錄建立檔案
+- check-in
+    - index.html
+- search
+    - index.html
+- sign-up
+    -index.html
+- check-list.png
+- index.html
+- style.css
