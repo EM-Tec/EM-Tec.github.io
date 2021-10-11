@@ -105,8 +105,18 @@
 &lt;li>新增學生&lt;/li>
 &lt;/ol>
 &lt;p>到時候我們建立的網站會向這四個API發送請求來更新試算表或獲取資料&lt;/p>
+&lt;div class="notices tip">
+&lt;div class="label">提示&lt;/div>
+&lt;p>&lt;a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet">google 官方文件 spreadsheet method&lt;/a>，裡面有非常詳盡的介紹，包括可以讀取欄位、讀取資料、排序資料、插入資料等等的功能，其實某方面來說算是功能齊全的類資料庫了。有興趣可以點開來看裡面文件。&lt;/p>
+&lt;p>文件裡面 method 一大堆，還是直接實作比較快。&lt;/p>
+&lt;/div>
 &lt;h3 id="出缺席紀錄">出缺席紀錄&lt;/h3>
-&lt;p>請建立一個新的專案並貼上以下內容。記得貼上excel那段ID&lt;/p>
+&lt;p>請建立一個新的專案並貼上以下內容。記得貼上excel那段ID
+&lt;div class="notices notice">
+&lt;div class="label">小叮嚀&lt;/div>
+&lt;p>為避免程式碼站太多空間，可能會部分隱藏。請記得展開或直接複製。&lt;/p>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parameter&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="c1">// 可以針對你帶入的資料變化 params.xxxxxx xxxxx = 你帶進來的key值
@@ -134,7 +144,54 @@
 &lt;span class="ln">25&lt;/span> &lt;span class="c1">// 被亂撞 會回吐這段文字給前端
 &lt;/span>&lt;span class="ln">26&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;別亂撞我～ :)&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">27&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="學生列表">學生列表&lt;/h3>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>貼上後請按執行。第一次執行時系統會要求你登入Google，請登入現在使用的帳號。
+完成後可能會看到紅色警告。因為我們直接執行了程式，沒有給資料（學生名稱）。因此請建立一個程式碼檔案叫做&lt;code>debug&lt;/code>，並貼上以下內容：&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="c1">//呼叫
+&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">debug&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">Result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="nx">parameter&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;測試先生&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;2021/10/10 22:46:00&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="nx">remain&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">10&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="nx">Logger&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Result: %s&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">Result&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">11&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>執行後你應該會看到底下顯示執行完畢，且表單多出了一列如下&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>編號&lt;/th>
+&lt;th>姓名&lt;/th>
+&lt;th>時間&lt;/th>
+&lt;th>剩餘課堂數&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>測試先生&lt;/td>
+&lt;td>2021/10/10 22:46:00&lt;/td>
+&lt;td>10&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="學生列表">學生列表&lt;/h3>
+&lt;p>學生列表不需要輸入參數即會輸出。這裡使用的輸出格式是JSON。JSON就是ios捷徑APP裡的辭典，簡單來說就是一個對照表。比如說你想要紀錄一個人的基本資料如下&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="nt">&amp;#34;姓&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;毛&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="nt">&amp;#34;名&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;宥鈞&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="nt">&amp;#34;性別&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;男&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="nt">&amp;#34;age&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="nt">&amp;#34;住址&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="nt">&amp;#34;路名&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;***路&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="nt">&amp;#34;city&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;台中市&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="nt">&amp;#34;國家&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;台灣&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="nt">&amp;#34;郵遞區號&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;40763&amp;#34;&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">13&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>而我們可以輕鬆的讓JavaScript讀懂它。請以相同方式建立以下API&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">){&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;XXXXXXXXXXXXXXXXXXX&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//抓取表單
 &lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">spreadsheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">SpreadsheetApp&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">openById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Sheet id
@@ -157,6 +214,7 @@
 &lt;span class="ln">20&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">dataExportFormat&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setMimeType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">MimeType&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">21&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="查詢紀錄">查詢紀錄&lt;/h3>
+&lt;p>這裡使用doPost。如果你喜歡用Get也可以&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doPost&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parameter&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="c1">// 可以針對你帶入的資料變化 params.xxxxxx xxxxx = 你帶進來的key值
@@ -203,7 +261,26 @@
 &lt;span class="ln">23&lt;/span> &lt;span class="c1">// 被亂撞 會回吐這段文字給前端
 &lt;/span>&lt;span class="ln">24&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;別亂撞我～ :)&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">25&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>未完待續...&lt;/p></description></item><item><title>【捷徑】快速進入當節課堂的Meet（備份）</title><link>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</guid><description>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="建立網站">建立網站&lt;/h3>
+&lt;p>最後，讓我們來做一個的簡單漂亮的網站吧。
+請依照以下目錄建立檔案&lt;/p>
+&lt;ul>
+&lt;li>check-in
+&lt;ul>
+&lt;li>index.html&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>search
+&lt;ul>
+&lt;li>index.html&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>sign-up
+-index.html&lt;/li>
+&lt;li>check-list.png&lt;/li>
+&lt;li>index.html&lt;/li>
+&lt;li>style.css&lt;/li>
+&lt;/ul></description></item><item><title>【捷徑】快速進入當節課堂的Meet（備份）</title><link>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</guid><description>
 &lt;p>透過這個捷徑快速進入當節課堂的Meet，再也不用怕忘記課表&lt;/p>
 &lt;p>記得在國二在家上課的時候常常忘記記課表及找不到Meet代碼，或著是來不及再去Classroom找，因此我做了這個捷徑。&lt;br />
 &lt;div class="notices info">
