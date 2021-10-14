@@ -5,7 +5,7 @@ date = "2021-08-16"
 description = "超方便的網址縮短服務"
 
 categories = [
-    "網站分享",
+    "網站",
 ]
 thumbnail = "images/thumbnails/is-gd.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/is-gd.jpg"
