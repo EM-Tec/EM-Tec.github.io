@@ -8,7 +8,7 @@ tags = [
     "OBS",
 ]
 categories = [
-    "複製貼上教學",
+    "直接照做教學",
 ]
 thumbnail = "images/thumbnails/vb-cable.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/vb-cable.jpg"
