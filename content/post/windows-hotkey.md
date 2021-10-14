@@ -6,10 +6,7 @@ description = "瞬間提高你的工作效率"
 tags = [
     "Windows"
 ]
-categories = [
-    "ios捷徑",
-    "自製",
-]
+
 thumbnail = "images/thumbnails/windows-hotkey.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/windows-hotkey.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/windows-hotkey.jpg"
