@@ -1,28 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網站分享 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E7%B6%B2%E7%AB%99%E5%88%86%E4%BA%AB/</link><description>Recent content in 網站分享 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Wed, 08 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E7%B6%B2%E7%AB%99%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>【MultiWall】讓不同螢幕放不同桌布</title><link>https://EM-Tec.github.io/post/multiwall/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/multiwall/</guid><description>
-&lt;p>使用多個螢幕可以大大的增加工作效率。比如說在開直播時可以在遊戲全螢幕時同時做OBS畫面切換或是查看聊天室。
-但是你是否有發現所有螢幕的桌布都只能設定一樣的。而如果你像我一樣兩個螢幕比例不同的話，其中一張比例會直接跑掉，十分的影響美觀。&lt;/p>
-&lt;p>但是有了MultiWall，你不但可以幫不同的螢幕設定不同的桌布，還可以讓一張背景橫跨多個桌布來達到延伸的效果。&lt;/p>
-&lt;div class="notices info">
-&lt;div class="label">MultiWall&lt;/div>
-&lt;ul>
-&lt;li>開發者:is.gd&lt;/li>
-&lt;li>軟體類型:免費軟體&lt;/li>
-&lt;li>網址:&lt;a href="http://windowbox.me/multiwall/downloads.php">官網&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;h2 id="使用教學">使用教學&lt;/h2>
-&lt;h3 id="下載">下載&lt;/h3>
-&lt;p>從官網下載MultiWall並安裝&lt;/p>
-&lt;h3 id="設定桌布">設定桌布&lt;/h3>
-&lt;p>建議開啟軟體之後先按下Detect來偵測桌面
-&lt;img src="https://EM-Tec.github.io/images/MultiWall-detect.png" alt="偵測桌面">
-接著選擇模式:延伸圖片或分別用不同的圖片
-&lt;img src="https://EM-Tec.github.io/images/MultiWall-mode.png" alt="選擇模式">
-接著選取你電腦上的桌布或示範例圖庫
-&lt;img src="https://EM-Tec.github.io/images/MultiWall-browse.png" alt="選取圖片">
-你可以給圖片加上各種濾鏡或特效，但是我建議在導入軟體之前就先編輯好&lt;/p>
-&lt;p>最後按下apply即可
-&lt;img src="https://EM-Tec.github.io/images/MultiWall-apply.png" alt="Apply">&lt;/p></description></item><item><title>【is.gd】超好用網址縮短！連Apple都在用</title><link>https://EM-Tec.github.io/post/is-gd/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/is-gd/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網站分享 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E7%B6%B2%E7%AB%99%E5%88%86%E4%BA%AB/</link><description>Recent content in 網站分享 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E7%B6%B2%E7%AB%99%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>【is.gd】超好用網址縮短！連Apple都在用</title><link>https://EM-Tec.github.io/post/is-gd/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/is-gd/</guid><description>
 &lt;p>太長的網址常除了不好看占版面之外，也難以令人記住。因此所短網址是一個不錯的做法。而其中我最常用的就是is.gd，因為它is good~&lt;/p>
 &lt;p>其實主要的原因是因為它很短，比bit.ly短了一個字母，而且頁面超簡單，載入速度快。而它也有可以API可以使用(Apple官方的縮短網址ios捷徑就是使用is.gd)&lt;/p>
 &lt;p>
