@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "【is.gd】超好用網址縮短！連Apple都在用"
+title = "【MultiWall】讓不同螢幕放不同桌布"
 date = "2021-09-08"
 description = "超方便的網址縮短服務"
 
