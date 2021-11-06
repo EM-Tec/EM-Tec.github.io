@@ -18,6 +18,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/MultiWall.jpg"
 <!--more-->
 
 {{% notice info "MultiWall" %}}
+
 * 開發者:is.gd
 * 軟體類型:免費軟體
 * 網址:[官網](http://windowbox.me/multiwall/downloads.php)

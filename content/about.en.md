@@ -16,7 +16,6 @@ I took a long time to write an original article, plagiarizing the white prostitu
 
 ## 關於我
 
-
 Yo, this is EM, also known as Elvis Mao or Edit Mr., a Jr. high student who loves technology. <br />
 I like to use technology to create stuff, including programming, music, electronic drawing, graphic design, etc.
 

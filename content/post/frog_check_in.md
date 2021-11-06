@@ -46,7 +46,10 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 ### 點名
 
 ![點名畫面](https://EM-Tec.github.io/images/frog_check_in-check.png)
-網站會從表單取得學生名單並顯示。只需要點擊名稱即可完成報到。<br />
+網站會從表單取得學生名單並顯示。只需要點擊名稱即可完成報到。
+
+完成報到後會使用Line Notify通知完成報到的學生和報到時間到指定的群組。
+
 ![報到成功會提示你還剩下幾堂課](https://EM-Tec.github.io/images/frog_check_in-checked.png)
 {{% notice notice "提醒" %}}
 
@@ -70,7 +73,8 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 我們分成三個步驟:
 
 1. 建立試算表(Google Sheet)
-2. 創建API(Google App Script)來處理資料並更新試算表
+2. 生成Line Notify仗權(若不需要Line通知可省略)
+2. 創建API(Google App Script)來處理資料、發送訊息、以及更新試算表
 3. 建立一個漂亮的網站方便操作
 
 ### 建立試算表(Google Sheet)
@@ -91,6 +95,12 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 
 接著請你複製這個試算表的ID，也就是網址`https://docs.google.com/spreadsheets/d/`和`/`之間那一串(如`1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA`)。等一下會用到。
 
+### 生成Line Notify仗權
+
+Line Notify是個比較冷門但是非常好用的工具。我們可以透過他來從第三方(如你的網站、或是ios捷徑)無限量的廣播訊息到指定的群組，或是單獨發給你。我們會在報到成功後請Line用Line Notify來在群組裡廣播提醒。
+
+請依照圖片步驟建立一個仗權，要給Line看這一串他才知道要傳送信息到哪裡。使用Line Lontify而不是Line機器人的原因是免費版的官方帳號一個月只能傳送500則訊息，但老師的學生數量大，可能會吃不消；且Line Notify設定較簡單。
+
 ### 建立API(Google App Script)
 
 想要讓網站編輯試算表需要透過Google App Script(GAS)來完成。我們要建立四個API，分別用來:
@@ -107,12 +117,14 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 
 文件裡面 method 一大堆，還是直接實作比較快。
 {{% /notice %}}
+
 #### 出缺席紀錄
 
 請建立一個新的專案並貼上以下內容。記得貼上excel那段ID
 {{% notice notice "小叮嚀" %}}
 為避免程式碼站太多空間，可能會部分隱藏。請記得展開或直接複製。
 {{% /notice %}}
+
 ```js
 function doGet(e) {
   var params = e.parameter;
@@ -142,14 +154,11 @@ function doGet(e) {
   return ContentService.createTextOutput('別亂撞我～ :)');
 }
 ```
-在這個程式當中，我們說當我們拿著資料到這個應用程式時，將我們給的姓名、時間、剩餘課堂數、以及編號寫入到試算表第一頁最後一行的下一行。
+
+在這個程式當中，我們說當我們拿著資料到這個應用程式時，將我們給的姓名、時間、剩餘課堂數、以及編號寫入到試算表第一頁最後一行的下一行。但是這樣還沒結束，會後我們還要請Line Notify幫我們廣播。請在`return ContentService.createTextOutput(true);`之前插入以下程式碼。記得填入剛才生成的仗權。
 
 編輯完成後請按執行。第一次執行時系統會要求你登入Google，請登入現在使用的帳號並提供編輯試算表的權限。Google會告訴你不安全因為這是是你自己製作的應用程式，沒有經過Google審查。直接點選進階，並繼續前往即可。成功部署後請保存應用程式的網址，之後網站就會傳送資料到這個網站來寫入和讀取資料。<br />
-完成後可能會看到紅色警告。因為我們直接執行了程式，沒有給資料（學生名稱）。因此請建立一個程式碼檔案叫做`debug`，並貼上以下內容：
-
-{{% notice notice "小叮嚀" %}}
-若發布後還有做修改，既得要再次發布且要發布為新版本。
-{{% /notice %}}
+完成後可能會看到紅色警告說無法執行，因為我們直接執行了程式，沒有給資料（學生名稱）。因此請建立一個程式碼檔案叫做`debug`，並貼上以下內容：
 
 ```js
 //呼叫
@@ -164,13 +173,19 @@ function debug() {
     Logger.log('Result: %s', Result);
 }
 ```
+
 執行後你應該會看到底下顯示執行完畢，且表單多出了一列如下
 
 編號 | 姓名 | 時間 |剩餘課堂數
 ----|----|----|----|
 1 | 測試先生 | 2021/10/10 22:46:00 | 10
 
+{{% notice notice "小叮嚀" %}}
+若發布後還有做修改，既得要再次發布且要發布為新版本。
+{{% /notice %}}
+
 #### 學生列表
+
 學生列表不需要輸入，直接讀取內容就好了。這裡使用的輸出格式是JSON。JSON就是ios捷徑APP裡的辭典，簡單來說就是一個對照表。比如說你想要紀錄一個人的基本資料如下
 
 ```json
@@ -188,6 +203,7 @@ function debug() {
      }
 }
 ```
+
 我們可以輕鬆的讓JavaScript讀懂它。請以相同方式建立以下API
 
 ```js
@@ -213,11 +229,13 @@ function doGet(e){
   return ContentService.createTextOutput(dataExportFormat).setMimeType(ContentService.MimeType.JSON);
   }
 ```
+
 在這段程式當中，我們一列一列的把試算表的資料塞進JSON裡，最後再回傳給我們。
 
 #### 查詢紀錄
 
 這裡使用Post來傳送而不是Get。其實都可以，只是想說換一個方式。差別在於使用Get時資料是存在網址當中，而Post像是還有一個附件。因為資料量很小，所以都可以使用。
+
 ```js
 function doPost(e) {
     var params = e.parameter;
@@ -240,7 +258,9 @@ function doPost(e) {
     );
 }
 ```
+
 在這段程式當中雖然一樣是回傳資料，但是在塞進JSON前先判斷一下姓名是否符合。直得注意的是我們是從第2欄開始抓，因為使用者不需要知道這是所有資料當中的第幾筆資料。
+
 #### 新增學生
 
 ```js
@@ -270,16 +290,19 @@ function doGet(e) {
   return ContentService.createTextOutput('別亂撞我～ :)');
 }
 ```
+
 我們在其中一個儲存格中插入了一個叫做`COUNTIF`的函式。他會統計在紀錄當中有幾筆資料的姓名和他左邊的姓名一樣。而剩餘課堂數就是全部課堂數減統計出來已經上的課堂數。
 
 ### 建立網站
+
 最後，讓我們來做一個的簡單漂亮的網站吧。
 請選一個地方建立以下幾個純文字檔案
-- check-in.html
-- search.html
-- sign-up.html
-- index.html
-- style.css
+
+* check-in.html
+* search.html
+* sign-up.html
+* index.html
+* style.css
 
 HTML是網頁的檔案，有點像Word檔，而CSS是用來裝飾HTML的。你可以用它來決定字要多大、什麼顏色、間距要多少等。
 
@@ -290,27 +313,27 @@ HTML是網頁的檔案，有點像Word檔，而CSS是用來裝飾HTML的。你�
 ```html
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8" />
-	<title>點名系統</title>
-	<!-- 網站資訊 -->
-	<meta name="description" content="使用Google sheet的api紀錄出缺席" />
-	<meta name="author" content="毛哥EM" />
-	<!-- 讓網址正常顯示以及裝飾 -->
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="theme-color" content="00BFFF" />
-	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+ <meta charset="utf-8" />
+ <title>點名系統</title>
+ <!-- 網站資訊 -->
+ <meta name="description" content="使用Google sheet的api紀錄出缺席" />
+ <meta name="author" content="毛哥EM" />
+ <!-- 讓網址正常顯示以及裝飾 -->
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="theme-color" content="00BFFF" />
+ <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
 <body>
-	<main>
-		<h1>點名系統</h1>
-		<p>主選單</p>
-		<button onclick="window.location='check-in.html';">報到</button>
-		<button onclick="window.location='search.html';">查詢紀錄</button>
-		<button onclick="window.location='sign-up.html';">新增學生</button>
-		<p>
-			<a href="https://Edit-Mr.github.io">毛哥EM</a>製作
-		</p>
-	</main>
+ <main>
+  <h1>點名系統</h1>
+  <p>主選單</p>
+  <button onclick="window.location='check-in.html';">報到</button>
+  <button onclick="window.location='search.html';">查詢紀錄</button>
+  <button onclick="window.location='sign-up.html';">新增學生</button>
+  <p>
+   <a href="https://Edit-Mr.github.io">毛哥EM</a>製作
+  </p>
+ </main>
 </body>
 ```
 
@@ -319,82 +342,82 @@ HTML是網頁的檔案，有點像Word檔，而CSS是用來裝飾HTML的。你�
 ```html
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8" />
-	<title>新增學生 - 點名系統</title>
-	<!-- 網站資訊 -->
-	<meta name="description" content="使用Google sheet的api紀錄出缺席" />
-	<meta name="author" content="毛哥EM" />
-	<!-- 讓網址正常顯示以及裝飾 -->
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="theme-color" content="00BFFF" />
-	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-	<!-- 載入jQuery -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <meta charset="utf-8" />
+ <title>新增學生 - 點名系統</title>
+ <!-- 網站資訊 -->
+ <meta name="description" content="使用Google sheet的api紀錄出缺席" />
+ <meta name="author" content="毛哥EM" />
+ <!-- 讓網址正常顯示以及裝飾 -->
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="theme-color" content="00BFFF" />
+ <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+ <!-- 載入jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
-	<main>
-		<h1><a href="index.html">點名系統</a></h1>
-		<p>新增學生</p>
-		<input type="text" class="form-control" id="name" />
-		<button type="button" id="sendOrder">新增</button>
-		<p>
-			<a href="https://Edit-Mr.github.io">毛哥EM</a>製作<br />
-			送出後請稍等數秒 勿重複新增
-		</p>
-	</main>
-	<script>
-		$(function () {
-		    // 監聽 按鈕點擊
-		
-		    $("#sendOrder").click(function (e) {
-		        // 姓名
-		
-		        var name = $("#name").val();
-		
-		        $("input").focus(function () {
-		            $(this).css("border", "");
-		        });
-		
-		        // 擋住不填資料
-		
-		        if (name == "") {
-		            $("#name").css("border", "1px solid #ff0000");
-		        } else {
-		            var name = name.replace(" ", "");
-		
-		            var data = {
-		                name: name,
-		            };
-		
-		            $.ajax({
-		                // 這邊用get type
-		
-		                type: "get",
-		
-		                // api url - google appscript 產出的 url
-		
-		                url: "https://script.google.com/............",
-		
-		                // 剛剛整理好的資料帶入
-		
-		                data: data,
-		
-		                // 資料格式是JSON
-		
-		                dataType: "JSON",
-		
-		                // 成功送出 會回頭觸發下面這塊
-		
-		                success: function (response) {
-		                    console.log(response);
-		
-		                    alert("新增成功!!");
-		                },
-		            });
-		        }
-		    });
-		});
-	</script>
+ <main>
+  <h1><a href="index.html">點名系統</a></h1>
+  <p>新增學生</p>
+  <input type="text" class="form-control" id="name" />
+  <button type="button" id="sendOrder">新增</button>
+  <p>
+   <a href="https://Edit-Mr.github.io">毛哥EM</a>製作<br />
+   送出後請稍等數秒 勿重複新增
+  </p>
+ </main>
+ <script>
+  $(function () {
+      // 監聽 按鈕點擊
+  
+      $("#sendOrder").click(function (e) {
+          // 姓名
+  
+          var name = $("#name").val();
+  
+          $("input").focus(function () {
+              $(this).css("border", "");
+          });
+  
+          // 擋住不填資料
+  
+          if (name == "") {
+              $("#name").css("border", "1px solid #ff0000");
+          } else {
+              var name = name.replace(" ", "");
+  
+              var data = {
+                  name: name,
+              };
+  
+              $.ajax({
+                  // 這邊用get type
+  
+                  type: "get",
+  
+                  // api url - google appscript 產出的 url
+  
+                  url: "https://script.google.com/............",
+  
+                  // 剛剛整理好的資料帶入
+  
+                  data: data,
+  
+                  // 資料格式是JSON
+  
+                  dataType: "JSON",
+  
+                  // 成功送出 會回頭觸發下面這塊
+  
+                  success: function (response) {
+                      console.log(response);
+  
+                      alert("新增成功!!");
+                  },
+              });
+          }
+      });
+  });
+ </script>
 </body>
 ```
 
@@ -403,89 +426,89 @@ HTML是網頁的檔案，有點像Word檔，而CSS是用來裝飾HTML的。你�
 ```html
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8" />
-	<title>報到 - 點名系統</title>
-	<!-- 網站資訊 -->
-	<meta name="description" content="使用Google sheet的api紀錄出缺席" />
-	<meta name="author" content="毛哥EM" />
-	<!-- 讓網址正常顯示已經裝飾 -->
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="theme-color" content="00BFFF" />
-	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-	<!-- 載入jQuery和學生列表 -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <meta charset="utf-8" />
+ <title>報到 - 點名系統</title>
+ <!-- 網站資訊 -->
+ <meta name="description" content="使用Google sheet的api紀錄出缺席" />
+ <meta name="author" content="毛哥EM" />
+ <!-- 讓網址正常顯示已經裝飾 -->
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="theme-color" content="00BFFF" />
+ <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+ <!-- 載入jQuery和學生列表 -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <script>
-	//用Get讀取資料
-	   window.onload = () => {
-	   	// api url - google appscript 產出的 url
-	       let requestURL = "https://script.google.com/.........";
-	       let request = new XMLHttpRequest();
-	       request.open("GET", requestURL);
-	       request.responseType = "json";
-	       request.send();
-	       //收到資料後輪流做成按鈕
-	       request.onload = function () {
-	           let student = request.response;
-	           for (var i in student) {
-	               var now = student[i];
-	               var stu = now.name;
-	               var left = now.left;
-	               --left;
-	               var but = '<button id="' + stu + '">' + stu + "</button>";
-	               console.log(but);
-	               $("#students").append(but);
-	               var iden = "#" + stu;
-	               var click = 'to("' + stu + '", ' + left + ");";
-	               $(iden).attr("onclick", click);
-	           }
-	           //載入完成後更改副標題
-	           $("#header").text("點擊姓名即可完成報到");
-	       };
-	   };
-	   function to(name, have) {
-	       var currentdate = new Date();
-	       var filltime = currentdate.getFullYear() + "/" + (currentdate.getMonth() + 1) + "/" + currentdate.getDate() + "  " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
-	       // 打包 要的資料
-	       var course = have;
-	       console.log(course);
-	       var data = {
-	           name: name,
-	           time: filltime,
-	           remain: course,
-	       };
-	       var tag = name;
-	       $.ajax({
-	           // 這邊用get type
-	           type: "get",
-	           // api url - google appscript 產出的 url
-	           url: "https://script.google.com/.........",
-	           // 剛剛整理好的資料帶入
-	           data: data,
-	           // 資料格式是JSON
-	           dataType: "JSON",
-	           // 成功送出 會回頭觸發下面這塊
-	           success: function (response) {
-	               var msg = response;
-	               alert("報到成功! 還剩" + course + "堂課");
-	           },
-	       });
-	       //報到完成的顯示在下方框框並將按鈕隱藏
-	       $("#ed").prepend("<li>" + tag + "</li>");
-	       var id = "#" + tag;
-	       $(id).fadeOut();
-	   }
+ //用Get讀取資料
+    window.onload = () => {
+     // api url - google appscript 產出的 url
+        let requestURL = "https://script.google.com/.........";
+        let request = new XMLHttpRequest();
+        request.open("GET", requestURL);
+        request.responseType = "json";
+        request.send();
+        //收到資料後輪流做成按鈕
+        request.onload = function () {
+            let student = request.response;
+            for (var i in student) {
+                var now = student[i];
+                var stu = now.name;
+                var left = now.left;
+                --left;
+                var but = '<button id="' + stu + '">' + stu + "</button>";
+                console.log(but);
+                $("#students").append(but);
+                var iden = "#" + stu;
+                var click = 'to("' + stu + '", ' + left + ");";
+                $(iden).attr("onclick", click);
+            }
+            //載入完成後更改副標題
+            $("#header").text("點擊姓名即可完成報到");
+        };
+    };
+    function to(name, have) {
+        var currentdate = new Date();
+        var filltime = currentdate.getFullYear() + "/" + (currentdate.getMonth() + 1) + "/" + currentdate.getDate() + "  " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+        // 打包 要的資料
+        var course = have;
+        console.log(course);
+        var data = {
+            name: name,
+            time: filltime,
+            remain: course,
+        };
+        var tag = name;
+        $.ajax({
+            // 這邊用get type
+            type: "get",
+            // api url - google appscript 產出的 url
+            url: "https://script.google.com/.........",
+            // 剛剛整理好的資料帶入
+            data: data,
+            // 資料格式是JSON
+            dataType: "JSON",
+            // 成功送出 會回頭觸發下面這塊
+            success: function (response) {
+                var msg = response;
+                alert("報到成功! 還剩" + course + "堂課");
+            },
+        });
+        //報到完成的顯示在下方框框並將按鈕隱藏
+        $("#ed").prepend("<li>" + tag + "</li>");
+        var id = "#" + tag;
+        $(id).fadeOut();
+    }
 </script>
 </head>
 <body>
-	<main>
-		<h1><a href="index.html">點名系統</a></h1>
-		<p id="header">載入中</p>
-		<div id="students"></div>
-		<h2>已到學生</h2>
-		<p class="ed" id="ed"></p>
-		<p><a href="https://Edit-Mr.github.io">毛哥EM</a>製作</p>
-	</main>
+ <main>
+  <h1><a href="index.html">點名系統</a></h1>
+  <p id="header">載入中</p>
+  <div id="students"></div>
+  <h2>已到學生</h2>
+  <p class="ed" id="ed"></p>
+  <p><a href="https://Edit-Mr.github.io">毛哥EM</a>製作</p>
+ </main>
 </body>
 ```
 
@@ -585,6 +608,7 @@ HTML是網頁的檔案，有點像Word檔，而CSS是用來裝飾HTML的。你�
 ```
 
 #### style.css
+
 ```css
 @charset "utf-8";
 /*按鈕
@@ -677,4 +701,5 @@ table tbody tr {
     border-bottom: 1px solid #e3f1d5;
 }
 ```
+
 這樣就完成囉
