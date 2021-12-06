@@ -36,6 +36,6 @@ shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-real_name_syst
 我有設計一個多人版的，但建議兩個都下載。因為如果只有一個人的話就不用再輸入人數了。
 {{% notice tip "小提醒" %}}
 
-* 如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。
+* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://em-tec.github.io/post/shortcut-untrusted_shortcut/)提供的方法。
 * 你也可以用Siri執行這個捷徑。
 {{% /notice %}}
