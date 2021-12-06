@@ -9,7 +9,7 @@ tags = [
 categories = [
     "網站"
 ]
-thumbnail = "images_thumbnails_link-to-qr.jpg"
+thumbnail = "images/thumbnails/link-to-qr.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/link-to-qr.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/link-to-qr.jpg"
 +++
