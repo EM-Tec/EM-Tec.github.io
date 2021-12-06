@@ -742,7 +742,7 @@
 &lt;div class="label">小提醒&lt;/div>
 &lt;ul>
 &lt;li>但是這是當時的課程所以現在無法運作，但你可以下載下來做修改。&lt;/li>
-&lt;li>如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。&lt;/li>
+&lt;li>如果手機說無法加入不受信任的捷徑，請參考&lt;a href="https://em-tec.github.io/post/shortcut-untrusted_shortcut/">這篇文章&lt;/a>提供的方法。&lt;/li>
 &lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
 &lt;/ul>
 &lt;/div>
