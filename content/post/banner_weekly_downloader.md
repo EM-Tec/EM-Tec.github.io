@@ -33,4 +33,10 @@ shareImage = "https://em-tec.github.io/images/thumbnails/banner_weekly_downloade
  [https://edit-mr.github.io/code/weekly/redirect/](https://edit-mr.github.io/code/weekly/redirect/) 
 ## ios捷徑（稍後更新連結）
 若你使用的是ios裝置，你可以使用我製作的捷徑腳本來快速獲取當天、上一次、或指定日期的週報。
-需要注意的是:若未曾匯入非官方的捷徑，須至設定/捷徑開啟"允許加入不受信任的捷徑"。此網站及捷徑皆為開源項目，歡迎到GitHub查看。
+{{% notice tip "小提醒" %}}
+
+* 如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。
+* 此網站及捷徑皆為開源項目，歡迎到GitHub查看。
+* 你也可以用Siri執行這個捷徑。
+{{% /notice %}}
+需要注意的是:
