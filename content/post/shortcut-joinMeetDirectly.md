@@ -44,6 +44,6 @@ shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirect
 {{% notice tip "小提醒" %}}
 
 * 但是這是當時的課程所以現在無法運作，但你可以下載下來做修改。
-* 如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。
+* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://em-tec.github.io/post/shortcut-untrusted_shortcut/)提供的方法。
 * 你也可以用Siri執行這個捷徑。
 {{% /notice %}}
