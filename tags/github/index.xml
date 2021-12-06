@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/github/</link><description>Recent content in Github on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Thu, 07 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>【GAS】自製點名系統</title><link>https://EM-Tec.github.io/post/frog_check_in/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/frog_check_in/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/github/</link><description>Recent content in Github on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>【網頁&amp;捷徑】旌旗教會週報下載器</title><link>https://EM-Tec.github.io/post/banner_weekly_downloader/</link><pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/banner_weekly_downloader/</guid><description>
+&lt;p>當時在製作的時候正是疫情爆發的時間，教會聚會全面改成線上，且只有提供週報的圖片檔，因此製作了一個可以下載週報的網站。即使現在疫情已經過去，我還是習慣使用這它&lt;/p>
+&lt;blockquote>
+&lt;p>好久沒有寫部落格文章了～最近都在忙著 -認真讀書- 、更新&lt;a href="https://Edit-Mr.github.io">毛哥EM的基地&lt;/a>及製作Line機器人。最近編程編到有點頭痛，想說把欠了很久的文章寫完，休息一下&lt;br>
+&lt;div class="notices info">
+&lt;div class="label">旌旗教會週報下載器&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>類型:網站&lt;/li>
+&lt;li>連結:&lt;a href="https://Edit-Mr.github.io/code/weekly">iCloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+周間時當週週報教會可能還未釋出，若無法下載（出現404）請過一陣子再試。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="當週週報連結">當週週報連結&lt;/h2>
+&lt;p>如果你平常只需要獲取當周週報，可直接到以下網址，永久有效。歡迎設為書籤
+&lt;a href="https://edit-mr.github.io/code/weekly/redirect/">https://edit-mr.github.io/code/weekly/redirect/&lt;/a>&lt;/p>
+&lt;h2 id="ios捷徑稍後更新連結">ios捷徑（稍後更新連結）&lt;/h2>
+&lt;p>若你使用的是ios裝置，你可以使用我製作的捷徑腳本來快速獲取當天、上一次、或指定日期的週報。
+需要注意的是:若未曾匯入非官方的捷徑，須至設定/捷徑開啟&amp;quot;允許加入不受信任的捷徑&amp;quot;。此網站及捷徑皆為開源項目，歡迎到GitHub查看。&lt;/p></description></item><item><title>【GAS】自製點名系統</title><link>https://EM-Tec.github.io/post/frog_check_in/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/frog_check_in/</guid><description>
 &lt;p>大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。&lt;/p>
 &lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-home.png" alt="首頁">
 &lt;div class="notices info">
@@ -26,8 +45,9 @@
 &lt;/p>
 &lt;h3 id="點名">點名&lt;/h3>
 &lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-check.png" alt="點名畫面">
-網站會從表單取得學生名單並顯示。只需要點擊名稱即可完成報到。&lt;br />
-&lt;img src="https://EM-Tec.github.io/images/frog_check_in-checked.png" alt="報到成功會提示你還剩下幾堂課">
+網站會從表單取得學生名單並顯示。只需要點擊名稱即可完成報到。&lt;/p>
+&lt;p>完成報到後會使用Line Notify通知完成報到的學生和報到時間到指定的群組。&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-checked.png" alt="報到成功會提示你還剩下幾堂課">
 &lt;div class="notices notice">
 &lt;div class="label">提醒&lt;/div>
 &lt;ul>
@@ -52,7 +72,8 @@
 &lt;p>我們分成三個步驟:&lt;/p>
 &lt;ol>
 &lt;li>建立試算表(Google Sheet)&lt;/li>
-&lt;li>創建API(Google App Script)來處理資料並更新試算表&lt;/li>
+&lt;li>生成Line Notify仗權(若不需要Line通知可省略)&lt;/li>
+&lt;li>創建API(Google App Script)來處理資料、發送訊息、以及更新試算表&lt;/li>
 &lt;li>建立一個漂亮的網站方便操作&lt;/li>
 &lt;/ol>
 &lt;h3 id="建立試算表google-sheet">建立試算表(Google Sheet)&lt;/h3>
@@ -96,6 +117,9 @@
 &lt;/tbody>
 &lt;/table>
 &lt;p>接著請你複製這個試算表的ID，也就是網址&lt;code>https://docs.google.com/spreadsheets/d/&lt;/code>和&lt;code>/&lt;/code>之間那一串(如&lt;code>1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA&lt;/code>)。等一下會用到。&lt;/p>
+&lt;h3 id="生成line-notify仗權">生成Line Notify仗權&lt;/h3>
+&lt;p>Line Notify是個比較冷門但是非常好用的工具。我們可以透過他來從第三方(如你的網站、或是ios捷徑)無限量的廣播訊息到指定的群組，或是單獨發給你。我們會在報到成功後請Line用Line Notify來在群組裡廣播提醒。&lt;/p>
+&lt;p>請依照圖片步驟建立一個仗權，要給Line看這一串他才知道要傳送信息到哪裡。使用Line Lontify而不是Line機器人的原因是免費版的官方帳號一個月只能傳送500則訊息，但老師的學生數量大，可能會吃不消；且Line Notify設定較簡單。&lt;/p>
 &lt;h3 id="建立apigoogle-app-script">建立API(Google App Script)&lt;/h3>
 &lt;p>想要讓網站編輯試算表需要透過Google App Script(GAS)來完成。我們要建立四個API，分別用來:&lt;/p>
 &lt;ol>
@@ -117,7 +141,7 @@
 &lt;p>為避免程式碼站太多空間，可能會部分隱藏。請記得展開或直接複製。&lt;/p>
 &lt;/div>
 &lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parameter&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="c1">// 可以針對你帶入的資料變化 params.xxxxxx xxxxx = 你帶進來的key值
 &lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
@@ -144,14 +168,10 @@
 &lt;span class="ln">25&lt;/span> &lt;span class="c1">// 被亂撞 會回吐這段文字給前端
 &lt;/span>&lt;span class="ln">26&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;別亂撞我～ :)&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">27&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>在這個程式當中，我們說當我們拿著資料到這個應用程式時，將我們給的姓名、時間、剩餘課堂數、以及編號寫入到試算表第一頁最後一行的下一行。&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>在這個程式當中，我們說當我們拿著資料到這個應用程式時，將我們給的姓名、時間、剩餘課堂數、以及編號寫入到試算表第一頁最後一行的下一行。但是這樣還沒結束，會後我們還要請Line Notify幫我們廣播。請在&lt;code>return ContentService.createTextOutput(true);&lt;/code>之前插入以下程式碼。記得填入剛才生成的仗權。&lt;/p>
 &lt;p>編輯完成後請按執行。第一次執行時系統會要求你登入Google，請登入現在使用的帳號並提供編輯試算表的權限。Google會告訴你不安全因為這是是你自己製作的應用程式，沒有經過Google審查。直接點選進階，並繼續前往即可。成功部署後請保存應用程式的網址，之後網站就會傳送資料到這個網站來寫入和讀取資料。&lt;br />
-完成後可能會看到紅色警告。因為我們直接執行了程式，沒有給資料（學生名稱）。因此請建立一個程式碼檔案叫做&lt;code>debug&lt;/code>，並貼上以下內容：&lt;/p>
-&lt;div class="notices notice">
-&lt;div class="label">小叮嚀&lt;/div>
-&lt;p>若發布後還有做修改，既得要再次發布且要發布為新版本。&lt;/p>
-&lt;/div>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="c1">//呼叫
+完成後可能會看到紅色警告說無法執行，因為我們直接執行了程式，沒有給資料（學生名稱）。因此請建立一個程式碼檔案叫做&lt;code>debug&lt;/code>，並貼上以下內容：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="c1">//呼叫
 &lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">debug&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">Result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">({&lt;/span>
 &lt;span class="ln"> 4&lt;/span> &lt;span class="nx">parameter&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
@@ -181,9 +201,13 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;div class="notices notice">
+&lt;div class="label">小叮嚀&lt;/div>
+&lt;p>若發布後還有做修改，既得要再次發布且要發布為新版本。&lt;/p>
+&lt;/div>
 &lt;h4 id="學生列表">學生列表&lt;/h4>
 &lt;p>學生列表不需要輸入，直接讀取內容就好了。這裡使用的輸出格式是JSON。JSON就是ios捷徑APP裡的辭典，簡單來說就是一個對照表。比如說你想要紀錄一個人的基本資料如下&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">{&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="nt">&amp;#34;姓&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;毛&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="nt">&amp;#34;名&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;宥鈞&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="ln"> 4&lt;/span> &lt;span class="nt">&amp;#34;性別&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;男&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
@@ -197,7 +221,7 @@
 &lt;span class="ln">12&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;span class="ln">13&lt;/span>&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>我們可以輕鬆的讓JavaScript讀懂它。請以相同方式建立以下API&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">){&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;XXXXXXXXXXXXXXXXXXX&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//抓取表單
 &lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">spreadsheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">SpreadsheetApp&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">openById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Sheet id
 &lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">sheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">spreadsheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getSheets&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="c1">// 要第幾個sheet？ 1 就是第2個
@@ -221,7 +245,7 @@
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>在這段程式當中，我們一列一列的把試算表的資料塞進JSON裡，最後再回傳給我們。&lt;/p>
 &lt;h4 id="查詢紀錄">查詢紀錄&lt;/h4>
 &lt;p>這裡使用Post來傳送而不是Get。其實都可以，只是想說換一個方式。差別在於使用Get時資料是存在網址當中，而Post像是還有一個附件。因為資料量很小，所以都可以使用。&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doPost&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doPost&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parameter&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="c1">// 可以針對你帶入的資料變化 params.xxxxxx xxxxx = 你帶進來的key值
 &lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
@@ -243,7 +267,7 @@
 &lt;span class="ln">20&lt;/span>&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>在這段程式當中雖然一樣是回傳資料，但是在塞進JSON前先判斷一下姓名是否符合。直得注意的是我們是從第2欄開始抓，因為使用者不需要知道這是所有資料當中的第幾筆資料。&lt;/p>
 &lt;h4 id="新增學生-1">新增學生&lt;/h4>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parameter&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="c1">// 可以針對你帶入的資料變化 params.xxxxxx xxxxx = 你帶進來的key值
 &lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
@@ -282,7 +306,7 @@
 &lt;p>HTML是網頁的檔案，有點像Word檔，而CSS是用來裝飾HTML的。你可以用它來決定字要多大、什麼顏色、間距要多少等。&lt;/p>
 &lt;p>而我們在HTML檔中還插入了一些JavaScript來傳送和讀取資料和顯示資料。我使用了一個叫做jQuery的JavaScript函式庫，它可以讓程式變得更簡略。記得把傳送到的網址改成你剛才建的Google App Script的網址，其他你可以直接複製貼上。&lt;/p>
 &lt;h4 id="indexhtml">index.html&lt;/h4>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &lt;span class="ln"> 2&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;span class="ln"> 4&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -307,7 +331,7 @@
 &lt;span class="ln">23&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln">24&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="sign-uphtml">sign-up.html&lt;/h4>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &lt;span class="ln"> 2&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;span class="ln"> 4&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>新增學生 - 點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -387,7 +411,7 @@
 &lt;span class="ln">78&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln">79&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="check-inhtml">check-in.html&lt;/h4>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &lt;span class="ln"> 2&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;span class="ln"> 4&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>報到 - 點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -474,7 +498,7 @@
 &lt;span class="ln">85&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln">86&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="searchhtml">search.html&lt;/h4>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &lt;span class="ln"> 2&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln"> 3&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;span class="ln"> 4&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>查詢 - 點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -565,7 +589,7 @@
 &lt;span class="ln">89&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln">90&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="stylecss">style.css&lt;/h4>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">@&lt;/span>&lt;span class="k">charset&lt;/span> &lt;span class="s2">&amp;#34;utf-8&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">@&lt;/span>&lt;span class="k">charset&lt;/span> &lt;span class="s2">&amp;#34;utf-8&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln"> 2&lt;/span>&lt;span class="c">/*按鈕
 &lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="c">-----------------*/&lt;/span>
 &lt;span class="ln"> 4&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="p">{&lt;/span>
@@ -576,7 +600,7 @@
 &lt;span class="ln"> 9&lt;/span> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln">10&lt;/span> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln">11&lt;/span> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">12&lt;/span> &lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">all&lt;/span> &lt;span class="mf">0.3&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">ease&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">out&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">all&lt;/span> &lt;span class="mf">0.3&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">ease-out&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln">13&lt;/span> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inset&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">-8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.2&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="ln">14&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln">15&lt;/span>&lt;span class="p">}&lt;/span>
@@ -610,7 +634,7 @@
 &lt;span class="ln">43&lt;/span> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inset&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">-4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.2&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln">44&lt;/span> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln">45&lt;/span> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">46&lt;/span> &lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">all&lt;/span> &lt;span class="mf">0.3&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">ease&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">out&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">46&lt;/span> &lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">all&lt;/span> &lt;span class="mf">0.3&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">ease-out&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln">47&lt;/span> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inset&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">-8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.2&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="ln">48&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln">49&lt;/span>&lt;span class="p">}&lt;/span>
