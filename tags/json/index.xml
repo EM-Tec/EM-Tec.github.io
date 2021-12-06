@@ -17,7 +17,15 @@
 &lt;a href="https://edit-mr.github.io/code/weekly/redirect/">https://edit-mr.github.io/code/weekly/redirect/&lt;/a>&lt;/p>
 &lt;h2 id="ios捷徑稍後更新連結">ios捷徑（稍後更新連結）&lt;/h2>
 &lt;p>若你使用的是ios裝置，你可以使用我製作的捷徑腳本來快速獲取當天、上一次、或指定日期的週報。
-需要注意的是:若未曾匯入非官方的捷徑，須至設定/捷徑開啟&amp;quot;允許加入不受信任的捷徑&amp;quot;。此網站及捷徑皆為開源項目，歡迎到GitHub查看。&lt;/p></description></item><item><title>【捷徑】快速進入當節課堂的Meet（備份）</title><link>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</guid><description>
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;ul>
+&lt;li>如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。&lt;/li>
+&lt;li>此網站及捷徑皆為開源項目，歡迎到GitHub查看。&lt;/li>
+&lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
+&lt;/ul>
+&lt;/div>
+需要注意的是:&lt;/p></description></item><item><title>【捷徑】快速進入當節課堂的Meet（備份）</title><link>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</link><pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/</guid><description>
 &lt;p>透過這個捷徑快速進入當節課堂的Meet，再也不用怕忘記課表&lt;/p>
 &lt;p>記得在國二在家上課的時候常常忘記記課表及找不到Meet代碼，或著是來不及再去Classroom找，因此我做了這個捷徑。&lt;br />
 &lt;div class="notices info">

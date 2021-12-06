@@ -35,7 +35,15 @@
 &lt;a href="https://edit-mr.github.io/code/weekly/redirect/">https://edit-mr.github.io/code/weekly/redirect/&lt;/a>&lt;/p>
 &lt;h2 id="ios捷徑稍後更新連結">ios捷徑（稍後更新連結）&lt;/h2>
 &lt;p>若你使用的是ios裝置，你可以使用我製作的捷徑腳本來快速獲取當天、上一次、或指定日期的週報。
-需要注意的是:若未曾匯入非官方的捷徑，須至設定/捷徑開啟&amp;quot;允許加入不受信任的捷徑&amp;quot;。此網站及捷徑皆為開源項目，歡迎到GitHub查看。&lt;/p></description></item><item><title>【GAS】自製點名系統</title><link>https://EM-Tec.github.io/post/frog_check_in/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/frog_check_in/</guid><description>
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;ul>
+&lt;li>如果手機說無法加入不受信任的捷徑，請使用這裡提供的方法。&lt;/li>
+&lt;li>此網站及捷徑皆為開源項目，歡迎到GitHub查看。&lt;/li>
+&lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
+&lt;/ul>
+&lt;/div>
+需要注意的是:&lt;/p></description></item><item><title>【GAS】自製點名系統</title><link>https://EM-Tec.github.io/post/frog_check_in/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/frog_check_in/</guid><description>
 &lt;p>大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。&lt;/p>
 &lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-home.png" alt="首頁">
 &lt;div class="notices info">
