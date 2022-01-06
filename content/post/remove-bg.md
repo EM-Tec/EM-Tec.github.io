@@ -2,7 +2,7 @@
 author = "毛哥EM"
 title = "【Remove.bg】讓AI幫你一鍵去背"
 date = "2022-01-06"
-description = "介紹Remove.bg，並講解如何使用Api來製作捷徑來去被"
+description = "介紹Remove.bg這個超讚的去被網站，並講解如何使用它提供的Api來製作捷徑，使你能夠一鍵去被"
 featured = true
 tags = ["捷徑"
 ]
@@ -13,7 +13,7 @@ thumbnail = "images/thumbnails/remove-bg.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
 +++
-在這篇文章我要介紹Remove.bg這個超讚的去被軟體，並講解如何使用Api來製作捷徑來去被
+在這篇文章我要介紹Remove.bg這個超讚的去被網站，並講解如何使用它提供的Api來製作捷徑，使你能夠一鍵去被
 <!--more-->
 
 去背對於影音創作者來說是十分重要的技能。除了可以凸顯主題之外，也可以對背景空間進行利用，不過如果要對沒有使用綠幕的圖片進行去背通常是一件十分痛苦的一件事。好在有一個線上的網站可以透過AI來去背，且效果十分不錯。
