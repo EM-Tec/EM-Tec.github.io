@@ -1,4 +1,3 @@
-# # 【Remove.bg】讓AI幫你一鍵去背
 +++
 author = "毛哥EM"
 title = "【Remove.bg】讓AI幫你一鍵去背"
