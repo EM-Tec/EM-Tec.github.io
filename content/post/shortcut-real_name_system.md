@@ -22,12 +22,12 @@ shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-real_name_syst
 
 * 開發者:毛哥EM(我)
 * 軟體類型:ios捷徑
-* 下載位置:[iCloud](https://www.icloud.com/shortcuts/19ea26ff47244258a6d9ff21a553659b)
+* 下載位置:[iCloud](https://www.icloud.com/shortcuts/1929e97c60ff4fada8b237a3823ceb85)
 {{% /notice %}}
 {{% notice info "多人實名制" %}}
 * 開發者:毛哥EM(我)
 * 軟體類型:ios捷徑
-* 下載位置:[iCloud](https://www.icloud.com/shortcuts/19ea26ff47244258a6d9ff21a553659b)
+* 下載位置:[iCloud](https://www.icloud.com/shortcuts/a83fa309449b42e0831ee958dde32813)
 {{% /notice %}}
 建議將它訂選在主畫面。要使用它只需要點一下，掃描，就結束了。重頭到尾之需點一下開啟，連傳送都不用點。有沒有超方便~
 
