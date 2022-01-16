@@ -3,7 +3,7 @@ author = "毛哥EM"
 title = "【捷徑】史上最快簡訊實名制"
 date = "2021-08-13"
 description = "保證這是史上最快的簡訊實名制方法"
-tags = [自製,
+tags = ["自製",
     "ios捷徑"
 ]
 categories = [
