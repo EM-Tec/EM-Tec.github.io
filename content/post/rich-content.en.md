@@ -1,6 +1,6 @@
 +++
 author = "Hugo Authors"
-title = "[Hugo Document]Rich Content"
+title = "【Hugo】Rich Content"
 date = "2019-03-10"
 description = "A brief description of Hugo Shortcodes"
 tags = [
