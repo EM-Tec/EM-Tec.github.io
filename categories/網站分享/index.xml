@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網站分享 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E7%B6%B2%E7%AB%99%E5%88%86%E4%BA%AB/</link><description>Recent content in 網站分享 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Thu, 06 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E7%B6%B2%E7%AB%99%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>【Remove.bg】讓AI幫你一鍵去背</title><link>https://EM-Tec.github.io/post/remove-bg/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/remove-bg/</guid><description>
+&lt;p>在這篇文章我要介紹Remove.bg這個超讚的去被網站，並講解如何使用它提供的Api來製作捷徑，使你能夠一鍵去被&lt;/p>
+&lt;p>去背對於影音創作者來說是十分重要的技能。除了可以凸顯主題之外，也可以對背景空間進行利用，不過如果要對沒有使用綠幕的圖片進行去背通常是一件十分痛苦的一件事。好在有一個線上的網站可以透過AI來去背，且效果十分不錯。
+&lt;div class="notices info">
+&lt;div class="label">Remove.bg&lt;/div>
+&lt;ul>
+&lt;li>開發者:&lt;a href="https://www.kaleido.ai/">Kaleido&lt;/a>&lt;/li>
+&lt;li>類型:網站/網路應用程式&lt;/li>
+&lt;li>連結:&lt;a href="https://Remove.bg">Remove.bg&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p>
+&lt;p>進入到網站後可以直接上傳照片。上傳完成後可以直接下載，也可以做一些編輯如手動去背（如果AI沒去好）、添加濾鏡、背景顏色等。&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/remove-bg-site.jpg" alt="Remove.bg介面">&lt;/p>
+&lt;h2 id="ios捷徑api">ios捷徑（API）&lt;/h2>
+&lt;p>每次去背都要打卡網頁操作，如果量多的話十分不方便。好在他們有提供API，可以讓我們用捷徑腳本來簡化步驟。&lt;/p>
+&lt;div class="notices tip">
+&lt;div class="label">API是什麼&lt;/div>
+&lt;p>API(Application Programming Interface)，中文叫做應用程式介面。你可以想像有一台飲料機，上面的按鈕就是 API ，當你投入錢並按下按鈕時飲料機就收到了你的需求，並將飲料從取物口送出，而投入的方式可以是硬幣、鈔票、或刷卡。&lt;/p>
+&lt;/div>
+&lt;p>以下是一個簡單的捷徑示範，你可以直接下載來使用。後面會提供簡單的製作教學。有多簡單呢，只有兩個方塊！
+&lt;div class="notices info">
+&lt;div class="label">Remove.bg一鍵去背&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>軟體類型:ios捷徑&lt;/li>
+&lt;li>下載位置:&lt;a href="https://www.icloud.com/shortcuts/fce4a5a7643e4fc2b8c26fa82f5a2fc3">iCloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p>
+&lt;h3 id="使用方法">使用方法&lt;/h3>
+&lt;p>要使用Remove.bg的API你需要一個用來辨識你是誰的API Key（仗權）。請先到&lt;a href="https://accounts.kaleido.ai/users/sign_in#api-key">這裡&lt;/a>註冊一個帳號，你可以直接使用Google登入，並複製你的API Key。&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/remove-bg-api.png" alt="獲取API Key">&lt;/p>
+&lt;p>Remove.bg提供每個帳號每個月50次的免費使用。對一般人來說已經很足夠了，但如果還需要更多的話可以升級方案&lt;s>或再註冊一個帳號&lt;/s>&lt;/p>
+&lt;p>加入捷徑後請輸入剛才得到的API Key。&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/remove-bg-shortcutsSetup.PNG" alt="Remove.bg介面">&lt;/p>
+&lt;p>要使用時只需要分享圖片，並點選捷徑即可。是不是超方便的！&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/remove-bg-shortcuts.jpg" alt="用捷徑去背">&lt;/p>
+&lt;h3 id="製作教學">製作教學&lt;/h3>
+&lt;p>從官方文件可以看出我們呼叫API至少需要提供API Key、大小、圖片，並以&lt;code>Post&lt;/code>的方式傳遞到&lt;code>https://api.remove.bg/v1.0/removebg&lt;/code>。所以捷徑只需要照著填入並儲存把回傳的圖片即可。實際設定如下&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/remove-bg-shortcutsBlock.jpg" alt="捷徑動作">&lt;/p></description></item><item><title>【link-to-qr】超好看QRCode生成器</title><link>https://EM-Tec.github.io/post/link-to-qr/</link><pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/link-to-qr/</guid><description>
+&lt;p>QR Code是分享網站連結常用的方法。適合在印刷上面方便用讀者進入網頁，不用一個一個字照著打。
+而製作一個好看的QR Code不但可以讓畫面更好看，還可以增進使用者掃描的意願。而其中我覺得最好看的QR Code生成器就是LINK to QR。&lt;/p>
+&lt;p>
+&lt;div class="notices info">
+&lt;div class="label">link-to-qr&lt;/div>
+&lt;ul>
+&lt;li>開發者:posterilove&lt;/li>
+&lt;li>類型:免費網站工具&lt;/li>
+&lt;li>連結:&lt;a href="https//link-to-qr.com/">link-to-qr.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+進入網站後可以先在文字框裡輸入網址。我以我製作的旌旗青年週報下載器做為示範
+&lt;img src="https://EM-Tec.github.io/images/link-to-qr-header.png" alt="網頁">
+這裡建議可以先使用is.gd縮短網址(推薦設為小寫，可閱讀的-Lower case pronounceable)，而網址前面不用加https://這樣可以讓QR Code更簡略。不只好看也可以更方便掃描。
+&lt;img src="https://EM-Tec.github.io/images/link-to-qr-header.png" alt="不同內容的比較">
+而你也可以設定QR Code的邊框、文字、顏色、還有是否要去背等等。
+&lt;img src="https://EM-Tec.github.io/images/link-to-qr-function.png" alt="link-to-qr可以設定許多參數">
+而我自己習慣設成白色/黑色QR Code、加邊框、不加文字、並且去背，方便應用於各種版面。以下為最終效果&lt;/p></description></item><item><title>【網頁&amp;捷徑】旌旗教會週報下載器</title><link>https://EM-Tec.github.io/post/banner_weekly_downloader/</link><pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/banner_weekly_downloader/</guid><description>
+&lt;p>當時在製作的時候正是疫情爆發的時間，教會聚會全面改成線上，且只有提供週報的圖片檔，因此製作了一個可以下載週報的網站。即使現在疫情已經過去，我還是習慣使用這它&lt;/p>
+&lt;blockquote>
+&lt;p>好久沒有寫部落格文章了～最近都在忙著 &lt;s>認真讀書&lt;/s> 、更新&lt;a href="https://Edit-Mr.github.io">毛哥EM的基地&lt;/a>及製作Line機器人。最近編程編到有點頭痛，想說把欠了很久的文章寫完，休息一下&lt;/p>
+&lt;/blockquote>
+&lt;div class="notices info">
+&lt;div class="label">旌旗教會週報下載器&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>類型:網站&lt;/li>
+&lt;li>連結:&lt;a href="https://Edit-Mr.github.io/code/weekly">iCloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h2 id="當週週報連結">當週週報連結&lt;/h2>
+&lt;p>如果你平常只需要獲取當周週報，可直接到以下網址，永久有效。歡迎設為書籤。&lt;/p>
+&lt;p>周間時當週週報教會可能還未釋出，若無法下載（出現404）請過一陣子再試。&lt;/p>
+&lt;p>&lt;a href="https://edit-mr.github.io/code/weekly/redirect/">https://edit-mr.github.io/code/weekly/redirect/&lt;/a>&lt;/p>
+&lt;h2 id="ios捷徑稍後更新連結">ios捷徑（稍後更新連結）&lt;/h2>
+&lt;p>若你使用的是ios裝置，你可以使用我製作的捷徑腳本來快速獲取當天、上一次、或指定日期的週報。
+&lt;div class="notices tip">
+&lt;div class="label">小提醒&lt;/div>
+&lt;ul>
+&lt;li>如果手機說無法加入不受信任的捷徑，請參考&lt;a href="https://em-tec.github.io/post/shortcut-untrusted_shortcut/">這篇文章&lt;/a>提供的方法。&lt;/li>
+&lt;li>此網站及捷徑皆為開源項目，歡迎到&lt;a href="https://github.com/Edit-Mr/Edit-Mr.github.io/tree/main/code/weekly">GitHub&lt;/a>查看。&lt;/li>
+&lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p></description></item><item><title>【is.gd】超好用網址縮短！連Apple都在用</title><link>https://EM-Tec.github.io/post/is-gd/</link><pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/is-gd/</guid><description>
+&lt;p>太長的網址常除了不好看占版面之外，也難以令人記住。因此所短網址是一個不錯的做法。而其中我最常用的就是is.gd，因為它is good~&lt;/p>
+&lt;p>其實主要的原因是因為它很短，比bit.ly短了一個字母，而且頁面超簡單，載入速度快。而它也有可以API可以使用(Apple官方的縮短網址ios捷徑就是使用is.gd)&lt;/p>
+&lt;p>
+&lt;div class="notices info">
+&lt;div class="label">is.gd&lt;/div>
+&lt;ul>
+&lt;li>開發者:is.gd&lt;/li>
+&lt;li>網站類型:免費網站&lt;/li>
+&lt;li>網址:&lt;a href="https://is.gd/">is.gd&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+前往is.gd並在方框輸入你要縮短的URL(我以EM's Base為例為例)
+這時你可以直接按下Shorten來縮短，但是我們可以做更進一步的自訂。包括Lower case(全部小寫)，或Lower case pronounceable(可讀的小寫單字)。我通常會選擇Lower case pronounceable，我比較記得下來。&lt;/p>
+&lt;p>按下Shorten後即可得到一個連結。進到那個網址就會直接重新導向道你指定的網址。&lt;/p>
+&lt;p>is.gd因為非常簡單所以深得我心，在必須手記網址時真的非常實用。雖然功能相對較少，但對我來說非常足夠了，真心推薦給大家。順帶一提，is.gd的姊妹網站v.gd也是一樣的功能。但是因為我覺得頁面沒那麼好看所以還是習慣用 is.gd&lt;/p></description></item></channel></rss>

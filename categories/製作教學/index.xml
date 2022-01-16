@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>製作教學 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E8%A3%BD%E4%BD%9C%E6%95%99%E5%AD%B8/</link><description>Recent content in 製作教學 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Thu, 07 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E8%A3%BD%E4%BD%9C%E6%95%99%E5%AD%B8/index.xml" rel="self" type="application/rss+xml"/><item><title>【GAS】自製點名系統</title><link>https://EM-Tec.github.io/post/frog_check_in/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/frog_check_in/</guid><description>
+&lt;p>大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-home.png" alt="首頁">
+&lt;div class="notices info">
+&lt;div class="label">大眼蛙教練點名系統&lt;/div>
+&lt;ul>
+&lt;li>開發者:毛哥EM(我)&lt;/li>
+&lt;li>類型:網站&lt;/li>
+&lt;li>網址:&lt;a href="http://edit-mr.github.io/code/frog">EM's Base&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p>
+&lt;h2 id="功能">功能&lt;/h2>
+&lt;h3 id="新增學生">新增學生&lt;/h3>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-add.png" alt="新增學生">
+輸入名稱並按新增即可。&lt;br />
+電腦會自動在Google Sheet建立好欄位。教練只需要到試算表設定學生的課程數就好了。如果沒有課了會用紅色表示，而未設定會被判斷為沒有課程。
+&lt;img src="https://EM-Tec.github.io/images/frog_check_in-student.PNG" alt="試算表中的學生列表">
+&lt;div class="notices warning">
+&lt;div class="label">超重要提醒&lt;/div>
+&lt;ul>
+&lt;li>學生姓名不可以有空格，如果有空格會自動刪除&lt;/li>
+&lt;li>要刪除學生請刪除整列，不可留一整列空白&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p>
+&lt;h3 id="點名">點名&lt;/h3>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-check.png" alt="點名畫面">
+網站會從表單取得學生名單並顯示。只需要點擊名稱即可完成報到。&lt;/p>
+&lt;p>完成報到後會使用Line Notify通知完成報到的學生和報到時間到指定的群組。&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-checked.png" alt="報到成功會提示你還剩下幾堂課">
+&lt;div class="notices notice">
+&lt;div class="label">提醒&lt;/div>
+&lt;ul>
+&lt;li>為了配合不同螢幕大小，沒有限制每行出現的學生數。盡可能多顯示一些，比較容易找到。&lt;/li>
+&lt;li>為避免重複點名，報到後學生會隱藏。重新整理頁面即可顯現&lt;/li>
+&lt;li>下方方框會顯示自開啟網頁後已完成報到的學生。&lt;/li>
+&lt;/ul>
+&lt;/div>
+在試算表的「紀錄」可以看到之前學生的報到紀錄。當天的會以綠色做標記。
+&lt;img src="https://EM-Tec.github.io/images/frog_check_in-record.png" alt="報到紀錄">
+&lt;div class="notices warning">
+&lt;div class="label">超重要提醒&lt;/div>
+&lt;ul>
+&lt;li>如果要刪除記錄（如誤按到）請&lt;strong>務必&lt;/strong>要「&lt;strong>刪除整列&lt;/strong>」。不可留空&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/p>
+&lt;h3 id="查詢記錄">查詢記錄&lt;/h3>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/frog_check_in-search.png" alt="查詢毛宥恩的報到紀錄">
+如果要查詢之前報到的紀錄，請到查詢頁面並輸入姓名。&lt;/p>
+&lt;h2 id="教學">教學&lt;/h2>
+&lt;p>我們分成三個步驟:&lt;/p>
+&lt;ol>
+&lt;li>建立試算表(Google Sheet)&lt;/li>
+&lt;li>生成Line Notify仗權(若不需要Line通知可省略)&lt;/li>
+&lt;li>創建API(Google App Script)來處理資料、發送訊息、以及更新試算表&lt;/li>
+&lt;li>建立一個漂亮的網站方便操作&lt;/li>
+&lt;/ol>
+&lt;h3 id="建立試算表google-sheet">建立試算表(Google Sheet)&lt;/h3>
+&lt;p>我分成兩個表格，分別叫做&lt;code>紀錄&lt;/code>和&lt;code>統計&lt;/code>。為了方便辨識第一排插入標題&lt;/p>
+&lt;h4 id="紀錄">紀錄&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>編號&lt;/th>
+&lt;th>姓名&lt;/th>
+&lt;th>時間&lt;/th>
+&lt;th>剩餘課堂數&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="統計">統計&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>學生&lt;/th>
+&lt;th>上課次數&lt;/th>
+&lt;th>剩餘課堂數&lt;/th>
+&lt;th>總課堂數&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>接著請你複製這個試算表的ID，也就是網址&lt;code>https://docs.google.com/spreadsheets/d/&lt;/code>和&lt;code>/&lt;/code>之間那一串(如&lt;code>1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA&lt;/code>)。等一下會用到。&lt;/p>
+&lt;h3 id="生成line-notify仗權">生成Line Notify仗權&lt;/h3>
+&lt;p>Line Notify是個比較冷門但是非常好用的工具。我們可以透過他來從第三方(如你的網站、或是ios捷徑)無限量的廣播訊息到指定的群組，或是單獨發給你。我們會在報到成功後請Line用Line Notify來在群組裡廣播提醒。&lt;/p>
+&lt;p>請依照圖片步驟建立一個仗權，要給Line看這一串他才知道要傳送信息到哪裡。使用Line Lontify而不是Line機器人的原因是免費版的官方帳號一個月只能傳送500則訊息，但老師的學生數量大，可能會吃不消；且Line Notify設定較簡單。&lt;/p>
+&lt;h3 id="建立apigoogle-app-script">建立API(Google App Script)&lt;/h3>
+&lt;p>想要讓網站編輯試算表需要透過Google App Script(GAS)來完成。我們要建立四個API，分別用來:&lt;/p>
+&lt;ol>
+&lt;li>紀錄出缺席&lt;/li>
+&lt;li>獲取學生列表(以進行報到)&lt;/li>
+&lt;li>查詢紀錄&lt;/li>
+&lt;li>新增學生&lt;/li>
+&lt;/ol>
+&lt;p>到時候我們建立的網站會向這四個API發送請求來更新試算表或獲取資料&lt;/p>
+&lt;div class="notices tip">
+&lt;div class="label">提示&lt;/div>
+&lt;p>&lt;a href="https://developers.google.com/apps-script/reference/spreadsheet/sheet">google 官方文件 spreadsheet method&lt;/a>，裡面有非常詳盡的介紹，包括可以讀取欄位、讀取資料、排序資料、插入資料等等的功能，其實某方面來說算是功能齊全的類資料庫了。有興趣可以點開來看裡面文件。&lt;/p>
+&lt;p>文件裡面 method 一大堆，還是直接實作比較快。&lt;/p>
+&lt;/div>
+&lt;h4 id="出缺席紀錄">出缺席紀錄&lt;/h4>
+&lt;p>請建立一個新的專案並貼上以下內容。記得貼上excel那段ID
+&lt;div class="notices notice">
+&lt;div class="label">小叮嚀&lt;/div>
+&lt;p>為避免程式碼站太多空間，可能會部分隱藏。請記得展開或直接複製。&lt;/p>
+&lt;/div>
+&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parameter&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="c1">// 可以針對你帶入的資料變化 params.xxxxxx xxxxx = 你帶進來的key值
+&lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">time&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">time&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">remain&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">remain&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="c1">//將Sheet指定為&amp;#34;資料庫&amp;#34;試算表 SpreadSheet = 試算表 ，貼上excel那段參數
+&lt;/span>&lt;span class="ln"> 8&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">SpreadSheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">SpreadsheetApp&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">openById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;XXXXXXXXXXXXXXXXXXX&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="c1">//取得頁籤:&amp;#34;工作表1&amp;#34; Sheet = 頁籤
+&lt;/span>&lt;span class="ln">10&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">Sheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">SpreadSheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getSheets&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="c1">//取得有資料的最後一行的&amp;#34;行數&amp;#34;(目的要在最後一行插入新資料)
+&lt;/span>&lt;span class="ln">12&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">LastRow&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getLastRow&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">13&lt;/span> &lt;span class="c1">// 編號為行數(如要輸入編號2時裡面已經有2行了)
+&lt;/span>&lt;span class="ln">14&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">orderNum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">LastRow&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">15&lt;/span>
+&lt;span class="ln">16&lt;/span> &lt;span class="c1">//開始寫入資料 擋住沒填時間 不給寫入資料，防止被亂撞api
+&lt;/span>&lt;span class="ln">17&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">time&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="ln">18&lt;/span> &lt;span class="c1">//在最後一行的下一行寫入資料
+&lt;/span>&lt;span class="ln">19&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getRange&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">LastRow&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">orderNum&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">20&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getRange&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">LastRow&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">21&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getRange&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">LastRow&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">time&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">22&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getRange&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">LastRow&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">remain&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">23&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">24&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">25&lt;/span> &lt;span class="c1">// 被亂撞 會回吐這段文字給前端
+&lt;/span>&lt;span class="ln">26&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;別亂撞我～ :)&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">27&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>在這個程式當中，我們說當我們拿著資料到這個應用程式時，將我們給的姓名、時間、剩餘課堂數、以及編號寫入到試算表第一頁最後一行的下一行。但是這樣還沒結束，會後我們還要請Line Notify幫我們廣播。請在&lt;code>return ContentService.createTextOutput(true);&lt;/code>之前插入以下程式碼。記得填入剛才生成的仗權。&lt;/p>
+&lt;p>編輯完成後請按執行。第一次執行時系統會要求你登入Google，請登入現在使用的帳號並提供編輯試算表的權限。Google會告訴你不安全因為這是是你自己製作的應用程式，沒有經過Google審查。直接點選進階，並繼續前往即可。成功部署後請保存應用程式的網址，之後網站就會傳送資料到這個網站來寫入和讀取資料。&lt;br />
+完成後可能會看到紅色警告說無法執行，因為我們直接執行了程式，沒有給資料（學生名稱）。因此請建立一個程式碼檔案叫做&lt;code>debug&lt;/code>，並貼上以下內容：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="c1">//呼叫
+&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">debug&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">Result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="nx">parameter&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;測試先生&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;2021/10/10 22:46:00&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="nx">remain&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">10&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="nx">Logger&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Result: %s&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">Result&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">11&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>執行後你應該會看到底下顯示執行完畢，且表單多出了一列如下&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>編號&lt;/th>
+&lt;th>姓名&lt;/th>
+&lt;th>時間&lt;/th>
+&lt;th>剩餘課堂數&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>測試先生&lt;/td>
+&lt;td>2021/10/10 22:46:00&lt;/td>
+&lt;td>10&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="notices notice">
+&lt;div class="label">小叮嚀&lt;/div>
+&lt;p>若發布後還有做修改，既得要再次發布且要發布為新版本。&lt;/p>
+&lt;/div>
+&lt;h4 id="學生列表">學生列表&lt;/h4>
+&lt;p>學生列表不需要輸入，直接讀取內容就好了。這裡使用的輸出格式是JSON。JSON就是ios捷徑APP裡的辭典，簡單來說就是一個對照表。比如說你想要紀錄一個人的基本資料如下&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="nt">&amp;#34;姓&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;毛&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="nt">&amp;#34;名&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;宥鈞&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="nt">&amp;#34;性別&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;男&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="nt">&amp;#34;年齡&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="nt">&amp;#34;住址&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="nt">&amp;#34;路名&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;大馬路&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="nt">&amp;#34;city&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;台中市&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="nt">&amp;#34;國家&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;台灣&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="nt">&amp;#34;郵遞區號&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;40763&amp;#34;&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">13&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>我們可以輕鬆的讓JavaScript讀懂它。請以相同方式建立以下API&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;XXXXXXXXXXXXXXXXXXX&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//抓取表單
+&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">spreadsheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">SpreadsheetApp&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">openById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Sheet id
+&lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">sheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">spreadsheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getSheets&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="c1">// 要第幾個sheet？ 1 就是第2個
+&lt;/span>&lt;span class="ln"> 5&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">rowLength&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getLastRow&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//取行長度
+&lt;/span>&lt;span class="ln"> 6&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">columnLength&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getLastColumn&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">//取列長度
+&lt;/span>&lt;span class="ln"> 7&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getRange&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">rowLength&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">columnLength&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">getValues&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// 取得的資料
+&lt;/span>&lt;span class="ln"> 8&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">dataExport&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="c1">// 一個個加入json
+&lt;/span>&lt;span class="ln">10&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="nx">dataExport&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">13&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="ln">14&lt;/span> &lt;span class="nx">left&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="ln">15&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="ln">16&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="ln">17&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="ln">18&lt;/span> &lt;span class="c1">// 回傳JSON
+&lt;/span>&lt;span class="ln">19&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">dataExportFormat&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">dataExport&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">20&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">dataExportFormat&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setMimeType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">MimeType&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">21&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>在這段程式當中，我們一列一列的把試算表的資料塞進JSON裡，最後再回傳給我們。&lt;/p>
+&lt;h4 id="查詢紀錄">查詢紀錄&lt;/h4>
+&lt;p>這裡使用Post來傳送而不是Get。其實都可以，只是想說換一個方式。差別在於使用Get時資料是存在網址當中，而Post像是還有一個附件。因為資料量很小，所以都可以使用。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doPost&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parameter&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="c1">// 可以針對你帶入的資料變化 params.xxxxxx xxxxx = 你帶進來的key值
+&lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">SpreadSheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">SpreadsheetApp&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">openById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;XXXXXXXXXXXXXXXXXXX&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//抓取表單
+&lt;/span>&lt;span class="ln"> 6&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">Sheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">SpreadSheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getSheets&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">LastRow&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getLastRow&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">listAll&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getSheetValues&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">LastRow&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="c1">// 把符合的抓出來
+&lt;/span>&lt;span class="ln">11&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">listAll&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">listAll&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">13&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">listAll&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">14&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">15&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">16&lt;/span> &lt;span class="c1">// 回傳JSON
+&lt;/span>&lt;span class="ln">17&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">)).&lt;/span>&lt;span class="nx">setMimeType&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="ln">18&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">MimeType&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">JSON&lt;/span>
+&lt;span class="ln">19&lt;/span> &lt;span class="p">);&lt;/span>
+&lt;span class="ln">20&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>在這段程式當中雖然一樣是回傳資料，但是在塞進JSON前先判斷一下姓名是否符合。直得注意的是我們是從第2欄開始抓，因為使用者不需要知道這是所有資料當中的第幾筆資料。&lt;/p>
+&lt;h4 id="新增學生-1">新增學生&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln"> 1&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">doGet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parameter&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="c1">// 可以針對你帶入的資料變化 params.xxxxxx xxxxx = 你帶進來的key值
+&lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="c1">//將Sheet指定為&amp;#34;資料庫&amp;#34;試算表 SpreadSheet = 試算表 ，貼上excel那段參數
+&lt;/span>&lt;span class="ln"> 6&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">SpreadSheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">SpreadsheetApp&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">openById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;XXXXXXXXXXXXXXXXXXX&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="c1">//取得頁籤:&amp;#34;工作表1&amp;#34; Sheet = 頁籤
+&lt;/span>&lt;span class="ln"> 8&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">Sheet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">SpreadSheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getSheets&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="c1">//取得有資料的最後一行的&amp;#34;行數&amp;#34;(目的要在最後一行插入新資料)
+&lt;/span>&lt;span class="ln">10&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">LastRow&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getLastRow&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">now&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">LastRow&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="c1">//格字內加入函式統計課程數
+&lt;/span>&lt;span class="ln">13&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">his&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;=COUNTIF(&amp;#39;紀錄&amp;#39;!B:B,A&amp;#34;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="s2">&amp;#34;)&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">14&lt;/span> &lt;span class="c1">//格字內加入函式計算剩餘課程數
+&lt;/span>&lt;span class="ln">15&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">less&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;=D&amp;#39;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="s1">&amp;#39;-B&amp;#39;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">16&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="ln">17&lt;/span> &lt;span class="c1">//在最後一行的下一行寫入資料
+&lt;/span>&lt;span class="ln">18&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getRange&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">LastRow&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">19&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getRange&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">LastRow&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">his&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">20&lt;/span> &lt;span class="nx">Sheet&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getRange&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">LastRow&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">less&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">21&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">22&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">23&lt;/span> &lt;span class="c1">// 被亂撞 會回吐這段文字給前端
+&lt;/span>&lt;span class="ln">24&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ContentService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createTextOutput&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;別亂撞我～ :)&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">25&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>我們在其中一個儲存格中插入了一個叫做&lt;code>COUNTIF&lt;/code>的函式。他會統計在紀錄當中有幾筆資料的姓名和他左邊的姓名一樣。而剩餘課堂數就是全部課堂數減統計出來已經上的課堂數。&lt;/p>
+&lt;h3 id="建立網站">建立網站&lt;/h3>
+&lt;p>最後，讓我們來做一個的簡單漂亮的網站吧。
+請選一個地方建立以下幾個純文字檔案&lt;/p>
+&lt;ul>
+&lt;li>check-in.html&lt;/li>
+&lt;li>search.html&lt;/li>
+&lt;li>sign-up.html&lt;/li>
+&lt;li>index.html&lt;/li>
+&lt;li>style.css&lt;/li>
+&lt;/ul>
+&lt;p>HTML是網頁的檔案，有點像Word檔，而CSS是用來裝飾HTML的。你可以用它來決定字要多大、什麼顏色、間距要多少等。&lt;/p>
+&lt;p>而我們在HTML檔中還插入了一些JavaScript來傳送和讀取資料和顯示資料。我使用了一個叫做jQuery的JavaScript函式庫，它可以讓程式變得更簡略。記得把傳送到的網址改成你剛才建的Google App Script的網址，其他你可以直接複製貼上。&lt;/p>
+&lt;h4 id="indexhtml">index.html&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span class="ln"> 2&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="c">&amp;lt;!-- 網站資訊 --&amp;gt;&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;description&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;使用Google sheet的api紀錄出缺席&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;author&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;毛哥EM&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="c">&amp;lt;!-- 讓網址正常顯示以及裝飾 --&amp;gt;&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-color&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;00BFFF&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/css&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;style.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;screen&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">12&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">13&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">14&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">15&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">16&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>主選單&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">17&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;window.location=&amp;#39;check-in.html&amp;#39;;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>報到&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">18&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;window.location=&amp;#39;search.html&amp;#39;;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>查詢紀錄&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">19&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;window.location=&amp;#39;sign-up.html&amp;#39;;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>新增學生&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">20&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">21&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>毛哥EM&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>製作
+&lt;span class="ln">22&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">23&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">24&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="sign-uphtml">sign-up.html&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span class="ln"> 2&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>新增學生 - 點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="c">&amp;lt;!-- 網站資訊 --&amp;gt;&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;description&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;使用Google sheet的api紀錄出缺席&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;author&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;毛哥EM&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="c">&amp;lt;!-- 讓網址正常顯示以及裝飾 --&amp;gt;&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-color&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;00BFFF&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/css&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;style.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;screen&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="c">&amp;lt;!-- 載入jQuery --&amp;gt;&lt;/span>
+&lt;span class="ln">13&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">14&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">15&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">16&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">17&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;index.html&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">18&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>新增學生&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">19&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;form-control&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;name&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">20&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;button&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;sendOrder&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>新增&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">21&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">22&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>毛哥EM&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>製作&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">br&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">23&lt;/span> 送出後請稍等數秒 勿重複新增
+&lt;span class="ln">24&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">25&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">26&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">27&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">28&lt;/span> &lt;span class="c1">// 監聽 按鈕點擊
+&lt;/span>&lt;span class="ln">29&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="ln">30&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#sendOrder&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">click&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">31&lt;/span> &lt;span class="c1">// 姓名
+&lt;/span>&lt;span class="ln">32&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="ln">33&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#name&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">34&lt;/span>
+&lt;span class="ln">35&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;input&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">focus&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">36&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">css&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;border&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">37&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">38&lt;/span>
+&lt;span class="ln">39&lt;/span> &lt;span class="c1">// 擋住不填資料
+&lt;/span>&lt;span class="ln">40&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="ln">41&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">42&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#name&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">css&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;border&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;1px solid #ff0000&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">43&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">44&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">45&lt;/span>
+&lt;span class="ln">46&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">47&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">48&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="ln">49&lt;/span>
+&lt;span class="ln">50&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ajax&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="ln">51&lt;/span> &lt;span class="c1">// 這邊用get type
+&lt;/span>&lt;span class="ln">52&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="ln">53&lt;/span> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;get&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">54&lt;/span>
+&lt;span class="ln">55&lt;/span> &lt;span class="c1">// api url - google appscript 產出的 url
+&lt;/span>&lt;span class="ln">56&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="ln">57&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;https://script.google.com/............&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">58&lt;/span>
+&lt;span class="ln">59&lt;/span> &lt;span class="c1">// 剛剛整理好的資料帶入
+&lt;/span>&lt;span class="ln">60&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="ln">61&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">62&lt;/span>
+&lt;span class="ln">63&lt;/span> &lt;span class="c1">// 資料格式是JSON
+&lt;/span>&lt;span class="ln">64&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="ln">65&lt;/span> &lt;span class="nx">dataType&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;JSON&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">66&lt;/span>
+&lt;span class="ln">67&lt;/span> &lt;span class="c1">// 成功送出 會回頭觸發下面這塊
+&lt;/span>&lt;span class="ln">68&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="ln">69&lt;/span> &lt;span class="nx">success&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">70&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">71&lt;/span>
+&lt;span class="ln">72&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;新增成功!!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">73&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="ln">74&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">75&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">76&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">77&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">78&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">79&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="check-inhtml">check-in.html&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span class="ln"> 2&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>報到 - 點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="c">&amp;lt;!-- 網站資訊 --&amp;gt;&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;description&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;使用Google sheet的api紀錄出缺席&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;author&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;毛哥EM&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="c">&amp;lt;!-- 讓網址正常顯示已經裝飾 --&amp;gt;&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-color&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;00BFFF&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/css&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;style.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;screen&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="c">&amp;lt;!-- 載入jQuery和學生列表 --&amp;gt;&lt;/span>
+&lt;span class="ln">13&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">14&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">15&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">16&lt;/span> &lt;span class="c1">//用Get讀取資料
+&lt;/span>&lt;span class="ln">17&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">18&lt;/span> &lt;span class="c1">// api url - google appscript 產出的 url
+&lt;/span>&lt;span class="ln">19&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">requestURL&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://script.google.com/.........&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">20&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">request&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">XMLHttpRequest&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">21&lt;/span> &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GET&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">requestURL&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">22&lt;/span> &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">responseType&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;json&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">23&lt;/span> &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">send&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">24&lt;/span> &lt;span class="c1">//收到資料後輪流做成按鈕
+&lt;/span>&lt;span class="ln">25&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">26&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">student&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">27&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">student&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">28&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">now&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">student&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="ln">29&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">stu&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">now&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">30&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">left&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">now&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">left&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">31&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="nx">left&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">32&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">but&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;button id=&amp;#34;&amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">stu&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;&amp;#34;&amp;gt;&amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">stu&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;&amp;lt;/button&amp;gt;&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">33&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">but&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">34&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#students&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">but&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">35&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">iden&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;#&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">stu&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">36&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">click&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;to(&amp;#34;&amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">stu&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;&amp;#34;, &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">left&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;);&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">37&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">iden&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">attr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;onclick&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">click&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">38&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">39&lt;/span> &lt;span class="c1">//載入完成後更改副標題
+&lt;/span>&lt;span class="ln">40&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#header&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;點擊姓名即可完成報到&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">41&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="ln">42&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="ln">43&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">have&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">44&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">currentdate&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">45&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">filltime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">currentdate&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getFullYear&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">currentdate&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMonth&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">currentdate&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getDate&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">currentdate&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getHours&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">currentdate&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMinutes&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;:&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">currentdate&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getSeconds&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">46&lt;/span> &lt;span class="c1">// 打包 要的資料
+&lt;/span>&lt;span class="ln">47&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">course&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">have&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">48&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">course&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">49&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">50&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">51&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">filltime&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">52&lt;/span> &lt;span class="nx">remain&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">course&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">53&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="ln">54&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">tag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">55&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ajax&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="ln">56&lt;/span> &lt;span class="c1">// 這邊用get type
+&lt;/span>&lt;span class="ln">57&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;get&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">58&lt;/span> &lt;span class="c1">// api url - google appscript 產出的 url
+&lt;/span>&lt;span class="ln">59&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;https://script.google.com/.........&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">60&lt;/span> &lt;span class="c1">// 剛剛整理好的資料帶入
+&lt;/span>&lt;span class="ln">61&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">62&lt;/span> &lt;span class="c1">// 資料格式是JSON
+&lt;/span>&lt;span class="ln">63&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">dataType&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;JSON&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">64&lt;/span> &lt;span class="c1">// 成功送出 會回頭觸發下面這塊
+&lt;/span>&lt;span class="ln">65&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">success&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">66&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">msg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">response&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">67&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;報到成功! 還剩&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">course&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;堂課&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">68&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="ln">69&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">70&lt;/span> &lt;span class="c1">//報到完成的顯示在下方框框並將按鈕隱藏
+&lt;/span>&lt;span class="ln">71&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#ed&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">prepend&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;&amp;lt;li&amp;gt;&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">tag&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;&amp;lt;/li&amp;gt;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">72&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;#&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">tag&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">73&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">fadeOut&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">74&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">75&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">76&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">77&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">78&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">79&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;index.html&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">80&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>載入中&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">81&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;students&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">82&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>已到學生&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">83&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;ed&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;ed&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">84&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>毛哥EM&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>製作&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">85&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">86&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="searchhtml">search.html&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span class="ln"> 2&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>查詢 - 點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="c">&amp;lt;!-- 網站資訊 --&amp;gt;&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;description&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;使用Google sheet的api紀錄出缺席&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;author&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;毛哥EM&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="c">&amp;lt;!-- 讓網址正常顯示以及裝飾 --&amp;gt;&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-color&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;00BFFF&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/css&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;style.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;screen&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="c">&amp;lt;!-- 載入jQuery --&amp;gt;&lt;/span>
+&lt;span class="ln">13&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">14&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">15&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">16&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">17&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;index.html&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>點名系統&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">18&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>紀錄查詢&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">19&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;name&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">20&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;button&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;send&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>查詢&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">21&lt;/span> &lt;span class="c">&amp;lt;!-- 顯示查詢結果的表格 先隱藏 --&amp;gt;&lt;/span>
+&lt;span class="ln">22&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">table&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;table table-striped&amp;#34;&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;display: none;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">23&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">thead&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">24&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">25&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>姓名&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">26&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>報到時間&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">27&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>剩下課堂&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">th&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">28&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">tr&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">29&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">thead&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">30&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">tbody&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;dataView&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">31&lt;/span> &lt;span class="c">&amp;lt;!-- 查詢到的資料會插入到這裡 --&amp;gt;&lt;/span>
+&lt;span class="ln">32&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">tbody&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">33&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">table&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">34&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">35&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>毛哥EM&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>製作&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">br&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">36&lt;/span> 送出後請稍等數秒
+&lt;span class="ln">37&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">38&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">39&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">40&lt;/span> &lt;span class="c1">//當傳送按鈕被點擊
+&lt;/span>&lt;span class="ln">41&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">42&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#send&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">click&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">43&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">44&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#name&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">45&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;input&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">focus&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">46&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">css&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;border&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">47&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">48&lt;/span> &lt;span class="c1">//擋住沒有輸入姓名
+&lt;/span>&lt;span class="ln">49&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">50&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#name&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">css&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;border&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;1px solid #ff0000&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">51&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">52&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">53&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">54&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="ln">55&lt;/span> &lt;span class="c1">//Post到前面做的API，記得更改網址
+&lt;/span>&lt;span class="ln">56&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ajax&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="ln">57&lt;/span> &lt;span class="c1">// 這邊用post type
+&lt;/span>&lt;span class="ln">58&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;post&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">59&lt;/span> &lt;span class="c1">// api url - google appscript 產出的 url
+&lt;/span>&lt;span class="ln">60&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;https://script.google.com/...........&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">61&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">62&lt;/span> &lt;span class="nx">dataType&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;JSON&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">63&lt;/span> &lt;span class="nx">success&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">64&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">content&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">65&lt;/span> &lt;span class="c1">//把資料一行行做出表格
+&lt;/span>&lt;span class="ln">66&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">element&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">67&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">remain&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">element&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">68&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">element&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">69&lt;/span> &lt;span class="nx">content&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="sb">`&amp;lt;tr&amp;gt;
+&lt;/span>&lt;span class="ln">70&lt;/span>&lt;span class="sb"> &amp;lt;td&amp;gt;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">&amp;lt;/td&amp;gt;
+&lt;/span>&lt;span class="ln">71&lt;/span>&lt;span class="sb"> &amp;lt;td&amp;gt;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">time&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">&amp;lt;/td&amp;gt;
+&lt;/span>&lt;span class="ln">72&lt;/span>&lt;span class="sb"> &amp;lt;td&amp;gt;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">remain&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">&amp;lt;/td&amp;gt;
+&lt;/span>&lt;span class="ln">73&lt;/span>&lt;span class="sb"> &amp;lt;/tr&amp;gt;`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">74&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">75&lt;/span> &lt;span class="c1">//如果有資料的話顯示表格，否則提示查無資料
+&lt;/span>&lt;span class="ln">76&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">content&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">77&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByClassName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;table-striped&amp;#34;&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;table&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">78&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">79&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;查無資料&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">80&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">81&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">dataView&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;dataView&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">82&lt;/span> &lt;span class="nx">dataView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">innerHTML&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">content&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">83&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#name&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">84&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="ln">85&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">86&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="ln">87&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">88&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="ln">89&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">90&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="stylecss">style.css&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">@&lt;/span>&lt;span class="k">charset&lt;/span> &lt;span class="s2">&amp;#34;utf-8&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 2&lt;/span>&lt;span class="c">/*按鈕
+&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="c">-----------------*/&lt;/span>
+&lt;span class="ln"> 4&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="k">outline&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">600&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">all&lt;/span> &lt;span class="mf">0.3&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">ease-out&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">13&lt;/span> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inset&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">-8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.2&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">14&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">15&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">16&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">hover&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">17&lt;/span> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#444&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">18&lt;/span> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inset&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">-4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.2&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">19&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">20&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">active&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">21&lt;/span> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#222&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">22&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">23&lt;/span>&lt;span class="c">/*其他
+&lt;/span>&lt;span class="ln">24&lt;/span>&lt;span class="c">-----------------*/&lt;/span>
+&lt;span class="ln">25&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">26&lt;/span> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">white&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">27&lt;/span> &lt;span class="k">text-decoration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">28&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">29&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">hover&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">30&lt;/span> &lt;span class="k">text-decoration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">underline&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">31&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">32&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">ed&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">33&lt;/span> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">34&lt;/span> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">white&lt;/span> &lt;span class="kc">solid&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">35&lt;/span> &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">36&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">37&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">38&lt;/span> &lt;span class="k">outline&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">39&lt;/span> &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">40&lt;/span> &lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">600&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">41&lt;/span> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">42&lt;/span> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">43&lt;/span> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inset&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">-4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.2&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">44&lt;/span> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">45&lt;/span> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">46&lt;/span> &lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">all&lt;/span> &lt;span class="mf">0.3&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">ease-out&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">47&lt;/span> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inset&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">-8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.2&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="ln">48&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">49&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">50&lt;/span>&lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">51&lt;/span> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">lightskyblue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">52&lt;/span> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">white&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">53&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">54&lt;/span>&lt;span class="nt">main&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">55&lt;/span> &lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">56&lt;/span> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">57&lt;/span> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">58&lt;/span> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">59&lt;/span> &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">60&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">61&lt;/span>&lt;span class="nt">h1&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">62&lt;/span> &lt;span class="k">margin-bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">-10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">63&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">64&lt;/span>
+&lt;span class="ln">65&lt;/span>&lt;span class="nt">table&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">66&lt;/span> &lt;span class="k">margin-top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">67&lt;/span> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">black&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">68&lt;/span> &lt;span class="k">border-spacing&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">69&lt;/span> &lt;span class="k">border-collapse&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">collapse&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">70&lt;/span> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">white&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">71&lt;/span> &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">72&lt;/span> &lt;span class="k">max-width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">73&lt;/span> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">74&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">75&lt;/span>&lt;span class="nt">table&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">76&lt;/span> &lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">77&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">78&lt;/span>&lt;span class="nt">table&lt;/span> &lt;span class="nt">td&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="ln">79&lt;/span>&lt;span class="nt">table&lt;/span> &lt;span class="nt">th&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">80&lt;/span> &lt;span class="k">padding-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">81&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">82&lt;/span>&lt;span class="nt">table&lt;/span> &lt;span class="nt">thead&lt;/span> &lt;span class="nt">tr&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">83&lt;/span> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">84&lt;/span> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">deepskyblue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">85&lt;/span> &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">16&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">86&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">87&lt;/span>&lt;span class="nt">table&lt;/span> &lt;span class="nt">tbody&lt;/span> &lt;span class="nt">tr&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">88&lt;/span> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">48&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">89&lt;/span> &lt;span class="k">border-bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#e3f1d5&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">90&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>這樣就完成囉&lt;/p></description></item></channel></rss>
