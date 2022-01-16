@@ -11,8 +11,8 @@ tags = ["自製",
     "ios捷徑"
 ]
 categories = [
-    "捷徑分享",
-    ,
+    "捷徑分享"
+
 ]
 series = ["線上教學"]
 thumbnail = "images/thumbnails/shortcut-joinMeetDirectly.jpg"
