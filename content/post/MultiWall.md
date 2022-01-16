@@ -3,7 +3,7 @@ author = "毛哥EM"
 title = "【MultiWall】讓不同螢幕放不同桌布"
 date = "2021-09-08"
 description = "有了MultiWall，你不但可以幫不同的螢幕設定不同的桌布，還可以讓一張背景橫跨多個桌布來達到延伸的效果"
-tags = [  "Windows"]
+tags = ["Windows"]
 categories = [
     "軟體分享",
 ]
