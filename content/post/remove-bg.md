@@ -4,10 +4,11 @@ title = "【Remove.bg】讓AI幫你一鍵去背"
 date = "2022-01-06"
 description = "介紹Remove.bg這個超讚的去被網站，並講解如何使用它提供的Api來製作捷徑，使你能夠一鍵去被"
 featured = true
-tags = ["捷徑"
+tags = ["ios捷徑"
 ]
+series = ["複製貼上就能成為工程師"]
 categories = [
-    "網頁分享","API分享"
+    "網站分享","API分享","捷徑分享"
 ]
 thumbnail = "images/thumbnails/remove-bg.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"

@@ -2,10 +2,10 @@
 author = "毛哥EM"
 title = "【MultiWall】讓不同螢幕放不同桌布"
 date = "2021-09-08"
-description = "超方便的網址縮短服務"
-
+description = "有了MultiWall，你不但可以幫不同的螢幕設定不同的桌布，還可以讓一張背景橫跨多個桌布來達到延伸的效果"
+tags = [  "Windows"]
 categories = [
-    "軟體",
+    "軟體分享",
 ]
 thumbnail = "images/thumbnails/MultiWall.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/MultiWall.jpg"

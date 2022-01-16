@@ -1,6 +1,6 @@
 ---
 author: Hugo Authors
-title: Math Typesetting
+title: [Hugo Document]Math Typesetting
 date: 2019-03-08
 description: A brief guide to setup KaTeX
 math: true

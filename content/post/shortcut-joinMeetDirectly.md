@@ -4,14 +4,15 @@ title = "【捷徑】快速進入當節課堂的Meet（備份）"
 date = "2021-06-04"
 description = "快速進入當節課堂的Meet，再也不用怕忘記課表"
 featured = true
-tags = [
+tags = ["自製",
     "衛道中學",
     "Github",
     "JSON",
+    "ios捷徑"
 ]
 categories = [
-    "ios捷徑",
-    "自製",
+    "捷徑分享",
+    ,
 ]
 series = ["線上教學"]
 thumbnail = "images/thumbnails/shortcut-joinMeetDirectly.jpg"

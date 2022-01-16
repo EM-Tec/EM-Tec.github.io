@@ -4,15 +4,14 @@ title = "【網頁&捷徑】旌旗教會週報下載器"
 date = "2021-12-01"
 description = "輕鬆下載當天或之前的週報"
 featured = true
-tags = [
-    "毛哥EM的基地",
+tags = [  "自製",
     "Github",
-    "JSON"
+    "JSON",
+  "ios捷徑"
 ]
 categories = [
-    "網站",
-    "自製",
-"ios捷徑"
+    "網站分享",
+"捷徑分享"
 ]
 thumbnail = "images/thumbnails/banner_weekly_downloader.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/banner_weekly_downloader.jpg"

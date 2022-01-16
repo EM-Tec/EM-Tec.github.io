@@ -3,12 +3,11 @@ author = "毛哥EM"
 title = "【捷徑】史上最快簡訊實名制"
 date = "2021-08-13"
 description = "保證這是史上最快的簡訊實名制方法"
-tags = [
-    "ios"
+tags = [自製,
+    "ios捷徑"
 ]
 categories = [
-    "ios捷徑",
-    "自製",
+    "捷徑分享",
 ]
 thumbnail = "images/thumbnails/shortcut-real_name_system.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-real_name_system.jpg"

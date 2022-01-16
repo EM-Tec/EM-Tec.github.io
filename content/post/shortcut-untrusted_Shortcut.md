@@ -4,12 +4,11 @@ title = "【捷徑】怎麼加入不受信任的捷徑?"
 date = "2021-06-04"
 description = "如果碰見這問題，可以透過這個簡單的方法來解決"
 tags = [
-    "教學",
-    "ios"
+    "ios捷徑"
 ]
 series = ["線上教學"]
 categories = [
-    "ios捷徑",
+
 ]
 thumbnail = "images/thumbnails/shortcut-untrusted_Shortcut.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-untrusted_Shortcut.jpg"

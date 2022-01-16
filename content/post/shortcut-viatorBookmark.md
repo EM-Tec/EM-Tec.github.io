@@ -4,15 +4,14 @@ title = "【捷徑】衛道網頁書籤"
 date = "2021-06-04"
 description = "快速連結到衛道的網頁或檔案"
 featured = true
-tags = [
+tags = [ "自製",    "ios捷徑",
     "衛道中學",
     "Github",
     "JSON",
 ]
-series = ["線上教學"]
 categories = [
-    "ios捷徑",
-    "自製",
+    "捷徑分享",
+   
 ]
 thumbnail = "images/thumbnails/shortcut-viatorBookmark.md.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.md.jpg"

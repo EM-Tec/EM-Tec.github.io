@@ -1,6 +1,6 @@
 +++
 author = "Hugo Authors"
-title = "Placeholder Text"
+title = "[Hugo Document]Placeholder Text"
 date = "2019-03-09"
 description = "Lorem Ipsum Dolor Si Amet"
 tags = [

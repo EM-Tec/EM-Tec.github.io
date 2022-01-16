@@ -5,10 +5,10 @@ date = "2021-08-14"
 description = "使用OBS攝取Zoom的視窗。"
 featured = true
 tags = [
-    "OBS",
+    "OBS",  "Windows"
 ]
 categories = [
-    "直接照做教學",
+"軟體分享",
 ]
 thumbnail = "images/thumbnails/vb-cable.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/vb-cable.jpg"

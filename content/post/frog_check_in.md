@@ -5,14 +5,16 @@ date = "2021-10-07"
 description = "使用Google sheet 試算表表單串接api。介紹、使用說明與製作教學"
 featured = true
 tags = [
+"自製", 
     "HTML",
     "CSS",
     "JavaScript",
     "Github",
     "GAS"
 ]
+series = ["複製貼上就能成為工程師"]
 categories = [
-    "自製",
+    "製作教學"
 ]
 series = [""]
 thumbnail = "images/thumbnails/frog_check_in.jpg"
