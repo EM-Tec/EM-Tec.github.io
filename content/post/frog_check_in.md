@@ -16,7 +16,7 @@ series = ["複製貼上就能成為工程師"]
 categories = [
     "製作教學"
 ]
-series = [""]
+
 thumbnail = "images/thumbnails/frog_check_in.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
