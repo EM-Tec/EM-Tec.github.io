@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>所有文章 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/post/</link><description>Recent content in 所有文章 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Thu, 06 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>【Remove.bg】讓AI幫你一鍵去背</title><link>https://EM-Tec.github.io/post/remove-bg/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/remove-bg/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>所有文章 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/post/</link><description>Recent content in 所有文章 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2021毛哥EM</copyright><lastBuildDate>Sun, 17 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>【重點整理】APCS筆記</title><link>https://EM-Tec.github.io/post/apcs_note/</link><pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/apcs_note/</guid><description>
+&lt;p>這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀&lt;/p>
+&lt;div class="notices note">
+&lt;div class="label">好久不見!&lt;/div>
+&lt;p>因為要準備會考已經非常久沒有發文了，不過這一篇是我自己寫的一些重點整理筆記，且會持續更新。程式語言教學只會寫C與其他語言不同的語法，適合已經對程式有概念的人閱讀。如果你對C語言有興趣可以參考&lt;a href="https://ithelp.ithome.com.tw/users/20119869/ironman/4724">這個系列文章&lt;/a>，我覺得寫得不錯w&lt;/p>
+&lt;/div>
+&lt;h1 id="c規則">C規則&lt;/h1>
+&lt;h2 id="輸出">輸出&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln">1&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;字串&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">2&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;字串或格式代碼&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="err">變數&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="err">變數&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="err">變數&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">3&lt;/span>&lt;span class="n">puts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ABC&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="c1">//自動換行，但沒有格式化字串的功能
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>\n&lt;/code>:換行&lt;/li>
+&lt;li>&lt;code>\t&lt;/code>:自動對齊&lt;/li>
+&lt;li>&lt;code>\a&lt;/code>: 鈴聲&lt;/li>
+&lt;li>&lt;code>\b&lt;/code>: 游標(下個文字開始顯示的位置)倒退一格&lt;/li>
+&lt;li>&lt;code>\r&lt;/code>: 游標倒退到這行的開頭&lt;/li>
+&lt;/ul>
+&lt;h2 id="變數">變數&lt;/h2>
+&lt;h3 id="型態">型態&lt;/h3>
+&lt;p>加上 &lt;code>unsigned&lt;/code>，會變成只能表示正數和0，但範圍 &lt;strong>大小&lt;/strong> 不變。如&lt;code>unsigned char&lt;/code>的範圍是0~2^8&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>型態&lt;/th>
+&lt;th>說明&lt;/th>
+&lt;th>範圍&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>long int&lt;/td>
+&lt;td>長整數&lt;/td>
+&lt;td>±21億&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>int&lt;/td>
+&lt;td>整數&lt;/td>
+&lt;td>±21億&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>short int&lt;/td>
+&lt;td>短整數&lt;/td>
+&lt;td>±32768&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>char&lt;/td>
+&lt;td>字元&lt;/td>
+&lt;td>0~255&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>float&lt;/td>
+&lt;td>浮點數&lt;/td>
+&lt;td>1.2~3.4e±38&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>double&lt;/td>
+&lt;td>倍精度浮點數&lt;/td>
+&lt;td>1.2~1.8e±308&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="快速宣告">快速宣告&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln">1&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">z&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">2&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">z&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>雖然沒有硬性規定，但C語言中可以用 &lt;code>f&lt;/code>, &lt;code>F&lt;/code> 標示數值是浮點數，整數時可以用 &lt;code>.&lt;/code> 標示&lt;/p>
+&lt;h3 id="輸入">輸入&lt;/h3>
+&lt;h2 id="預留位置format-placehold">預留位置(Format placehold&lt;/h2>
+&lt;p>整數用 &lt;code>%d&lt;/code>，浮點數用 &lt;code>%f&lt;/code>，字元用 &lt;code>%c&lt;/code>&lt;/p>
+&lt;p>%hd, %d, %lld 都是將資料轉換成整數&lt;br>
+能處理的位數 %hd &amp;lt; %d &amp;lt; %lld&lt;/p>
+&lt;h2 id="關鍵字">關鍵字&lt;/h2>
+&lt;p>auto, do, goto, signed, break, double, if, sizeof, case, else, int, static, char, enum, long, struct, const, extern, register, switch, continue, float, return, typedef, default, for, short, union&lt;/p>
+&lt;h2 id="科學記號">科學記號&lt;/h2>
+&lt;ul>
+&lt;li>123=1.23E+2&lt;/li>
+&lt;li>0.00041=4.1e-4&lt;/li>
+&lt;/ul></description></item><item><title>【Remove.bg】讓AI幫你一鍵去背</title><link>https://EM-Tec.github.io/post/remove-bg/</link><pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/remove-bg/</guid><description>
 &lt;p>在這篇文章我要介紹Remove.bg這個超讚的去被網站，並講解如何使用它提供的Api來製作捷徑，使你能夠一鍵去被&lt;/p>
 &lt;p>去背對於影音創作者來說是十分重要的技能。除了可以凸顯主題之外，也可以對背景空間進行利用，不過如果要對沒有使用綠幕的圖片進行去背通常是一件十分痛苦的一件事。好在有一個線上的網站可以透過AI來去背，且效果十分不錯。
 &lt;div class="notices info">
