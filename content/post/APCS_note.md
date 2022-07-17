@@ -25,7 +25,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 
 ```c
 printf("字串");
-printf("字串或格式代碼",變數1,變數2,變數3);
+printf("字串或格式代碼",var1,var2,var3);
 puts("ABC");//自動換行，但沒有格式化字串的功能
 ```
 
@@ -50,22 +50,87 @@ char | 字元 | 0~255
 float | 浮點數 | 1.2~3.4e±38
 double | 倍精度浮點數 | 1.2~1.8e±308
 
-### 快速宣告
+### 宣告
+
+以下4種方式都可以
 
 ```c
+int x
+int x=1
+//一次多個
 int x=1, y=10, z=100;
 int x=y=z=100;
 ```
-
 雖然沒有硬性規定，但C語言中可以用 `f`, `F` 標示數值是浮點數，整數時可以用 `.` 標示
+
+### 指派/指定 運算子(Assignment Operator)
+
+前面用過的 = 就是其中一種，執行時會先將等號右邊的值算出來，再指派給左邊的變數
+`a=a+1`等效`a+=1`等效`a++`
+`a=a-1`等效`a-=1`等效`a--`
+`a=a*2`等效`a*=2`
+`a=a/2`等效`a/=2`
+`a=a%2`等效`a%=2`
 
 ### 輸入
 ```
 //輸入整數、字元、浮點到變數x、y、z
 scanf("%d%c%d", &x, &y, &z);
 ```
+## 邏輯判斷
+### if、switch、while、for
+和js大同小異
+```c
+//if
+if(ture){
+	printf("yes");
+}
+else{
+	printf("no");
+}
+//大括號內只有一行可省略大括號
+if(x>100)
+	printf("x is greater than 100.");
 
-## 預留位置(Format placehold
+//switch
+switch(x){
+	case 0: case 7:
+		printf("A\n");
+		//x=0或是7都會印出A
+		break;
+	case 2: case 5:
+		printf("B\n");
+		break;
+	case 4: case 3:
+		printf("C\n");
+		break;
+	case 6: case 1:
+		printf("D\n");
+		break;
+}
+
+//while
+while(ture){
+	printf("forever printing");
+}
+
+//for 大括號內只有一行一樣可省略大括號
+int i;
+for(i=0; i!=5; i++)
+	printf("%d", i);//輸出12345
+	
+```
+{{% notice note "程式碼縮排" %}}
+和js一樣沒有規定，不縮也可以  
+通常以一個 Tab 鍵(在鍵盤左邊) 為單位，每多一個大括號，就多空一個單位。如果大括號被省略還是要縮排
+{{% /notice %}}
+
+### break & continue
+
+* break: 強制結束迴圈
+* continue: 跳過這次的區塊，但迴圈不會結束
+
+## 預留位置(Format placehold)
 
 整數用 `%d`，浮點數用 `%f`，字元用 `%c`
 
