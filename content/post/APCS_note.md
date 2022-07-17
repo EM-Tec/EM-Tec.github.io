@@ -14,7 +14,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀
 <!--more-->
 {{% notice note "好久不見!" %}}
-因為要準備會考已經非常久沒有發文了，不過這一篇是我自己寫的一些重點整理筆記，且會持續更新。適合已經對程式有概念的人閱讀。如果你對C語言有興趣可以參考[這篇文章](https://ithelp.ithome.com.tw/users/20119869/ironman/4724)，我覺得寫得不錯w
+因為要準備會考已經非常久沒有發文了，不過這一篇是我自己寫的一些重點整理筆記，且會持續更新。程式語言教學只會寫C與其他語言不同的語法，適合已經對程式有概念的人閱讀。如果你對C語言有興趣可以參考[這個系列文章](https://ithelp.ithome.com.tw/users/20119869/ironman/4724)，我覺得寫得不錯w
 {{% /notice %}}
 
 # C規則
@@ -40,7 +40,7 @@ puts("ABC");//自動換行，但沒有格式化字串的功能
 加上 `unsigned`，會變成只能表示正數和0，但範圍 **大小** 不變。如`unsigned char`的範圍是0~2^8
 
 型態 | 說明 | 範圍
------| ---- | -----
+---- | ---- | ----
 long int | 長整數 | ±21億
 int | 整數 | ±21億
 short int | 短整數 | ±32768
@@ -63,6 +63,7 @@ int x=y=z=100;
 
 %hd, %d, %lld 都是將資料轉換成整數  
 能處理的位數 %hd < %d < %lld
+
 ## 關鍵字
 
 auto, do, goto, signed, break, double, if, sizeof, case, else, int, static, char, enum, long, struct, const, extern, register, switch, continue, float, return, typedef, default, for, short, union
