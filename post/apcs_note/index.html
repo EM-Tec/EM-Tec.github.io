@@ -78,7 +78,7 @@
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
 Jul 17, 2022</span>
-<span class=post_time> · 1 min read</span>
+<span class=post_time> · 2 min read</span>
 <span class=page_only>&nbsp;·
 <div class=post_share>
 分享到:
@@ -103,7 +103,7 @@ Jul 17, 2022</span>
 <p>只寫和javascript不同的地方，或我自己覺得重要或會忘記的部分</p>
 <h2 id=輸出>輸出</h2>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;字串&#34;</span><span class=p>);</span>
-<span class=ln>2</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;字串或格式代碼&#34;</span><span class=p>,</span><span class=err>變數</span><span class=mi>1</span><span class=p>,</span><span class=err>變數</span><span class=mi>2</span><span class=p>,</span><span class=err>變數</span><span class=mi>3</span><span class=p>);</span>
+<span class=ln>2</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;字串或格式代碼&#34;</span><span class=p>,</span><span class=n>var1</span><span class=p>,</span><span class=n>var2</span><span class=p>,</span><span class=n>var3</span><span class=p>);</span>
 <span class=ln>3</span><span class=n>puts</span><span class=p>(</span><span class=s>&#34;ABC&#34;</span><span class=p>);</span><span class=c1>//自動換行，但沒有格式化字串的功能
 </span></code></pre></div><ul>
 <li><code>\n</code>:換行</li>
@@ -156,14 +156,77 @@ Jul 17, 2022</span>
 </tr>
 </tbody>
 </table>
-<h3 id=快速宣告>快速宣告</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=kt>int</span> <span class=n>x</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span> <span class=n>y</span><span class=o>=</span><span class=mi>10</span><span class=p>,</span> <span class=n>z</span><span class=o>=</span><span class=mi>100</span><span class=p>;</span>
-<span class=ln>2</span><span class=kt>int</span> <span class=n>x</span><span class=o>=</span><span class=n>y</span><span class=o>=</span><span class=n>z</span><span class=o>=</span><span class=mi>100</span><span class=p>;</span>
+<h3 id=宣告>宣告</h3>
+<p>以下4種方式都可以</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=kt>int</span> <span class=n>x</span>
+<span class=ln>2</span><span class=kt>int</span> <span class=n>x</span><span class=o>=</span><span class=mi>1</span>
+<span class=ln>3</span><span class=c1>//一次多個
+</span><span class=ln>4</span><span class=c1></span><span class=kt>int</span> <span class=n>x</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span> <span class=n>y</span><span class=o>=</span><span class=mi>10</span><span class=p>,</span> <span class=n>z</span><span class=o>=</span><span class=mi>100</span><span class=p>;</span>
+<span class=ln>5</span><span class=kt>int</span> <span class=n>x</span><span class=o>=</span><span class=n>y</span><span class=o>=</span><span class=n>z</span><span class=o>=</span><span class=mi>100</span><span class=p>;</span>
 </code></pre></div><p>雖然沒有硬性規定，但C語言中可以用 <code>f</code>, <code>F</code> 標示數值是浮點數，整數時可以用 <code>.</code> 標示</p>
+<h3 id=指派指定-運算子assignment-operator>指派/指定 運算子(Assignment Operator)</h3>
+<p>前面用過的 = 就是其中一種，執行時會先將等號右邊的值算出來，再指派給左邊的變數
+<code>a=a+1</code>等效<code>a+=1</code>等效<code>a++</code>
+<code>a=a-1</code>等效<code>a-=1</code>等效<code>a--</code>
+<code>a=a*2</code>等效<code>a*=2</code>
+<code>a=a/2</code>等效<code>a/=2</code>
+<code>a=a%2</code>等效<code>a%=2</code></p>
 <h3 id=輸入>輸入</h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>//輸入整數、字元、浮點到變數x、y、z
 <span class=ln>2</span>scanf(&#34;%d%c%d&#34;, &amp;x, &amp;y, &amp;z);
-</code></pre></div><h2 id=預留位置format-placehold>預留位置(Format placehold</h2>
+</code></pre></div><h2 id=邏輯判斷>邏輯判斷</h2>
+<h3 id=ifswitchwhilefor>if、switch、while、for</h3>
+<p>和js大同小異</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln> 1</span><span class=c1>//if
+</span><span class=ln> 2</span><span class=c1></span><span class=k>if</span><span class=p>(</span><span class=n>ture</span><span class=p>){</span>
+<span class=ln> 3</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;yes&#34;</span><span class=p>);</span>
+<span class=ln> 4</span><span class=p>}</span>
+<span class=ln> 5</span><span class=k>else</span><span class=p>{</span>
+<span class=ln> 6</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;no&#34;</span><span class=p>);</span>
+<span class=ln> 7</span><span class=p>}</span>
+<span class=ln> 8</span><span class=c1>//大括號內只有一行可省略大括號
+</span><span class=ln> 9</span><span class=c1></span><span class=k>if</span><span class=p>(</span><span class=n>x</span><span class=o>&gt;</span><span class=mi>100</span><span class=p>)</span>
+<span class=ln>10</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;x is greater than 100.&#34;</span><span class=p>);</span>
+<span class=ln>11</span>
+<span class=ln>12</span><span class=c1>//switch
+</span><span class=ln>13</span><span class=c1></span><span class=k>switch</span><span class=p>(</span><span class=n>x</span><span class=p>){</span>
+<span class=ln>14</span>	<span class=k>case</span> <span class=mi>0</span><span class=o>:</span> <span class=k>case</span> <span class=mi>7</span><span class=o>:</span>
+<span class=ln>15</span>		<span class=n>printf</span><span class=p>(</span><span class=s>&#34;A</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+<span class=ln>16</span>		<span class=c1>//x=0或是7都會印出A
+</span><span class=ln>17</span><span class=c1></span>		<span class=k>break</span><span class=p>;</span>
+<span class=ln>18</span>	<span class=k>case</span> <span class=mi>2</span><span class=o>:</span> <span class=k>case</span> <span class=mi>5</span><span class=o>:</span>
+<span class=ln>19</span>		<span class=n>printf</span><span class=p>(</span><span class=s>&#34;B</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+<span class=ln>20</span>		<span class=k>break</span><span class=p>;</span>
+<span class=ln>21</span>	<span class=k>case</span> <span class=mi>4</span><span class=o>:</span> <span class=k>case</span> <span class=mi>3</span><span class=o>:</span>
+<span class=ln>22</span>		<span class=n>printf</span><span class=p>(</span><span class=s>&#34;C</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+<span class=ln>23</span>		<span class=k>break</span><span class=p>;</span>
+<span class=ln>24</span>	<span class=k>case</span> <span class=mi>6</span><span class=o>:</span> <span class=k>case</span> <span class=mi>1</span><span class=o>:</span>
+<span class=ln>25</span>		<span class=n>printf</span><span class=p>(</span><span class=s>&#34;D</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+<span class=ln>26</span>		<span class=k>break</span><span class=p>;</span>
+<span class=ln>27</span><span class=p>}</span>
+<span class=ln>28</span>
+<span class=ln>29</span><span class=c1>//while
+</span><span class=ln>30</span><span class=c1></span><span class=k>while</span><span class=p>(</span><span class=n>ture</span><span class=p>){</span>
+<span class=ln>31</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;forever printing&#34;</span><span class=p>);</span>
+<span class=ln>32</span><span class=p>}</span>
+<span class=ln>33</span>
+<span class=ln>34</span><span class=c1>//for 大括號內只有一行一樣可省略大括號
+</span><span class=ln>35</span><span class=c1></span><span class=kt>int</span> <span class=n>i</span><span class=p>;</span>
+<span class=ln>36</span><span class=k>for</span><span class=p>(</span><span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>i</span><span class=o>!=</span><span class=mi>5</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+<span class=ln>37</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d&#34;</span><span class=p>,</span> <span class=n>i</span><span class=p>);</span><span class=c1>//輸出12345
+</span><span class=ln>38</span><span class=c1></span>	
+</code></pre></div>
+<div class="notices note">
+<div class=label>程式碼縮排</div>
+<p>和js一樣沒有規定，不縮也可以<br>
+通常以一個 Tab 鍵(在鍵盤左邊) 為單位，每多一個大括號，就多空一個單位。如果大括號被省略還是要縮排</p>
+</div>
+<h3 id=break--continue>break & continue</h3>
+<ul>
+<li>break: 強制結束迴圈</li>
+<li>continue: 跳過這次的區塊，但迴圈不會結束</li>
+</ul>
+<h2 id=預留位置format-placehold>預留位置(Format placehold)</h2>
 <p>整數用 <code>%d</code>，浮點數用 <code>%f</code>，字元用 <code>%c</code></p>
 <p>%hd, %d, %lld 都是將資料轉換成整數<br>
 能處理的位數 %hd &lt; %d &lt; %lld</p>

@@ -8,7 +8,7 @@
 &lt;p>只寫和javascript不同的地方，或我自己覺得重要或會忘記的部分&lt;/p>
 &lt;h2 id="輸出">輸出&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln">1&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;字串&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln">2&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;字串或格式代碼&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="err">變數&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="err">變數&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="err">變數&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">2&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;字串或格式代碼&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">var1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">var2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">var3&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">3&lt;/span>&lt;span class="n">puts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ABC&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="c1">//自動換行，但沒有格式化字串的功能
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;code>\n&lt;/code>:換行&lt;/li>
@@ -61,14 +61,77 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="快速宣告">快速宣告&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln">1&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">z&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">2&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">z&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;h3 id="宣告">宣告&lt;/h3>
+&lt;p>以下4種方式都可以&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln">1&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>
+&lt;span class="ln">2&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;span class="ln">3&lt;/span>&lt;span class="c1">//一次多個
+&lt;/span>&lt;span class="ln">4&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">z&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">5&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">z&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>雖然沒有硬性規定，但C語言中可以用 &lt;code>f&lt;/code>, &lt;code>F&lt;/code> 標示數值是浮點數，整數時可以用 &lt;code>.&lt;/code> 標示&lt;/p>
+&lt;h3 id="指派指定-運算子assignment-operator">指派/指定 運算子(Assignment Operator)&lt;/h3>
+&lt;p>前面用過的 = 就是其中一種，執行時會先將等號右邊的值算出來，再指派給左邊的變數
+&lt;code>a=a+1&lt;/code>等效&lt;code>a+=1&lt;/code>等效&lt;code>a++&lt;/code>
+&lt;code>a=a-1&lt;/code>等效&lt;code>a-=1&lt;/code>等效&lt;code>a--&lt;/code>
+&lt;code>a=a*2&lt;/code>等效&lt;code>a*=2&lt;/code>
+&lt;code>a=a/2&lt;/code>等效&lt;code>a/=2&lt;/code>
+&lt;code>a=a%2&lt;/code>等效&lt;code>a%=2&lt;/code>&lt;/p>
 &lt;h3 id="輸入">輸入&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>//輸入整數、字元、浮點到變數x、y、z
 &lt;span class="ln">2&lt;/span>scanf(&amp;#34;%d%c%d&amp;#34;, &amp;amp;x, &amp;amp;y, &amp;amp;z);
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="預留位置format-placehold">預留位置(Format placehold&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="邏輯判斷">邏輯判斷&lt;/h2>
+&lt;h3 id="ifswitchwhilefor">if、switch、while、for&lt;/h3>
+&lt;p>和js大同小異&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln"> 1&lt;/span>&lt;span class="c1">//if
+&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ture&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="ln"> 3&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;yes&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 4&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 5&lt;/span>&lt;span class="k">else&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;no&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 7&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 8&lt;/span>&lt;span class="c1">//大括號內只有一行可省略大括號
+&lt;/span>&lt;span class="ln"> 9&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;x is greater than 100.&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">11&lt;/span>
+&lt;span class="ln">12&lt;/span>&lt;span class="c1">//switch
+&lt;/span>&lt;span class="ln">13&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">switch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="ln">14&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="ln">15&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;A&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">16&lt;/span> &lt;span class="c1">//x=0或是7都會印出A
+&lt;/span>&lt;span class="ln">17&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">18&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="ln">19&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;B&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">20&lt;/span> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">21&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="ln">22&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;C&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">23&lt;/span> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">24&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">case&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="ln">25&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;D&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">26&lt;/span> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">27&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">28&lt;/span>
+&lt;span class="ln">29&lt;/span>&lt;span class="c1">//while
+&lt;/span>&lt;span class="ln">30&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ture&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="ln">31&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;forever printing&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">32&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="ln">33&lt;/span>
+&lt;span class="ln">34&lt;/span>&lt;span class="c1">//for 大括號內只有一行一樣可省略大括號
+&lt;/span>&lt;span class="ln">35&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">36&lt;/span>&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="ln">37&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="c1">//輸出12345
+&lt;/span>&lt;span class="ln">38&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="notices note">
+&lt;div class="label">程式碼縮排&lt;/div>
+&lt;p>和js一樣沒有規定，不縮也可以&lt;br>
+通常以一個 Tab 鍵(在鍵盤左邊) 為單位，每多一個大括號，就多空一個單位。如果大括號被省略還是要縮排&lt;/p>
+&lt;/div>
+&lt;h3 id="break--continue">break &amp;amp; continue&lt;/h3>
+&lt;ul>
+&lt;li>break: 強制結束迴圈&lt;/li>
+&lt;li>continue: 跳過這次的區塊，但迴圈不會結束&lt;/li>
+&lt;/ul>
+&lt;h2 id="預留位置format-placehold">預留位置(Format placehold)&lt;/h2>
 &lt;p>整數用 &lt;code>%d&lt;/code>，浮點數用 &lt;code>%f&lt;/code>，字元用 &lt;code>%c&lt;/code>&lt;/p>
 &lt;p>%hd, %d, %lld 都是將資料轉換成整數&lt;br>
 能處理的位數 %hd &amp;lt; %d &amp;lt; %lld&lt;/p>
