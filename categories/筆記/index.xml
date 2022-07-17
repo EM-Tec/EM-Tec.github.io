@@ -5,6 +5,7 @@
 &lt;p>因為要準備會考已經非常久沒有發文了，不過這一篇是我自己寫的一些重點整理筆記，且會持續更新。程式語言教學只會寫C與其他語言不同的語法，適合已經對程式有概念的人閱讀。如果你對C語言有興趣可以參考&lt;a href="https://ithelp.ithome.com.tw/users/20119869/ironman/4724">這個系列文章&lt;/a>，我覺得寫得不錯w&lt;/p>
 &lt;/div>
 &lt;h1 id="c規則">C規則&lt;/h1>
+&lt;p>只寫和javascript不同的地方，或我自己覺得重要或會忘記的部分&lt;/p>
 &lt;h2 id="輸出">輸出&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln">1&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;字串&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">2&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;字串或格式代碼&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="err">變數&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="err">變數&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="err">變數&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span>
@@ -65,7 +66,9 @@
 &lt;span class="ln">2&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">z&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>雖然沒有硬性規定，但C語言中可以用 &lt;code>f&lt;/code>, &lt;code>F&lt;/code> 標示數值是浮點數，整數時可以用 &lt;code>.&lt;/code> 標示&lt;/p>
 &lt;h3 id="輸入">輸入&lt;/h3>
-&lt;h2 id="預留位置format-placehold">預留位置(Format placehold&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>//輸入整數、字元、浮點到變數x、y、z
+&lt;span class="ln">2&lt;/span>scanf(&amp;#34;%d%c%d&amp;#34;, &amp;amp;x, &amp;amp;y, &amp;amp;z);
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="預留位置format-placehold">預留位置(Format placehold&lt;/h2>
 &lt;p>整數用 &lt;code>%d&lt;/code>，浮點數用 &lt;code>%f&lt;/code>，字元用 &lt;code>%c&lt;/code>&lt;/p>
 &lt;p>%hd, %d, %lld 都是將資料轉換成整數&lt;br>
 能處理的位數 %hd &amp;lt; %d &amp;lt; %lld&lt;/p>

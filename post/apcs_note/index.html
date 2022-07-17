@@ -100,6 +100,7 @@ Jul 17, 2022</span>
 <p>因為要準備會考已經非常久沒有發文了，不過這一篇是我自己寫的一些重點整理筆記，且會持續更新。程式語言教學只會寫C與其他語言不同的語法，適合已經對程式有概念的人閱讀。如果你對C語言有興趣可以參考<a href=https://ithelp.ithome.com.tw/users/20119869/ironman/4724>這個系列文章</a>，我覺得寫得不錯w</p>
 </div>
 <h1 id=c規則>C規則</h1>
+<p>只寫和javascript不同的地方，或我自己覺得重要或會忘記的部分</p>
 <h2 id=輸出>輸出</h2>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;字串&#34;</span><span class=p>);</span>
 <span class=ln>2</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;字串或格式代碼&#34;</span><span class=p>,</span><span class=err>變數</span><span class=mi>1</span><span class=p>,</span><span class=err>變數</span><span class=mi>2</span><span class=p>,</span><span class=err>變數</span><span class=mi>3</span><span class=p>);</span>
@@ -160,7 +161,9 @@ Jul 17, 2022</span>
 <span class=ln>2</span><span class=kt>int</span> <span class=n>x</span><span class=o>=</span><span class=n>y</span><span class=o>=</span><span class=n>z</span><span class=o>=</span><span class=mi>100</span><span class=p>;</span>
 </code></pre></div><p>雖然沒有硬性規定，但C語言中可以用 <code>f</code>, <code>F</code> 標示數值是浮點數，整數時可以用 <code>.</code> 標示</p>
 <h3 id=輸入>輸入</h3>
-<h2 id=預留位置format-placehold>預留位置(Format placehold</h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln>1</span>//輸入整數、字元、浮點到變數x、y、z
+<span class=ln>2</span>scanf(&#34;%d%c%d&#34;, &amp;x, &amp;y, &amp;z);
+</code></pre></div><h2 id=預留位置format-placehold>預留位置(Format placehold</h2>
 <p>整數用 <code>%d</code>，浮點數用 <code>%f</code>，字元用 <code>%c</code></p>
 <p>%hd, %d, %lld 都是將資料轉換成整數<br>
 能處理的位數 %hd &lt; %d &lt; %lld</p>
