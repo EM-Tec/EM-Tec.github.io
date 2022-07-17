@@ -19,6 +19,8 @@ shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 
 # C規則
 
+只寫和javascript不同的地方，或我自己覺得重要或會忘記的部分
+
 ## 輸出
 
 ```c
@@ -58,7 +60,10 @@ int x=y=z=100;
 雖然沒有硬性規定，但C語言中可以用 `f`, `F` 標示數值是浮點數，整數時可以用 `.` 標示
 
 ### 輸入
-
+```
+//輸入整數、字元、浮點到變數x、y、z
+scanf("%d%c%d", &x, &y, &z);
+```
 
 ## 預留位置(Format placehold
 
