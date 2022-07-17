@@ -41,16 +41,16 @@ puts("ABC");//自動換行，但沒有格式化字串的功能
 
 型態 | 說明 | 範圍
 -----| ---- | -----
-long int|長整數|±21億
-int|整數|±21億
-short int|短整數|±32768
-char|字元|0~255
-float|浮點數|1.2~3.4e±38
-double|倍精度浮點數|1.2~1.8e±308
+long int | 長整數 | ±21億
+int | 整數 | ±21億
+short int | 短整數 | ±32768
+char | 字元 | 0~255
+float | 浮點數 | 1.2~3.4e±38
+double | 倍精度浮點數 | 1.2~1.8e±308
 
 ### 快速宣告
 
-``` c
+```c
 int x=1, y=10, z=100;
 int x=y=z=100;
 ```
@@ -61,6 +61,8 @@ int x=y=z=100;
 
 整數用 `%d`，浮點數用 `%f`，字元用 `%c`
 
+%hd, %d, %lld 都是將資料轉換成整數  
+能處理的位數 %hd < %d < %lld
 ## 關鍵字
 
 auto, do, goto, signed, break, double, if, sizeof, case, else, int, static, char, enum, long, struct, const, extern, register, switch, continue, float, return, typedef, default, for, short, union
