@@ -1,6 +1,6 @@
 <!doctype html><html lang=zh-tw data-figures class=page>
 <head>
-<title>【重點整理】APCS筆記 | 毛哥EM資訊密技</title>
+<title>【重點整理】APCS筆記(長更) | 毛哥EM資訊密技</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv=x-ua-compatible content="IE=edge">
@@ -11,9 +11,9 @@
 <meta name=description content="這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀">
 <meta name=twitter:card content="summary">
 <meta name=twitter:creator content>
-<meta name=twitter:title content="【重點整理】APCS筆記">
+<meta name=twitter:title content="【重點整理】APCS筆記(長更)">
 <meta property="og:url" content="https://EM-Tec.github.io/post/apcs_note/">
-<meta property="og:title" content="【重點整理】APCS筆記">
+<meta property="og:title" content="【重點整理】APCS筆記(長更)">
 <meta property="og:description" content="這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀">
 <meta property="og:image" content="https://em-tec.github.io/images/thumbnails/notes.png">
 <link rel=apple-touch-icon sizes=180x180 href=https://EM-Tec.github.io/icons/apple-touch-icon.png>
@@ -73,7 +73,7 @@
 <main>
 <div class="grid-inverse wrap content">
 <article class=post_content>
-<h1 class=post_title>【重點整理】APCS筆記</h1>
+<h1 class=post_title>【重點整理】APCS筆記(長更)</h1>
 <div class=post_meta>
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
@@ -82,9 +82,9 @@ Jul 17, 2022</span>
 <span class=page_only>&nbsp;·
 <div class=post_share>
 分享到:
-<a href="https://twitter.com/intent/tweet?text=%e3%80%90%e9%87%8d%e9%bb%9e%e6%95%b4%e7%90%86%e3%80%91APCS%e7%ad%86%e8%a8%98&url=https%3a%2f%2fEM-Tec.github.io%2fpost%2fapcs_note%2f&tw_p=tweetbutton" class=twitter title="分享到 Twitter" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#twitter"/></svg>
+<a href="https://twitter.com/intent/tweet?text=%e3%80%90%e9%87%8d%e9%bb%9e%e6%95%b4%e7%90%86%e3%80%91APCS%e7%ad%86%e8%a8%98%28%e9%95%b7%e6%9b%b4%29&url=https%3a%2f%2fEM-Tec.github.io%2fpost%2fapcs_note%2f&tw_p=tweetbutton" class=twitter title="分享到 Twitter" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#twitter"/></svg>
 </a>
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fEM-Tec.github.io%2fpost%2fapcs_note%2f&t=%e3%80%90%e9%87%8d%e9%bb%9e%e6%95%b4%e7%90%86%e3%80%91APCS%e7%ad%86%e8%a8%98" class=facebook title="分享到 Facebook" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#facebook"/></svg>
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fEM-Tec.github.io%2fpost%2fapcs_note%2f&t=%e3%80%90%e9%87%8d%e9%bb%9e%e6%95%b4%e7%90%86%e3%80%91APCS%e7%ad%86%e8%a8%98%28%e9%95%b7%e6%9b%b4%29" class=facebook title="分享到 Facebook" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#facebook"/></svg>
 </a>
 <a href=#linkedinshare id=linkedinshare class=linkedin title="分享到 LinkedIn" rel=nofollow><svg class="icon"><use xlink:href="#linkedin"/></svg>
 </a>
@@ -93,7 +93,7 @@ Jul 17, 2022</span>
 </div>
 </span>
 </div>
-<img src=https://em-tec.github.io/images/thumbnails/notes.png class=image_featured alt=【重點整理】APCS筆記>
+<img src=https://em-tec.github.io/images/thumbnails/notes.png class=image_featured alt=【重點整理】APCS筆記(長更)>
 <p>這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀</p>
 <div class="notices note">
 <div class=label>好久不見!</div>
@@ -112,6 +112,10 @@ Jul 17, 2022</span>
 <li><code>\b</code>: 游標(下個文字開始顯示的位置)倒退一格</li>
 <li><code>\r</code>: 游標倒退到這行的開頭</li>
 </ul>
+<h3 id=預留位置format-placehold>預留位置(Format placehold)</h3>
+<p>整數用 <code>%d</code>，浮點數用 <code>%f</code>，字元用 <code>%c</code>，字串用 <code>%s</code></p>
+<p>%hd, %d, %lld 都是將資料轉換成整數<br>
+能處理的位數 %hd &lt; %d &lt; %lld</p>
 <h2 id=變數>變數</h2>
 <h3 id=型態>型態</h3>
 <p>加上 <code>unsigned</code>，會變成只能表示正數和0，但範圍 <strong>大小</strong> 不變。如<code>unsigned char</code>的範圍是0~2^8</p>
@@ -156,6 +160,8 @@ Jul 17, 2022</span>
 </tr>
 </tbody>
 </table>
+<p>你有沒有發現<s>可悲的</s>C語言中，並沒有 String 這個型別。需要使用<a href=###%E5%AD%97%E5%85%83%E9%99%A3%E5%88%97 title="character Array">字元的陣列 (character Array)</a> 作為字串，而<strong>空字元(<code>'\0'</code>)代表字串結束</strong>
+所以 <code>"123"</code>，其實是一個長度為四的一維字元陣列，它的元依序是 <code>'1'</code>, <code>'2'</code>, <code>'3'</code>, <code>'\0'</code></p>
 <h3 id=宣告>宣告</h3>
 <p>以下4種方式都可以</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=kt>int</span> <span class=n>x</span>
@@ -226,11 +232,73 @@ Jul 17, 2022</span>
 <li>break: 強制結束迴圈</li>
 <li>continue: 跳過這次的區塊，但迴圈不會結束</li>
 </ul>
-<h2 id=預留位置format-placehold>預留位置(Format placehold)</h2>
-<p>整數用 <code>%d</code>，浮點數用 <code>%f</code>，字元用 <code>%c</code></p>
-<p>%hd, %d, %lld 都是將資料轉換成整數<br>
-能處理的位數 %hd &lt; %d &lt; %lld</p>
+<h2 id=陣列>陣列</h2>
+<p>以下是一些合法使用的例子</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=kt>int</span> <span class=n>arrA</span><span class=p>[</span><span class=mi>5</span><span class=p>];</span>
+<span class=ln>2</span><span class=kt>int</span> <span class=n>arr</span><span class=p>[]</span><span class=o>=</span><span class=p>{</span><span class=mi>12</span><span class=p>,</span><span class=mi>22</span><span class=p>,</span><span class=mi>3</span><span class=p>};</span>
+<span class=ln>3</span><span class=n>arr</span><span class=p>[</span><span class=mi>2</span><span class=p>]</span><span class=o>=</span><span class=mi>4</span><span class=p>;</span>
+<span class=ln>4</span><span class=n>arr</span><span class=p>[</span><span class=n>x</span><span class=p>]</span><span class=o>=</span><span class=n>y</span><span class=p>;</span>
+<span class=ln>5</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>arr</span><span class=p>[</span><span class=mi>0</span><span class=p>]);</span>
+</code></pre></div><h3 id=字元陣列-character-array>字元陣列 (character Array)</h3>
+<p>AKA字串。可悲C</p>
+<ul>
+<li>字元常數是用<strong>單引號</strong>括起來的一個字元，如'a'、'b'、'='、'+'、'?'</li>
+<li>字串常數是由一對雙引號括起的字元序列，如"EM" ， “Oh yeah!” ， "$12.5"</li>
+</ul>
+<p>字元常數'a'和字串常數"a"雖然都只有一個字元，但在記憶體中的情況是不同的。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>'a' | <code>a</code>
+"a" | <code>a</code> <code>\0</code></p>
+<h4 id=宣告-1>宣告</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=c1>//可以用和陣列一樣的方法初始化字串的內容
+</span><span class=ln>2</span><span class=c1></span><span class=kt>char</span> <span class=n>s</span><span class=p>[</span><span class=mi>100</span><span class=p>]</span><span class=o>=</span><span class=p>{</span><span class=sc>&#39;H&#39;</span><span class=p>,</span> <span class=sc>&#39;e&#39;</span><span class=p>,</span> <span class=sc>&#39;l&#39;</span><span class=p>,</span> <span class=sc>&#39;l&#39;</span><span class=p>,</span> <span class=sc>&#39;o&#39;</span><span class=p>,</span> <span class=sc>&#39;!&#39;</span><span class=p>,</span> <span class=sc>&#39;\0&#39;</span><span class=p>};</span>
+<span class=ln>3</span><span class=c1>//或是用雙引號代表字串，但一樣只能在宣告時用這個方法指派
+</span><span class=ln>4</span><span class=c1></span><span class=kt>char</span> <span class=n>s</span><span class=p>[</span><span class=mi>100</span><span class=p>]</span><span class=o>=</span><span class=s>&#34;Hello!&#34;</span><span class=p>;</span>
+<span class=ln>5</span><span class=c1>//可把字串作為printf()的引數來印出字串
+</span><span class=ln>6</span><span class=c1></span><span class=kt>char</span> <span class=n>s</span><span class=p>[</span><span class=mi>100</span><span class=p>]</span><span class=o>=</span><span class=s>&#34;Hello!&#34;</span><span class=p>;</span>
+<span class=ln>7</span><span class=n>printf</span><span class=p>(</span><span class=n>s</span><span class=p>);</span>
+</code></pre></div><h4 id=輸出-1>輸出</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=kt>char</span> <span class=n>s</span><span class=p>[</span><span class=mi>100</span><span class=p>]</span><span class=o>=</span><span class=s>&#34;PJ&#34;</span><span class=p>;</span>
+<span class=ln>2</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;My name is %s.&#34;</span><span class=p>,</span> <span class=n>s</span><span class=p>);</span>
+<span class=ln>3</span><span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</code></pre></div><h4 id=輸入-1>輸入</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=kt>char</span> <span class=n>name</span><span class=p>[</span><span class=mi>100</span><span class=p>];</span>
+<span class=ln>2</span><span class=n>scanf</span><span class=p>(</span><span class=s>&#34;%s&#34;</span><span class=p>,</span> <span class=n>name</span><span class=p>);</span>
+<span class=ln>3</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;My name is %s.</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>name</span><span class=p>);</span>
+</code></pre></div><p>如果輸入的字串<strong>包含空格</strong>必須用 <code>%[^\n]</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=kt>char</span> <span class=n>name</span><span class=p>[</span><span class=mi>100</span><span class=p>];</span>
+<span class=ln>2</span><span class=n>scanf</span><span class=p>(</span><span class=s>&#34;%[^</span><span class=se>\n</span><span class=s>]&#34;</span><span class=p>,</span> <span class=n>name</span><span class=p>);</span>
+<span class=ln>3</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;My name is %s.</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>name</span><span class=p>);</span>
+</code></pre></div><p>####　常見字串處理</p>
+<h5 id=字串長度>字串長度</h5>
+<p>可用loop</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span><span class=ln> 3</span><span class=cp></span>
+<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+<span class=ln> 5</span>	<span class=kt>char</span> <span class=n>s</span><span class=p>[</span><span class=mi>100</span><span class=p>]</span><span class=o>=</span><span class=s>&#34;Hello!&#34;</span><span class=p>;</span>
+<span class=ln> 6</span>	<span class=kt>int</span> <span class=n>len</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+<span class=ln> 7</span>	<span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>!=</span><span class=sc>&#39;\0&#39;</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+<span class=ln> 8</span>		<span class=n>len</span><span class=o>++</span><span class=p>;</span>
+<span class=ln> 9</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>len</span><span class=p>);</span>
+<span class=ln>10</span>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+<span class=ln>11</span><span class=p>}</span>
+</code></pre></div><p>或透過函式庫<code>string.h</code></p>
 <h2 id=關鍵字>關鍵字</h2>
+<p>以下這些字不能作為變數名稱</p>
 <p>auto, do, goto, signed, break, double, if, sizeof, case, else, int, static, char, enum, long, struct, const, extern, register, switch, continue, float, return, typedef, default, for, short, union</p>
 <h2 id=科學記號>科學記號</h2>
 <ul>
