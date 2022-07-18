@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "【重點整理】APCS筆記"
+title = "【重點整理】APCS筆記(長更)"
 date = "2022-07-17"
 description = "這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀"
 
@@ -35,6 +35,13 @@ puts("ABC");//自動換行，但沒有格式化字串的功能
 * `\b`: 游標(下個文字開始顯示的位置)倒退一格
 * `\r`: 游標倒退到這行的開頭
 
+### 預留位置(Format placehold)
+
+整數用 `%d`，浮點數用 `%f`，字元用 `%c`，字串用 `%s`
+
+%hd, %d, %lld 都是將資料轉換成整數  
+能處理的位數 %hd < %d < %lld
+
 ## 變數
 
 ### 型態
@@ -49,6 +56,9 @@ short int | 短整數 | ±32768
 char | 字元 | 0~255
 float | 浮點數 | 1.2~3.4e±38
 double | 倍精度浮點數 | 1.2~1.8e±308
+
+你有沒有發現<s>可悲的</s>C語言中，並沒有 String 這個型別。需要使用[字元的陣列 (character Array)](###字元陣列 (character Array) ) 作為字串，而**空字元(`'\0'`)代表字串結束**
+所以 `"123"`，其實是一個長度為四的一維字元陣列，它的元依序是 `'1'`, `'2'`, `'3'`, `'\0'`
 
 ### 宣告
 
@@ -77,6 +87,7 @@ int x=y=z=100;
 //輸入整數、字元、浮點到變數x、y、z
 scanf("%d%c%d", &x, &y, &z);
 ```
+
 ## 邏輯判斷
 ### if、switch、while、for
 和js大同小異
@@ -130,14 +141,90 @@ for(i=0; i!=5; i++)
 * break: 強制結束迴圈
 * continue: 跳過這次的區塊，但迴圈不會結束
 
-## 預留位置(Format placehold)
+## 陣列
 
-整數用 `%d`，浮點數用 `%f`，字元用 `%c`
+以下是一些合法使用的例子
 
-%hd, %d, %lld 都是將資料轉換成整數  
-能處理的位數 %hd < %d < %lld
+```c
+int arrA[5];
+int arr[]={12,22,3};
+arr[2]=4;
+arr[x]=y;
+printf("%d\n", arr[0]);
+```
 
+### 字元陣列 (character Array)
+
+AKA字串。可悲C
+* 字元常數是用**單引號**括起來的一個字元，如'a'、'b'、'='、'+'、'?'
+* 字串常數是由一對雙引號括起的字元序列，如"EM" ， “Oh yeah!” ， "$12.5"
+
+字元常數'a'和字串常數"a"雖然都只有一個字元，但在記憶體中的情況是不同的。
+
+|      |      |
+| ---- | ---- |
+|      |      |
+
+'a' | `a`
+"a" | `a` `\0`
+
+#### 宣告
+
+```c
+//可以用和陣列一樣的方法初始化字串的內容
+char s[100]={'H', 'e', 'l', 'l', 'o', '!', '\0'};
+//或是用雙引號代表字串，但一樣只能在宣告時用這個方法指派
+char s[100]="Hello!";
+//可把字串作為printf()的引數來印出字串
+char s[100]="Hello!";
+printf(s);
+```
+
+#### 輸出
+
+```c
+char s[100]="PJ";
+printf("My name is %s.", s);
+return 0;
+```
+
+#### 輸入
+
+```c
+char name[100];
+scanf("%s", name);
+printf("My name is %s.\n", name);
+```
+
+如果輸入的字串**包含空格**必須用 `%[^\n]`
+
+```c
+char name[100];
+scanf("%[^\n]", name);
+printf("My name is %s.\n", name);
+```
+
+####　常見字串處理
+
+##### 字串長度
+可用loop
+```c
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	char s[100]="Hello!";
+	int len=0;
+	for(int i=0; s[i]!='\0'; i++)
+		len++;
+	printf("%d\n", len);
+	return 0;
+}
+```
+或透過函式庫`string.h`
 ## 關鍵字
+
+以下這些字不能作為變數名稱
 
 auto, do, goto, signed, break, double, if, sizeof, case, else, int, static, char, enum, long, struct, const, extern, register, switch, continue, float, return, typedef, default, for, short, union
 
