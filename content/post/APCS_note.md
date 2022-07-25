@@ -222,6 +222,50 @@ int main(){
 }
 ```
 或透過函式庫`string.h`
+
+## 定義
+
+語法是:`#define <目標文字> <替換文字>`
+
+用 `#define` 定義的函式，執行速度會比自訂函式還快，但函式功能複雜時不好編寫，且容易造成執行結果錯誤
+
+```c
+#include<stdio.h>
+#include<stdlib.h>
+#define plus + //定義函式
+#define x 1 //定義變數
+#define y 2 //定義變數
+#define say printf
+
+int main(){
+	say("%d\n", x plus y);
+	return 0;
+}
+```
+
+## 函式
+
+```c
+#include<stdio.h>
+#include<stdlib.h>
+
+int pi(){
+    char say[3]="hi";
+    showMessage(say);
+    return 666;
+}
+void showMessage(a){
+    printf(a);
+}
+int main(){
+    printf("\n%d", pi());//輸出12345
+    return 0;
+}
+
+```
+
+
+
 ## 關鍵字
 
 以下這些字不能作為變數名稱
