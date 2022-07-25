@@ -297,7 +297,38 @@ Jul 17, 2022</span>
 <span class=ln>10</span>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
 <span class=ln>11</span><span class=p>}</span>
 </code></pre></div><p>或透過函式庫<code>string.h</code></p>
-<h2 id=關鍵字>關鍵字</h2>
+<h2 id=定義>定義</h2>
+<p>語法是:<code>#define &lt;目標文字> &lt;替換文字></code></p>
+<p>用 <code>#define</code> 定義的函式，執行速度會比自訂函式還快，但函式功能複雜時不好編寫，且容易造成執行結果錯誤</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span><span class=ln> 3</span><span class=cp>#define plus + </span><span class=c1>//定義函式
+</span><span class=ln> 4</span><span class=c1></span><span class=cp>#define x 1 </span><span class=c1>//定義變數
+</span><span class=ln> 5</span><span class=c1></span><span class=cp>#define y 2 </span><span class=c1>//定義變數
+</span><span class=ln> 6</span><span class=c1></span><span class=cp>#define say printf
+</span><span class=ln> 7</span><span class=cp></span>
+<span class=ln> 8</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+<span class=ln> 9</span>	<span class=n>say</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>x</span> <span class=n>plus</span> <span class=n>y</span><span class=p>);</span>
+<span class=ln>10</span>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+<span class=ln>11</span><span class=p>}</span>
+</code></pre></div><h2 id=函式>函式</h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span><span class=ln> 3</span><span class=cp></span>
+<span class=ln> 4</span><span class=kt>int</span> <span class=nf>pi</span><span class=p>(){</span>
+<span class=ln> 5</span>    <span class=kt>char</span> <span class=n>say</span><span class=p>[</span><span class=mi>3</span><span class=p>]</span><span class=o>=</span><span class=s>&#34;hi&#34;</span><span class=p>;</span>
+<span class=ln> 6</span>    <span class=n>showMessage</span><span class=p>(</span><span class=n>say</span><span class=p>);</span>
+<span class=ln> 7</span>    <span class=k>return</span> <span class=mi>666</span><span class=p>;</span>
+<span class=ln> 8</span><span class=p>}</span>
+<span class=ln> 9</span><span class=kt>void</span> <span class=nf>showMessage</span><span class=p>(</span><span class=n>a</span><span class=p>){</span>
+<span class=ln>10</span>    <span class=n>printf</span><span class=p>(</span><span class=n>a</span><span class=p>);</span>
+<span class=ln>11</span><span class=p>}</span>
+<span class=ln>12</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+<span class=ln>13</span>    <span class=n>printf</span><span class=p>(</span><span class=s>&#34;</span><span class=se>\n</span><span class=s>%d&#34;</span><span class=p>,</span> <span class=n>pi</span><span class=p>());</span><span class=c1>//輸出12345
+</span><span class=ln>14</span><span class=c1></span>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+<span class=ln>15</span><span class=p>}</span>
+<span class=ln>16</span>
+</code></pre></div><h2 id=關鍵字>關鍵字</h2>
 <p>以下這些字不能作為變數名稱</p>
 <p>auto, do, goto, signed, break, double, if, sizeof, case, else, int, static, char, enum, long, struct, const, extern, register, switch, continue, float, return, typedef, default, for, short, union</p>
 <h2 id=科學記號>科學記號</h2>
