@@ -16,8 +16,7 @@ author = "毛哥EM"
 
 ## 關於我
 
-哈囉，我是毛哥EM-一名熱愛科技的國中生。<br />
-我喜歡用科技進行各種創作，包括程式、音樂、電繪、平面設計等等
+哈囉，我是毛哥EM，一位數位創作者。 我喜歡用科技來表達自己，進行各種各樣的創作，比如繪畫、音樂、平面設計和網頁設計。 除了自己做，我也很喜歡與其他創作者合作或著開放委託。
 
 ### 💻 &nbsp;目前工作
 
@@ -65,7 +64,7 @@ author = "毛哥EM"
 #### EM-Tec
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=EM-Tec&show_icons=true&theme=radical" />
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=EM-Tec&theme=radical&layout=compact&exclude_lang=java+r" />
-  
+
 ### 聯絡資訊
 
 - Email: elvismao@ctemplar.com

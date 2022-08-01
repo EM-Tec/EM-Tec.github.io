@@ -1,8 +1,9 @@
 +++
-title = "關於"
-description = "關於我與此網站"
+title = "About"
+description = "About Me and this site"
 date = "2021-09-27"
 author = "毛哥EM"
+
 +++
 ## About This Site
 
@@ -14,15 +15,9 @@ Born as a self-taught junior high school student, it is not easy to build this b
 I took a long time to write an original article, plagiarizing the white prostitution party and directly Ctrl+C Ctrl+V in just a few seconds. For me, originality is very hard, but the cost of plagiarism is very low. Although the current trend of plagiarism is very serious, I believe in respecting the original and protecting the original from now on. Tomorrow is another day! If there is a quote from my article or work, I hope to indicate the source.
 {{% /notice %}}
 
-## 關於我
+## About Me
 
-Yo, this is EM, also known as Elvis Mao or Edit Mr., a Jr. high student who loves technology. <br />
-I like to use technology to create stuff, including programming, music, electronic drawing, graphic design, etc.
-
-### 💻 &nbsp;目前工作
-
-- 🤔 &nbsp; 探索新技術並開發解決生活中的問題。用科技使人們的生活更方便
-- 🎓 &nbsp; 就讀衛道中學並且在Google學習各種科技知識
+My name is Elvis. I'm a student who graduated from Viator Junoir High School and also a digital artist. I like to use different kinds of technology to express myself and do all types of creations, such as paintings, music, graphic design, and web design. Besides doing my own, I love collaborating with other creators or open commissions.
 
 ### 🛠 &nbsp; Tech Stack
 
@@ -62,11 +57,12 @@ I've two account, so I can ceparate my creation and blog
 
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Edit-Mr&show_icons=true&theme=radical" />
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Edit-Mr&theme=radical&layout=compact&exclude_lang=java+r" />
+
 #### EM-Tec
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=EM-Tec&show_icons=true&theme=radical" />
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=EM-Tec&theme=radical&layout=compact&exclude_lang=java+r" />
-  
+
 ### Contact Me
 
-- Email: elvismao@ctemplar.com
+- Email: elvismao.070512@gmail.com
 - Instergram: @em.tec.blog
