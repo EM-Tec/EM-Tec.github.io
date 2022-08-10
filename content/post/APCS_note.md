@@ -3,13 +3,11 @@ author = "毛哥EM"
 title = "【重點整理】APCS筆記(長更)"
 date = "2022-07-17"
 description = "這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀"
-
-categories = [
-    "筆記",
-]
+categories = ["筆記"]
 thumbnail = "images/thumbnails/notes.png"
 featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
+
 +++
 這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀
 <!--more-->
@@ -21,12 +19,30 @@ shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 
 只寫和javascript不同的地方，或我自己覺得重要或會忘記的部分
 
+## 函式Cool
+
+通常會加入`stdio.h`和`stdlib.h`
+
+* stdio.h
+  * puts(char) - 將字串顯示到視窗上，自動換行
+  * gets(char) - 透過鍵盤輸入**字串**
+* stdlib.h
+  * abs(int x) - 回傳整數 `x` 的絕對值
+  * atoi(char) - 回傳字串轉整數的結果
+  * strtof(char) - 
+  * 回傳字串轉 `float` 的結果
+* [math.h](##數學<math.h>)
+* string.h
+  * strlen(s) - 回傳一個整數，是字串 `s` 的長度，長度的計算不包含字串結尾的 `'\0'`
+
+
+
 ## 輸出
 
 ```c
 printf("字串");
 printf("字串或格式代碼",var1,var2,var3);
-puts("ABC");//自動換行，但沒有格式化字串的功能
+puts("ABC");//自動換行，但沒有格式化字串的功能。只能顯示字串
 ```
 
 * `\n`:換行
@@ -41,6 +57,12 @@ puts("ABC");//自動換行，但沒有格式化字串的功能
 
 %hd, %d, %lld 都是將資料轉換成整數  
 能處理的位數 %hd < %d < %lld
+
+### 格式化字串
+
+#### 最小長度
+
+在 `%` 的後面加上數字，可以設定變數顯示的最小長度，如果長度不足會自動補空格，以達到對其的目的如`printf("%4d\n", a)`；在最小位數的前面加上0，會變成用0補齊長度如`printf("%07d\n", b);`
 
 ## 變數
 
@@ -161,10 +183,8 @@ AKA字串。可悲C
 
 字元常數'a'和字串常數"a"雖然都只有一個字元，但在記憶體中的情況是不同的。
 
-|      |      |
-| ---- | ---- |
-|      |      |
-
+輸入 | 記憶體 
+---- | ---- 
 'a' | `a`
 "a" | `a` `\0`
 
@@ -210,7 +230,6 @@ printf("My name is %s.\n", name);
 可用loop
 ```c
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(){
 	char s[100]="Hello!";
@@ -231,7 +250,6 @@ int main(){
 
 ```c
 #include<stdio.h>
-#include<stdlib.h>
 #define plus + //定義函式
 #define x 1 //定義變數
 #define y 2 //定義變數
@@ -266,6 +284,67 @@ int main(){
 
 
 
+## 建構式
+
+### struct
+
+```c
+#include<stdio.h>
+#include<stdlib.h>
+
+struct STUDENT{
+    int number;
+    int age;
+};
+
+int main(){
+	struct STUDENT student_1={87, 19};
+	printf("I am %d,I'm %d years old",student_1.number,student_1.age);
+    //I am 87,I'm 19 years old
+}
+```
+
+### union
+
+太廢了我也不知道拿來幹嘛
+
+和 `struct` 一樣可以由多個不同型別的成員組成，但 **同一時間只能儲存一個資料**，或者可以說雖然可以用不同的成員名稱取得其中的資料，但實際上不管用哪個名稱都會得到同一個數值
+
+```c
+#include<stdio.h>
+#include<stdlib.h>
+
+union Data{
+	int n;
+	float f;
+};
+
+int main(){
+	union Data data={5};
+	printf("%d %f\n", data.n, data.f);
+    //5 0.000000
+}
+```
+
+
+
+### enum
+
+```C
+#include<stdio.h>
+#include<stdlib.h>
+
+enum week{A=1, B, C, D=1, E, F};
+
+int main(){
+	printf("%d %d %d %d %d %d", A, B, C, D, E, F);
+    //1 2 3 1 2 3
+	return 0;
+}
+```
+
+
+
 ## 關鍵字
 
 以下這些字不能作為變數名稱
@@ -276,3 +355,18 @@ auto, do, goto, signed, break, double, if, sizeof, case, else, int, static, char
 
 * 123=1.23E+2
 * 0.00041=4.1e-4
+
+## 數學<math.h>
+
+* `M_E` 回傳自然常數 e
+* `M_PI` 回傳圓周率 π
+* `M_SQRT2` 回傳根號2
+* `sin(x)` `cos(x)` `tan(x)` `asin(x)` `acos(x)` `atan(x)` BJ4
+* `exp(x)` 回傳自然常數 e 的 `x` 次方
+* `pow(x, y)` 回傳 `x` 的 `y` 次方
+* `pow(x)` 回傳10的 `x` 次方
+* `sqrt(x)` 回傳 `x` 的根號
+* `log(x)` 回傳以 `e` 為底的對數
+* `log10(x)` 回傳以10為底的對數
+* `abs(x)` 回傳整數 `x` 的絕對值
+* `fabs(x)` 回傳實數 `x` 的絕對值
