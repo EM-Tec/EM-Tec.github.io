@@ -6,10 +6,34 @@
 &lt;/div>
 &lt;h1 id="c規則">C規則&lt;/h1>
 &lt;p>只寫和javascript不同的地方，或我自己覺得重要或會忘記的部分&lt;/p>
+&lt;h2 id="函式cool">函式Cool&lt;/h2>
+&lt;p>通常會加入&lt;code>stdio.h&lt;/code>和&lt;code>stdlib.h&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>stdio.h
+&lt;ul>
+&lt;li>puts(char) - 將字串顯示到視窗上，自動換行&lt;/li>
+&lt;li>gets(char) - 透過鍵盤輸入&lt;strong>字串&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>stdlib.h
+&lt;ul>
+&lt;li>abs(int x) - 回傳整數 &lt;code>x&lt;/code> 的絕對值&lt;/li>
+&lt;li>atoi(char) - 回傳字串轉整數的結果&lt;/li>
+&lt;li>strtof(char) -&lt;/li>
+&lt;li>回傳字串轉 &lt;code>float&lt;/code> 的結果&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="##%E6%95%B8%E5%AD%B8%3Cmath.h%3E">math.h&lt;/a>&lt;/li>
+&lt;li>string.h
+&lt;ul>
+&lt;li>strlen(s) - 回傳一個整數，是字串 &lt;code>s&lt;/code> 的長度，長度的計算不包含字串結尾的 &lt;code>'\0'&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="輸出">輸出&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln">1&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;字串&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="ln">2&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;字串或格式代碼&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">var1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">var2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">var3&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln">3&lt;/span>&lt;span class="n">puts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ABC&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="c1">//自動換行，但沒有格式化字串的功能
+&lt;span class="ln">3&lt;/span>&lt;span class="n">puts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ABC&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="c1">//自動換行，但沒有格式化字串的功能。只能顯示字串
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;code>\n&lt;/code>:換行&lt;/li>
 &lt;li>&lt;code>\t&lt;/code>:自動對齊&lt;/li>
@@ -21,6 +45,9 @@
 &lt;p>整數用 &lt;code>%d&lt;/code>，浮點數用 &lt;code>%f&lt;/code>，字元用 &lt;code>%c&lt;/code>，字串用 &lt;code>%s&lt;/code>&lt;/p>
 &lt;p>%hd, %d, %lld 都是將資料轉換成整數&lt;br>
 能處理的位數 %hd &amp;lt; %d &amp;lt; %lld&lt;/p>
+&lt;h3 id="格式化字串">格式化字串&lt;/h3>
+&lt;h4 id="最小長度">最小長度&lt;/h4>
+&lt;p>在 &lt;code>%&lt;/code> 的後面加上數字，可以設定變數顯示的最小長度，如果長度不足會自動補空格，以達到對其的目的如&lt;code>printf(&amp;quot;%4d\n&amp;quot;, a)&lt;/code>；在最小位數的前面加上0，會變成用0補齊長度如&lt;code>printf(&amp;quot;%07d\n&amp;quot;, b);&lt;/code>&lt;/p>
 &lt;h2 id="變數">變數&lt;/h2>
 &lt;h3 id="型態">型態&lt;/h3>
 &lt;p>加上 &lt;code>unsigned&lt;/code>，會變成只能表示正數和0，但範圍 &lt;strong>大小&lt;/strong> 不變。如&lt;code>unsigned char&lt;/code>的範圍是0~2^8&lt;/p>
@@ -154,19 +181,21 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;/th>
-&lt;th>&lt;/th>
+&lt;th>輸入&lt;/th>
+&lt;th>記憶體&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>'a'&lt;/td>
+&lt;td>&lt;code>a&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;quot;a&amp;quot;&lt;/td>
+&lt;td>&lt;code>a&lt;/code> &lt;code>\0&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>'a' | &lt;code>a&lt;/code>
-&amp;quot;a&amp;quot; | &lt;code>a&lt;/code> &lt;code>\0&lt;/code>&lt;/p>
 &lt;h4 id="宣告-1">宣告&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln">1&lt;/span>&lt;span class="c1">//可以用和陣列一樣的方法初始化字串的內容
 &lt;/span>&lt;span class="ln">2&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="sc">&amp;#39;H&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sc">&amp;#39;e&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sc">&amp;#39;l&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sc">&amp;#39;l&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sc">&amp;#39;o&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sc">&amp;#39;!&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sc">&amp;#39;\0&amp;#39;&lt;/span>&lt;span class="p">};&lt;/span>
@@ -191,31 +220,29 @@
 &lt;h5 id="字串長度">字串長度&lt;/h5>
 &lt;p>可用loop&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
-&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span class="cp">
-&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="cp">&lt;/span>
-&lt;span class="ln"> 4&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(){&lt;/span>
-&lt;span class="ln"> 5&lt;/span> &lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Hello!&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 6&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 7&lt;/span> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="sc">&amp;#39;\0&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="ln"> 8&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 9&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln">10&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">11&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="cp">&lt;/span>
+&lt;span class="ln"> 3&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Hello!&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="sc">&amp;#39;\0&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">len&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">10&lt;/span>&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>或透過函式庫&lt;code>string.h&lt;/code>&lt;/p>
 &lt;h2 id="定義">定義&lt;/h2>
 &lt;p>語法是:&lt;code>#define &amp;lt;目標文字&amp;gt; &amp;lt;替換文字&amp;gt;&lt;/code>&lt;/p>
 &lt;p>用 &lt;code>#define&lt;/code> 定義的函式，執行速度會比自訂函式還快，但函式功能複雜時不好編寫，且容易造成執行結果錯誤&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
-&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span class="cp">
-&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="cp">#define plus + &lt;/span>&lt;span class="c1">//定義函式
-&lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="cp">#define x 1 &lt;/span>&lt;span class="c1">//定義變數
-&lt;/span>&lt;span class="ln"> 5&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="cp">#define y 2 &lt;/span>&lt;span class="c1">//定義變數
-&lt;/span>&lt;span class="ln"> 6&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="cp">#define say printf
-&lt;/span>&lt;span class="ln"> 7&lt;/span>&lt;span class="cp">&lt;/span>
-&lt;span class="ln"> 8&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(){&lt;/span>
-&lt;span class="ln"> 9&lt;/span> &lt;span class="n">say&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="n">plus&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln">10&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">11&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="cp">#define plus + &lt;/span>&lt;span class="c1">//定義函式
+&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="cp">#define x 1 &lt;/span>&lt;span class="c1">//定義變數
+&lt;/span>&lt;span class="ln"> 4&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="cp">#define y 2 &lt;/span>&lt;span class="c1">//定義變數
+&lt;/span>&lt;span class="ln"> 5&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="cp">#define say printf
+&lt;/span>&lt;span class="ln"> 6&lt;/span>&lt;span class="cp">&lt;/span>
+&lt;span class="ln"> 7&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="n">say&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="n">plus&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 9&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">10&lt;/span>&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="函式">函式&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
 &lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span class="cp">
@@ -233,6 +260,48 @@
 &lt;/span>&lt;span class="ln">14&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="ln">15&lt;/span>&lt;span class="p">}&lt;/span>
 &lt;span class="ln">16&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="建構式">建構式&lt;/h2>
+&lt;h3 id="struct">struct&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="cp">&lt;/span>
+&lt;span class="ln"> 4&lt;/span>&lt;span class="k">struct&lt;/span> &lt;span class="n">STUDENT&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">number&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">age&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 7&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;span class="ln"> 8&lt;/span>
+&lt;span class="ln"> 9&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="k">struct&lt;/span> &lt;span class="n">STUDENT&lt;/span> &lt;span class="n">student_1&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">87&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">19&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;I am %d,I&amp;#39;m %d years old&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">student_1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">number&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">student_1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">age&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="c1">//I am 87,I&amp;#39;m 19 years old
+&lt;/span>&lt;span class="ln">13&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="union">union&lt;/h3>
+&lt;p>太廢了我也不知道拿來幹嘛&lt;/p>
+&lt;p>和 &lt;code>struct&lt;/code> 一樣可以由多個不同型別的成員組成，但 &lt;strong>同一時間只能儲存一個資料&lt;/strong>，或者可以說雖然可以用不同的成員名稱取得其中的資料，但實際上不管用哪個名稱都會得到同一個數值&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="cp">&lt;/span>
+&lt;span class="ln"> 4&lt;/span>&lt;span class="k">union&lt;/span> &lt;span class="n">Data&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 5&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 6&lt;/span> &lt;span class="kt">float&lt;/span> &lt;span class="n">f&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 7&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;span class="ln"> 8&lt;/span>
+&lt;span class="ln"> 9&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;span class="ln">10&lt;/span> &lt;span class="k">union&lt;/span> &lt;span class="n">Data&lt;/span> &lt;span class="n">data&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;span class="ln">11&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %f&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">12&lt;/span> &lt;span class="c1">//5 0.000000
+&lt;/span>&lt;span class="ln">13&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="enum">enum&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-C" data-lang="C">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;span class="ln"> 2&lt;/span>&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="cp">&lt;/span>
+&lt;span class="ln"> 4&lt;/span>&lt;span class="k">enum&lt;/span> &lt;span class="n">week&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">B&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">C&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">D&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">E&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">F&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;span class="ln"> 5&lt;/span>
+&lt;span class="ln"> 6&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d %d %d %d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">A&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">B&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">C&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">D&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">E&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">F&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 8&lt;/span> &lt;span class="c1">//1 2 3 1 2 3
+&lt;/span>&lt;span class="ln"> 9&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">10&lt;/span>&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="關鍵字">關鍵字&lt;/h2>
 &lt;p>以下這些字不能作為變數名稱&lt;/p>
 &lt;p>auto, do, goto, signed, break, double, if, sizeof, case, else, int, static, char, enum, long, struct, const, extern, register, switch, continue, float, return, typedef, default, for, short, union&lt;/p>
@@ -240,4 +309,19 @@
 &lt;ul>
 &lt;li>123=1.23E+2&lt;/li>
 &lt;li>0.00041=4.1e-4&lt;/li>
+&lt;/ul>
+&lt;h2 id="數學mathh">數學&amp;lt;math.h&amp;gt;&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>M_E&lt;/code> 回傳自然常數 e&lt;/li>
+&lt;li>&lt;code>M_PI&lt;/code> 回傳圓周率 π&lt;/li>
+&lt;li>&lt;code>M_SQRT2&lt;/code> 回傳根號2&lt;/li>
+&lt;li>&lt;code>sin(x)&lt;/code> &lt;code>cos(x)&lt;/code> &lt;code>tan(x)&lt;/code> &lt;code>asin(x)&lt;/code> &lt;code>acos(x)&lt;/code> &lt;code>atan(x)&lt;/code> BJ4&lt;/li>
+&lt;li>&lt;code>exp(x)&lt;/code> 回傳自然常數 e 的 &lt;code>x&lt;/code> 次方&lt;/li>
+&lt;li>&lt;code>pow(x, y)&lt;/code> 回傳 &lt;code>x&lt;/code> 的 &lt;code>y&lt;/code> 次方&lt;/li>
+&lt;li>&lt;code>pow(x)&lt;/code> 回傳10的 &lt;code>x&lt;/code> 次方&lt;/li>
+&lt;li>&lt;code>sqrt(x)&lt;/code> 回傳 &lt;code>x&lt;/code> 的根號&lt;/li>
+&lt;li>&lt;code>log(x)&lt;/code> 回傳以 &lt;code>e&lt;/code> 為底的對數&lt;/li>
+&lt;li>&lt;code>log10(x)&lt;/code> 回傳以10為底的對數&lt;/li>
+&lt;li>&lt;code>abs(x)&lt;/code> 回傳整數 &lt;code>x&lt;/code> 的絕對值&lt;/li>
+&lt;li>&lt;code>fabs(x)&lt;/code> 回傳實數 &lt;code>x&lt;/code> 的絕對值&lt;/li>
 &lt;/ul></description></item></channel></rss>

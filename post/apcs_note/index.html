@@ -78,7 +78,7 @@
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
 Jul 17, 2022</span>
-<span class=post_time> · 2 min read</span>
+<span class=post_time> · 3 min read</span>
 <span class=page_only>&nbsp;·
 <div class=post_share>
 分享到:
@@ -101,10 +101,34 @@ Jul 17, 2022</span>
 </div>
 <h1 id=c規則>C規則</h1>
 <p>只寫和javascript不同的地方，或我自己覺得重要或會忘記的部分</p>
+<h2 id=函式cool>函式Cool</h2>
+<p>通常會加入<code>stdio.h</code>和<code>stdlib.h</code></p>
+<ul>
+<li>stdio.h
+<ul>
+<li>puts(char) - 將字串顯示到視窗上，自動換行</li>
+<li>gets(char) - 透過鍵盤輸入<strong>字串</strong></li>
+</ul>
+</li>
+<li>stdlib.h
+<ul>
+<li>abs(int x) - 回傳整數 <code>x</code> 的絕對值</li>
+<li>atoi(char) - 回傳字串轉整數的結果</li>
+<li>strtof(char) -</li>
+<li>回傳字串轉 <code>float</code> 的結果</li>
+</ul>
+</li>
+<li><a href=##%E6%95%B8%E5%AD%B8%3Cmath.h%3E>math.h</a></li>
+<li>string.h
+<ul>
+<li>strlen(s) - 回傳一個整數，是字串 <code>s</code> 的長度，長度的計算不包含字串結尾的 <code>'\0'</code></li>
+</ul>
+</li>
+</ul>
 <h2 id=輸出>輸出</h2>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;字串&#34;</span><span class=p>);</span>
 <span class=ln>2</span><span class=n>printf</span><span class=p>(</span><span class=s>&#34;字串或格式代碼&#34;</span><span class=p>,</span><span class=n>var1</span><span class=p>,</span><span class=n>var2</span><span class=p>,</span><span class=n>var3</span><span class=p>);</span>
-<span class=ln>3</span><span class=n>puts</span><span class=p>(</span><span class=s>&#34;ABC&#34;</span><span class=p>);</span><span class=c1>//自動換行，但沒有格式化字串的功能
+<span class=ln>3</span><span class=n>puts</span><span class=p>(</span><span class=s>&#34;ABC&#34;</span><span class=p>);</span><span class=c1>//自動換行，但沒有格式化字串的功能。只能顯示字串
 </span></code></pre></div><ul>
 <li><code>\n</code>:換行</li>
 <li><code>\t</code>:自動對齊</li>
@@ -116,6 +140,9 @@ Jul 17, 2022</span>
 <p>整數用 <code>%d</code>，浮點數用 <code>%f</code>，字元用 <code>%c</code>，字串用 <code>%s</code></p>
 <p>%hd, %d, %lld 都是將資料轉換成整數<br>
 能處理的位數 %hd &lt; %d &lt; %lld</p>
+<h3 id=格式化字串>格式化字串</h3>
+<h4 id=最小長度>最小長度</h4>
+<p>在 <code>%</code> 的後面加上數字，可以設定變數顯示的最小長度，如果長度不足會自動補空格，以達到對其的目的如<code>printf("%4d\n", a)</code>；在最小位數的前面加上0，會變成用0補齊長度如<code>printf("%07d\n", b);</code></p>
 <h2 id=變數>變數</h2>
 <h3 id=型態>型態</h3>
 <p>加上 <code>unsigned</code>，會變成只能表示正數和0，但範圍 <strong>大小</strong> 不變。如<code>unsigned char</code>的範圍是0~2^8</p>
@@ -249,19 +276,21 @@ Jul 17, 2022</span>
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>輸入</th>
+<th>記憶體</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td>'a'</td>
+<td><code>a</code></td>
+</tr>
+<tr>
+<td>"a"</td>
+<td><code>a</code> <code>\0</code></td>
 </tr>
 </tbody>
 </table>
-<p>'a' | <code>a</code>
-"a" | <code>a</code> <code>\0</code></p>
 <h4 id=宣告-1>宣告</h4>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln>1</span><span class=c1>//可以用和陣列一樣的方法初始化字串的內容
 </span><span class=ln>2</span><span class=c1></span><span class=kt>char</span> <span class=n>s</span><span class=p>[</span><span class=mi>100</span><span class=p>]</span><span class=o>=</span><span class=p>{</span><span class=sc>&#39;H&#39;</span><span class=p>,</span> <span class=sc>&#39;e&#39;</span><span class=p>,</span> <span class=sc>&#39;l&#39;</span><span class=p>,</span> <span class=sc>&#39;l&#39;</span><span class=p>,</span> <span class=sc>&#39;o&#39;</span><span class=p>,</span> <span class=sc>&#39;!&#39;</span><span class=p>,</span> <span class=sc>&#39;\0&#39;</span><span class=p>};</span>
@@ -286,31 +315,29 @@ Jul 17, 2022</span>
 <h5 id=字串長度>字串長度</h5>
 <p>可用loop</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
-</span><span class=ln> 3</span><span class=cp></span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
-<span class=ln> 5</span>	<span class=kt>char</span> <span class=n>s</span><span class=p>[</span><span class=mi>100</span><span class=p>]</span><span class=o>=</span><span class=s>&#34;Hello!&#34;</span><span class=p>;</span>
-<span class=ln> 6</span>	<span class=kt>int</span> <span class=n>len</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
-<span class=ln> 7</span>	<span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>!=</span><span class=sc>&#39;\0&#39;</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
-<span class=ln> 8</span>		<span class=n>len</span><span class=o>++</span><span class=p>;</span>
-<span class=ln> 9</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>len</span><span class=p>);</span>
-<span class=ln>10</span>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>11</span><span class=p>}</span>
+</span><span class=ln> 2</span><span class=cp></span>
+<span class=ln> 3</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+<span class=ln> 4</span>	<span class=kt>char</span> <span class=n>s</span><span class=p>[</span><span class=mi>100</span><span class=p>]</span><span class=o>=</span><span class=s>&#34;Hello!&#34;</span><span class=p>;</span>
+<span class=ln> 5</span>	<span class=kt>int</span> <span class=n>len</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span>
+<span class=ln> 6</span>	<span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>!=</span><span class=sc>&#39;\0&#39;</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+<span class=ln> 7</span>		<span class=n>len</span><span class=o>++</span><span class=p>;</span>
+<span class=ln> 8</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>len</span><span class=p>);</span>
+<span class=ln> 9</span>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+<span class=ln>10</span><span class=p>}</span>
 </code></pre></div><p>或透過函式庫<code>string.h</code></p>
 <h2 id=定義>定義</h2>
 <p>語法是:<code>#define &lt;目標文字> &lt;替換文字></code></p>
 <p>用 <code>#define</code> 定義的函式，執行速度會比自訂函式還快，但函式功能複雜時不好編寫，且容易造成執行結果錯誤</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
-</span><span class=ln> 3</span><span class=cp>#define plus + </span><span class=c1>//定義函式
-</span><span class=ln> 4</span><span class=c1></span><span class=cp>#define x 1 </span><span class=c1>//定義變數
-</span><span class=ln> 5</span><span class=c1></span><span class=cp>#define y 2 </span><span class=c1>//定義變數
-</span><span class=ln> 6</span><span class=c1></span><span class=cp>#define say printf
-</span><span class=ln> 7</span><span class=cp></span>
-<span class=ln> 8</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
-<span class=ln> 9</span>	<span class=n>say</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>x</span> <span class=n>plus</span> <span class=n>y</span><span class=p>);</span>
-<span class=ln>10</span>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>11</span><span class=p>}</span>
+</span><span class=ln> 2</span><span class=cp>#define plus + </span><span class=c1>//定義函式
+</span><span class=ln> 3</span><span class=c1></span><span class=cp>#define x 1 </span><span class=c1>//定義變數
+</span><span class=ln> 4</span><span class=c1></span><span class=cp>#define y 2 </span><span class=c1>//定義變數
+</span><span class=ln> 5</span><span class=c1></span><span class=cp>#define say printf
+</span><span class=ln> 6</span><span class=cp></span>
+<span class=ln> 7</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+<span class=ln> 8</span>	<span class=n>say</span><span class=p>(</span><span class=s>&#34;%d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>x</span> <span class=n>plus</span> <span class=n>y</span><span class=p>);</span>
+<span class=ln> 9</span>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+<span class=ln>10</span><span class=p>}</span>
 </code></pre></div><h2 id=函式>函式</h2>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
 </span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
@@ -328,6 +355,48 @@ Jul 17, 2022</span>
 </span><span class=ln>14</span><span class=c1></span>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
 <span class=ln>15</span><span class=p>}</span>
 <span class=ln>16</span>
+</code></pre></div><h2 id=建構式>建構式</h2>
+<h3 id=struct>struct</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span><span class=ln> 3</span><span class=cp></span>
+<span class=ln> 4</span><span class=k>struct</span> <span class=n>STUDENT</span><span class=p>{</span>
+<span class=ln> 5</span>    <span class=kt>int</span> <span class=n>number</span><span class=p>;</span>
+<span class=ln> 6</span>    <span class=kt>int</span> <span class=n>age</span><span class=p>;</span>
+<span class=ln> 7</span><span class=p>};</span>
+<span class=ln> 8</span>
+<span class=ln> 9</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+<span class=ln>10</span>	<span class=k>struct</span> <span class=n>STUDENT</span> <span class=n>student_1</span><span class=o>=</span><span class=p>{</span><span class=mi>87</span><span class=p>,</span> <span class=mi>19</span><span class=p>};</span>
+<span class=ln>11</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;I am %d,I&#39;m %d years old&#34;</span><span class=p>,</span><span class=n>student_1</span><span class=p>.</span><span class=n>number</span><span class=p>,</span><span class=n>student_1</span><span class=p>.</span><span class=n>age</span><span class=p>);</span>
+<span class=ln>12</span>    <span class=c1>//I am 87,I&#39;m 19 years old
+</span><span class=ln>13</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><h3 id=union>union</h3>
+<p>太廢了我也不知道拿來幹嘛</p>
+<p>和 <code>struct</code> 一樣可以由多個不同型別的成員組成，但 <strong>同一時間只能儲存一個資料</strong>，或者可以說雖然可以用不同的成員名稱取得其中的資料，但實際上不管用哪個名稱都會得到同一個數值</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span><span class=ln> 3</span><span class=cp></span>
+<span class=ln> 4</span><span class=k>union</span> <span class=n>Data</span><span class=p>{</span>
+<span class=ln> 5</span>	<span class=kt>int</span> <span class=n>n</span><span class=p>;</span>
+<span class=ln> 6</span>	<span class=kt>float</span> <span class=n>f</span><span class=p>;</span>
+<span class=ln> 7</span><span class=p>};</span>
+<span class=ln> 8</span>
+<span class=ln> 9</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+<span class=ln>10</span>	<span class=k>union</span> <span class=n>Data</span> <span class=n>data</span><span class=o>=</span><span class=p>{</span><span class=mi>5</span><span class=p>};</span>
+<span class=ln>11</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d %f</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>data</span><span class=p>.</span><span class=n>n</span><span class=p>,</span> <span class=n>data</span><span class=p>.</span><span class=n>f</span><span class=p>);</span>
+<span class=ln>12</span>    <span class=c1>//5 0.000000
+</span><span class=ln>13</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><h3 id=enum>enum</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;stdlib.h&gt;</span><span class=cp>
+</span><span class=ln> 3</span><span class=cp></span>
+<span class=ln> 4</span><span class=k>enum</span> <span class=n>week</span><span class=p>{</span><span class=n>A</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span> <span class=n>B</span><span class=p>,</span> <span class=n>C</span><span class=p>,</span> <span class=n>D</span><span class=o>=</span><span class=mi>1</span><span class=p>,</span> <span class=n>E</span><span class=p>,</span> <span class=n>F</span><span class=p>};</span>
+<span class=ln> 5</span>
+<span class=ln> 6</span><span class=kt>int</span> <span class=nf>main</span><span class=p>(){</span>
+<span class=ln> 7</span>	<span class=n>printf</span><span class=p>(</span><span class=s>&#34;%d %d %d %d %d %d&#34;</span><span class=p>,</span> <span class=n>A</span><span class=p>,</span> <span class=n>B</span><span class=p>,</span> <span class=n>C</span><span class=p>,</span> <span class=n>D</span><span class=p>,</span> <span class=n>E</span><span class=p>,</span> <span class=n>F</span><span class=p>);</span>
+<span class=ln> 8</span>    <span class=c1>//1 2 3 1 2 3
+</span><span class=ln> 9</span><span class=c1></span>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+<span class=ln>10</span><span class=p>}</span>
 </code></pre></div><h2 id=關鍵字>關鍵字</h2>
 <p>以下這些字不能作為變數名稱</p>
 <p>auto, do, goto, signed, break, double, if, sizeof, case, else, int, static, char, enum, long, struct, const, extern, register, switch, continue, float, return, typedef, default, for, short, union</p>
@@ -335,6 +404,21 @@ Jul 17, 2022</span>
 <ul>
 <li>123=1.23E+2</li>
 <li>0.00041=4.1e-4</li>
+</ul>
+<h2 id=數學mathh>數學&lt;math.h></h2>
+<ul>
+<li><code>M_E</code> 回傳自然常數 e</li>
+<li><code>M_PI</code> 回傳圓周率 π</li>
+<li><code>M_SQRT2</code> 回傳根號2</li>
+<li><code>sin(x)</code> <code>cos(x)</code> <code>tan(x)</code> <code>asin(x)</code> <code>acos(x)</code> <code>atan(x)</code> BJ4</li>
+<li><code>exp(x)</code> 回傳自然常數 e 的 <code>x</code> 次方</li>
+<li><code>pow(x, y)</code> 回傳 <code>x</code> 的 <code>y</code> 次方</li>
+<li><code>pow(x)</code> 回傳10的 <code>x</code> 次方</li>
+<li><code>sqrt(x)</code> 回傳 <code>x</code> 的根號</li>
+<li><code>log(x)</code> 回傳以 <code>e</code> 為底的對數</li>
+<li><code>log10(x)</code> 回傳以10為底的對數</li>
+<li><code>abs(x)</code> 回傳整數 <code>x</code> 的絕對值</li>
+<li><code>fabs(x)</code> 回傳實數 <code>x</code> 的絕對值</li>
 </ul><div id=disqus_thread></div>
 <script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//em-tec.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
 <noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
