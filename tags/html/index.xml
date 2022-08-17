@@ -2,7 +2,7 @@
 &lt;p>直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。那我們就來幫試算表包個糖衣吧&lt;/p>
 &lt;p>當你要分享表格給其他人看時，使用Google試算表把連結貼給別人是一個簡單快速的方法。除了可以套各種公式，修改資料會馬上同步，也可以開設權限讓其他人一起編輯。&lt;/p>
 &lt;p>&lt;strong>罷特&lt;/strong>如果只是要給別人看資料比如說客戶名單、訂單資訊、直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。
-&lt;img src="https://em-tec.github.io/images/create-site-for-sheet/sheet.jpg" alt="試算表 不難看但沒什麼質感">&lt;/p>
+&lt;img src="https://em-tec.github.io/images/create-site-for-sheet-sheet.jpg" alt="試算表 不難看但沒什麼質感">&lt;/p>
 &lt;h1 id="怎麼辦幫它抹上一層糖衣">怎麼辦？幫它抹上一層糖衣！&lt;/h1>
 &lt;p>我們來做一個超簡單的小網頁讓它自己去表格抓你要的資料來顯示。我們會寫一些程式(HTML,CSS,Js）不過如果你不會也沒關系w只要跟著步驟複製貼上就可以了。今天我要來幫我的畫家朋友薩波來做一個網站讓他的委託人可以查看他畫圖的進度，還要讓電腦排序讓已經完成的委託排在下面。&lt;/p>
 &lt;div class="notices info">
@@ -20,7 +20,7 @@ Responsive Tables using LI&lt;/a> by Faiz Ahmed (&lt;a href="https://codepen.io/
 on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;/p>
 &lt;script async src="https://cpwebassets.codepen.io/assets/embed/ei.js">&lt;/script>
-&lt;p>我在網站上增加了一點文字、顏色(CSS)、超連結(&lt;a>)、還有圖片、縮圖。以及簡單的出場動畫(animate.css)&lt;s>來炫技&lt;/s>。&lt;/p>
+&lt;p>我在網站上增加了一點文字、顏色(CSS)、超連結(&lt;code>&amp;lt;a&amp;gt;&lt;/code>)、還有圖片、縮圖。以及簡單的出場動畫(animate.css)&lt;s>來炫技&lt;/s>。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln"> 3&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
@@ -203,7 +203,7 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="後端-gas-gas">後端 GAS! GAS!&lt;/h2>
 &lt;p>好了前端做好了接下來我們來建另一個網站讓剛才那個網站來這裡讀取資料。為了方便起見我們在給資料的時候直接給一個做好的表格讓網站貼上。&lt;/p>
 &lt;p>我們先看一下試算表。在這裡我們可以看到每一行資料有5項，其中我希望第5項的資料可以放在付款狀態後面。現在請你先請你複製這個試算表的ID，也就是網址&lt;code>https://docs.google.com/spreadsheets/d/&lt;/code>和&lt;code>/&lt;/code>之間那一串(如&lt;code>1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA&lt;/code>)。等一下會用到。&lt;/p>
-&lt;p>&lt;img src="https://em-tec.github.io/images/create-site-for-sheet/sheet" alt="再看一次試算表">&lt;/p>
+&lt;p>&lt;img src="https://em-tec.github.io/images/create-site-for-sheet-sheet" alt="再看一次試算表">&lt;/p>
 &lt;p>我們會使用GAS(Google App Script)來建立網頁應用程式來讀取表格資料。&lt;/p>
 &lt;div class="notices info">
 &lt;div class="label">Google App Script&lt;/div>
@@ -222,7 +222,7 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 如順序&lt;code>1234567&lt;/code>排序後不會變&lt;code>124589367&lt;/code>，而是&lt;code>985421367&lt;/code>。&lt;/p>
 &lt;p>你可以根據自己的需求決定排法&lt;/p>
 &lt;/div>
-&lt;p>&lt;img src="https://em-tec.github.io/images/gas" alt="GAS快速教學">&lt;/p>
+&lt;p>&lt;img src="https://em-tec.github.io/images/gas.jpg" alt="GAS快速教學">&lt;/p>
 &lt;p>做好了之後點擊執行▶️，你會需要授予你的程式讀取資料的權限。因為你寫的程式沒有被Google驗證過所以會顯示不安全，但我相信你不會把你的帳號搞爆，對吧&lt;/p>
 &lt;p>接下來我們要部署它，讓它成為一個網站來讓我們抓。這裡選擇網頁應用程式，所有人都以你的身份讀取。按下部署就可以囉&lt;/p>
 &lt;p>這裡我們把部署的網址複製起來。如果要做修改除了按儲存之外要記得重新部署成新版本才會更新喔&lt;/p>

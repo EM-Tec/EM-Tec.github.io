@@ -1,8 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>所有文章 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/post/</link><description>Recent content in 所有文章 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>【GAS】複製貼上讓試算表變身成網頁表格 秀爆你的客戶朋友！</title><link>https://EM-Tec.github.io/post/create-site-for-sheet/</link><pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/create-site-for-sheet/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>所有文章 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/post/</link><description>Recent content in 所有文章 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Wed, 17 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>【Github Action】自動部署你的Hugo網站</title><link>https://EM-Tec.github.io/post/hugo-githubaction/</link><pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/hugo-githubaction/</guid><description>
+&lt;p>每次寫完文章還要打指令生成網站，麻煩死了！讓Github Action幫你自動部署，寫完文章直角上傳就好了！&lt;/p>
+&lt;div class="notices notice">
+&lt;div class="label">在開始之前&lt;/div>
+&lt;p>請先建立好部落格，並且將整個檔案的資料夾上傳到Github的&lt;code>用戶名/用戶名.github.io&lt;/code>repository
+記住不是裡面的&lt;code>public&lt;/code>子資料夾，是整個資料夾喔&lt;/p>
+&lt;/div>
+&lt;h1 id="要解決的問題">要解決的問題&lt;/h1>
+&lt;p>平常我們寫完一篇文章，要先打指令生成靜態網站（生成在&lt;code>public&lt;/code>資料夾裡面），再把它上傳到Github上面。
+除了過程十分的麻煩以外，因為網站資料是儲存在你自己的電腦裡面，所以假設你更變工作環境（比如說在手機上）你就沒辦法進行編輯。&lt;/p>
+&lt;p>既然每次生成網站的指令都是一樣的，不如我們來建立一個Github Action來讓它自動部署吧&lt;/p>
+&lt;h1 id="設定-github">設定 Github&lt;/h1>
+&lt;h2 id="設定-access-token">設定 Access Token&lt;/h2>
+&lt;p>首先我們要先建立一個Repository 的 Access Token。這是一把鑰匙，我們要把鑰匙給Github Action的程式它才可以部署我們的網站&lt;/p>
+&lt;p>請先到&lt;code>Settings/Developer Settings&lt;/code>下的&lt;code>Personal access tokens&lt;/code>生成一組&lt;code>Access Token&lt;/code>。建議scope直接選repo的所有權限。&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/static/images/hugo-githubAction-access-token.png" alt="生成Access Token">&lt;/p>
+&lt;h2 id="添加-secrets">添加 Secrets&lt;/h2>
+&lt;p>因為我們的Github Action程式碼是公開的，但是我們不想要讓其他人看到剛才的那組Access Token，所以我們要建立一組Secret。當我們在程式說要「那個東西」的時候，他就會知道要來這裡找這組密碼。&lt;/p>
+&lt;p>請到&lt;code>Settings/Secrets&lt;/code>新增一組 Secrets，我這邊叫做 ACCESS_TOKEN，之後在腳本上會用到。&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/static/images/hugo-githubAction-sectets.png" alt="添加Secrets">&lt;/p>
+&lt;h2 id="新增workflow">新增Workflow&lt;/h2>
+&lt;p>依序點擊Action，New，set up a workflow yourself，並貼上以下程式。名稱可以自己取，貼上完之後點擊Start Commit。&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/static/images/hugo-githubAction-access-workflow.jpg" alt="設定Workflow">&lt;/p>
+&lt;p>程式意思是當main分支有push操作時（就是你上傳或更變檔案），會生成靜態網頁。剛才不是說會生成在&lt;code>public&lt;/code>這個資料夾，我們把它推送到 gh-pages 這個分支（當然你也可以自己取名）&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln"> 1&lt;/span>name: create
+&lt;span class="ln"> 2&lt;/span>
+&lt;span class="ln"> 3&lt;/span>on:
+&lt;span class="ln"> 4&lt;/span> push:
+&lt;span class="ln"> 5&lt;/span> branches:
+&lt;span class="ln"> 6&lt;/span> - main # 當main分支有push操作時
+&lt;span class="ln"> 7&lt;/span>
+&lt;span class="ln"> 8&lt;/span>jobs:
+&lt;span class="ln"> 9&lt;/span> deploy:
+&lt;span class="ln">10&lt;/span> runs-on: ubuntu-18.04
+&lt;span class="ln">11&lt;/span> steps:
+&lt;span class="ln">12&lt;/span> - uses: actions/checkout@v2
+&lt;span class="ln">13&lt;/span> with:
+&lt;span class="ln">14&lt;/span> submodules: true # 找尋Hugo主題(true OR recursive)
+&lt;span class="ln">15&lt;/span> fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+&lt;span class="ln">16&lt;/span>
+&lt;span class="ln">17&lt;/span> - name: Setup Hugo
+&lt;span class="ln">18&lt;/span> uses: peaceiris/actions-hugo@v2
+&lt;span class="ln">19&lt;/span> with:
+&lt;span class="ln">20&lt;/span> hugo-version: &amp;#39;0.89.4&amp;#39; # hugo 版本
+&lt;span class="ln">21&lt;/span> extended: true
+&lt;span class="ln">22&lt;/span>
+&lt;span class="ln">23&lt;/span> - name: Build
+&lt;span class="ln">24&lt;/span> run: hugo --minify
+&lt;span class="ln">25&lt;/span>
+&lt;span class="ln">26&lt;/span> - name: Deploy
+&lt;span class="ln">27&lt;/span> uses: peaceiris/actions-gh-pages@v3
+&lt;span class="ln">28&lt;/span> with:
+&lt;span class="ln">29&lt;/span> github_token: ${{ secrets.HUGO_DEPLOY_TOKEN }}
+&lt;span class="ln">30&lt;/span> PUBLISH_BRANCH: gh-pages # 推送到 gh-pages 分支
+&lt;span class="ln">31&lt;/span> PUBLISH_DIR: ./public # hugo 生成的目錄
+&lt;span class="ln">32&lt;/span> commit_message: ${{github.event.head_commit.message }}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>新增完成後它會自己跑一次。不過我們還需要做一個設定。生成的網站是放在&lt;code>gh-pages&lt;/code>這個分支，我們要輸入網址時，去讀取這個分支而不是main。所以請到&lt;code>Settings/Pages/Branch&lt;/code>更改&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/static/images/hugo-githubAction-branch.jpg" alt="更改Branch">&lt;/p>
+&lt;p>這樣就大公告成囉！記得每次更新完部落格Github Action都需要大約30秒的執行時間才會完成部署。如果你想要查看它的進度狀態可以點擊最新紀錄的橘點看目前的即時狀態。如果變成綠色就是部署成功，如果是鴻森代表有問題（通常是文章中的語法有語法錯誤）。&lt;/p></description></item><item><title>【GAS】複製貼上讓試算表變身成網頁表格 秀爆你的客戶朋友！</title><link>https://EM-Tec.github.io/post/create-site-for-sheet/</link><pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/create-site-for-sheet/</guid><description>
 &lt;p>直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。那我們就來幫試算表包個糖衣吧&lt;/p>
 &lt;p>當你要分享表格給其他人看時，使用Google試算表把連結貼給別人是一個簡單快速的方法。除了可以套各種公式，修改資料會馬上同步，也可以開設權限讓其他人一起編輯。&lt;/p>
 &lt;p>&lt;strong>罷特&lt;/strong>如果只是要給別人看資料比如說客戶名單、訂單資訊、直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。
-&lt;img src="https://em-tec.github.io/images/create-site-for-sheet/sheet.jpg" alt="試算表 不難看但沒什麼質感">&lt;/p>
+&lt;img src="https://em-tec.github.io/images/create-site-for-sheet-sheet.jpg" alt="試算表 不難看但沒什麼質感">&lt;/p>
 &lt;h1 id="怎麼辦幫它抹上一層糖衣">怎麼辦？幫它抹上一層糖衣！&lt;/h1>
 &lt;p>我們來做一個超簡單的小網頁讓它自己去表格抓你要的資料來顯示。我們會寫一些程式(HTML,CSS,Js）不過如果你不會也沒關系w只要跟著步驟複製貼上就可以了。今天我要來幫我的畫家朋友薩波來做一個網站讓他的委託人可以查看他畫圖的進度，還要讓電腦排序讓已經完成的委託排在下面。&lt;/p>
 &lt;div class="notices info">
@@ -20,7 +78,7 @@ Responsive Tables using LI&lt;/a> by Faiz Ahmed (&lt;a href="https://codepen.io/
 on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;/p>
 &lt;script async src="https://cpwebassets.codepen.io/assets/embed/ei.js">&lt;/script>
-&lt;p>我在網站上增加了一點文字、顏色(CSS)、超連結(&lt;a>)、還有圖片、縮圖。以及簡單的出場動畫(animate.css)&lt;s>來炫技&lt;/s>。&lt;/p>
+&lt;p>我在網站上增加了一點文字、顏色(CSS)、超連結(&lt;code>&amp;lt;a&amp;gt;&lt;/code>)、還有圖片、縮圖。以及簡單的出場動畫(animate.css)&lt;s>來炫技&lt;/s>。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &lt;span class="ln"> 2&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="ln"> 3&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
@@ -203,7 +261,7 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="後端-gas-gas">後端 GAS! GAS!&lt;/h2>
 &lt;p>好了前端做好了接下來我們來建另一個網站讓剛才那個網站來這裡讀取資料。為了方便起見我們在給資料的時候直接給一個做好的表格讓網站貼上。&lt;/p>
 &lt;p>我們先看一下試算表。在這裡我們可以看到每一行資料有5項，其中我希望第5項的資料可以放在付款狀態後面。現在請你先請你複製這個試算表的ID，也就是網址&lt;code>https://docs.google.com/spreadsheets/d/&lt;/code>和&lt;code>/&lt;/code>之間那一串(如&lt;code>1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA&lt;/code>)。等一下會用到。&lt;/p>
-&lt;p>&lt;img src="https://em-tec.github.io/images/create-site-for-sheet/sheet" alt="再看一次試算表">&lt;/p>
+&lt;p>&lt;img src="https://em-tec.github.io/images/create-site-for-sheet-sheet" alt="再看一次試算表">&lt;/p>
 &lt;p>我們會使用GAS(Google App Script)來建立網頁應用程式來讀取表格資料。&lt;/p>
 &lt;div class="notices info">
 &lt;div class="label">Google App Script&lt;/div>
@@ -222,7 +280,7 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 如順序&lt;code>1234567&lt;/code>排序後不會變&lt;code>124589367&lt;/code>，而是&lt;code>985421367&lt;/code>。&lt;/p>
 &lt;p>你可以根據自己的需求決定排法&lt;/p>
 &lt;/div>
-&lt;p>&lt;img src="https://em-tec.github.io/images/gas" alt="GAS快速教學">&lt;/p>
+&lt;p>&lt;img src="https://em-tec.github.io/images/gas.jpg" alt="GAS快速教學">&lt;/p>
 &lt;p>做好了之後點擊執行▶️，你會需要授予你的程式讀取資料的權限。因為你寫的程式沒有被Google驗證過所以會顯示不安全，但我相信你不會把你的帳號搞爆，對吧&lt;/p>
 &lt;p>接下來我們要部署它，讓它成為一個網站來讓我們抓。這裡選擇網頁應用程式，所有人都以你的身份讀取。按下部署就可以囉&lt;/p>
 &lt;p>這裡我們把部署的網址複製起來。如果要做修改除了按儲存之外要記得重新部署成新版本才會更新喔&lt;/p>

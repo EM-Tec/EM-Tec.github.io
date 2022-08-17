@@ -1,6 +1,6 @@
-<!doctype html><html lang=zh-tw data-figures>
+<!doctype html><html lang=zh-tw data-figures class=page>
 <head>
-<title>線上教學 | 毛哥EM資訊密技</title>
+<title>【Github Action】自動部署你的Hugo網站 | 毛哥EM資訊密技</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv=x-ua-compatible content="IE=edge">
@@ -8,19 +8,18 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-H69XEEC798')</script>
 <meta property="og:locale" content="zh-tw">
 <meta property="og:type" content="article">
-<meta name=description content>
+<meta name=description content="寫完文章直接上傳，讓Github自動幫您生成網站！">
 <meta name=twitter:card content="summary">
 <meta name=twitter:creator content>
-<meta name=twitter:title content="線上教學">
-<meta property="og:url" content="https://EM-Tec.github.io/series/%E7%B7%9A%E4%B8%8A%E6%95%99%E5%AD%B8/">
-<meta property="og:title" content="線上教學">
-<meta property="og:description" content>
-<meta property="og:image" content="https://EM-Tec.github.io/icons/EMprofile.png">
+<meta name=twitter:title content="【Github Action】自動部署你的Hugo網站">
+<meta property="og:url" content="https://EM-Tec.github.io/post/hugo-githubaction/">
+<meta property="og:title" content="【Github Action】自動部署你的Hugo網站">
+<meta property="og:description" content="寫完文章直接上傳，讓Github自動幫您生成網站！">
+<meta property="og:image" content="https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG">
 <link rel=apple-touch-icon sizes=180x180 href=https://EM-Tec.github.io/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://EM-Tec.github.io/icons/favicon-32x32.png>
 <link rel=manifest href=https://EM-Tec.github.io/icons/site.webmanifest>
-<link rel=canonical href=https://EM-Tec.github.io/series/%E7%B7%9A%E4%B8%8A%E6%95%99%E5%AD%B8/>
-<link rel=alternate type=application/rss+xml href=https://EM-Tec.github.io/series/%E7%B7%9A%E4%B8%8A%E6%95%99%E5%AD%B8/index.xml title=毛哥EM資訊密技>
+<link rel=canonical href=https://EM-Tec.github.io/post/hugo-githubaction/>
 <link rel=preload href=https://EM-Tec.github.io/css/styles.ee3b9488ef041710052f5c22837bf044d13ac251377aac559881157179229b04be4ae0027ad7b3c9b0cf469d0b37c82b8fcc5956709efe67b73f0e08a76bba3d.css integrity="sha512-7juUiO8EFxAFL1wig3vwRNE6wlE3eqxVmIEVcXkimwS+SuACetezybDPRp0LN8grj8xZVnCe/me3Pw4Ip2u6PQ==" as=style crossorigin=anonymous>
 <link rel=preload href=https://EM-Tec.github.io/js/bundle.min.14825dc619648aeca2e4e66c65ef7d06ea216e6a64cd503f64d2fe77950ee425c47fc0f2cf993c2d656f534914619a2c47c8313438a810ed5008db38a46a812d.js as=script integrity="sha512-FIJdxhlkiuyi5OZsZe99BuohbmpkzVA/ZNL+d5UO5CXEf8Dyz5k8LWVvU0kUYZosR8gxNDioEO1QCNs4pGqBLQ==" crossorigin=anonymous>
 <link rel=stylesheet type=text/css href=https://EM-Tec.github.io/css/styles.ee3b9488ef041710052f5c22837bf044d13ac251377aac559881157179229b04be4ae0027ad7b3c9b0cf469d0b37c82b8fcc5956709efe67b73f0e08a76bba3d.css integrity="sha512-7juUiO8EFxAFL1wig3vwRNE6wlE3eqxVmIEVcXkimwS+SuACetezybDPRp0LN8grj8xZVnCe/me3Pw4Ip2u6PQ==" crossorigin=anonymous>
@@ -73,96 +72,92 @@
 </header>
 <main>
 <div class="grid-inverse wrap content">
-<ul class=posts id=posts>
-<li class=post_item>
-<div class=excerpt>
-<div class=excerpt_header>
-<h3 class=post_link>
-<a href=https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/ title=【捷徑】快速進入當節課堂的Meet（備份）>【捷徑】快速進入當節課堂的Meet（備份）</a>
-</h3>
+<article class=post_content>
+<h1 class=post_title>【Github Action】自動部署你的Hugo網站</h1>
 <div class=post_meta>
 <span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
 <span class=post_date>
-Jun 4, 2021</span>
-<span class=post_time> · 1 min read</span><span>&nbsp;· <a href=https://EM-Tec.github.io/tags/%E8%87%AA%E8%A3%BD title=自製 class="post_tag button button_translucent">自製
-</a><a href=https://EM-Tec.github.io/tags/%E8%A1%9B%E9%81%93%E4%B8%AD%E5%AD%B8 title=衛道中學 class="post_tag button button_translucent">衛道中學
-</a><a href=https://EM-Tec.github.io/tags/github title=Github class="post_tag button button_translucent">Github
-</a><a href=https://EM-Tec.github.io/tags/json title=JSON class="post_tag button button_translucent">JSON
-</a><a href=https://EM-Tec.github.io/tags/ios%E6%8D%B7%E5%BE%91 title=ios捷徑 class="post_tag button button_translucent">ios捷徑
+Aug 17, 2022</span>
+<span class=post_time> · 1 min read</span><span>&nbsp;· <a href=https://EM-Tec.github.io/tags/github title=Github class="post_tag button button_translucent">Github
 </a>
 </span>
 <span class=page_only>&nbsp;·
 <div class=post_share>
 分享到:
-<a href="https://twitter.com/intent/tweet?text=%e3%80%90%e6%8d%b7%e5%be%91%e3%80%91%e5%bf%ab%e9%80%9f%e9%80%b2%e5%85%a5%e7%95%b6%e7%af%80%e8%aa%b2%e5%a0%82%e7%9a%84Meet%ef%bc%88%e5%82%99%e4%bb%bd%ef%bc%89&url=https%3a%2f%2fEM-Tec.github.io%2fpost%2fshortcut-joinmeetdirectly%2f&tw_p=tweetbutton" class=twitter title="分享到 Twitter" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#twitter"/></svg>
+<a href="https://twitter.com/intent/tweet?text=%e3%80%90Github%20Action%e3%80%91%e8%87%aa%e5%8b%95%e9%83%a8%e7%bd%b2%e4%bd%a0%e7%9a%84Hugo%e7%b6%b2%e7%ab%99&url=https%3a%2f%2fEM-Tec.github.io%2fpost%2fhugo-githubaction%2f&tw_p=tweetbutton" class=twitter title="分享到 Twitter" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#twitter"/></svg>
 </a>
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fEM-Tec.github.io%2fpost%2fshortcut-joinmeetdirectly%2f&t=%e3%80%90%e6%8d%b7%e5%be%91%e3%80%91%e5%bf%ab%e9%80%9f%e9%80%b2%e5%85%a5%e7%95%b6%e7%af%80%e8%aa%b2%e5%a0%82%e7%9a%84Meet%ef%bc%88%e5%82%99%e4%bb%bd%ef%bc%89" class=facebook title="分享到 Facebook" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#facebook"/></svg>
-</a>
-<a href=#linkedinshare id=linkedinshare class=linkedin title="分享到 LinkedIn" rel=nofollow><svg class="icon"><use xlink:href="#linkedin"/></svg>
-</a>
-<a href=https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/ title="Copy Link" class="link link_yank"><svg class="icon"><use xlink:href="#copy"/></svg>
-</a>
-</div>
-</span>
-</div>
-</div>
-<div class="excerpt_footer partition">
-<div class=excerpt_thumbnail>
-<img src=https://EM-Tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg alt=【捷徑】快速進入當節課堂的Meet（備份）>
-</div>
-<div>
-<p class=pale>
-<p>透過這個捷徑快速進入當節課堂的Meet，再也不用怕忘記課表</p>
-</p>
-<a href=https://EM-Tec.github.io/post/shortcut-joinmeetdirectly/ title=閱讀更多 class="excerpt_more button">閱讀更多</a>
-</div>
-</div>
-</div>
-</li>
-<li class=post_item>
-<div class=excerpt>
-<div class=excerpt_header>
-<h3 class=post_link>
-<a href=https://EM-Tec.github.io/post/shortcut-untrusted_shortcut/ title=【捷徑】怎麼加入不受信任的捷徑?>【捷徑】怎麼加入不受信任的捷徑?</a>
-</h3>
-<div class=post_meta>
-<span><svg class="icon"><use xlink:href="#calendar"/></svg></span>
-<span class=post_date>
-Jun 4, 2021</span>
-<span class=post_time> · 1 min read</span><span>&nbsp;· <a href=https://EM-Tec.github.io/tags/ios%E6%8D%B7%E5%BE%91 title=ios捷徑 class="post_tag button button_translucent">ios捷徑
-</a>
-</span>
-<span class=page_only>&nbsp;·
-<div class=post_share>
-分享到:
-<a href="https://twitter.com/intent/tweet?text=%e3%80%90%e6%8d%b7%e5%be%91%e3%80%91%e6%80%8e%e9%ba%bc%e5%8a%a0%e5%85%a5%e4%b8%8d%e5%8f%97%e4%bf%a1%e4%bb%bb%e7%9a%84%e6%8d%b7%e5%be%91%3f&url=https%3a%2f%2fEM-Tec.github.io%2fpost%2fshortcut-untrusted_shortcut%2f&tw_p=tweetbutton" class=twitter title="分享到 Twitter" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#twitter"/></svg>
-</a>
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fEM-Tec.github.io%2fpost%2fshortcut-untrusted_shortcut%2f&t=%e3%80%90%e6%8d%b7%e5%be%91%e3%80%91%e6%80%8e%e9%ba%bc%e5%8a%a0%e5%85%a5%e4%b8%8d%e5%8f%97%e4%bf%a1%e4%bb%bb%e7%9a%84%e6%8d%b7%e5%be%91%3f" class=facebook title="分享到 Facebook" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#facebook"/></svg>
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fEM-Tec.github.io%2fpost%2fhugo-githubaction%2f&t=%e3%80%90Github%20Action%e3%80%91%e8%87%aa%e5%8b%95%e9%83%a8%e7%bd%b2%e4%bd%a0%e7%9a%84Hugo%e7%b6%b2%e7%ab%99" class=facebook title="分享到 Facebook" target=_blank rel=nofollow><svg class="icon"><use xlink:href="#facebook"/></svg>
 </a>
 <a href=#linkedinshare id=linkedinshare class=linkedin title="分享到 LinkedIn" rel=nofollow><svg class="icon"><use xlink:href="#linkedin"/></svg>
 </a>
-<a href=https://EM-Tec.github.io/post/shortcut-untrusted_shortcut/ title="Copy Link" class="link link_yank"><svg class="icon"><use xlink:href="#copy"/></svg>
+<a href=https://EM-Tec.github.io/post/hugo-githubaction/ title="Copy Link" class="link link_yank"><svg class="icon"><use xlink:href="#copy"/></svg>
 </a>
 </div>
 </span>
 </div>
+<img src=https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG class=image_featured alt="【Github Action】自動部署你的Hugo網站">
+<p>每次寫完文章還要打指令生成網站，麻煩死了！讓Github Action幫你自動部署，寫完文章直角上傳就好了！</p>
+<div class="notices notice">
+<div class=label>在開始之前</div>
+<p>請先建立好部落格，並且將整個檔案的資料夾上傳到Github的<code>用戶名/用戶名.github.io</code>repository
+記住不是裡面的<code>public</code>子資料夾，是整個資料夾喔</p>
 </div>
-<div class="excerpt_footer partition">
-<div class=excerpt_thumbnail>
-<img src=https://EM-Tec.github.io/images/thumbnails/shortcut-untrusted_Shortcut.jpg alt=【捷徑】怎麼加入不受信任的捷徑?>
-</div>
-<div>
-<p class=pale>
-<p>不少人要下載Siri捷徑腳本時，都會因為捷徑的安全設定不允許不受信任的捷徑，導致無法順利下載此捷徑」那為什麼會變成這樣呢？難道都不能下載網頁上的捷徑腳本了嗎？</p>
-</p>
-<a href=https://EM-Tec.github.io/post/shortcut-untrusted_shortcut/ title=閱讀更多 class="excerpt_more button">閱讀更多</a>
-</div>
-</div>
-</div>
-</li>
-<li>
-</li>
-</ul>
+<h1 id=要解決的問題>要解決的問題</h1>
+<p>平常我們寫完一篇文章，要先打指令生成靜態網站（生成在<code>public</code>資料夾裡面），再把它上傳到Github上面。
+除了過程十分的麻煩以外，因為網站資料是儲存在你自己的電腦裡面，所以假設你更變工作環境（比如說在手機上）你就沒辦法進行編輯。</p>
+<p>既然每次生成網站的指令都是一樣的，不如我們來建立一個Github Action來讓它自動部署吧</p>
+<h1 id=設定-github>設定 Github</h1>
+<h2 id=設定-access-token>設定 Access Token</h2>
+<p>首先我們要先建立一個Repository 的 Access Token。這是一把鑰匙，我們要把鑰匙給Github Action的程式它才可以部署我們的網站</p>
+<p>請先到<code>Settings/Developer Settings</code>下的<code>Personal access tokens</code>生成一組<code>Access Token</code>。建議scope直接選repo的所有權限。</p>
+<p><img src=https://EM-Tec.github.io/static/images/hugo-githubAction-access-token.png alt="生成Access Token"></p>
+<h2 id=添加-secrets>添加 Secrets</h2>
+<p>因為我們的Github Action程式碼是公開的，但是我們不想要讓其他人看到剛才的那組Access Token，所以我們要建立一組Secret。當我們在程式說要「那個東西」的時候，他就會知道要來這裡找這組密碼。</p>
+<p>請到<code>Settings/Secrets</code>新增一組 Secrets，我這邊叫做 ACCESS_TOKEN，之後在腳本上會用到。</p>
+<p><img src=https://EM-Tec.github.io/static/images/hugo-githubAction-sectets.png alt=添加Secrets></p>
+<h2 id=新增workflow>新增Workflow</h2>
+<p>依序點擊Action，New，set up a workflow yourself，並貼上以下程式。名稱可以自己取，貼上完之後點擊Start Commit。</p>
+<p><img src=https://EM-Tec.github.io/static/images/hugo-githubAction-access-workflow.jpg alt=設定Workflow></p>
+<p>程式意思是當main分支有push操作時（就是你上傳或更變檔案），會生成靜態網頁。剛才不是說會生成在<code>public</code>這個資料夾，我們把它推送到 gh-pages 這個分支（當然你也可以自己取名）</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln> 1</span>name: create
+<span class=ln> 2</span>
+<span class=ln> 3</span>on:
+<span class=ln> 4</span>  push:
+<span class=ln> 5</span>    branches:
+<span class=ln> 6</span>      - main  # 當main分支有push操作時
+<span class=ln> 7</span>
+<span class=ln> 8</span>jobs:
+<span class=ln> 9</span>  deploy:
+<span class=ln>10</span>    runs-on: ubuntu-18.04
+<span class=ln>11</span>    steps:
+<span class=ln>12</span>      - uses: actions/checkout@v2
+<span class=ln>13</span>        with:
+<span class=ln>14</span>          submodules: true  # 找尋Hugo主題(true OR recursive)
+<span class=ln>15</span>          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+<span class=ln>16</span>
+<span class=ln>17</span>      - name: Setup Hugo
+<span class=ln>18</span>        uses: peaceiris/actions-hugo@v2
+<span class=ln>19</span>        with:
+<span class=ln>20</span>          hugo-version: &#39;0.89.4&#39; # hugo 版本
+<span class=ln>21</span>          extended: true
+<span class=ln>22</span>
+<span class=ln>23</span>      - name: Build
+<span class=ln>24</span>        run: hugo --minify
+<span class=ln>25</span>
+<span class=ln>26</span>      - name: Deploy
+<span class=ln>27</span>        uses: peaceiris/actions-gh-pages@v3
+<span class=ln>28</span>        with:
+<span class=ln>29</span>          github_token: ${{ secrets.HUGO_DEPLOY_TOKEN }}
+<span class=ln>30</span>          PUBLISH_BRANCH: gh-pages  # 推送到 gh-pages 分支
+<span class=ln>31</span>          PUBLISH_DIR: ./public     # hugo 生成的目錄
+<span class=ln>32</span>          commit_message: ${{github.event.head_commit.message }}
+</code></pre></div><p>新增完成後它會自己跑一次。不過我們還需要做一個設定。生成的網站是放在<code>gh-pages</code>這個分支，我們要輸入網址時，去讀取這個分支而不是main。所以請到<code>Settings/Pages/Branch</code>更改</p>
+<p><img src=https://EM-Tec.github.io/static/images/hugo-githubAction-branch.jpg alt=更改Branch></p>
+<p>這樣就大公告成囉！記得每次更新完部落格Github Action都需要大約30秒的執行時間才會完成部署。如果你想要查看它的進度狀態可以點擊最新紀錄的橘點看目前的即時狀態。如果變成綠色就是部署成功，如果是鴻森代表有問題（通常是文章中的語法有語法錯誤）。</p><div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//em-tec.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</article>
 <aside class=sidebar>
 <section class=sidebar_inner>
 <div class=author_header>
@@ -200,9 +195,6 @@ Jun 4, 2021</span>
 <h2 class=mt-4>最新文章</h2>
 <ul class=flex-column>
 <li>
-<a href=https://EM-Tec.github.io/post/hugo-githubaction/ class=nav-link title="【Github Action】自動部署你的Hugo網站">【Github Action】自動部署你的Hugo網站</a>
-</li>
-<li>
 <a href=https://EM-Tec.github.io/post/create-site-for-sheet/ class=nav-link title="【GAS】複製貼上讓試算表變身成網頁表格 秀爆你的客戶朋友！">【GAS】複製貼上讓試算表變身成網頁表格 秀爆你的客戶朋友！</a>
 </li>
 <li>
@@ -222,6 +214,9 @@ Jun 4, 2021</span>
 </li>
 <li>
 <a href=https://EM-Tec.github.io/post/multiwall/ class=nav-link title=【MultiWall】讓不同螢幕放不同桌布>【MultiWall】讓不同螢幕放不同桌布</a>
+</li>
+<li>
+<a href=https://EM-Tec.github.io/post/is-gd/ class=nav-link title=【is.gd】超好用網址縮短！連Apple都在用>【is.gd】超好用網址縮短！連Apple都在用</a>
 </li>
 </ul>
 <div>
