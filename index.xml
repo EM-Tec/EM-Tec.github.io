@@ -1,4 +1,451 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毛哥EM資訊密技</title><link>https://EM-Tec.github.io/</link><description>Recent content on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Sun, 17 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>【重點整理】APCS筆記(長更)</title><link>https://EM-Tec.github.io/post/apcs_note/</link><pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/apcs_note/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毛哥EM資訊密技</title><link>https://EM-Tec.github.io/</link><description>Recent content on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>【GAS】複製貼上讓試算表變身成網頁表格 秀爆你的客戶朋友！</title><link>https://EM-Tec.github.io/post/create-site-for-sheet/</link><pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/create-site-for-sheet/</guid><description>
+&lt;p>直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。那我們就來幫試算表包個糖衣吧&lt;/p>
+&lt;p>當你要分享表格給其他人看時，使用Google試算表把連結貼給別人是一個簡單快速的方法。除了可以套各種公式，修改資料會馬上同步，也可以開設權限讓其他人一起編輯。&lt;/p>
+&lt;p>&lt;strong>罷特&lt;/strong>如果只是要給別人看資料比如說客戶名單、訂單資訊、直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。
+&lt;img src="https://em-tec.github.io/images/create-site-for-sheet/sheet.jpg" alt="試算表 不難看但沒什麼質感">&lt;/p>
+&lt;h1 id="怎麼辦幫它抹上一層糖衣">怎麼辦？幫它抹上一層糖衣！&lt;/h1>
+&lt;p>我們來做一個超簡單的小網頁讓它自己去表格抓你要的資料來顯示。我們會寫一些程式(HTML,CSS,Js）不過如果你不會也沒關系w只要跟著步驟複製貼上就可以了。今天我要來幫我的畫家朋友薩波來做一個網站讓他的委託人可以查看他畫圖的進度，還要讓電腦排序讓已經完成的委託排在下面。&lt;/p>
+&lt;div class="notices info">
+&lt;div class="label">薩波委託進度&lt;/div>
+&lt;p>開發者:毛哥EM(我)
+類型:網站
+網址:&lt;a href="https://Edit-Mr.github.io/code/sabooo">毛哥EM的基地&lt;/a>&lt;/p>
+&lt;/div>
+&lt;h2 id="架一個網站">架一個網站！&lt;/h2>
+&lt;p>你可以使用任何一個可以給你存放網站代碼的地方，比如說&lt;a href="https://github.io">Github&lt;/a>。&lt;/p>
+&lt;p>我從&lt;a href="https://codepen.io/">Codepen&lt;/a>上找到了一個很好看的表格模板來做修改。它在螢幕尺寸太窄的時候會用不同的版面來顯示，保持使用者體驗。你也可以找其他的模板或者是自己建立一個。&lt;/p>
+&lt;p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="dJeRex" data-user="faaezahmd" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+&lt;span>See the Pen &lt;a href="https://codepen.io/faaezahmd/pen/dJeRex">
+Responsive Tables using LI&lt;/a> by Faiz Ahmed (&lt;a href="https://codepen.io/faaezahmd">@faaezahmd&lt;/a>)
+on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
+&lt;/p>
+&lt;script async src="https://cpwebassets.codepen.io/assets/embed/ei.js">&lt;/script>
+&lt;p>我在網站上增加了一點文字、顏色(CSS)、超連結(&lt;a>)、還有圖片、縮圖。以及簡單的出場動畫(animate.css)&lt;s>來炫技&lt;/s>。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 3&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是標題--&amp;gt;&lt;/span>
+&lt;span class="ln"> 5&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波進度查詢表&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 6&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是縮圖，可以換網址--&amp;gt;&lt;/span>
+&lt;span class="ln"> 8&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io/code/sabooo/thumbnail.png&amp;#34;&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;icon&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;image/x-icon&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 9&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/css&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io/css/Animate.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;screen&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 10&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是主題顏色，可以自由更換（支援HEX）--&amp;gt;&lt;/span>
+&lt;span class="ln"> 11&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-color&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;orange&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 12&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 13&lt;/span> &lt;span class="c">&amp;lt;!--下面這些是樣式，可以自由更換顏色之類的--&amp;gt;&lt;/span>
+&lt;span class="ln"> 14&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 15&lt;/span>         &lt;span class="p">@&lt;/span>&lt;span class="k">import&lt;/span> &lt;span class="nt">url&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">https&lt;/span>&lt;span class="o">://&lt;/span>&lt;span class="nt">fonts&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">googleapis&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">earlyaccess&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">cwtexyen&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">css&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 16&lt;/span>
+&lt;span class="ln"> 17&lt;/span>         &lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 18&lt;/span>             &lt;span class="k">font-family&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Arial&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;cwTeXYen&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;微軟正黑體&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 19&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fee5bd&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 20&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 21&lt;/span>
+&lt;span class="ln"> 22&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">container&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 23&lt;/span>             &lt;span class="k">max-width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 24&lt;/span>             &lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 25&lt;/span>             &lt;span class="k">margin-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 26&lt;/span>             &lt;span class="k">padding-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 27&lt;/span>             &lt;span class="k">padding-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 28&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 29&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 30&lt;/span>
+&lt;span class="ln"> 31&lt;/span>         &lt;span class="nt">h2&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 32&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">23&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 33&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 34&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 35&lt;/span>             &lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 36&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e69137&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 37&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">fadeIn&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 38&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 39&lt;/span>             &lt;span class="n">animate-delay&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.9&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 40&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 41&lt;/span>
+&lt;span class="ln"> 42&lt;/span>         &lt;span class="nt">h1&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 43&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">35&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 44&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 45&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 46&lt;/span>             &lt;span class="k">size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 47&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#351c75&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 48&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">zoomIn&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 49&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 50&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 51&lt;/span>
+&lt;span class="ln"> 52&lt;/span>         &lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 53&lt;/span>             &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 54&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 55&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 56&lt;/span>             &lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">space-between&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 57&lt;/span>             &lt;span class="k">margin-bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 58&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 59&lt;/span>
+&lt;span class="ln"> 60&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-header&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="ln"> 61&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 62&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#f9a756&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 63&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 64&lt;/span>             &lt;span class="k">margin-top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 65&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 66&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">slideInUp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 67&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 68&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 69&lt;/span>
+&lt;span class="ln"> 70&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 71&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 72&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 73&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 74&lt;/span>
+&lt;span class="ln"> 75&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 76&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 77&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 78&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 79&lt;/span>
+&lt;span class="ln"> 80&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-row&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 81&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 82&lt;/span>             &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 83&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">backInLeft&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 84&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 85&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 86&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-row&lt;/span>&lt;span class="p">{}&lt;/span>
+&lt;span class="ln"> 87&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-1&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 88&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 89&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 90&lt;/span>
+&lt;span class="ln"> 91&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-2&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 92&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 93&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 94&lt;/span>
+&lt;span class="ln"> 95&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-3&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 96&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 97&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 98&lt;/span>
+&lt;span class="ln"> 99&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-4&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">100&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">101&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">102&lt;/span>
+&lt;span class="ln">103&lt;/span>         &lt;span class="p">@&lt;/span>&lt;span class="k">media&lt;/span> &lt;span class="nt">all&lt;/span> &lt;span class="nt">and&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nt">max-width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">767px&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">104&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-header&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">105&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">106&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">107&lt;/span>
+&lt;span class="ln">108&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">109&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">110&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">111&lt;/span>
+&lt;span class="ln">112&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">113&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">114&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">115&lt;/span>
+&lt;span class="ln">116&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">117&lt;/span>                 &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">118&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">119&lt;/span>
+&lt;span class="ln">120&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">121&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">122&lt;/span>                 &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">123&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">124&lt;/span>
+&lt;span class="ln">125&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">126&lt;/span>                 &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#6c7a89&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">127&lt;/span>                 &lt;span class="k">padding-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">128&lt;/span>                 &lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">attr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">label&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">129&lt;/span>                 &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">130&lt;/span>                 &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">right&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">131&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">132&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">133&lt;/span>
+&lt;span class="ln">134&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">header&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">135&lt;/span>             &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">136&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">137&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">138&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">slideInUp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">139&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">140&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">141&lt;/span>
+&lt;span class="ln">142&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">finished&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">143&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">green&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">144&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">145&lt;/span>
+&lt;span class="ln">146&lt;/span>         &lt;span class="nt">p&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="ln">147&lt;/span>         &lt;span class="nt">a&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">148&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">149&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">150&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#6c7a89&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">151&lt;/span>             &lt;span class="k">text-decoration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">152&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">fadeIn&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">153&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">154&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">155&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">156&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">157&lt;/span>
+&lt;span class="ln">158&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">159&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">160&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波2022委託與贈圖表&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">161&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>這些不代表畫的順序 會跳著畫&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">162&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header.png&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">163&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;table-note&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">164&lt;/span>             如果要一次看完整表格請切換到電腦版網頁喔
+&lt;span class="ln">165&lt;/span>         &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">166&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;responsive-table&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">167&lt;/span>             &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;table-header&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">168&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>委託人姓名&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">169&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>委託項目&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">170&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-3&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>付款狀態&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">171&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-4&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>進度狀態&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">172&lt;/span>             &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">173&lt;/span>             資料載入中
+&lt;span class="ln">174&lt;/span>         &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">175&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://www.facebook.com/Sabo9335&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波FB&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> · &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>
+&lt;span class="ln">176&lt;/span>                 &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://instagram.com/sabooo_9335?igshid=YmMyMTA2M2Y=&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波IG&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> · &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>
+&lt;span class="ln">177&lt;/span>                 &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://discord.gg/ve9ERWVEPR&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>橘子牌太空船&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">br&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>Made by &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://github.com/Edit-Mr&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>EDM&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> with❤&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">178&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">179&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="後端-gas-gas">後端 GAS! GAS!&lt;/h2>
+&lt;p>好了前端做好了接下來我們來建另一個網站讓剛才那個網站來這裡讀取資料。為了方便起見我們在給資料的時候直接給一個做好的表格讓網站貼上。&lt;/p>
+&lt;p>我們先看一下試算表。在這裡我們可以看到每一行資料有5項，其中我希望第5項的資料可以放在付款狀態後面。現在請你先請你複製這個試算表的ID，也就是網址&lt;code>https://docs.google.com/spreadsheets/d/&lt;/code>和&lt;code>/&lt;/code>之間那一串(如&lt;code>1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA&lt;/code>)。等一下會用到。&lt;/p>
+&lt;p>&lt;img src="https://em-tec.github.io/images/create-site-for-sheet/sheet" alt="再看一次試算表">&lt;/p>
+&lt;p>我們會使用GAS(Google App Script)來建立網頁應用程式來讀取表格資料。&lt;/p>
+&lt;div class="notices info">
+&lt;div class="label">Google App Script&lt;/div>
+&lt;p>開發者:Google
+類型:免費網站（可付費升級）
+網址:&lt;a href="https://script.google.com">script.google.com&lt;/a>&lt;/p>
+&lt;/div>
+&lt;p>請建立一個新的專案並貼上以下內容。記得貼上Google Sheet那段ID，並修改自己要的範圍，程式碼裡有詳細的註解。原理是讀取一行行的資料並轉成HTML表格，其中如果狀態是完成的加上一個class讓顏色變綠色。在排序方面我是把完成的和未完成的分成兩個陣列（清單）儲存，在把完成的接在未完成的後面合併。&lt;/p>
+&lt;div class="notices notice">
+&lt;div class="label">小叮嚀&lt;/div>
+為避免程式碼站太多空間，可能會部分隱藏。請記得展開或直接複製。
+&lt;/div>
+&lt;div class="notices notice">
+&lt;div class="label">為什麼要分兩個陣列？不要讓未完成的直接插入到最前面？&lt;/div>
+&lt;p>我們可以用&lt;code>push()&lt;/code>將資料插入到最後面，也可以用&lt;code>unshift()&lt;/code>插入到最前面。但是如果用這個方式未完成的清單順序會整個便相反
+如順序&lt;code>1234567&lt;/code>排序後不會變&lt;code>124589367&lt;/code>，而是&lt;code>985421367&lt;/code>。&lt;/p>
+&lt;p>你可以根據自己的需求決定排法&lt;/p>
+&lt;/div>
+&lt;p>&lt;img src="https://em-tec.github.io/images/gas" alt="GAS快速教學">&lt;/p>
+&lt;p>做好了之後點擊執行▶️，你會需要授予你的程式讀取資料的權限。因為你寫的程式沒有被Google驗證過所以會顯示不安全，但我相信你不會把你的帳號搞爆，對吧&lt;/p>
+&lt;p>接下來我們要部署它，讓它成為一個網站來讓我們抓。這裡選擇網頁應用程式，所有人都以你的身份讀取。按下部署就可以囉&lt;/p>
+&lt;p>這裡我們把部署的網址複製起來。如果要做修改除了按儲存之外要記得重新部署成新版本才會更新喔&lt;/p>
+&lt;p>接下來我們回到Github的網頁讓他來讀這個表格&lt;/p>
+&lt;div class="notices notice">
+&lt;div class="label">等等，不是做好表格網頁了，直接讓它顯示就好了啊幹嘛那麼麻煩？&lt;/div>
+&lt;p>可以當然是可以，姑且不論網址有多長多醜，如果使用Google App Script建設的網站會出現橫幅很醜的一個警告，而且他超長讓你的版面整個跑掉。為了更好的使用者體驗既然都做了就做到底吧！&lt;/p>
+&lt;/div>
+&lt;h2 id="前端-讀取資料">前端 讀取資料&lt;/h2>
+&lt;p>最後一步了！我們回到程式碼的head裡面，加入jQuery這個套件&lt;em>讓我們可以少寫幾行&lt;/em>&lt;/p>
+&lt;p>然後我們修改一下&lt;code>body&lt;/code>。程式讀到表格之後會用表格取代&lt;code>class&lt;/code>裡面的所有內容。我已在這裡可以寫一些表格讀取到之前會顯示的訊息比如說「資料讀取中...」之類的。&lt;/p>
+&lt;p>最後在我們在&lt;code>&amp;lt;/body&amp;gt;&lt;/code>前面貼上以下的JavaScript來讀取並顯示表格。記得把網址換成剛剛表格資料的網址喔~&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="c1">//請把下面按這串改成剛才的網址
+&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="c1">&lt;/span>         &lt;span class="kd">let&lt;/span> &lt;span class="nx">requestURL&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://script.google.com/macros/s/AKfycbxq942U9fZK5tR6Vi1OZkr5Hq0Bv_qPSm1rOOYFFZUS_vyrTu60QuW7xmU-d09UpI1XLQ/exec&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 4&lt;/span>         &lt;span class="kd">let&lt;/span> &lt;span class="nx">request&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">XMLHttpRequest&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln"> 5&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GET&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">requestURL&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 6&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">responseType&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 7&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">send&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln"> 8&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 9&lt;/span>             &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;載入成功&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">10&lt;/span>             &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;p&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">addClass&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;animate_animated&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s1">&amp;#39;animate_fadeOut&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">//動畫
+&lt;/span>&lt;span class="ln">11&lt;/span>&lt;span class="c1">&lt;/span>             &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.responsive-table&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//用表格取代.responsive-table
+&lt;/span>&lt;span class="ln">12&lt;/span>&lt;span class="c1">&lt;/span>         &lt;span class="p">};&lt;/span>
+&lt;span class="ln">13&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="最終程式碼">最終程式碼&lt;/h1>
+&lt;p>最終的程式碼如下，有沒有超有成就感？&lt;/p>
+&lt;h2 id="顯示網站">顯示網站&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span class="ln"> 2&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 3&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 4&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是標題--&amp;gt;&lt;/span>
+&lt;span class="ln"> 5&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波進度查詢表&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 6&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 7&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是縮圖，可以換網址--&amp;gt;&lt;/span>
+&lt;span class="ln"> 8&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io/code/sabooo/thumbnail.png&amp;#34;&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;icon&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;image/x-icon&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 9&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/css&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io/css/Animate.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;screen&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 10&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是主題顏色，可以自由更換（支援HEX）--&amp;gt;&lt;/span>
+&lt;span class="ln"> 11&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-color&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;orange&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln"> 12&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 13&lt;/span> &lt;span class="c">&amp;lt;!--下面這些是樣式，可以自由更換顏色之類的--&amp;gt;&lt;/span>
+&lt;span class="ln"> 14&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln"> 15&lt;/span>         &lt;span class="p">@&lt;/span>&lt;span class="k">import&lt;/span> &lt;span class="nt">url&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">https&lt;/span>&lt;span class="o">://&lt;/span>&lt;span class="nt">fonts&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">googleapis&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">earlyaccess&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">cwtexyen&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">css&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 16&lt;/span>
+&lt;span class="ln"> 17&lt;/span>         &lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 18&lt;/span>             &lt;span class="k">font-family&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Arial&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;cwTeXYen&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;微軟正黑體&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 19&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fee5bd&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 20&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 21&lt;/span>
+&lt;span class="ln"> 22&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">container&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 23&lt;/span>             &lt;span class="k">max-width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 24&lt;/span>             &lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 25&lt;/span>             &lt;span class="k">margin-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 26&lt;/span>             &lt;span class="k">padding-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 27&lt;/span>             &lt;span class="k">padding-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 28&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 29&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 30&lt;/span>
+&lt;span class="ln"> 31&lt;/span>         &lt;span class="nt">h2&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 32&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">23&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 33&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 34&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 35&lt;/span>             &lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 36&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e69137&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 37&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">fadeIn&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 38&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 39&lt;/span>             &lt;span class="n">animate-delay&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.9&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 40&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 41&lt;/span>
+&lt;span class="ln"> 42&lt;/span>         &lt;span class="nt">h1&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 43&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">35&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 44&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 45&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 46&lt;/span>             &lt;span class="k">size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 47&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#351c75&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 48&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">zoomIn&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 49&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 50&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 51&lt;/span>
+&lt;span class="ln"> 52&lt;/span>         &lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 53&lt;/span>             &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 54&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 55&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 56&lt;/span>             &lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">space-between&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 57&lt;/span>             &lt;span class="k">margin-bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 58&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 59&lt;/span>
+&lt;span class="ln"> 60&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-header&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="ln"> 61&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 62&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#f9a756&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 63&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 64&lt;/span>             &lt;span class="k">margin-top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 65&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 66&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">slideInUp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 67&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 68&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 69&lt;/span>
+&lt;span class="ln"> 70&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 71&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 72&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 73&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 74&lt;/span>
+&lt;span class="ln"> 75&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 76&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 77&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 78&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 79&lt;/span>
+&lt;span class="ln"> 80&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-row&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 81&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 82&lt;/span>             &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln"> 83&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">backInLeft&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 84&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 85&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 86&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-row&lt;/span>&lt;span class="p">{}&lt;/span>
+&lt;span class="ln"> 87&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-1&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 88&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 89&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 90&lt;/span>
+&lt;span class="ln"> 91&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-2&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 92&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 93&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 94&lt;/span>
+&lt;span class="ln"> 95&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-3&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln"> 96&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln"> 97&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln"> 98&lt;/span>
+&lt;span class="ln"> 99&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-4&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">100&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">101&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">102&lt;/span>
+&lt;span class="ln">103&lt;/span>         &lt;span class="p">@&lt;/span>&lt;span class="k">media&lt;/span> &lt;span class="nt">all&lt;/span> &lt;span class="nt">and&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nt">max-width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">767px&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">104&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-header&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">105&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">106&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">107&lt;/span>
+&lt;span class="ln">108&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">109&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">110&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">111&lt;/span>
+&lt;span class="ln">112&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">113&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">114&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">115&lt;/span>
+&lt;span class="ln">116&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">117&lt;/span>                 &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">118&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">119&lt;/span>
+&lt;span class="ln">120&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">121&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">122&lt;/span>                 &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">123&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">124&lt;/span>
+&lt;span class="ln">125&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">126&lt;/span>                 &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#6c7a89&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">127&lt;/span>                 &lt;span class="k">padding-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">128&lt;/span>                 &lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">attr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">label&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">129&lt;/span>                 &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">130&lt;/span>                 &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">right&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">131&lt;/span>             &lt;span class="p">}&lt;/span>
+&lt;span class="ln">132&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">133&lt;/span>
+&lt;span class="ln">134&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">header&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">135&lt;/span>             &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">136&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">137&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">138&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">slideInUp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">139&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">140&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">141&lt;/span>
+&lt;span class="ln">142&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">finished&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">143&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">green&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">144&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">145&lt;/span>
+&lt;span class="ln">146&lt;/span>         &lt;span class="nt">p&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="ln">147&lt;/span>         &lt;span class="nt">a&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">148&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">149&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">150&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#6c7a89&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">151&lt;/span>             &lt;span class="k">text-decoration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">152&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">fadeIn&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">153&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">154&lt;/span>         &lt;span class="p">}&lt;/span>
+&lt;span class="ln">155&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">156&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">157&lt;/span>
+&lt;span class="ln">158&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">159&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">160&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波2022委託與贈圖表&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">161&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>這些不代表畫的順序 會跳著畫&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">162&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header.png&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="ln">163&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;table-note&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">164&lt;/span>             如果要一次看完整表格請切換到電腦版網頁喔
+&lt;span class="ln">165&lt;/span>         &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">166&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;responsive-table&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">167&lt;/span>             &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;table-header&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">168&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>委託人姓名&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">169&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>委託項目&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">170&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-3&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>付款狀態&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">171&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-4&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>進度狀態&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">172&lt;/span>             &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">173&lt;/span>             資料載入中
+&lt;span class="ln">174&lt;/span>         &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">175&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://www.facebook.com/Sabo9335&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波FB&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> · &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>
+&lt;span class="ln">176&lt;/span>                 &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://instagram.com/sabooo_9335?igshid=YmMyMTA2M2Y=&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波IG&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> · &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>
+&lt;span class="ln">177&lt;/span>                 &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://discord.gg/ve9ERWVEPR&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>橘子牌太空船&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">br&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>Made by &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://github.com/Edit-Mr&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>EDM&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> with❤&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">178&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">179&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">180&lt;/span> &lt;span class="c1">//請把下面按這串改成剛才的網址
+&lt;/span>&lt;span class="ln">181&lt;/span>&lt;span class="c1">&lt;/span>         &lt;span class="kd">let&lt;/span> &lt;span class="nx">requestURL&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://script.google.com/macros/s/xxxxxxxx/exec&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">182&lt;/span>         &lt;span class="kd">let&lt;/span> &lt;span class="nx">request&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">XMLHttpRequest&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">183&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GET&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">requestURL&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">184&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">responseType&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="ln">185&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">send&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="ln">186&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="ln">187&lt;/span>             &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;載入成功&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="ln">188&lt;/span>             &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;p&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">addClass&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;animate_animated&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s1">&amp;#39;animate_fadeOut&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">//動畫
+&lt;/span>&lt;span class="ln">189&lt;/span>&lt;span class="c1">&lt;/span>             &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.responsive-table&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//用表格取代.responsive-table
+&lt;/span>&lt;span class="ln">190&lt;/span>&lt;span class="c1">&lt;/span>         &lt;span class="p">};&lt;/span>
+&lt;span class="ln">191&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="ln">192&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="表格資料網站">表格資料網站&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln">1&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>【重點整理】APCS筆記(長更)</title><link>https://EM-Tec.github.io/post/apcs_note/</link><pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/apcs_note/</guid><description>
 &lt;p>這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀&lt;/p>
 &lt;div class="notices note">
 &lt;div class="label">好久不見!&lt;/div>
@@ -1293,451 +1740,4 @@ Shift+方向鍵
 &lt;li>你也可以用Siri執行這個捷徑。&lt;/li>
 &lt;/ul>
 &lt;/div>
-&lt;/p></description></item><item><title>【GAS】複製貼上讓試算表變身成網頁表格 秀爆你的客戶朋友！</title><link>https://EM-Tec.github.io/post/create-site-for-sheet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/create-site-for-sheet/</guid><description>
-&lt;p>直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。那我們就來幫試算表包個糖衣吧&lt;/p>
-&lt;p>當你要分享表格給其他人看時，使用Google試算表把連結貼給別人是一個簡單快速的方法。除了可以套各種公式，修改資料會馬上同步，也可以開設權限讓其他人一起編輯。&lt;/p>
-&lt;p>&lt;strong>罷特&lt;/strong>如果只是要給別人看資料比如說客戶名單、訂單資訊、直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。
-&lt;img src="https://em-tec.github.io/images/create-site-for-sheet/sheet.jpg" alt="試算表 不難看但沒什麼質感">&lt;/p>
-&lt;h1 id="怎麼辦幫它抹上一層糖衣">怎麼辦？幫它抹上一層糖衣！&lt;/h1>
-&lt;p>我們來做一個超簡單的小網頁讓它自己去表格抓你要的資料來顯示。我們會寫一些程式(HTML,CSS,Js）不過如果你不會也沒關系w只要跟著步驟複製貼上就可以了。今天我要來幫我的畫家朋友薩波來做一個網站讓他的委託人可以查看他畫圖的進度，還要讓電腦排序讓已經完成的委託排在下面。&lt;/p>
-&lt;div class="notices info">
-&lt;div class="label">薩波委託進度&lt;/div>
-&lt;p>開發者:毛哥EM(我)
-類型:網站
-網址:&lt;a href="https://Edit-Mr.github.io/code/sabooo">毛哥EM的基地&lt;/a>&lt;/p>
-&lt;/div>
-&lt;h2 id="架一個網站">架一個網站！&lt;/h2>
-&lt;p>你可以使用任何一個可以給你存放網站代碼的地方，比如說&lt;a href="https://github.io">Github&lt;/a>。&lt;/p>
-&lt;p>我從&lt;a href="https://codepen.io/">Codepen&lt;/a>上找到了一個很好看的表格模板來做修改。它在螢幕尺寸太窄的時候會用不同的版面來顯示，保持使用者體驗。你也可以找其他的模板或者是自己建立一個。&lt;/p>
-&lt;p class="codepen" data-height="300" data-default-tab="html" data-slug-hash="dJeRex" data-user="faaezahmd" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-&lt;span>See the Pen &lt;a href="https://codepen.io/faaezahmd/pen/dJeRex">
-Responsive Tables using LI&lt;/a> by Faiz Ahmed (&lt;a href="https://codepen.io/faaezahmd">@faaezahmd&lt;/a>)
-on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
-&lt;/p>
-&lt;script async src="https://cpwebassets.codepen.io/assets/embed/ei.js">&lt;/script>
-&lt;p>我在網站上增加了一點文字、顏色(CSS)、超連結(&lt;a>)、還有圖片、縮圖。以及簡單的出場動畫(animate.css)&lt;s>來炫技&lt;/s>。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&lt;span class="ln"> 2&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 3&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;span class="ln"> 4&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是標題--&amp;gt;&lt;/span>
-&lt;span class="ln"> 5&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波進度查詢表&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 6&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;span class="ln"> 7&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是縮圖，可以換網址--&amp;gt;&lt;/span>
-&lt;span class="ln"> 8&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io/code/sabooo/thumbnail.png&amp;#34;&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;icon&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;image/x-icon&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 9&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/css&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io/css/Animate.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;screen&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 10&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是主題顏色，可以自由更換（支援HEX）--&amp;gt;&lt;/span>
-&lt;span class="ln"> 11&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-color&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;orange&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;span class="ln"> 12&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 13&lt;/span> &lt;span class="c">&amp;lt;!--下面這些是樣式，可以自由更換顏色之類的--&amp;gt;&lt;/span>
-&lt;span class="ln"> 14&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 15&lt;/span>         &lt;span class="p">@&lt;/span>&lt;span class="k">import&lt;/span> &lt;span class="nt">url&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">https&lt;/span>&lt;span class="o">://&lt;/span>&lt;span class="nt">fonts&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">googleapis&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">earlyaccess&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">cwtexyen&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">css&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 16&lt;/span>
-&lt;span class="ln"> 17&lt;/span>         &lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 18&lt;/span>             &lt;span class="k">font-family&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Arial&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;cwTeXYen&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;微軟正黑體&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 19&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fee5bd&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 20&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 21&lt;/span>
-&lt;span class="ln"> 22&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">container&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 23&lt;/span>             &lt;span class="k">max-width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 24&lt;/span>             &lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 25&lt;/span>             &lt;span class="k">margin-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 26&lt;/span>             &lt;span class="k">padding-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 27&lt;/span>             &lt;span class="k">padding-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 28&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 29&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 30&lt;/span>
-&lt;span class="ln"> 31&lt;/span>         &lt;span class="nt">h2&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 32&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">23&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 33&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 34&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 35&lt;/span>             &lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 36&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e69137&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 37&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">fadeIn&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 38&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 39&lt;/span>             &lt;span class="n">animate-delay&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.9&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 40&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 41&lt;/span>
-&lt;span class="ln"> 42&lt;/span>         &lt;span class="nt">h1&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 43&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">35&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 44&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 45&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 46&lt;/span>             &lt;span class="k">size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 47&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#351c75&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 48&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">zoomIn&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 49&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 50&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 51&lt;/span>
-&lt;span class="ln"> 52&lt;/span>         &lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 53&lt;/span>             &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 54&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 55&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 56&lt;/span>             &lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">space-between&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 57&lt;/span>             &lt;span class="k">margin-bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 58&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 59&lt;/span>
-&lt;span class="ln"> 60&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-header&lt;/span>&lt;span class="o">,&lt;/span>
-&lt;span class="ln"> 61&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 62&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#f9a756&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 63&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 64&lt;/span>             &lt;span class="k">margin-top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 65&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 66&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">slideInUp&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 67&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 68&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 69&lt;/span>
-&lt;span class="ln"> 70&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 71&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 72&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 73&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 74&lt;/span>
-&lt;span class="ln"> 75&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 76&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 77&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 78&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 79&lt;/span>
-&lt;span class="ln"> 80&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-row&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 81&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 82&lt;/span>             &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.1&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln"> 83&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">backInLeft&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 84&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 85&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 86&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-row&lt;/span>&lt;span class="p">{}&lt;/span>
-&lt;span class="ln"> 87&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-1&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 88&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 89&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 90&lt;/span>
-&lt;span class="ln"> 91&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-2&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 92&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 93&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 94&lt;/span>
-&lt;span class="ln"> 95&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-3&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 96&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 97&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 98&lt;/span>
-&lt;span class="ln"> 99&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-4&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">100&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">101&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">102&lt;/span>
-&lt;span class="ln">103&lt;/span>         &lt;span class="p">@&lt;/span>&lt;span class="k">media&lt;/span> &lt;span class="nt">all&lt;/span> &lt;span class="nt">and&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nt">max-width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">767px&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">104&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-header&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">105&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">106&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">107&lt;/span>
-&lt;span class="ln">108&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">109&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">110&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">111&lt;/span>
-&lt;span class="ln">112&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">113&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">114&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">115&lt;/span>
-&lt;span class="ln">116&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">117&lt;/span>                 &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">118&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">119&lt;/span>
-&lt;span class="ln">120&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">121&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">122&lt;/span>                 &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">123&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">124&lt;/span>
-&lt;span class="ln">125&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">126&lt;/span>                 &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#6c7a89&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">127&lt;/span>                 &lt;span class="k">padding-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">128&lt;/span>                 &lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">attr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">label&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln">129&lt;/span>                 &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">130&lt;/span>                 &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">right&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">131&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">132&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">133&lt;/span>
-&lt;span class="ln">134&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">header&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">135&lt;/span>             &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">136&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">137&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">138&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">slideInUp&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">139&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">140&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">141&lt;/span>
-&lt;span class="ln">142&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">finished&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">143&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">green&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">144&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">145&lt;/span>
-&lt;span class="ln">146&lt;/span>         &lt;span class="nt">p&lt;/span>&lt;span class="o">,&lt;/span>
-&lt;span class="ln">147&lt;/span>         &lt;span class="nt">a&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">148&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">149&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">150&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#6c7a89&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">151&lt;/span>             &lt;span class="k">text-decoration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">152&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">fadeIn&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">153&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">154&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">155&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">156&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">157&lt;/span>
-&lt;span class="ln">158&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">159&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">160&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波2022委託與贈圖表&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">161&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>這些不代表畫的順序 會跳著畫&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">162&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header.png&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;span class="ln">163&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;table-note&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">164&lt;/span>             如果要一次看完整表格請切換到電腦版網頁喔
-&lt;span class="ln">165&lt;/span>         &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">166&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;responsive-table&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">167&lt;/span>             &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;table-header&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">168&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>委託人姓名&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">169&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>委託項目&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">170&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-3&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>付款狀態&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">171&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-4&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>進度狀態&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">172&lt;/span>             &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">173&lt;/span>             資料載入中
-&lt;span class="ln">174&lt;/span>         &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">175&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://www.facebook.com/Sabo9335&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波FB&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> · &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>
-&lt;span class="ln">176&lt;/span>                 &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://instagram.com/sabooo_9335?igshid=YmMyMTA2M2Y=&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波IG&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> · &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>
-&lt;span class="ln">177&lt;/span>                 &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://discord.gg/ve9ERWVEPR&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>橘子牌太空船&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">br&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>Made by &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://github.com/Edit-Mr&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>EDM&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> with❤&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">178&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">179&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="後端-gas-gas">後端 GAS! GAS!&lt;/h2>
-&lt;p>好了前端做好了接下來我們來建另一個網站讓剛才那個網站來這裡讀取資料。為了方便起見我們在給資料的時候直接給一個做好的表格讓網站貼上。&lt;/p>
-&lt;p>我們先看一下試算表。在這裡我們可以看到每一行資料有5項，其中我希望第5項的資料可以放在付款狀態後面。現在請你先請你複製這個試算表的ID，也就是網址&lt;code>https://docs.google.com/spreadsheets/d/&lt;/code>和&lt;code>/&lt;/code>之間那一串(如&lt;code>1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA&lt;/code>)。等一下會用到。&lt;/p>
-&lt;p>&lt;img src="https://em-tec.github.io/images/create-site-for-sheet/sheet" alt="再看一次試算表">&lt;/p>
-&lt;p>我們會使用GAS(Google App Script)來建立網頁應用程式來讀取表格資料。&lt;/p>
-&lt;div class="notices info">
-&lt;div class="label">Google App Script&lt;/div>
-&lt;p>開發者:Google
-類型:免費網站（可付費升級）
-網址:&lt;a href="https://script.google.com">script.google.com&lt;/a>&lt;/p>
-&lt;/div>
-&lt;p>請建立一個新的專案並貼上以下內容。記得貼上Google Sheet那段ID，並修改自己要的範圍，程式碼裡有詳細的註解。原理是讀取一行行的資料並轉成HTML表格，其中如果狀態是完成的加上一個class讓顏色變綠色。在排序方面我是把完成的和未完成的分成兩個陣列（清單）儲存，在把完成的接在未完成的後面合併。&lt;/p>
-&lt;div class="notices notice">
-&lt;div class="label">小叮嚀&lt;/div>
-為避免程式碼站太多空間，可能會部分隱藏。請記得展開或直接複製。
-&lt;/div>
-&lt;div class="notices notice">
-&lt;div class="label">為什麼要分兩個陣列？不要讓未完成的直接插入到最前面？&lt;/div>
-&lt;p>我們可以用&lt;code>push()&lt;/code>將資料插入到最後面，也可以用&lt;code>unshift()&lt;/code>插入到最前面。但是如果用這個方式未完成的清單順序會整個便相反
-如順序&lt;code>1234567&lt;/code>排序後不會變&lt;code>124589367&lt;/code>，而是&lt;code>985421367&lt;/code>。&lt;/p>
-&lt;p>你可以根據自己的需求決定排法&lt;/p>
-&lt;/div>
-&lt;p>&lt;img src="https://em-tec.github.io/images/gas" alt="GAS快速教學">&lt;/p>
-&lt;p>做好了之後點擊執行▶️，你會需要授予你的程式讀取資料的權限。因為你寫的程式沒有被Google驗證過所以會顯示不安全，但我相信你不會把你的帳號搞爆，對吧&lt;/p>
-&lt;p>接下來我們要部署它，讓它成為一個網站來讓我們抓。這裡選擇網頁應用程式，所有人都以你的身份讀取。按下部署就可以囉&lt;/p>
-&lt;p>這裡我們把部署的網址複製起來。如果要做修改除了按儲存之外要記得重新部署成新版本才會更新喔&lt;/p>
-&lt;p>接下來我們回到Github的網頁讓他來讀這個表格&lt;/p>
-&lt;div class="notices notice">
-&lt;div class="label">等等，不是做好表格網頁了，直接讓它顯示就好了啊幹嘛那麼麻煩？&lt;/div>
-&lt;p>可以當然是可以，姑且不論網址有多長多醜，如果使用Google App Script建設的網站會出現橫幅很醜的一個警告，而且他超長讓你的版面整個跑掉。為了更好的使用者體驗既然都做了就做到底吧！&lt;/p>
-&lt;/div>
-&lt;h2 id="前端-讀取資料">前端 讀取資料&lt;/h2>
-&lt;p>最後一步了！我們回到程式碼的head裡面，加入jQuery這個套件&lt;em>讓我們可以少寫幾行&lt;/em>&lt;/p>
-&lt;p>然後我們修改一下&lt;code>body&lt;/code>。程式讀到表格之後會用表格取代&lt;code>class&lt;/code>裡面的所有內容。我已在這裡可以寫一些表格讀取到之前會顯示的訊息比如說「資料讀取中...」之類的。&lt;/p>
-&lt;p>最後在我們在&lt;code>&amp;lt;/body&amp;gt;&lt;/code>前面貼上以下的JavaScript來讀取並顯示表格。記得把網址換成剛剛表格資料的網址喔~&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 2&lt;/span> &lt;span class="c1">//請把下面按這串改成剛才的網址
-&lt;/span>&lt;span class="ln"> 3&lt;/span>&lt;span class="c1">&lt;/span>         &lt;span class="kd">let&lt;/span> &lt;span class="nx">requestURL&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://script.google.com/macros/s/AKfycbxq942U9fZK5tR6Vi1OZkr5Hq0Bv_qPSm1rOOYFFZUS_vyrTu60QuW7xmU-d09UpI1XLQ/exec&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 4&lt;/span>         &lt;span class="kd">let&lt;/span> &lt;span class="nx">request&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">XMLHttpRequest&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="ln"> 5&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GET&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">requestURL&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln"> 6&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">responseType&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 7&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">send&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="ln"> 8&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 9&lt;/span>             &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;載入成功&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln">10&lt;/span>             &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;p&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">addClass&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;animate_animated&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s1">&amp;#39;animate_fadeOut&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">//動畫
-&lt;/span>&lt;span class="ln">11&lt;/span>&lt;span class="c1">&lt;/span>             &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.responsive-table&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//用表格取代.responsive-table
-&lt;/span>&lt;span class="ln">12&lt;/span>&lt;span class="c1">&lt;/span>         &lt;span class="p">};&lt;/span>
-&lt;span class="ln">13&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="最終程式碼">最終程式碼&lt;/h1>
-&lt;p>最終的程式碼如下，有沒有超有成就感？&lt;/p>
-&lt;h2 id="顯示網站">顯示網站&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="ln"> 1&lt;/span>&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&lt;span class="ln"> 2&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 3&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;utf-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;span class="ln"> 4&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是標題--&amp;gt;&lt;/span>
-&lt;span class="ln"> 5&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波進度查詢表&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 6&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;span class="ln"> 7&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是縮圖，可以換網址--&amp;gt;&lt;/span>
-&lt;span class="ln"> 8&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io/code/sabooo/thumbnail.png&amp;#34;&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;icon&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;image/x-icon&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 9&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/css&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://Edit-Mr.github.io/css/Animate.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;screen&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 10&lt;/span> &lt;span class="c">&amp;lt;!--下面這行是主題顏色，可以自由更換（支援HEX）--&amp;gt;&lt;/span>
-&lt;span class="ln"> 11&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;theme-color&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;orange&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;span class="ln"> 12&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 13&lt;/span> &lt;span class="c">&amp;lt;!--下面這些是樣式，可以自由更換顏色之類的--&amp;gt;&lt;/span>
-&lt;span class="ln"> 14&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln"> 15&lt;/span>         &lt;span class="p">@&lt;/span>&lt;span class="k">import&lt;/span> &lt;span class="nt">url&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">https&lt;/span>&lt;span class="o">://&lt;/span>&lt;span class="nt">fonts&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">googleapis&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">earlyaccess&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">cwtexyen&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">css&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 16&lt;/span>
-&lt;span class="ln"> 17&lt;/span>         &lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 18&lt;/span>             &lt;span class="k">font-family&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Arial&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;cwTeXYen&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s2">&amp;#34;微軟正黑體&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 19&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fee5bd&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 20&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 21&lt;/span>
-&lt;span class="ln"> 22&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">container&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 23&lt;/span>             &lt;span class="k">max-width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 24&lt;/span>             &lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 25&lt;/span>             &lt;span class="k">margin-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 26&lt;/span>             &lt;span class="k">padding-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 27&lt;/span>             &lt;span class="k">padding-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 28&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 29&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 30&lt;/span>
-&lt;span class="ln"> 31&lt;/span>         &lt;span class="nt">h2&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 32&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">23&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 33&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 34&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 35&lt;/span>             &lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 36&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e69137&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 37&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">fadeIn&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 38&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 39&lt;/span>             &lt;span class="n">animate-delay&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.9&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 40&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 41&lt;/span>
-&lt;span class="ln"> 42&lt;/span>         &lt;span class="nt">h1&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 43&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">35&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 44&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 45&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 46&lt;/span>             &lt;span class="k">size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 47&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#351c75&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 48&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">zoomIn&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 49&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 50&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 51&lt;/span>
-&lt;span class="ln"> 52&lt;/span>         &lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 53&lt;/span>             &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 54&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 55&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 56&lt;/span>             &lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">space-between&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 57&lt;/span>             &lt;span class="k">margin-bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 58&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 59&lt;/span>
-&lt;span class="ln"> 60&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-header&lt;/span>&lt;span class="o">,&lt;/span>
-&lt;span class="ln"> 61&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 62&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#f9a756&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 63&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 64&lt;/span>             &lt;span class="k">margin-top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 65&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 66&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">slideInUp&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 67&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 68&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 69&lt;/span>
-&lt;span class="ln"> 70&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 71&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 72&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 73&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 74&lt;/span>
-&lt;span class="ln"> 75&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 76&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 77&lt;/span>             &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 78&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 79&lt;/span>
-&lt;span class="ln"> 80&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-row&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 81&lt;/span>             &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 82&lt;/span>             &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.1&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln"> 83&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">backInLeft&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 84&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 85&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 86&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">table-row&lt;/span>&lt;span class="p">{}&lt;/span>
-&lt;span class="ln"> 87&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-1&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 88&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 89&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 90&lt;/span>
-&lt;span class="ln"> 91&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-2&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 92&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 93&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 94&lt;/span>
-&lt;span class="ln"> 95&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-3&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln"> 96&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln"> 97&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln"> 98&lt;/span>
-&lt;span class="ln"> 99&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col-4&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">100&lt;/span>             &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">101&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">102&lt;/span>
-&lt;span class="ln">103&lt;/span>         &lt;span class="p">@&lt;/span>&lt;span class="k">media&lt;/span> &lt;span class="nt">all&lt;/span> &lt;span class="nt">and&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nt">max-width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">767px&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">104&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">table-header&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">105&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">106&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">107&lt;/span>
-&lt;span class="ln">108&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">table-note&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">109&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">110&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">111&lt;/span>
-&lt;span class="ln">112&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">113&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">114&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">115&lt;/span>
-&lt;span class="ln">116&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">117&lt;/span>                 &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">118&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">119&lt;/span>
-&lt;span class="ln">120&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">121&lt;/span>                 &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">122&lt;/span>                 &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">123&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">124&lt;/span>
-&lt;span class="ln">125&lt;/span>             &lt;span class="p">.&lt;/span>&lt;span class="nc">responsive-table&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">col&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">126&lt;/span>                 &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#6c7a89&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">127&lt;/span>                 &lt;span class="k">padding-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">128&lt;/span>                 &lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">attr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">label&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln">129&lt;/span>                 &lt;span class="k">flex-basis&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">130&lt;/span>                 &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">right&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">131&lt;/span>             &lt;span class="p">}&lt;/span>
-&lt;span class="ln">132&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">133&lt;/span>
-&lt;span class="ln">134&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">header&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">135&lt;/span>             &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">136&lt;/span>             &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">137&lt;/span>             &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">auto&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">138&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">slideInUp&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">139&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">140&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">141&lt;/span>
-&lt;span class="ln">142&lt;/span>         &lt;span class="p">.&lt;/span>&lt;span class="nc">finished&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">143&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">green&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">144&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">145&lt;/span>
-&lt;span class="ln">146&lt;/span>         &lt;span class="nt">p&lt;/span>&lt;span class="o">,&lt;/span>
-&lt;span class="ln">147&lt;/span>         &lt;span class="nt">a&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">148&lt;/span>             &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">149&lt;/span>             &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">150&lt;/span>             &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#6c7a89&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">151&lt;/span>             &lt;span class="k">text-decoration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">152&lt;/span>             &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">fadeIn&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">153&lt;/span>             &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">154&lt;/span>         &lt;span class="p">}&lt;/span>
-&lt;span class="ln">155&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">156&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">157&lt;/span>
-&lt;span class="ln">158&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">159&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">160&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波2022委託與贈圖表&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">161&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>這些不代表畫的順序 會跳著畫&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">162&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header.png&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;span class="ln">163&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;table-note&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">164&lt;/span>             如果要一次看完整表格請切換到電腦版網頁喔
-&lt;span class="ln">165&lt;/span>         &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">166&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;responsive-table&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">167&lt;/span>             &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;table-header&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">168&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>委託人姓名&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">169&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>委託項目&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">170&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-3&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>付款狀態&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">171&lt;/span>                 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;col col-4&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>進度狀態&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">172&lt;/span>             &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">173&lt;/span>             資料載入中
-&lt;span class="ln">174&lt;/span>         &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">175&lt;/span>         &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://www.facebook.com/Sabo9335&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波FB&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> · &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>
-&lt;span class="ln">176&lt;/span>                 &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://instagram.com/sabooo_9335?igshid=YmMyMTA2M2Y=&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>薩波IG&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> · &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>
-&lt;span class="ln">177&lt;/span>                 &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://discord.gg/ve9ERWVEPR&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>橘子牌太空船&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">br&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>Made by &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://github.com/Edit-Mr&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>EDM&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> with❤&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">178&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">179&lt;/span>     &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">180&lt;/span> &lt;span class="c1">//請把下面按這串改成剛才的網址
-&lt;/span>&lt;span class="ln">181&lt;/span>&lt;span class="c1">&lt;/span>         &lt;span class="kd">let&lt;/span> &lt;span class="nx">requestURL&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://script.google.com/macros/s/xxxxxxxx/exec&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">182&lt;/span>         &lt;span class="kd">let&lt;/span> &lt;span class="nx">request&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">XMLHttpRequest&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="ln">183&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GET&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">requestURL&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln">184&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">responseType&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="ln">185&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">send&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="ln">186&lt;/span>         &lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="ln">187&lt;/span>             &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;載入成功&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="ln">188&lt;/span>             &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;p&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">addClass&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;animate_animated&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s1">&amp;#39;animate_fadeOut&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">//動畫
-&lt;/span>&lt;span class="ln">189&lt;/span>&lt;span class="c1">&lt;/span>             &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.responsive-table&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//用表格取代.responsive-table
-&lt;/span>&lt;span class="ln">190&lt;/span>&lt;span class="c1">&lt;/span>         &lt;span class="p">};&lt;/span>
-&lt;span class="ln">191&lt;/span>     &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="ln">192&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="表格資料網站">表格資料網站&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln">1&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;/p></description></item></channel></rss>
