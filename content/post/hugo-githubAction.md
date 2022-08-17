@@ -2,7 +2,7 @@
 author = "毛哥EM"
 title = "【Github Action】自動部署你的Hugo網站"
 date = "2022-08-17"
-description = "寫完文章直接上傳，讓Github自動幫您生成網站！
+description = "寫完文章直接上傳，讓Github自動幫您生成網站！"
 tags = ["Github"]
 series = ["複製貼上就能成為工程師"]
 categories = [ "製作教學" ]
