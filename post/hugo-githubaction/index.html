@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://EM-Tec.github.io/post/hugo-githubaction/">
 <meta property="og:title" content="【Github Action】自動部署你的Hugo網站">
 <meta property="og:description" content="寫完文章直接上傳，讓Github自動幫您生成網站！">
-<meta property="og:image" content="https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG">
+<meta property="og:image" content="https://EM-Tec.github.io/icons/EMprofile.png">
 <link rel=apple-touch-icon sizes=180x180 href=https://EM-Tec.github.io/icons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://EM-Tec.github.io/icons/favicon-32x32.png>
 <link rel=manifest href=https://EM-Tec.github.io/icons/site.webmanifest>
@@ -95,7 +95,6 @@ Aug 17, 2022</span>
 </div>
 </span>
 </div>
-<img src=https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG class=image_featured alt="【Github Action】自動部署你的Hugo網站">
 <p>每次寫完文章還要打指令生成網站，麻煩死了！讓Github Action幫你自動部署，寫完文章直角上傳就好了！</p>
 <div class="notices notice">
 <div class=label>在開始之前</div>
@@ -110,14 +109,14 @@ Aug 17, 2022</span>
 <h2 id=設定-access-token>設定 Access Token</h2>
 <p>首先我們要先建立一個Repository 的 Access Token。這是一把鑰匙，我們要把鑰匙給Github Action的程式它才可以部署我們的網站</p>
 <p>請先到<code>Settings/Developer Settings</code>下的<code>Personal access tokens</code>生成一組<code>Access Token</code>。建議scope直接選repo的所有權限。</p>
-<p><img src=https://EM-Tec.github.io/static/images/hugo-githubAction-access-token.png alt="生成Access Token"></p>
+<p><img src=https://EM-Tec.github.io/images/hugo-githubAction-access-token.png alt="生成Access Token"></p>
 <h2 id=添加-secrets>添加 Secrets</h2>
 <p>因為我們的Github Action程式碼是公開的，但是我們不想要讓其他人看到剛才的那組Access Token，所以我們要建立一組Secret。當我們在程式說要「那個東西」的時候，他就會知道要來這裡找這組密碼。</p>
 <p>請到<code>Settings/Secrets</code>新增一組 Secrets，我這邊叫做 ACCESS_TOKEN，之後在腳本上會用到。</p>
-<p><img src=https://EM-Tec.github.io/static/images/hugo-githubAction-sectets.png alt=添加Secrets></p>
+<p><img src=https://EM-Tec.github.io/images/hugo-githubAction-sectets.png alt=添加Secrets></p>
 <h2 id=新增workflow>新增Workflow</h2>
 <p>依序點擊Action，New，set up a workflow yourself，並貼上以下程式。名稱可以自己取，貼上完之後點擊Start Commit。</p>
-<p><img src=https://EM-Tec.github.io/static/images/hugo-githubAction-access-workflow.jpg alt=設定Workflow></p>
+<p><img src=https://EM-Tec.github.io/images/hugo-githubAction-access-workflow.jpg alt=設定Workflow></p>
 <p>程式意思是當main分支有push操作時（就是你上傳或更變檔案），會生成靜態網頁。剛才不是說會生成在<code>public</code>這個資料夾，我們把它推送到 gh-pages 這個分支（當然你也可以自己取名）</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=ln> 1</span>name: create
 <span class=ln> 2</span>
@@ -152,7 +151,7 @@ Aug 17, 2022</span>
 <span class=ln>31</span>          PUBLISH_DIR: ./public     # hugo 生成的目錄
 <span class=ln>32</span>          commit_message: ${{github.event.head_commit.message }}
 </code></pre></div><p>新增完成後它會自己跑一次。不過我們還需要做一個設定。生成的網站是放在<code>gh-pages</code>這個分支，我們要輸入網址時，去讀取這個分支而不是main。所以請到<code>Settings/Pages/Branch</code>更改</p>
-<p><img src=https://EM-Tec.github.io/static/images/hugo-githubAction-branch.jpg alt=更改Branch></p>
+<p><img src=https://EM-Tec.github.io/images/hugo-githubAction-branch.jpg alt=更改Branch></p>
 <p>這樣就大公告成囉！記得每次更新完部落格Github Action都需要大約30秒的執行時間才會完成部署。如果你想要查看它的進度狀態可以點擊最新紀錄的橘點看目前的即時狀態。如果變成綠色就是部署成功，如果是鴻森代表有問題（通常是文章中的語法有語法錯誤）。</p><div id=disqus_thread></div>
 <script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//em-tec.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
 <noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>

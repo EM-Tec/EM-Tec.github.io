@@ -13,14 +13,14 @@
 &lt;h2 id="設定-access-token">設定 Access Token&lt;/h2>
 &lt;p>首先我們要先建立一個Repository 的 Access Token。這是一把鑰匙，我們要把鑰匙給Github Action的程式它才可以部署我們的網站&lt;/p>
 &lt;p>請先到&lt;code>Settings/Developer Settings&lt;/code>下的&lt;code>Personal access tokens&lt;/code>生成一組&lt;code>Access Token&lt;/code>。建議scope直接選repo的所有權限。&lt;/p>
-&lt;p>&lt;img src="https://EM-Tec.github.io/static/images/hugo-githubAction-access-token.png" alt="生成Access Token">&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/hugo-githubAction-access-token.png" alt="生成Access Token">&lt;/p>
 &lt;h2 id="添加-secrets">添加 Secrets&lt;/h2>
 &lt;p>因為我們的Github Action程式碼是公開的，但是我們不想要讓其他人看到剛才的那組Access Token，所以我們要建立一組Secret。當我們在程式說要「那個東西」的時候，他就會知道要來這裡找這組密碼。&lt;/p>
 &lt;p>請到&lt;code>Settings/Secrets&lt;/code>新增一組 Secrets，我這邊叫做 ACCESS_TOKEN，之後在腳本上會用到。&lt;/p>
-&lt;p>&lt;img src="https://EM-Tec.github.io/static/images/hugo-githubAction-sectets.png" alt="添加Secrets">&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/hugo-githubAction-sectets.png" alt="添加Secrets">&lt;/p>
 &lt;h2 id="新增workflow">新增Workflow&lt;/h2>
 &lt;p>依序點擊Action，New，set up a workflow yourself，並貼上以下程式。名稱可以自己取，貼上完之後點擊Start Commit。&lt;/p>
-&lt;p>&lt;img src="https://EM-Tec.github.io/static/images/hugo-githubAction-access-workflow.jpg" alt="設定Workflow">&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/hugo-githubAction-access-workflow.jpg" alt="設定Workflow">&lt;/p>
 &lt;p>程式意思是當main分支有push操作時（就是你上傳或更變檔案），會生成靜態網頁。剛才不是說會生成在&lt;code>public&lt;/code>這個資料夾，我們把它推送到 gh-pages 這個分支（當然你也可以自己取名）&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln"> 1&lt;/span>name: create
 &lt;span class="ln"> 2&lt;/span>
@@ -55,7 +55,7 @@
 &lt;span class="ln">31&lt;/span> PUBLISH_DIR: ./public # hugo 生成的目錄
 &lt;span class="ln">32&lt;/span> commit_message: ${{github.event.head_commit.message }}
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>新增完成後它會自己跑一次。不過我們還需要做一個設定。生成的網站是放在&lt;code>gh-pages&lt;/code>這個分支，我們要輸入網址時，去讀取這個分支而不是main。所以請到&lt;code>Settings/Pages/Branch&lt;/code>更改&lt;/p>
-&lt;p>&lt;img src="https://EM-Tec.github.io/static/images/hugo-githubAction-branch.jpg" alt="更改Branch">&lt;/p>
+&lt;p>&lt;img src="https://EM-Tec.github.io/images/hugo-githubAction-branch.jpg" alt="更改Branch">&lt;/p>
 &lt;p>這樣就大公告成囉！記得每次更新完部落格Github Action都需要大約30秒的執行時間才會完成部署。如果你想要查看它的進度狀態可以點擊最新紀錄的橘點看目前的即時狀態。如果變成綠色就是部署成功，如果是鴻森代表有問題（通常是文章中的語法有語法錯誤）。&lt;/p></description></item><item><title>【GAS】複製貼上讓試算表變身成網頁表格 秀爆你的客戶朋友！</title><link>https://EM-Tec.github.io/post/create-site-for-sheet/</link><pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/create-site-for-sheet/</guid><description>
 &lt;p>直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。那我們就來幫試算表包個糖衣吧&lt;/p>
 &lt;p>當你要分享表格給其他人看時，使用Google試算表把連結貼給別人是一個簡單快速的方法。除了可以套各種公式，修改資料會馬上同步，也可以開設權限讓其他人一起編輯。&lt;/p>
