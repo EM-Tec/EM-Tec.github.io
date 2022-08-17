@@ -6,6 +6,9 @@ description = "寫完文章直接上傳，讓Github自動幫您生成網站！"
 tags = ["Github"]
 series = ["複製貼上就能成為工程師"]
 categories = [ "製作教學" ]
+thumbnail = "images/thumbnails/hugo-githubAction.jpeg"
+featureImage = "https://em-tec.github.io/images/thumbnails/hugo-githubAction.jpeg"
+shareImage = "https://em-tec.github.io/images/thumbnails/hugo-githubAction.jpeg"
 +++
 每次寫完文章還要打指令生成網站，麻煩死了！讓Github Action幫你自動部署，寫完文章直角上傳就好了！
 <!--more-->
