@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "【ShowDesktopPerMonitor】進化Win+D！多螢幕不互相干擾/所有桌面視窗一鍵顯示"
-date = "2021-08-18"
+date = "2022-08-18"
 description = "透過軟體實現多螢幕Win+D不互相干擾、及所有桌面視窗一鍵顯示"
 tags = [
     "Windows"
