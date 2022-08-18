@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>軟體分享 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E8%BB%9F%E9%AB%94%E5%88%86%E4%BA%AB/</link><description>Recent content in 軟體分享 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Wed, 08 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E8%BB%9F%E9%AB%94%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>【MultiWall】讓不同螢幕放不同桌布</title><link>https://EM-Tec.github.io/post/multiwall/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/multiwall/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>軟體分享 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E8%BB%9F%E9%AB%94%E5%88%86%E4%BA%AB/</link><description>Recent content in 軟體分享 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Thu, 18 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E8%BB%9F%E9%AB%94%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>【ShowDesktopPerMonitor】進化Win+D！多螢幕不互相干擾/所有桌面視窗一鍵顯示</title><link>https://EM-Tec.github.io/post/showdesktoppermonitor/</link><pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/showdesktoppermonitor/</guid><description>
+&lt;p>使用多個螢幕可以使工作效率大幅提升。不過如果使用Win+D來隱藏視窗、會一次隱藏所有螢幕的所有的視窗。&lt;/p>
+&lt;p>不過透過ShowDesktopPerMonitor可以模擬Win+D的隱藏視窗。除了可以分開螢幕控制以外，它的隱藏視窗是連工作列都看不到...（要怎麼使用就看你了！）&lt;/p>
+&lt;h1 id="安裝">安裝&lt;/h1>
+&lt;p>這個專案是開源在Github上的，基本上可以安心使用。雖然已經很久沒有更新了，但目前沒有任何問題。&lt;/p>
+&lt;div class="notices info">
+&lt;div class="label">ShowDesktopPerMonitor&lt;/div>
+&lt;ul>
+&lt;li>開發者:CryptKat&lt;/li>
+&lt;li>類型:免費開源軟體&lt;/li>
+&lt;li>網址:&lt;a href="https://github.com/CryptKat/ShowDesktopPerMonitor/">Github&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/CryptKat/ShowDesktopPerMonitor/releases/tag/1.0">下載連結&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h1 id="設定">設定&lt;/h1>
+&lt;p>請先到上面下載連結下載&lt;code>ShowDesktopPerMonitor_1.0.zip&lt;/code>並解壓縮。解壓縮後雙擊直接打開就可以了。&lt;/p>
+&lt;p>如果你是使用Windows 10可以將“Xbox Game Monitoring”關閉（原Win+G）,，預防你的G會沒辦法按。
+請到註冊表的&lt;code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\xbgm\Start&lt;/code>並將數值改成&lt;code>4&lt;/code>&lt;/p>
+&lt;h1 id="多個桌面">多個桌面&lt;/h1>
+&lt;p>如果你會使用多個桌面（Ctrl+Win+D)的話你會發現當你按下Win+D要顯示的時候，不只這個桌面，所有這個螢幕的桌面視窗都會跳出來。&lt;/p>
+&lt;p>可以說這是一個Bug，也可以說是一個&lt;em>特別的功能&lt;/em>&lt;/p>
+&lt;h1 id="關閉軟體">關閉軟體&lt;/h1>
+&lt;p>如果要讓它停止運行，請點擊螢幕右下角往上的箭頭，對ShowDesktopPerMonitor圖示點擊右鍵，並結束它&lt;/p></description></item><item><title>【MultiWall】讓不同螢幕放不同桌布</title><link>https://EM-Tec.github.io/post/multiwall/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/multiwall/</guid><description>
 &lt;p>使用多個螢幕可以大大的增加工作效率。比如說在開直播時可以在遊戲全螢幕時同時做OBS畫面切換或是查看聊天室。
 但是你是否有發現所有螢幕的桌布都只能設定一樣的。而如果你像我一樣兩個螢幕比例不同的話，其中一張比例會直接跑掉，十分的影響美觀。&lt;/p>
 &lt;p>但是有了MultiWall，你不但可以幫不同的螢幕設定不同的桌布，還可以讓一張背景橫跨多個桌布來達到延伸的效果。&lt;/p>
@@ -22,29 +44,7 @@
 &lt;img src="https://EM-Tec.github.io/images/MultiWall-browse.png" alt="選取圖片">
 你可以給圖片加上各種濾鏡或特效，但是我建議在導入軟體之前就先編輯好&lt;/p>
 &lt;p>最後按下apply即可
-&lt;img src="https://EM-Tec.github.io/images/MultiWall-apply.png" alt="Apply">&lt;/p></description></item><item><title>【ShowDesktopPerMonitor】進化Win+D！多螢幕不互相干擾/所有桌面視窗一鍵顯示</title><link>https://EM-Tec.github.io/post/showdesktoppermonitor/</link><pubDate>Wed, 18 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/showdesktoppermonitor/</guid><description>
-&lt;p>使用多個螢幕可以使工作效率大幅提升。不過如果使用Win+D來隱藏視窗、會一次隱藏所有螢幕的所有的視窗。&lt;/p>
-&lt;p>不過透過ShowDesktopPerMonitor可以模擬Win+D的隱藏視窗。除了可以分開螢幕控制以外，它的隱藏視窗是連工作列都看不到...（要怎麼使用就看你了！）&lt;/p>
-&lt;h1 id="安裝">安裝&lt;/h1>
-&lt;p>這個專案是開源在Github上的，基本上可以安心使用。雖然已經很久沒有更新了，但目前沒有任何問題。&lt;/p>
-&lt;div class="notices info">
-&lt;div class="label">ShowDesktopPerMonitor&lt;/div>
-&lt;ul>
-&lt;li>開發者:CryptKat&lt;/li>
-&lt;li>類型:免費開源軟體&lt;/li>
-&lt;li>網址:&lt;a href="https://github.com/CryptKat/ShowDesktopPerMonitor/">Github&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/CryptKat/ShowDesktopPerMonitor/releases/tag/1.0">下載連結&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;h1 id="設定">設定&lt;/h1>
-&lt;p>請先到上面下載連結下載&lt;code>ShowDesktopPerMonitor_1.0.zip&lt;/code>並解壓縮。解壓縮後雙擊直接打開就可以了。&lt;/p>
-&lt;p>如果你是使用Windows 10可以將“Xbox Game Monitoring”關閉（原Win+G）,，預防你的G會沒辦法按。
-請到註冊表的&lt;code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\xbgm\Start&lt;/code>並將數值改成&lt;code>4&lt;/code>&lt;/p>
-&lt;h1 id="多個桌面">多個桌面&lt;/h1>
-&lt;p>如果你會使用多個桌面（Ctrl+Win+D)的話你會發現當你按下Win+D要顯示的時候，不只這個桌面，所有這個螢幕的桌面視窗都會跳出來。&lt;/p>
-&lt;p>可以說這是一個Bug，也可以說是一個&lt;em>特別的功能&lt;/em>&lt;/p>
-&lt;h1 id="關閉軟體">關閉軟體&lt;/h1>
-&lt;p>如果要讓它停止運行，請點擊螢幕右下角往上的箭頭，對ShowDesktopPerMonitor圖示點擊右鍵，並結束它&lt;/p></description></item><item><title>【Zoom】是個超讚綠幕!輕鬆去背到OBS</title><link>https://EM-Tec.github.io/post/vb-cable/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/vb-cable/</guid><description>
+&lt;img src="https://EM-Tec.github.io/images/MultiWall-apply.png" alt="Apply">&lt;/p></description></item><item><title>【Zoom】是個超讚綠幕!輕鬆去背到OBS</title><link>https://EM-Tec.github.io/post/vb-cable/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/vb-cable/</guid><description>
 &lt;p>綠幕是拍片直播或視訊常用到的好幫手，因為它可以讓你輕鬆地去除掉背景。只需要在軟體中選擇綠幕顏色，並調整各種數據即可。但是如果沒有綠幕怎麼辦?這時可以使用電腦免費的視訊會議軟體Zoom達到一樣的效果。&lt;/p>
 &lt;h2 id="步驟">步驟&lt;/h2>
 &lt;h3 id="製作背景">製作背景&lt;/h3>
