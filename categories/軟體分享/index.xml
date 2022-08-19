@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>軟體分享 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E8%BB%9F%E9%AB%94%E5%88%86%E4%BA%AB/</link><description>Recent content in 軟體分享 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Thu, 18 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E8%BB%9F%E9%AB%94%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>【ShowDesktopPerMonitor】進化Win+D！多螢幕不互相干擾/所有桌面視窗一鍵顯示</title><link>https://EM-Tec.github.io/post/showdesktoppermonitor/</link><pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/showdesktoppermonitor/</guid><description>
-&lt;p>使用多個螢幕可以使工作效率大幅提升。不過如果使用Win+D來隱藏視窗、會一次隱藏所有螢幕的所有的視窗。&lt;/p>
-&lt;p>不過透過ShowDesktopPerMonitor可以模擬Win+D的隱藏視窗。除了可以分開螢幕控制以外，它的隱藏視窗是連工作列都看不到...（要怎麼使用就看你了！）&lt;/p>
+&lt;p>使用多個螢幕可以使工作效率大幅提升。不過如果使用Win+D來隱藏視窗、會一次隱藏所有螢幕的所有的視窗。
+不過透過ShowDesktopPerMonitor可以模擬Win+D的隱藏視窗。除了可以分開螢幕控制以外，它的隱藏視窗是連工作列都看不到...（要怎麼使用就看你了！）&lt;/p>
 &lt;h1 id="安裝">安裝&lt;/h1>
 &lt;p>這個專案是開源在Github上的，基本上可以安心使用。雖然已經很久沒有更新了，但目前沒有任何問題。&lt;/p>
 &lt;div class="notices info">

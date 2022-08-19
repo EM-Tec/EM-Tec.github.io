@@ -1,6 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毛哥EM資訊密技</title><link>https://EM-Tec.github.io/</link><description>Recent content on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Thu, 18 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>【ShowDesktopPerMonitor】進化Win+D！多螢幕不互相干擾/所有桌面視窗一鍵顯示</title><link>https://EM-Tec.github.io/post/showdesktoppermonitor/</link><pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/showdesktoppermonitor/</guid><description>
-&lt;p>使用多個螢幕可以使工作效率大幅提升。不過如果使用Win+D來隱藏視窗、會一次隱藏所有螢幕的所有的視窗。&lt;/p>
-&lt;p>不過透過ShowDesktopPerMonitor可以模擬Win+D的隱藏視窗。除了可以分開螢幕控制以外，它的隱藏視窗是連工作列都看不到...（要怎麼使用就看你了！）&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毛哥EM資訊密技</title><link>https://EM-Tec.github.io/</link><description>Recent content on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Fri, 19 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>【終端機】輕鬆更改SSH的驗證碼passpharase</title><link>https://EM-Tec.github.io/post/change-ssh-passphrase/</link><pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/change-ssh-passphrase/</guid><description>
+&lt;p>SSH是一種簡單的登入方式。以我來說在使用git來上傳檔案到Github時，因為我在手機生成並設定好了ssh，不用每次上傳都需要輸入帳號和全是亂碼的驗證密碼。
+不過也可以設定在使用SSH登入的時候需要輸入一組passpharase，來保障你的安全。不過如果你想要更改或取消密碼怎麼辦呢&lt;/p>
+&lt;h1 id="cd到ssh資料夾">cd到ssh資料夾&lt;/h1>
+&lt;p>這裡以Android的Termux為例。ssh資料夾在&lt;code>~/.ssh&lt;/code>（其他作業系統也大同小異）&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>cd .ssh
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="更改密碼">更改密碼&lt;/h1>
+&lt;p>如果你在建立的時候沒有自訂名稱（直接按enter，預設為&lt;code>id_rsa&lt;/code>），可直接打下面這串指令&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>change-ssh-passpharase
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你要指定ssh的話後面要加一小串&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>ssh-keygen -p -f &amp;lt;檔名&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你之前設定過密碼會看到&lt;code>Enter old passphrase:&lt;/code>，需要先輸入一次之前的密碼。不然直接輸入新密碼兩次就好了。如果不想要設定就直接按enter就好了。&lt;/p>
+&lt;p>如果看到以下這一串&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>Failed to load key id_rsa: incorrect passphrase supplied to decrypt private key
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>代表你剛才輸錯密碼，請重新輸入一次。&lt;/p></description></item><item><title>【ShowDesktopPerMonitor】進化Win+D！多螢幕不互相干擾/所有桌面視窗一鍵顯示</title><link>https://EM-Tec.github.io/post/showdesktoppermonitor/</link><pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/showdesktoppermonitor/</guid><description>
+&lt;p>使用多個螢幕可以使工作效率大幅提升。不過如果使用Win+D來隱藏視窗、會一次隱藏所有螢幕的所有的視窗。
+不過透過ShowDesktopPerMonitor可以模擬Win+D的隱藏視窗。除了可以分開螢幕控制以外，它的隱藏視窗是連工作列都看不到...（要怎麼使用就看你了！）&lt;/p>
 &lt;h1 id="安裝">安裝&lt;/h1>
 &lt;p>這個專案是開源在Github上的，基本上可以安心使用。雖然已經很久沒有更新了，但目前沒有任何問題。&lt;/p>
 &lt;div class="notices info">
@@ -525,21 +539,7 @@ on &lt;a href="https://codepen.io">CodePen&lt;/a>.&lt;/span>
 &lt;span class="ln">192&lt;/span> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="表格資料網站">表格資料網站&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="ln">1&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>【終端機】輕鬆更改SSH的驗證碼passpharase</title><link>https://EM-Tec.github.io/post/change-ssh-passphrase/</link><pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/change-ssh-passphrase/</guid><description>
-&lt;p>SSH是一種簡單的登入方式。以我來說在使用git來上傳檔案到Github時，因為我在手機生成並設定好了ssh，不用每次上傳都需要輸入帳號和全是亂碼的驗證密碼。&lt;/p>
-&lt;p>不過妳也可以設定在使用SSH登入的時候需要輸入一組passpharase，來保障你的安全。不過如果你想要更改或取消密碼怎麼辦呢&lt;/p>
-&lt;h1 id="cd到ssh資料夾">cd到ssh資料夾&lt;/h1>
-&lt;p>這裡以Android的Termux為例。ssh資料夾在&lt;code>~/.ssh&lt;/code>（其他作業系統也大同小異）&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>cd .ssh
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="更改密碼">更改密碼&lt;/h1>
-&lt;p>如果你在建立的時候沒有自訂名稱（直接按enter，預設為&lt;code>id_rsa&lt;/code>），可直接打下面這串指令&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>change-ssh-passpharase
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你要指定ssh的話後面要加一小串&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>ssh-keygen -p -f &amp;lt;檔名&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你之前設定過密碼會看到&lt;code>Enter old passphrase:&lt;/code>，需要先輸入一次之前的密碼。不然直接輸入新密碼兩次就好了。如果不想要設定就直接按enter就好了。&lt;/p>
-&lt;p>如果看到以下這一串&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>Failed to load key id_rsa: incorrect passphrase supplied to decrypt private key
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>代表你剛才輸錯密碼，請重新輸入一次。&lt;/p></description></item><item><title>【重點整理】APCS筆記(長更)</title><link>https://EM-Tec.github.io/post/apcs_note/</link><pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/apcs_note/</guid><description>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>【重點整理】APCS筆記(長更)</title><link>https://EM-Tec.github.io/post/apcs_note/</link><pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/apcs_note/</guid><description>
 &lt;p>這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀&lt;/p>
 &lt;div class="notices note">
 &lt;div class="label">好久不見!&lt;/div>
