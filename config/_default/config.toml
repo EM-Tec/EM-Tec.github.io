@@ -6,7 +6,7 @@ copyright = "2022毛哥EM"
 # canonifyurls = true
 paginate = 10
 theme = "hugo-clarity"
-disqusShortname = "em-tec"
+# disqusShortname = "em-tec"
 DefaultContentLanguage = "zh-tw"
 # [languages]
 # config/_default/languages.toml
