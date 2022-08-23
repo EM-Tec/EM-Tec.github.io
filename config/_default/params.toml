@@ -1,11 +1,11 @@
 # twitter = "@EM01902595"
 largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
-introDescription = "一位數位創作者。喜歡用科技進行各種創作，如繪畫、音樂、平面設計和網頁設計等"
+introDescription = "一位數位創作者。喜歡用科技進行各種創作，如繪畫、音樂、平面設計和網頁設計"
 introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
 description = "一位數位創作者。喜歡用科技進行各種創作，如繪畫、音樂、平面設計和網頁設計" # set your site's description here. will be use for home page content meta tags (seo). Alternatively set this description in your homepage content file i.e content/_index.md. Whatever is set in the latter will take precedence
 
 # showShare = false # Uncomment to not show share buttons on each post. Also available in each post's front matter.
-codeLineNumbers = true
+
 # Google analytics Id
 ga_analytics = "G-H69XEEC798"
 
