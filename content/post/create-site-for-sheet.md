@@ -7,7 +7,7 @@ featured = true
 tags = [ "自製", "HTML", "CSS", "JavaScript", "Github", "GAS" ]
 series = ["複製貼上就能成為工程師"]
 categories = [ "製作教學" ]
-
+toc = true
 thumbnail = "images/thumbnails/create-site-for-sheet.jpeg"
 featureImage = "https://em-tec.github.io/images/thumbnails/create-site-for-sheet.jpeg"
 shareImage = "https://em-tec.github.io/images/thumbnails/create-site-for-sheet.jpeg"
