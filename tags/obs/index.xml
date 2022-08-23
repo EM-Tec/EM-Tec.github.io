@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OBS on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/obs/</link><description>Recent content in OBS on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><copyright>2022毛哥EM</copyright><lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/obs/index.xml" rel="self" type="application/rss+xml"/><item><title>【Zoom】是個超讚綠幕!輕鬆去背到OBS</title><link>https://EM-Tec.github.io/post/vb-cable/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/vb-cable/</guid><description>
-&lt;p>綠幕是拍片直播或視訊常用到的好幫手，因為它可以讓你輕鬆地去除掉背景。只需要在軟體中選擇綠幕顏色，並調整各種數據即可。但是如果沒有綠幕怎麼辦?這時可以使用電腦免費的視訊會議軟體Zoom達到一樣的效果。&lt;/p>
+&lt;p>綠幕是拍片直播或視訊常用到的好幫手，因為它可以讓你輕鬆地去除掉背景。只需要在軟體中選擇綠幕顏色，並調整各種數據即可。但是如果沒有綠幕怎麼辦?這時可以使用電腦免費的視訊會議軟體Zoom達到一樣的效果。
+toc = true&lt;/p>
 &lt;h2 id="步驟">步驟&lt;/h2>
 &lt;h3 id="製作背景">製作背景&lt;/h3>
 &lt;p>我們需要一張只有一個顏色的圖片來作為Zoom的背景。以和人物最不相關為原則(通常使用綠色)。你可以使用小畫家來繪製。&lt;/p>

@@ -45,7 +45,8 @@
 你可以給圖片加上各種濾鏡或特效，但是我建議在導入軟體之前就先編輯好&lt;/p>
 &lt;p>最後按下apply即可
 &lt;img src="https://EM-Tec.github.io/images/MultiWall-apply.png" alt="Apply">&lt;/p></description></item><item><title>【Zoom】是個超讚綠幕!輕鬆去背到OBS</title><link>https://EM-Tec.github.io/post/vb-cable/</link><pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/vb-cable/</guid><description>
-&lt;p>綠幕是拍片直播或視訊常用到的好幫手，因為它可以讓你輕鬆地去除掉背景。只需要在軟體中選擇綠幕顏色，並調整各種數據即可。但是如果沒有綠幕怎麼辦?這時可以使用電腦免費的視訊會議軟體Zoom達到一樣的效果。&lt;/p>
+&lt;p>綠幕是拍片直播或視訊常用到的好幫手，因為它可以讓你輕鬆地去除掉背景。只需要在軟體中選擇綠幕顏色，並調整各種數據即可。但是如果沒有綠幕怎麼辦?這時可以使用電腦免費的視訊會議軟體Zoom達到一樣的效果。
+toc = true&lt;/p>
 &lt;h2 id="步驟">步驟&lt;/h2>
 &lt;h3 id="製作背景">製作背景&lt;/h3>
 &lt;p>我們需要一張只有一個顏色的圖片來作為Zoom的背景。以和人物最不相關為原則(通常使用綠色)。你可以使用小畫家來繪製。&lt;/p>
