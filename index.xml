@@ -67,7 +67,7 @@
 &lt;span class="ln"> 7&lt;/span>
 &lt;span class="ln"> 8&lt;/span>jobs:
 &lt;span class="ln"> 9&lt;/span> deploy:
-&lt;span class="ln">10&lt;/span> runs-on: ubuntu-18.04
+&lt;span class="ln">10&lt;/span> runs-on: ubuntu-latest
 &lt;span class="ln">11&lt;/span> steps:
 &lt;span class="ln">12&lt;/span> - uses: actions/checkout@v2
 &lt;span class="ln">13&lt;/span> with:
