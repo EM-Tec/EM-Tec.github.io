@@ -2,7 +2,7 @@
 author = "毛哥EM"
 title = "【pdftk】萬能PDF工具！一行指令合併 旋轉 提取 
 date = "2021-08-16"
-description = "還在慢慢用線上工具處裡PDF問題嗎？用PDF Toolkit (pdftk)"
+description = "還在慢慢用線上工具處裡PDF問題嗎？用PDF Toolkit (pdftk)一行指令完成各種PDF處裡！"
 
 categories = ["軟體分享"]
 tags = [
@@ -11,46 +11,46 @@ tags = [
 thumbnail = "images/thumbnails/is-gd.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/is-gd.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/is-gd.jpg"
+draft = true
 +++
-太長的網址常除了不好看占版面之外，也難以令人記住。因此所短網址是一個不錯的做法。而其中我最常用的就是is.gd，因為它is good~
+用PDF Toolkit (pdftk)一行指令完成各種PDF處裡！
 <!--more-->
-其實主要的原因是因為它很短，比bit.ly短了一個字母，而且頁面超簡單，載入速度快。而它也有可以API可以使用(Apple官方的縮短網址ios捷徑就是使用is.gd)
+因為這是一個終端機用指令執行的套件，所以請開啟你的終端機(Terminal/Termux/Command)並用
+{{% notice info "PDF Toolkit (pdftk)" %}}
 
-{{% notice info "is.gd" %}}
-
-* 開發者:is.gd
+* 開發者:pdflabs
 * 軟體類型類型:終端機套件
 * 網址:[www.pdflabs.com](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
 {{% /notice %}}
 
-下面將結合一些簡單的例子介紹它的各種功能。
+下面列出幾個常用的功能。輸出的檔案我都叫做`out.pdf`
 
 1。合併多個 PDF 文件
 
 pdftk 可以將多個 PDF 檔案合併成一個檔案。比如下面的例子：
-
+```
 pdftk 1.pdf 2.pdf 3.pdf cat output 123.pdf
-
+```
 或者使用檔案控制代碼：
-
+```
 pdftk A=1.pdf B=2.pdf cat A B output 12.pdf
-
+```
 下面的例子使用了檔案萬用字元：
-
+```
 pdftk *.pdf cat output combined.pdf
-
+```
 下面的例子將多個檔案的多頁提取出來生成一個新的 PDF 檔案：
-
+```
 pdftk A=one.pdf B=two.pdf cat A1-7 B1-5 A8 output combined.pdf
-
+```
 注:檔名一定要正確,有時看著一樣確還差個/,最好使用Tab鍵來自動補全.
 
 2。將 PDF 檔案中的一部分取出生成一個新檔案
 
 pdftk 可以隨意刪除或旋轉頁面。下面是一個把指定頁碼的頁面移出pdf文件的示例。
-
+```
 pdftk new.pdf cat 1-96 98-end output new1.pdf
-
+```
 新生成的 new1.pdf 文件不包含頁碼為 97 的頁面。cat 選項後跟的引數用以指定頁碼範圍和頁面方向的限定條件。1-96 表示從 1 到 96 頁，98-end 表示從 98 頁至文件末尾。所以輸出的新 pdf 文件不包含頁碼為 97 的頁面。
 
 除了示例中的具體數值，還可使用一些限定字元。odd 和 even 表示奇偶頁碼。N、S、E、W、L、R、D 表示文件版面的旋轉角度（N: 0，E: 90，S: 180，W: 270，L: -90，R: +90，D: +180）。
@@ -62,21 +62,21 @@ pdftk new.pdf cat 1-96 98-end output new1.pdf
 1-endE 表示整篇文件所有頁面都旋轉 90 度。
 
 90 度旋轉 PDF 檔案的第一頁:
-
+```
 pdftk  in.pdf cat 1E  2-end  output  out.pdf
-
+```
 旋轉整個文件 180 度：
-
+```
 pdftk  in.pdf  cat  1-endS  out.pdf
-
+```
 折分文件，將 PDF 檔案的每一頁輸出成一個 PDF 檔案，輸出檔案預設命名為 pg/_0001.pdf pg/_0002.pdf 等等：
-
+```
 pdftk  in.pdf  burst
-
+```
 也可以指定輸出檔名，比如下面的例子：
-
+```
 pdftk  in.pdf  burst output page_%1d.pdf
-
+```
 3。PDF 檔案加密和解密
 
 pdftk 可以對現有 PDF 檔案進行基於密碼的加解密，也就是說對現有的加密的 PDF 檔案解密需要提供解密密碼，pdftk 不是強力破解工具。
@@ -86,7 +86,7 @@ pdftk 可以設定兩種不同的密碼，稱為：owner password 和 user passw
 PDF 檔案可以採用 40 位加密或 128 位加密，通過使用命令選項 encrypt/_40bit 或 encrypt/_128bit 可以指定加密演算法的位數。如果不指定預設採用 128 位加密。
 
 使用者的許可權可以使用 allow 命令選項設定，可以設定的許可權如下：
-
+```
 /begin{description}
 
 /item[Printing] 允許高質量列印。
@@ -104,9 +104,9 @@ PDF 檔案可以採用 40 位加密或 128 位加密，通過使用命令選項 
 /item[AllFeatures] 允許所有特性。
 
 /end{description}
-
+```
 與加解密相關的命令語法總結如下：
-
+```
 pdftk <input PDF files>
 
    [input_pw <input PDF owner psswords]
@@ -122,9 +122,9 @@ pdftk <input PDF files>
    [owner_pw <owner password]
 
    [user_pw <user password]
-
+```
 下面是幾個例子：
-
+```
 pdftk a.pdf output b.pdf owner_pw foopass
 
 pdftk a.pdf output b.pdf owner_pw foo user_pw baz
@@ -132,9 +132,9 @@ pdftk a.pdf output b.pdf owner_pw foo user_pw baz
 pdftk a.pdf output b.pdf owner_pw foo user_pw baz allow printing
 
 pdftk secured.pdf input_pw foopass output unsecured.pdf
-
+```
 合併兩個 PDF 文件，其中有一個是加密的，在合併時要使用控制代碼選項來指定密碼。下面是一個示例，shortsec.pdf 是一個加密過的 PDF 文件，在合併時如果沒有指定密碼，則會出錯：
-
+```
 pdftk A=a.pdf B=b.pdf cat output combined.pdf
 
 Error: Failed to open PDF file:
@@ -146,35 +146,36 @@ Error: Failed to open PDF file:
 Errors encountered.  No output created.
 
 Done.  Input errors, so no output created.
-
+```
 下面通過控制代碼選項指定密碼則可以正常合併:
-
+```
 pdftk A=a.pdf B=b.pdf input_pw A=foopass cat output combined.pdf
-
+```
 4。新增 PDF 背景水印或前景圖章
 
 將一個 PDF 檔案的水印新增到另一個 PDF 檔案中。
-
+```
 pdftk in.pdf background back.pdf output out.pdf
-
+```
 pdftk 只提取有水印的 PDF 檔案的第一頁作為水印。
 
 stamp 命令選項與 background 類似，只是疊加在輸出檔案的上面（background 是疊加在輸出檔案的下面的）。
-
+```
 pdftk in.pdf stamp back.pdf output out.pdf
-
+```
 5。新增/提取 PDF 檔案附件
 
 可以將任意檔案新增到 PDF 檔案中，比如下面的例子：
-
+```
 pdftk in.pdf attach_files 1.html 2.html to_page 6 output out.pdf  
-
+```
 下面的例子將附件解壓縮到當前資料夾：
-
+```
 pdftk report.pdf unpack_files output . 
-
+```
 6。修復損壞了的 PDF 檔案
 
 下面的例子試圖修復一個損壞了的檔案：
-
+```
 pdftk broken.pdf output fixed.pdf
+```
