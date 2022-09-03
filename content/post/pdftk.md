@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "【pdftk】萬能PDF工具！一行指令合併 旋轉 提取 
+title = "【pdftk】萬能PDF工具！一行指令合併 旋轉 提取 "
 date = "2021-08-16"
 description = "還在慢慢用線上工具處裡PDF問題嗎？用PDF Toolkit (pdftk)一行指令完成各種PDF處裡！"
 
