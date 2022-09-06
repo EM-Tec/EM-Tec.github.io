@@ -40,6 +40,7 @@
 &lt;div class="notices notice">
 &lt;div class="label">小提醒&lt;/div>
 &lt;p>注:檔名一定要正確,有時看著一樣確還差個/，最好使用Tab鍵來自動補全。&lt;/p>
+&lt;/div>
 &lt;h2 id="將-pdf-檔案中的一部分取出生成一個新檔案">將 PDF 檔案中的一部分取出生成一個新檔案&lt;/h2>
 &lt;p>pdftk 可以隨意刪除或旋轉頁面。下面是一個把指定頁碼的頁面移出pdf文件的範例。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>pdftk new.pdf cat 1-96 98-end output new1.pdf
@@ -128,8 +129,7 @@
 &lt;p>下面的例子試圖修復一個損壞了的檔案：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="ln">1&lt;/span>pdftk broken.pdf output fixed.pdf
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>這篇資訊量有點大，建議可以加入書籤需要的時候再來看一下&lt;/p>
-&lt;p>&lt;a href="http://lybhu.blog.sohu.com/144036460.html">參考資料&lt;/a>&lt;/p>
-&lt;/div></description></item><item><title>【終端機】輕鬆更改SSH的驗證碼passpharase</title><link>https://EM-Tec.github.io/post/change-ssh-passphrase/</link><pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/change-ssh-passphrase/</guid><description>
+&lt;p>&lt;a href="http://lybhu.blog.sohu.com/144036460.html">參考資料&lt;/a>&lt;/p></description></item><item><title>【終端機】輕鬆更改SSH的驗證碼passpharase</title><link>https://EM-Tec.github.io/post/change-ssh-passphrase/</link><pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/change-ssh-passphrase/</guid><description>
 &lt;p>SSH是一種簡單的登入方式。以我來說在使用git來上傳檔案到Github時，因為我在手機生成並設定好了ssh，不用每次上傳都需要輸入帳號和全是亂碼的驗證密碼。
 不過也可以設定在使用SSH登入的時候需要輸入一組passpharase，來保障你的安全。不過如果你想要更改或取消密碼怎麼辦呢&lt;/p>
 &lt;h1 id="cd到ssh資料夾">cd到ssh資料夾&lt;/h1>
