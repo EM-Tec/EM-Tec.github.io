@@ -68,7 +68,7 @@ pdftk A=one.pdf B=two.pdf cat A1-7 B1-5 A8 output combined.pdf
 
 {{% notice notice "小提醒" %}}
 注:檔名一定要正確,有時看著一樣確還差個/，最好使用Tab鍵來自動補全。
-
+{{% /notice %}}
 ## 將 PDF 檔案中的一部分取出生成一個新檔案
 
 pdftk 可以隨意刪除或旋轉頁面。下面是一個把指定頁碼的頁面移出pdf文件的範例。
