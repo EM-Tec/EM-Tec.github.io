@@ -3,13 +3,12 @@ author = "毛哥EM"
 title = "【pdftk】萬能PDF工具！一行指令合併 旋轉 提取 "
 date = "2022-09-07"
 description = "還在慢慢用線上工具處裡PDF問題嗎？用PDF Toolkit (pdftk)一行指令完成各種PDF處裡！"
-
 categories = ["軟體分享"]
 tags = [
     "Terminal","Windows","Android",
 ]
-
 +++
+
 用PDF Toolkit (pdftk)一行指令完成各種PDF處裡！
 <!--more-->
 因為這是一個終端機用指令執行的套件，所以請開啟你的終端機(Terminal/Termux/Command)並用任意一個套件軟體安裝它。比如說mac可以用brew
