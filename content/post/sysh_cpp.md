@@ -1,14 +1,16 @@
 ---
-author = "毛哥EM"
-title = "【C++】常見題目解答"
-date = "2022-09-08"
-description = "西苑高一電腦課C++題目的最佳解。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看"
-categories = ["筆記"]
-thumbnail = "images/thumbnails/notes.png"
-featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
-shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
-draft = true
+author: 毛哥EM
+title: 【C++】常見題目解答
+description: 西苑高一電腦課C++題目的最佳解。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
+date: 2022-09-08
+categories:
+  - "Development"
+thumbnail: "images/thumbnails/notes.png"
+featureImage: "https://em-tec.github.io/images/thumbnails/notes.png"
+shareImage: "https://em-tec.github.io/images/thumbnails/notes.png"
+draft: true
 ---
+
 我整理出C++題目常見的題目並寫出我認為的最佳解(取自西苑高一電腦課)。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
 <!--more-->
 {{% notice warning "警告" %}}
