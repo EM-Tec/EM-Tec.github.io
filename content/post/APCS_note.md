@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "【重點整理】APCS筆記(長更)"
+title = "【重點整理】C語言"
 date = "2022-07-17"
 description = "這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀"
 categories = ["筆記"]
