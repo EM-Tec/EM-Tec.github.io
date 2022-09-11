@@ -3,12 +3,12 @@ author: 毛哥EM
 title: 【C++】常見題目解答
 description: 西苑高一電腦課C++題目的最佳解。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
 date: 2022-09-08
+tags: C++
 categories:
   - "Development"
 thumbnail: "images/thumbnails/notes.png"
 featureImage: "https://em-tec.github.io/images/thumbnails/notes.png"
 shareImage: "https://em-tec.github.io/images/thumbnails/notes.png"
-draft: true
 ---
 
 我整理出C++題目常見的題目並寫出我認為的最佳解(取自西苑高一電腦課)。也有提供一些減少程式碼的常用技巧。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
@@ -339,9 +339,9 @@ int main() {
 2. 計算有幾科不及格
 3. 
 {{% notice note "提示筆記" %}}
+這裡使用了`for-each`循環。 它將`y`設置為`a`的第一個元素，運行大掛號（可省略）的程式，然後它將`y`設置為`a`的第二個元素，然後...
 
-這裡使用了`for-each`循環。 它將 p 設置為 ps 的第一個元素，然後運行循環體。 然後它將 p 設置為 ps 的第二個元素，然後運行循環體。 等等。
-
+使用它是因用`for (int i = 0; i < 2; i++ )`太長了（如果要自動判斷陣列有多長要打`for (int i = 0; i < i.length; i++ )`）。重點是要存取清單的內容要用`a[i]`而不是`i`
 {{% /notice %}}
 
 ```c++
