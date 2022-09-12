@@ -1,4 +1,4 @@
 baseURL = 'https://EM-Tec.github.io'
 languageCode = 'zh-tw'
 title = '毛哥EM資訊密技'
-theme = 'hugo-clarity'
+theme = ["github.com/chipzoller/hugo-clarity"]
