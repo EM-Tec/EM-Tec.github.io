@@ -5,7 +5,7 @@ baseurl = "https://EM-Tec.github.io"  # Include trailing slash /
 copyright = "2022毛哥EM"
 # canonifyurls = true
 paginate = 10
-theme = "hugo-clarity"
+theme = ["github.com/chipzoller/hugo-clarity"]
 # disqusShortname = "em-tec"
 DefaultContentLanguage = "zh-tw"
 # [languages]
