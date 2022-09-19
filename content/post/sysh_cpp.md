@@ -3,7 +3,7 @@ author: 毛哥EM
 title: 【C++】常見題目解答
 description: 西苑高一電腦課C++題目的最佳解。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
 date: 2022-09-08
-tags: "C++"
+tags: "C"
 categories:
   - "Development"
 thumbnail: "images/thumbnails/notes.png"
