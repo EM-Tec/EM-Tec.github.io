@@ -95,37 +95,42 @@ Sep 8, 2022</span>
 </span>
 </div>
 <img src=https://em-tec.github.io/images/thumbnails/notes.png class=image_featured alt=【C++】常見題目解答>
-<p>我整理出C++題目常見的題目並寫出我認為的最佳解(取自西苑高一電腦課)。也有提供一些減少程式碼的常用技巧。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看</p>
+    <div class="post_body"><p>我整理出C++題目常見的題目並寫出我認為的最佳解(取自西苑高一電腦課)。也有提供一些減少程式碼的常用技巧。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看</p>
 <div class="notices warning">
-<div class=label>警告</div>
-<p>這裡的程式僅供參考，請不要偷懶直接複製貼上，小考你不會過的。</p>
+    <div class="label">警告</div>
+    <p>這裡的程式僅供參考，請不要偷懶直接複製貼上，小考你不會過的。</p>
 <p><strong>目前只更新到308</strong></p>
-</div>
-<h1 id=小提示>小提示</h1>
-<p>當然如果你只是想看解答<s>然後像月同學一樣手機開超大聲打音遊</s>可以<a href=#%E9%A1%8C%E7%9B%AE%E8%A7%A3%E7%AD%94>點我跳到解答</a></p>
+
+  </div>
+
+<h1 id="小提示">小提示</h1>
+<p>當然如果你只是想看解答<s>然後像月同學一樣手機開超大聲打音遊</s>可以<a href="#%E9%A1%8C%E7%9B%AE%E8%A7%A3%E7%AD%94">點我跳到解答</a></p>
+
 <div class="notices note">
-<div class=label>C語言</div>
-<p>如果你忘記C語言的語法想看看可以閱讀<a href=https://em-tec.github.io/post/apcs_note/>這篇文章</a>，不過相信你學過C++就不會想要碰它了。</p>
-</div>
-<h2 id=減少程式碼的常用技巧>減少程式碼的常用技巧</h2>
+    <div class="label">C語言</div>
+    <p>如果你忘記C語言的語法想看看可以閱讀<a href="https://em-tec.github.io/post/apcs_note/">這篇文章</a>，不過相信你學過C++就不會想要碰它了。</p>
+
+  </div>
+
+<h2 id="減少程式碼的常用技巧">減少程式碼的常用技巧</h2>
 <p>這裡講的是真的少打一點，不是全部縮成一排。減少程式碼可以方便閱讀且在bebug(找錯誤)比較方便</p>
-<h3 id=定義時賦予值>定義時賦予值</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln>1</span><span class=kt>int</span> <span class=n>a</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln>2</span><span class=n>a</span><span class=o>=</span><span class=mi>87</span><span class=p>;</span>
-</code></pre></div><p>可以簡化成<code>int a=87, b;</code>一行</p>
-<h3 id=在輸出行內進行運算>在輸出行內進行運算</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln>1</span><span class=n>a</span><span class=o>=</span><span class=n>x</span><span class=o>+</span><span class=n>y</span><span class=p>;</span>
-<span class=ln>2</span><span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>a</span>
-</code></pre></div><p>可以簡化成<code>cout&lt;&lt;x+y;</code>一行</p>
-<h3 id=if-else省去大括號>if else省去大括號</h3>
+<h3 id="定義時賦予值">定義時賦予值</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln">1</span><span class="cl"><span class="kt">int</span> <span class="n">a</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">a</span><span class="o">=</span><span class="mi">87</span><span class="p">;</span>
+</span></span></code></pre></div><p>可以簡化成<code>int a=87, b;</code>一行</p>
+<h3 id="在輸出行內進行運算">在輸出行內進行運算</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">a</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span>
+</span></span></code></pre></div><p>可以簡化成<code>cout&lt;&lt;x+y;</code>一行</p>
+<h3 id="if-else省去大括號">if else省去大括號</h3>
 <p>if else裡面如果只有一行指令可以省去大括號<code>{}</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln>1</span><span class=k>if</span><span class=p>(</span><span class=n>a</span><span class=o>&gt;</span><span class=n>b</span><span class=p>){</span>
-<span class=ln>2</span>    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>a</span><span class=p>;</span>
-<span class=ln>3</span><span class=p>}</span><span class=k>else</span><span class=p>{</span>
-<span class=ln>4</span>    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>b</span>
-<span class=ln>5</span><span class=p>}</span>
-</code></pre></div><p>可以簡化成<code>if(a>b) cout&lt;&lt;a; else cout&lt;&lt;b;</code>一行</p>
-<h3 id=數學含式庫mathh>數學含式庫&lt;math.h></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">){</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">b</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>可以簡化成<code>if(a&gt;b) cout&lt;&lt;a; else cout&lt;&lt;b;</code>一行</p>
+<h3 id="數學含式庫mathh">數學含式庫&lt;math.h&gt;</h3>
 <p>列出來怕你忘記</p>
 <ul>
 <li><code>M_E</code> 回傳自然常數 e</li>
@@ -141,39 +146,43 @@ Sep 8, 2022</span>
 <li><code>abs(x)</code> 回傳整數 <code>x</code> 的絕對值</li>
 <li><code>fabs(x)</code> 回傳實數 <code>x</code> 的絕對值</li>
 </ul>
-<h1 id=題目解答>題目解答</h1>
+<h1 id="題目解答">題目解答</h1>
 <p>就..雖然我很貼心還給你了複製鍵...但有問題要問...</p>
 <p>裡面的換行空格是大家的習慣寫法，可以參考。且你會發現雖然空格多一點程式還是比標準答案少</p>
+
 <div class="notices info">
-<div class=label>提醒</div>
-<p>裡面有一些東西還沒有教過，有興趣可以問我或是Google。</p>
+    <div class="label">提醒</div>
+    <p>裡面有一些東西還沒有教過，有興趣可以問我或是Google。</p>
 <p><strong>目前只更新到308</strong></p>
-</div>
-<h2 id=ch1>Ch.1</h2>
-<h3 id=101hello-c>101.Hello C++</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-C++ data-lang=C++><span class=ln>1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln>2</span><span class=cp></span>
-<span class=ln>3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln>4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln>5</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;Hello C++&#34;</span><span class=p>;</span>
-<span class=ln>6</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>7</span><span class=p>}</span>
-</code></pre></div><h3 id=102bmi>102.BMI</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>float</span> <span class=n>weight</span><span class=p>,</span> <span class=n>height</span><span class=p>,</span> <span class=n>BMI</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>weight</span> <span class=o>&gt;&gt;</span> <span class=n>height</span><span class=p>;</span>
-<span class=ln> 7</span>  <span class=n>BMI</span> <span class=o>=</span> <span class=n>weight</span> <span class=o>/</span> <span class=p>((</span><span class=n>height</span> <span class=o>/</span> <span class=mi>100</span><span class=p>)</span> <span class=o>*</span> <span class=p>(</span><span class=n>height</span> <span class=o>/</span> <span class=mi>100</span><span class=p>));</span>
-<span class=ln> 8</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;BMI為&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>BMI</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>10</span><span class=p>}</span>
-</code></pre></div><h2 id=ch2>Ch.2</h2>
+
+  </div>
+
+<h2 id="ch1">Ch.1</h2>
+<h3 id="101hello-c">101.Hello C++</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C++" data-lang="C++"><span class="line"><span class="ln">1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Hello C++&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="102bmi">102.BMI</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">float</span> <span class="n">weight</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">BMI</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">weight</span> <span class="o">&gt;&gt;</span> <span class="n">height</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="n">BMI</span> <span class="o">=</span> <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">height</span> <span class="o">/</span> <span class="mi">100</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;BMI為&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">BMI</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="ch2">Ch.2</h2>
 <p>###　201.運算子</p>
+
 <div class="notices note">
-<div class=label>提示筆記</div>
-<p>先乘除後加減(依照優先順序)</p>
+    <div class="label">提示筆記</div>
+    <p>先乘除後加減(依照優先順序)</p>
 <ul>
 <li>有括弧的先計算</li>
 <li>多個括弧皆使用小括弧。EX:((8+9)-7)</li>
@@ -233,230 +242,269 @@ Sep 8, 2022</span>
 </tr>
 </tbody>
 </table>
-</div>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>x</span> <span class=o>&gt;&gt;</span> <span class=n>y</span><span class=p>;</span>
-<span class=ln> 7</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 加 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 的和是 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>+</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=n>endl</span><span class=p>;</span>
-<span class=ln> 8</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 減 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 的差是 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>-</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=n>endl</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 乘 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 的積是 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>*</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=n>endl</span><span class=p>;</span>
-<span class=ln>10</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 除 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 的結果是 &#34;</span> <span class=o>&lt;&lt;</span> <span class=mf>1.0</span> <span class=o>*</span> <span class=n>x</span> <span class=o>/</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=n>endl</span><span class=p>;</span>
-<span class=ln>11</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 除 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 的商是 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>/</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=n>endl</span><span class=p>;</span>
-<span class=ln>12</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 除 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; 的餘數是 &#34;</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>%</span> <span class=n>y</span> <span class=o>&lt;&lt;</span> <span class=n>endl</span><span class=p>;</span>
-<span class=ln>13</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>14</span><span class=p>}</span>
-</code></pre></div><h3 id=202成績計算>202.成績計算</h3>
+
+  </div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 加 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 的和是 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 減 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 的差是 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 乘 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 的積是 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 除 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 的結果是 &#34;</span> <span class="o">&lt;&lt;</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 除 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 的商是 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 除 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 的餘數是 &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">%</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="202成績計算">202.成績計算</h3>
 <p>請製作一個程式，輸入五個成績，計算總和與平均並輸出</p>
+
 <div class="notices note">
-<div class=label>提示筆記</div>
-<p>C++換行可以用<code>&lt;&lt;endl</code>，但C語言的<code>\n</code>明顯短了三倍</p>
-</div>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>float</span> <span class=n>sum</span><span class=p>,</span> <span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=mi>6</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
-<span class=ln> 7</span>    <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 8</span>    <span class=n>a</span> <span class=o>+=</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=p>}</span>
-<span class=ln>10</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;總和:&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>a</span><span class=p>;</span>
-<span class=ln>11</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;</span><span class=se>\n</span><span class=s>平均:&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>a</span> <span class=o>/</span> <span class=mi>5</span><span class=p>;</span>
-<span class=ln>12</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>13</span><span class=p>}</span>
-</code></pre></div><h3 id=203矩形周長面積>203.矩形周長面積</h3>
+    <div class="label">提示筆記</div>
+    <p>C++換行可以用<code>&lt;&lt;endl</code>，但C語言的<code>\n</code>明顯短了三倍</p>
+
+  </div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">float</span> <span class="n">sum</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="n">a</span> <span class="o">+=</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;總和:&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">平均:&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">/</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="203矩形周長面積">203.矩形周長面積</h3>
 <p>請製作一個程式，輸入長方形的長 寬，並計算周長與面積</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>x</span> <span class=o>&gt;&gt;</span> <span class=n>y</span><span class=p>;</span>
-<span class=ln> 7</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;周長=&#34;</span> <span class=o>&lt;&lt;</span> <span class=mi>2</span> <span class=o>*</span> <span class=p>(</span><span class=n>x</span> <span class=o>+</span> <span class=n>y</span><span class=p>);</span>
-<span class=ln> 8</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;</span><span class=se>\n</span><span class=s>面積=&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>x</span> <span class=o>*</span> <span class=n>y</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>10</span><span class=p>}</span>
-</code></pre></div><h3 id=204畢氏定理>204.畢氏定理</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;周長=&#34;</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">面積=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="204畢氏定理">204.畢氏定理</h3>
 <p>請製作一個程式，輸入直角三角形兩邊長，利用畢氏定理求斜邊長</p>
+
 <div class="notices note">
-<div class=label>提示筆記</div>
-<p><code>sqrt(x)</code> 回傳 <code>x</code> 的平方根(Square Root)</p>
-</div>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;cmath&gt;</span><span class=cp>
-</span><span class=ln> 3</span><span class=cp></span>
-<span class=ln> 4</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 5</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 6</span>  <span class=kt>float</span> <span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>;</span>
-<span class=ln> 7</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>x</span> <span class=o>&gt;&gt;</span> <span class=n>y</span><span class=p>;</span>
-<span class=ln> 8</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;斜邊長=&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>sqrt</span><span class=p>(</span><span class=n>x</span> <span class=o>*</span> <span class=n>x</span> <span class=o>+</span> <span class=n>y</span> <span class=o>*</span> <span class=n>y</span><span class=p>);</span>
-<span class=ln> 9</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>10</span><span class=p>}</span>
-</code></pre></div><h3 id=205兩點距離>205.兩點距離</h3>
+    <div class="label">提示筆記</div>
+    <p><code>sqrt(x)</code> 回傳 <code>x</code> 的平方根(Square Root)</p>
+
+  </div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;斜邊長=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="205兩點距離">205.兩點距離</h3>
 <p>請製作一個程式，輸入二維中兩點座標，計算出兩點距離</p>
-<div class="notices info">
-<div class=label>提醒</div>
-<p>測資有一個是錯的。很明顯是老師的問題，我的程式應該不會錯(欠揍)</p>
-</div>
+
 <div class="notices note">
-<div class=label>提示筆記</div>
-<p><code>pow(x, y)</code> 回傳 <code>x</code> 的 <code>y</code> 次方</p>
-</div>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=cp>#include</span><span class=cpf>&lt;cmath&gt;</span><span class=cp>
-</span><span class=ln> 4</span><span class=cp></span>
-<span class=ln> 5</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 6</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 7</span>  <span class=kt>float</span> <span class=n>x1</span><span class=p>,</span> <span class=n>x2</span><span class=p>,</span> <span class=n>y1</span><span class=p>,</span> <span class=n>y2</span><span class=p>;</span>
-<span class=ln> 8</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>x1</span> <span class=o>&gt;&gt;</span> <span class=n>y1</span> <span class=o>&gt;&gt;</span> <span class=n>x2</span> <span class=o>&gt;&gt;</span> <span class=n>y2</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;兩點距離=&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>sqrt</span><span class=p>(</span><span class=n>pow</span><span class=p>(</span><span class=n>x1</span> <span class=o>-</span> <span class=n>x2</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span> <span class=o>+</span> <span class=n>pow</span><span class=p>(</span><span class=n>y1</span> <span class=o>-</span> <span class=n>y2</span><span class=p>,</span> <span class=mi>2</span><span class=p>));</span>
-<span class=ln>10</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>11</span><span class=p>}</span>
-</code></pre></div><h3 id=206兩點求一線>206.兩點求一線</h3>
+    <div class="label">提示筆記</div>
+    <p><code>pow(x, y)</code> 回傳 <code>x</code> 的 <code>y</code> 次方</p>
+
+  </div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="kt">float</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x1</span> <span class="o">&gt;&gt;</span> <span class="n">y1</span> <span class="o">&gt;&gt;</span> <span class="n">x2</span> <span class="o">&gt;&gt;</span> <span class="n">y2</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;兩點距離=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">pow</span><span class="p">(</span><span class="n">y1</span> <span class="o">-</span> <span class="n">y2</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="206兩點求一線">206.兩點求一線</h3>
 <p>請製作一個程式，輸入二維中兩點座標，計算出通過兩點的直線方程式</p>
-<div class="notices note">
-<div class=label>提示筆記</div>
-<p>斜率<code>m</code>為y變化量除以x變化量。將一數代數<code>y=mx+b</code>即可求出b並寫出方程式。<code>b</code>只會用一次算出來直接輸出，不用多設一個變數</p>
-</div>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp>#include</span><span class=cpf>&lt;cmath&gt;</span><span class=cp>
-</span><span class=ln> 3</span><span class=cp></span>
-<span class=ln> 4</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 5</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 6</span>  <span class=kt>float</span> <span class=n>x1</span><span class=p>,</span> <span class=n>x2</span><span class=p>,</span> <span class=n>y1</span><span class=p>,</span> <span class=n>y2</span><span class=p>,</span> <span class=n>m</span><span class=p>;</span>
-<span class=ln> 7</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>x1</span> <span class=o>&gt;&gt;</span> <span class=n>y1</span> <span class=o>&gt;&gt;</span> <span class=n>x2</span> <span class=o>&gt;&gt;</span> <span class=n>y2</span><span class=p>;</span>
-<span class=ln> 8</span>  <span class=n>m</span> <span class=o>=</span> <span class=p>(</span><span class=n>y1</span> <span class=o>-</span> <span class=n>y2</span><span class=p>)</span> <span class=o>/</span> <span class=p>(</span><span class=n>x1</span> <span class=o>-</span> <span class=n>x2</span><span class=p>);</span>
-<span class=ln> 9</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;方程式:y=&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>m</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;x+&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>y2</span> <span class=o>-</span> <span class=n>x2</span> <span class=o>*</span> <span class=n>m</span><span class=p>;</span>
-<span class=ln>10</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>11</span><span class=p>}</span>
-</code></pre></div><h2 id=ch3>Ch.3</h2>
-<h3 id=301奇偶同籠>301.奇偶同籠?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln">1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">	<span class="kt">float</span> <span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">x1</span><span class="o">&gt;&gt;</span><span class="n">y1</span><span class="o">&gt;&gt;</span><span class="n">x2</span><span class="o">&gt;&gt;</span><span class="n">y2</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;方程式:y=&#34;</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">y1</span><span class="o">-</span><span class="n">y2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">-</span><span class="n">x2</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="s">&#34;x+&#34;</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">y1</span><span class="o">*</span><span class="n">x2</span><span class="o">-</span><span class="n">y2</span><span class="o">*</span><span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x2</span><span class="o">-</span><span class="n">x1</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+<div class="notices info">
+    <div class="label">原本想法</div>
+    <p>斜率<code>m</code>為y變化量除以x變化量。將一數代數<code>y=mx+b</code>即可求出b並寫出方程式。<code>b</code>只會用一次算出來直接輸出，不用多設一個變數。</p>
+<p>不過浮點數是使用科學記號儲存，有一定的誤差 當斜率本身已經有誤差時，再用來算出截距，誤差將擴大。因此最後一個測資會有誤差。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln">1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">	<span class="kt">float</span> <span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">x1</span><span class="o">&gt;&gt;</span><span class="n">y1</span><span class="o">&gt;&gt;</span><span class="n">x2</span><span class="o">&gt;&gt;</span><span class="n">y2</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">	<span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="n">y1</span><span class="o">-</span><span class="n">y2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">-</span><span class="n">x2</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;方程式:y=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">m</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;x+&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">y2</span><span class="o">-</span><span class="n">x2</span><span class="o">*</span><span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+  </div>
+
+<h2 id="ch3">Ch.3</h2>
+<h3 id="301奇偶同籠">301.奇偶同籠?</h3>
 <p>請製作一個程式，可以讓使用者輸入一個整數，判斷是奇數還是偶數</p>
+
 <div class="notices note">
-<div class=label>提示筆記</div>
-<p>如果否則的語法是</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln>1</span><span class=k>if</span> <span class=p>(</span><span class=err>條件式</span><span class=p>){</span>
-<span class=ln>2</span>	<span class=err>程式區塊</span><span class=p>;</span>
-<span class=ln>3</span><span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-<span class=ln>4</span>    <span class=err>程式區塊</span><span class=p>;</span>
-<span class=ln>5</span><span class=p>}</span>
-</code></pre></div><p>如果大括號裡面只有一行程式可以省略</p>
-</div>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>a</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>;</span>
-<span class=ln> 7</span>  <span class=k>if</span> <span class=p>(</span><span class=n>a</span> <span class=o>%</span> <span class=mi>2</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span> <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;偶數&#34;</span><span class=p>;</span>
-<span class=ln> 8</span>  <span class=k>else</span> <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;奇數&#34;</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>10</span><span class=p>}</span>
-</code></pre></div><h3 id=302及格>302.及格?</h3>
+    <div class="label">提示筆記</div>
+    <p>如果否則的語法是</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="err">條件式</span><span class="p">){</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">	<span class="err">程式區塊</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">    <span class="err">程式區塊</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>如果大括號裡面只有一行程式可以省略</p>
+
+  </div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;偶數&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;奇數&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="302及格">302.及格?</h3>
 <p>請製作一個程式，讓使用者輸入一個成績，顯示「成績及格」或「成績不及格」</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>a</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>;</span>
-<span class=ln> 7</span>  <span class=k>if</span> <span class=p>(</span><span class=n>a</span> <span class=o>&gt;=</span> <span class=mi>60</span><span class=p>)</span> <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;成績及格&#34;</span><span class=p>;</span>
-<span class=ln> 8</span>  <span class=k>else</span> <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;成績不及格&#34;</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>10</span><span class=p>}</span>
-</code></pre></div><h3 id=303幾科不及格>303.幾科不及格</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;成績及格&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;成績不及格&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="303幾科不及格">303.幾科不及格</h3>
 <p>請製作一個程式：</p>
 <ol>
 <li>可以輸入五個成績</li>
 <li>計算有幾科不及格</li>
 <li></li>
 </ol>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>a</span><span class=p>[</span><span class=mi>5</span><span class=p>],</span> <span class=n>b</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>2</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>3</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>4</span><span class=p>];</span>
-<span class=ln> 7</span>  <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=nl>y</span><span class=p>:</span> <span class=n>a</span><span class=p>)</span>
-<span class=ln> 8</span>    <span class=k>if</span> <span class=p>(</span><span class=n>y</span> <span class=o>&lt;</span> <span class=mi>60</span><span class=p>)</span> <span class=n>b</span><span class=o>++</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;共&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>b</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;科不及格&#34;</span><span class=p>;</span>
-<span class=ln>10</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>11</span><span class=p>}</span>
-</code></pre></div><h3 id=304明年當學弟妹>304.明年當學弟/妹?</h3>
+
+<div class="notices note">
+    <div class="label">提示筆記</div>
+    <p>這裡使用了<code>for-each</code>循環。 它將<code>y</code>設置為<code>a</code>的第一個元素，運行大掛號（可省略）的程式，然後它將<code>y</code>設置為<code>a</code>的第二個元素，然後...</p>
+<p>使用它是因用<code>for (int i = 0; i &lt; 2; i++ )</code>太長了（如果要自動判斷陣列有多長要打<code>for (int i = 0; i &lt; i.length; i++ )</code>）。重點是要存取清單的內容要用<code>a[i]</code>而不是<code>i</code></p>
+
+  </div>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">y</span><span class="p">:</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">)</span> <span class="n">b</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;共&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;科不及格&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="304明年當學弟妹">304.明年當學弟/妹?</h3>
 <p>請製作一個程式：</p>
 <ol>
 <li>可以輸入五個成績</li>
 <li>判斷明年是否當學弟妹(不及格科數達一半)</li>
 </ol>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>a</span><span class=p>[</span><span class=mi>5</span><span class=p>],</span> <span class=n>b</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>2</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>3</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>4</span><span class=p>];</span>
-<span class=ln> 7</span>  <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=nl>y</span><span class=p>:</span> <span class=n>a</span><span class=p>)</span>
-<span class=ln> 8</span>    <span class=k>if</span> <span class=p>(</span><span class=n>y</span> <span class=o>&lt;</span> <span class=mi>60</span><span class=p>)</span> <span class=n>b</span><span class=o>++</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=k>if</span> <span class=p>(</span><span class=n>b</span> <span class=o>&gt;</span> <span class=mi>2</span><span class=p>)</span> <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;明年當學弟妹&#34;</span><span class=p>;</span>
-<span class=ln>10</span>  <span class=k>else</span> <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;明年當學長姊&#34;</span><span class=p>;</span>
-<span class=ln>11</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>12</span><span class=p>}</span>
-</code></pre></div><h3 id=305比大小>305.比大小</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">y</span><span class="p">:</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">)</span> <span class="n">b</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;明年當學弟妹&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;明年當學長姊&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="305比大小">305.比大小</h3>
 <p>請製作一個程式，輸入兩個正整數，輸出較大者</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>a</span> <span class=o>&gt;&gt;</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 7</span>  <span class=k>if</span> <span class=p>(</span><span class=n>a</span> <span class=o>&gt;</span> <span class=n>b</span><span class=p>)</span> <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=n>a</span><span class=p>;</span>
-<span class=ln> 8</span>  <span class=k>else</span> <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>10</span><span class=p>}</span>
-</code></pre></div><h3 id=306本丸好呷>306.本丸好呷</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="306本丸好呷">306.本丸好呷</h3>
 <p>某數字商店飯糰第二件59折，以低價者計。請製作一個程式，輸入兩個正整數，代表兩顆飯糰的定價，請計算優惠後的總價。</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>,</span> <span class=n>c</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>a</span> <span class=o>&gt;&gt;</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 7</span>  <span class=k>if</span> <span class=p>(</span><span class=n>a</span> <span class=o>&gt;</span> <span class=n>b</span><span class=p>)</span> <span class=n>c</span> <span class=o>=</span> <span class=mf>0.59</span> <span class=o>*</span> <span class=n>b</span> <span class=o>+</span> <span class=n>a</span><span class=p>;</span>
-<span class=ln> 8</span>  <span class=k>else</span> <span class=n>c</span> <span class=o>=</span> <span class=mf>0.59</span> <span class=o>*</span> <span class=n>a</span> <span class=o>+</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;優惠價=&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>c</span><span class=p>;</span>
-<span class=ln>10</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>11</span><span class=p>}</span>
-</code></pre></div><h3 id=307比仨大>307.比仨大</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.59</span> <span class="o">*</span> <span class="n">b</span> <span class="o">+</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="k">else</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.59</span> <span class="o">*</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;優惠價=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="307比仨大">307.比仨大</h3>
 <p>請製作一個程式，輸入三個正整數，輸出最大者</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>a</span><span class=p>[</span><span class=mi>3</span><span class=p>],</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>2</span><span class=p>];</span>
-<span class=ln> 7</span>  <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=nl>y</span><span class=p>:</span> <span class=n>a</span><span class=p>)</span>
-<span class=ln> 8</span>    <span class=k>if</span> <span class=p>(</span><span class=n>y</span> <span class=o>&gt;</span> <span class=n>b</span><span class=p>)</span> <span class=n>b</span> <span class=o>=</span> <span class=n>y</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;最大值=&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln>10</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>11</span><span class=p>}</span>
-</code></pre></div><h3 id=308比不完>308.比不完</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">y</span><span class="p">:</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="n">b</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;最大值=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="308比不完">308.比不完</h3>
 <p>請製作一個程式，輸入五個正整數，輸出最大者</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=ln> 1</span><span class=cp>#include</span><span class=cpf>&lt;iostream&gt;</span><span class=cp>
-</span><span class=ln> 2</span><span class=cp></span>
-<span class=ln> 3</span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
-<span class=ln> 4</span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-<span class=ln> 5</span>  <span class=kt>int</span> <span class=n>a</span><span class=p>[</span><span class=mi>5</span><span class=p>],</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln> 6</span>  <span class=n>cin</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>2</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>3</span><span class=p>]</span> <span class=o>&gt;&gt;</span> <span class=n>a</span><span class=p>[</span><span class=mi>4</span><span class=p>];</span>
-<span class=ln> 7</span>  <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=nl>y</span><span class=p>:</span> <span class=n>a</span><span class=p>)</span>
-<span class=ln> 8</span>    <span class=k>if</span> <span class=p>(</span><span class=n>y</span> <span class=o>&gt;</span> <span class=n>b</span><span class=p>)</span> <span class=n>b</span> <span class=o>=</span> <span class=n>y</span><span class=p>;</span>
-<span class=ln> 9</span>  <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34;最大值=&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>b</span><span class=p>;</span>
-<span class=ln>10</span>  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
-<span class=ln>11</span><span class=p>}</span>
-</code></pre></div><p>這些應該夠你們用幾週了，剩下的有空再繼續更新。</p>
-</article>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">y</span><span class="p">:</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="n">b</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;最大值=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>這些應該夠你們用幾週了，剩下的有空再繼續更新。</p>
+    </div>
+<div class="post_comments">
+  
+  
+  
+</div>
+
+
+
+
+  </article>
 <aside class=sidebar>
 <section class=sidebar_inner>
 <div class=author_header>
