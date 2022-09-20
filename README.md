@@ -1,6 +1,8 @@
-<div style="background-color: Black; color: white;"><div align="center">
-Hay there 👋 this is
+<div align="center">
 
-# [EM-Tec.github.io](http://em-tec.github.io)
-  This is the blog of [Edit Mr.](https://github.com/Edit-Mr)
-  </div></div>
+哈囉 👋 歡迎來到
+
+# [毛哥EM資訊密技](http://em-tec.github.io)
+
+這是[Edit Mr.](https://github.com/Edit-Mr)的部落格
+</div>

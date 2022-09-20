@@ -3,6 +3,7 @@ author: 毛哥EM
 title: 【C++】常見題目解答
 description: 西苑高一電腦課C++題目的最佳解。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
 date: 2022-09-08
+tags: "C++"
 categories:
   - "Development"
 thumbnail: "images/thumbnails/notes.png"
@@ -222,10 +223,6 @@ int main() {
 
 請製作一個程式，輸入二維中兩點座標，計算出兩點距離
 
-{{% notice info "提醒" %}}
-測資有一個是錯的。很明顯是老師的問題，我的程式應該不會錯(欠揍)
-{{% /notice %}}
-
 {{% notice note "提示筆記" %}}
 
 `pow(x, y)` 回傳 `x` 的 `y` 次方
@@ -250,25 +247,37 @@ int main() {
 
 請製作一個程式，輸入二維中兩點座標，計算出通過兩點的直線方程式
 
-{{% notice note "提示筆記" %}}
-
-斜率`m`為y變化量除以x變化量。將一數代數`y=mx+b`即可求出b並寫出方程式。`b`只會用一次算出來直接輸出，不用多設一個變數
-
-{{% /notice %}}
-
 ```c++
 #include<iostream>
 #include<cmath>
 
 using namespace std;
-int main() {
-  float x1, x2, y1, y2, m;
-  cin >> x1 >> y1 >> x2 >> y2;
-  m = (y1 - y2) / (x1 - x2);
-  cout << "方程式:y=" << m << "x+" << y2 - x2 * m;
-  return 0;
+int main(){
+	float x1,x2,y1,y2,m;
+	cin>>x1>>y1>>x2>>y2;
+	cout<<"方程式:y="<<(y1-y2)/(x1-x2)<<"x+"<<(y1*x2-y2*x1)/(x2-x1);
 }
 ```
+
+{{% notice info "原本想法" %}}
+
+斜率`m`為y變化量除以x變化量。將一數代數`y=mx+b`即可求出b並寫出方程式。`b`只會用一次算出來直接輸出，不用多設一個變數。
+
+不過浮點數是使用科學記號儲存，有一定的誤差 當斜率本身已經有誤差時，再用來算出截距，誤差將擴大。因此最後一個測資會有誤差。
+
+```c++
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+	float x1,x2,y1,y2,m;
+	cin>>x1>>y1>>x2>>y2;
+	m=(y1-y2)/(x1-x2);
+	cout << "方程式:y=" << m << "x+" << y2-x2*m;
+}
+```
+
+{{% /notice %}}
 
 ## Ch.3
 
