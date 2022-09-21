@@ -114,7 +114,7 @@ Sep 8, 2022</span>
   </div>
 
 <h2 id="減少程式碼的常用技巧">減少程式碼的常用技巧</h2>
-<p>這裡講的是真的少打一點，不是全部縮成一排。減少程式碼可以方便閱讀且在debug(找錯誤)比較方便</p>
+<p>這裡講的是真的少打一點，不是全部縮成一排。減少程式碼可以方便閱讀且在bebug(找錯誤)比較方便</p>
 <h3 id="定義時賦予值">定義時賦予值</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln">1</span><span class="cl"><span class="kt">int</span> <span class="n">a</span> <span class="n">b</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">a</span><span class="o">=</span><span class="mi">87</span><span class="p">;</span>
@@ -494,6 +494,75 @@ Sep 8, 2022</span>
 </span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;最大值=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="309正負">309.正負?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;正數&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;零&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;負數&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="310分級">310.分級</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="k">switch</span> <span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="k">case</span> <span class="mi">10</span><span class="o">:</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;A&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="k">case</span> <span class="mi">9</span><span class="o">:</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;A&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="k">case</span> <span class="mi">8</span><span class="o">:</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;B&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">  <span class="k">case</span> <span class="mi">7</span><span class="o">:</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;C&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">  <span class="k">case</span> <span class="mi">6</span><span class="o">:</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;D&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">  <span class="k">default</span><span class="o">:</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;F&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="311電腦教室不能帶飲料進來">311.電腦教室不能帶飲料進來</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="kt">float</span> <span class="n">b</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.8</span><span class="p">,</span><span class="mf">2.57</span><span class="p">};</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="n">c</span><span class="o">=</span><span class="n">a</span><span class="o">/</span><span class="mi">3</span><span class="o">*</span><span class="mf">223.59</span><span class="o">+</span><span class="n">b</span><span class="p">[</span><span class="n">a</span><span class="o">%</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">87</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;總價=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="312一塊錢玩兩次">312.一塊錢玩兩次</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="kt">float</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;ERROR&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="kt">float</span> <span class="n">d</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">d</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;無實數解&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">d</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;唯一解x=&#34;</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">-</span> <span class="n">b</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">      <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;兩解:</span><span class="se">\n</span><span class="s">x1=&#34;</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="n">b</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">x2=&#34;</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="n">b</span> <span class="o">-</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>這些應該夠你們用幾週了，剩下的有空再繼續更新。</p>
     </div>
 <div class="post_comments">
