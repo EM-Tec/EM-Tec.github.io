@@ -99,7 +99,7 @@ Sep 8, 2022</span>
 <div class="notices warning">
     <div class="label">重要提醒</div>
     <p>抱歉網站最近掛了沒有更新。還在搶救中。這裡的程式僅供參考，請不要偷懶直接複製貼上，小考你不會過的。</p>
-<p><strong>目前只更新到308</strong></p>
+<p><strong>目前只更新到312</strong></p>
     <p>關於有人問我是誰，選單有各種連結。</p>
 
   </div>
@@ -154,7 +154,7 @@ Sep 8, 2022</span>
 <div class="notices info">
     <div class="label">提醒</div>
     <p>裡面有一些東西還沒有教過，有興趣可以問我或是Google。</p>
-<p><strong>目前只更新到308</strong></p>
+<p><strong>目前只更新到312</strong></p>
 
   </div>
 
@@ -495,6 +495,7 @@ Sep 8, 2022</span>
 </span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="309正負">309.正負?</h3>
+        <p>請製作一個程式，判斷輸入的數字是正數、負數還是0</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
 </span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -507,6 +508,13 @@ Sep 8, 2022</span>
 </span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="310分級">310.分級</h3>
+        <p>請製作一個程式，讓使用者輸入成績，並判斷等級：
+<i>90~100分：A</i>
+<i>80~89分：B</i>
+<i>70~79分：C</i>
+<i>60~69分：D</i>
+<i>0~59分：F</i>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln"> 3</span><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
@@ -532,6 +540,8 @@ Sep 8, 2022</span>
 </span></span><span class="line"><span class="ln">23</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="311電腦教室不能帶飲料進來">311.電腦教室不能帶飲料進來</h3>
+        <p>某項數字商店飲料定價87元，第二件8折，第三件77折<br />
+請製作一個程式可以輸入件數計算價錢</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
 </span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -544,6 +554,13 @@ Sep 8, 2022</span>
 </span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="312一塊錢玩兩次">312.一塊錢玩兩次</h3>
+        <p>ax2 + bx + c = 0，請製作一個程式，輸入a、b、c，解一元二次方程式。<br />
+若a = 0則輸出ERROR<br />
+令d = b2 - 4ac：<br />
+若d = 0，則輸出方程式唯一解x=-b/2a<br />
+若d > 0，則輸出方程式兩解x=(-b±√d)/2a<br />
+若d < 0，則輸出無實數解<br />
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="cp"></span>
 </span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="cp">#include</span><span class="cpf">&lt;cmath&gt;</span><span class="cp">
