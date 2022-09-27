@@ -4,12 +4,10 @@ title = "【Remove.bg】讓AI幫你一鍵去背"
 date = "2022-01-06"
 description = "介紹Remove.bg這個超讚的去被網站，並講解如何使用它提供的Api來製作捷徑，使你能夠一鍵去被"
 featured = true
-tags = ["ios捷徑"
-]
+tags = ["ios捷徑"]
 series = ["複製貼上就能成為工程師"]
 categories = [
-    "網站分享","API分享","捷徑分享"
-]
+"網站分享","API分享","捷徑分享"]
 thumbnail = "images/thumbnails/remove-bg.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
@@ -46,9 +44,9 @@ API(Application Programming Interface)，中文叫做應用程式介面。你可
 ### 使用方法
 要使用Remove.bg的API你需要一個用來辨識你是誰的API Key（仗權）。請先到[這裡](https://accounts.kaleido.ai/users/sign_in#api-key)註冊一個帳號，你可以直接使用Google登入，並複製你的API Key。
 
-![獲取API Key](https://EM-Tec.github.io/images/remove-bg-api.png)
-
 Remove.bg提供每個帳號每個月50次的免費使用。對一般人來說已經很足夠了，但如果還需要更多的話可以升級方案<s>或再註冊一個帳號</s>
+
+![用捷徑去背](https://EM-Tec.github.io/images/remove-bg-api.jpg)
 
 加入捷徑後請輸入剛才得到的API Key。
 

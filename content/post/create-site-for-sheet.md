@@ -233,7 +233,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/create-site-for-sheet.j
 
 我們先看一下試算表。在這裡我們可以看到每一行資料有5項，其中我希望第5項的資料可以放在付款狀態後面。現在請你先請你複製這個試算表的ID，也就是網址`https://docs.google.com/spreadsheets/d/`和`/`之間那一串(如`1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA`)。等一下會用到。
 
-![再看一次試算表](https://em-tec.github.io/images/create-site-for-sheet-sheet)
+![再看一次試算表](https://em-tec.github.io/images/gas.jpg)
 
 我們會使用GAS(Google App Script)來建立網頁應用程式來讀取表格資料。
 
@@ -495,6 +495,3 @@ shareImage = "https://em-tec.github.io/images/thumbnails/create-site-for-sheet.j
 
 ## 表格資料網站
 
-```js
-
-```

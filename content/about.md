@@ -27,32 +27,7 @@ author = "毛哥EM"
 
 #### 🌐 &nbsp; 我會使用的語言
 
-  ![:inline](https://img.shields.io/badge/-HTML-333333?style=flat&logo=HTML5)
-  ![:inline](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
-  ![:inline](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
-  ![:inline](https://img.shields.io/badge/-Node.js-333333?style=flat&logo=node.js)
-  ![:inline](https://img.shields.io/badge/-ReactTypeScript-333333?style=flat&logo=typescript)
-  ![:inline](https://img.shields.io/badge/-Discord.js-333333?style=flat&logo=discord.js)
-  ![:inline](https://img.shields.io/badge/-PHP-333333?style=flat&logo=php)
-  ![:inline](https://img.shields.io/badge/-C++-333333?style=flat&logo=C)
-  ![:inline](https://img.shields.io/badge/-C%23-333333?style=flat&logo=c#)
-  ![:inline](https://img.shields.io/badge/-Markdown-333333?style=flat&logo=markdown)
-  ![:inline](https://img.shields.io/badge/-Go-333333?style=flat&logo=go)
-
-#### ⚙️ &nbsp; 好工具
-
-  ![:inline](https://img.shields.io/badge/-Git-333333?style=flat&logo=git)
-  ![:inline](https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github)
-  ![:inline](https://img.shields.io/badge/-Heroku-333333?style=flat&logo=heroku)
-  ![:inline](https://img.shields.io/badge/-Google_Cloud_Platform-333333?style=flat&logo=google-cloud)
-  ![:inline](https://img.shields.io/badge/-WordPress-333333?style=flat&logo=wordpress)
-  ![:inline](https://img.shields.io/badge/-Termux-333333?style=flat&logo=termux)
-
-#### 🔧 &nbsp; 好軟體
-
-  ![:inline](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC)
-  ![:inline](https://img.shields.io/badge/-Sublime%20Text-333333?style=flat&logo=sublime-text)
-
+  
 ### 我的Github狀態
 
 我有兩個GitHub帳戶，這樣我可以將我的部落個網站和其他網頁作品分開來放。

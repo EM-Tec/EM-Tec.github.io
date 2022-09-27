@@ -1,22 +1,23 @@
----
-author: 毛哥EM
-title: 【C++】常見題目解答
-description: 西苑高一電腦課C++題目的最佳解。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
-date: 2022-09-08
-tags: "C++"
-categories:
-  - "Development"
-thumbnail: "images/thumbnails/notes.png"
-featureImage: "https://em-tec.github.io/images/thumbnails/notes.png"
-shareImage: "https://em-tec.github.io/images/thumbnails/notes.png"
----
++++
+author = "毛哥EM"
+title=  "【C++】常見題目解答"
+description=  "西苑高一電腦課C++題目的最佳解。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看"
+date=  "2022-09-08"
+tags = ["C++"]
+categories = ["Development"]
+thumbnail=  "images/thumbnails/notes.png"
+featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
+shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
++++
 
 我整理出C++題目常見的題目並寫出我認為的最佳解(取自西苑高一電腦課)。也有提供一些減少程式碼的常用技巧。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
 <!--more-->
 {{% notice warning "警告" %}}
-這裡的程式僅供參考，請不要偷懶直接複製貼上，小考你不會過的。
+網站終於搶救成功啦!這兩天來更新!這裡的程式僅供參考，請不要偷懶直接複製貼上，小考你不會過的。
 
-**目前只更新到308**
+關於有人問我是誰，選單有各種連結。
+
+**目前只更新到312**
 {{% /notice %}}
 
 # 小提示
@@ -451,4 +452,97 @@ int main() {
 }
 ```
 
+### 309.正負?
+
+
+
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int a;
+  cin >> a;
+  if (a > 0) cout << "正數";
+  else if (a == 0) cout << "零";
+  else cout << "負數";
+  return 0;
+}
+
+```
+
+### 310.分級
+
+
+
+```c++
+int main() {
+  int a;
+  cin >> a;
+  switch (a / 10) {
+  case 10:
+    cout << "A";
+    break;
+  case 9:
+    cout << "A";
+    break;
+  case 8:
+    cout << "B";
+    break;
+  case 7:
+    cout << "C";
+    break;
+  case 6:
+    cout << "D";
+    break;
+  default:
+    cout << "F";
+  }
+  return 0;
+}
+```
+
+### 311.電腦教室不能帶飲料進來
+
+
+
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int a,c;
+  float b[4]={0,1,1.8,2.57};
+  cin >> a;
+  c=a/3*223.59+b[a%3]*87;
+  cout << "總價=" << c;
+  return 0;
+}
+```
+
+### 312.一塊錢玩兩次
+
+
+
+```c++
+#include<iostream>
+
+#include<cmath>
+
+using namespace std;
+int main() {
+  float a, b, c;
+  cin >> a >> b >> c;
+  if (a == 0) cout << "ERROR";
+  else {
+    float d = b * b - 4 * a * c;
+    if (d < 0) cout << "無實數解";
+    else {
+      if (d == 0) cout << "唯一解x=" << 0 - b / (a * 2);
+      else cout << "兩解:\nx1=" << (0 - b + sqrt(d)) / 2 * a << "\nx2=" << (0 - b - sqrt(d)) / 2 * a;
+    }
+  }
+  return 0;
+}
+```
 這些應該夠你們用幾週了，剩下的有空再繼續更新。
