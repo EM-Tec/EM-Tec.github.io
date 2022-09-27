@@ -18,3 +18,6 @@ DefaultContentLanguage = "zh-tw"
 category = "categories"
 tag = "tags"
 series = "series"
+
+[outputs]
+  home = ["HTML", "RSS","JSON"]
