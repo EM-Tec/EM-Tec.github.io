@@ -18,21 +18,11 @@ author = "毛哥EM"
 
 哈囉，我是毛哥EM，一位數位創作者。 我喜歡用科技來表達自己，進行各種各樣的創作，比如繪畫、音樂、平面設計和網頁設計。 除了自己做，我也很喜歡與其他創作者合作或著開放委託。
 
-### 💻 &nbsp;目前工作
-
-- 🤔 &nbsp; 探索新技術並開發解決生活中的問題。用科技使人們的生活更方便
-- 🎓 &nbsp; 就讀衛道中學並且在Google學習各種科技知識
-
-### 🛠 &nbsp; 技術能力
-
-#### 🌐 &nbsp; 我會使用的語言
-
-  
-### 我的Github狀態
+## 我的Github狀態
 
 我有兩個GitHub帳戶，這樣我可以將我的部落個網站和其他網頁作品分開來放。
 
-#### Edit Mr
+### Edit Mr
 
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Edit-Mr&show_icons=true&theme=radical" />
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Edit-Mr&theme=radical&layout=compact&exclude_lang=java+r" />
@@ -40,7 +30,7 @@ author = "毛哥EM"
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=EM-Tec&show_icons=true&theme=radical" />
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=EM-Tec&theme=radical&layout=compact&exclude_lang=java+r" />
 
-### 聯絡資訊
+## 聯絡資訊
 
 - Email: elvismao@ctemplar.com
 - Instergram: @em.tec.blog
