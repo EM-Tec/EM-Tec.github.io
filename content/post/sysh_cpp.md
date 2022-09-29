@@ -119,7 +119,7 @@ int main() {
 
 ## Ch.2
 
-###　201.運算子
+### 201.運算子
 
 {{% notice note "提示筆記" %}}
 先乘除後加減(依照優先順序)
@@ -420,17 +420,18 @@ int main() {
 
 請製作一個程式，輸入三個正整數，輸出最大者
 
+**更新:最大值b如果一開始沒有給定值會被設為0。故先將b設為第一個數再進行比較。**
+
 ```c++
 #include<iostream>
-
 using namespace std;
-int main() {
-  int a[3], b;
-  cin >> a[0] >> a[1] >> a[2];
-  for (int y: a)
-    if (y > b) b = y;
-  cout << "最大值=" << b;
-  return 0;
+int main(){
+  int a[3];
+  cin>>a[0]>>a[1]>>a[2];
+    int b = a[0];
+    for( int y : a ) if(y>b) b=y;
+        cout<<"最大值="<<b;
+    return 0;
 }
 ```
 
@@ -479,7 +480,6 @@ int main() {
 * 70~79分：C
 * 60~69分：D
 * 0~59分：F
-
 ```c++
 int main() {
   int a;
@@ -553,6 +553,44 @@ int main() {
       if (d == 0) cout << "唯一解x=" << 0 - b / (a * 2);
       else cout << "兩解:\nx1=" << (0 - b + sqrt(d)) / 2 * a << "\nx2=" << (0 - b - sqrt(d)) / 2 * a;
     }
+  }
+  return 0;
+}
+```
+
+### 313.
+
+```c++
+#include<iostream>
+
+#include<cmath>
+
+using namespace std;
+int main() {
+  float a, b, c, d;
+  cin >> a >> b >> c;
+  if (a > b) {
+    d = a;
+    a = b;
+    b = d;
+  }
+  if (b > c) {
+    d = b;
+    b = c;
+    c = d;
+  }
+  if (c >= a + b) {
+    cout << "ERROR";
+  } else {
+
+    int e = b * b + a * a;
+    int f = c * c;
+    if (e > f) cout << "銳";
+    else
+    if (e == f) cout << "直";
+    else cout << "鈍";
+    float D = (a + b + c) / 2;
+    cout << "角三角形\n面積=" << sqrt(D * (D - a) * (D - b) * (D - c));
   }
   return 0;
 }
