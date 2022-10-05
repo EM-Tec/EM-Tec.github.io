@@ -17,7 +17,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 
 關於有人問我是誰，選單有各種連結。
 
-**目前只更新到409**
+**目前只更新到410**
 {{% /notice %}}
 
 # 小提示
