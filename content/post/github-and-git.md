@@ -29,10 +29,11 @@ Github的單位是`使用者/倉庫/檔案`。我們會在電腦裡放一個資�
 進入[github.com](https://github.com)點擊Sign Up註冊跟著步驟填入資訊就好了。記得用戶名會變成你的免費網域（用戶名.github.io）所以記得好好取 ಡ ͜ ʖ ಡ
 
 成功註冊驗證完你可以編輯一下你的個人資訊（自我介紹，頭像之類的）。好了之後點擊New Repo，並命名為`用戶名.github.io`讓裡面的檔案自動變成網站。一定要一字不漏一樣喔，但如果只是要存檔案而已取什麼名字都可以。
-底下的選項如下
-* 
-* 
-* 
+底下有幾個選項
+* **Description (optional)**：*這個專案是什麼？在你的repo裡顯示，在列表中回顯示為副標題。*有沒有都可以
+* **Add a README file**：*添加一個`README.md`，在你的repo裡顯示，通常會寫一些介紹或使用說明。要寫多長都可以。*有沒有都可以
+* **Add .gitignore**：*在下載/上傳的時候忽略特定的檔案。比如說你用一個檔案存放你的私人密碼，你不希望這個上傳到網路上讓每個人都能看到對吧。*選擇None即可
+* **Choose a license**：*告訴別人他可以對你的程式做什麼。我是使用Apache License 2.0。你可以閱讀這些條款看哪個符合你的想法，很多人會用MIT的條款。*有沒有都可以
 
 成功建立之後你可以看見有一個剛才系統建立的`README.md`。這個是別人進入這個專案網頁會看到的這個說明文件，可以先不用管它。每次我們上傳完檔案後它都會需要部署一下。大概等個三十秒就可以進去你的網站了。網站就是`使用者.github.io`。
 
@@ -54,12 +55,31 @@ Github的單位是`使用者/倉庫/檔案`。我們會在電腦裡放一個資�
 
 底下我們來實際嘗試下載和上傳檔案
 
-# 使用Github Destop（限電腦，以PC做示範）
+# 複製下來（clone)
+## 使用Github Destop（限電腦，以PC做示範）
+
+{{% notice info "Gitub Destop" %}}
+
+* 開發者:Github (Microsoft)
+* 軟體類型:免費軟體
+* 網址:[Github](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
+{{% /notice %}}
+
 
 Github Destop可以讓你有按鈕可以按，不用打指令也可以使用git。多少可以節省一點時間，但看起來就沒有那麼酷（
 下載Github Destop並安裝，原則上就是你也懂的一直下一步。安裝成功後他會叫你輸入剛才講的個人資訊，並且請你登入你的Github帳號。
 
 登入完後他會請你選擇一個專案來clone。沒錯就是剛才講的複製下載檔案。預設位置會放到你的`文件資料夾/Github/專案名`裡面。按下`Ctrl+Shift+E`即可直接打開資料夾。
+
+## 使用Git（所有裝置適用）
+git config --global user.name "<使用者名字>"
+git config --global user.email "<電子信箱>"
+
+git init
+在要建立數據庫的目錄裡執行init命令。
+git add .
+git commit -m
+git remote add origin git@github.com/EM-Tec/EM-Tec.github.io
 
 接著我們來嘗試建立一個檔案。請在專案資料夾裡面點擊右鍵，建立一個文字檔案，並命名為`index.html`。當你在網址中沒有指定要讀取那個檔案名時會自動導到那個資料夾的`index.html`
 
@@ -80,13 +100,7 @@ Github Destop可以讓你有按鈕可以按，不用打指令也可以使用git�
 
 相信你一定把最後一行文字刪了。你可以用瀏覽器打開看看這個網站（HTML檔），你會發現HTML只不過是一個要用瀏覽器打開的word檔而已！
 
-現在我們來將它上傳到Github吧。回到Github Destop，你會發現它知道你新增了一個檔案。我們在左下角那個**小**的輸入框打入這次你做的事，或是你可以發現它預設給你打了一個訊息，懶得打直接按Commit也可以。打包完之後我們可以上傳囉。點擊push就好了，是不是超級簡單w。假設你想要確定是否和Github的內容是一樣的，點擊fetch它就會幫你自動比較。點擊後上面寫的數字就是不同檔案的數量。再次點擊pull就會將這兩個版本合併了。
-# 使用Git（所有裝置適用）
-git config --global user.name "<使用者名字>"
-git config --global user.email "<電子信箱>"
+# 上傳到Github
+現在我們來將它上傳到Github吧。回到Github Destop或你的終端機（確認是在讀取你的終端機資料夾），你會發現它知道你新增了一個檔案。
 
-git init
-在要建立數據庫的目錄裡執行init命令。
-git add .
-git commit -m
-git remote add origin git@github.com/EM-Tec/EM-Tec.github.io
+我們在左下角那個**小**的輸入框打入這次你做的事，或是你可以發現它預設給你打了一個訊息，懶得打直接按Commit也可以。打包完之後我們可以上傳囉。點擊push就好了，是不是超級簡單w。假設你想要確定是否和Github的內容是一樣的，點擊fetch它就會幫你自動比較。點擊後上面寫的數字就是不同檔案的數量。再次點擊pull就會將這兩個版本合併了。
