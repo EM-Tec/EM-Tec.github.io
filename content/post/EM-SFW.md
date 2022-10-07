@@ -27,7 +27,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirect
 
 * 開發者:毛哥EM(我)
 * 程式類型:免費開源網站
-* 下載位置:[毛哥EM的基地](https://Edit-Mr.github.io/code/EMSFW)
+* 網站位置:[毛哥EM的基地](https://Edit-Mr.github.io/code/EMSFW)
 {{% /notice %}}
 
 ## 使用教學
