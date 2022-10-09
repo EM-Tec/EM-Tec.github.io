@@ -12,7 +12,6 @@ categories = [
      "自製"
 
 ]
-draft=true
 series = ["線上教學"]
 thumbnail = "images/thumbnails/shortcut-joinMeetDirectly.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg"
@@ -36,24 +35,31 @@ shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirect
 
 你會看到一個簡單的設定畫面。你可以點擊空白鍵來開啟/關閉這個畫面。
 
+![EM-SFW介面](https://EM-Tec.github.io/images/EM-SFW.png)
+
+接著到視訊會議軟體分享螢幕畫面。選擇分享分頁且不用分享音訊（因為也沒有）即可。
+
 ### 超出畫面隱藏
 
 理論上不會超出螢幕畫面，如果真的超出了且切到畫面可以將此功能關閉。滑動滾軸到適當位置。
 
 ### 圖片模式（預設關閉）
+
 顯示的是即時擷取的影像，因此可以右鍵儲存截圖。不過因此不會顯示運行時間且不能使用字母畫面功能（沒有很重要）
 
 視訊畫面會被擠壓成視窗大小，適用於鏡頭畫面變形或老師太胖時...
 
-### 字母畫面
+![如果視窗實在太扁](https://EM-Tec.github.io/images/EM-SFW-over.png)
+
+### 子母畫面
 
 可以讓你的鏡頭畫面顯示在你的螢幕頂層，讓你可以知道你在鏡頭中長什麼樣。確保大家不會看到NSFW的畫面（所以叫EM-SFW）
 
-在圖片模式關閉時可以使用子母畫面功能。將鼠標移到畫面上並按下字母畫面按鈕（Chrome需要先按三個點）
+在圖片模式關閉時可以使用子母畫面功能。將鼠標移到畫面上並按下字母畫面按鈕（有時需要先按三個點）
 
 ### 儲存圖片
 
-在影像模式中可以點擊右鍵並點選儲存圖片來下載當前影像。如老師想儲存他辛辛苦苦寫的黑板。
+在影像模式中可以點擊右鍵並點選儲存圖片來下載當前影像，如老師想儲存他辛辛苦苦寫的黑板。不過儲存的是原始的影像，不會進行翻轉（但比例依舊會被拉長）
 
 {{% notice tip "提示" %}}
 
