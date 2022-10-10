@@ -29,11 +29,12 @@ shareImage = "https://em-tec.github.io/images/thumbnails/EM-SFW.jpg"
 * 開發者:毛哥EM(我)
 * 程式類型:免費開源網站
 * 網站位置:[毛哥EM的基地](https://Edit-Mr.github.io/code/EM-SFW)
+* 縮短網址：[is.gd/EMSFW](https://is.gd/EMSFW)
 {{% /notice %}}
 
 ## 使用教學
 
-進入<https://Edit-Mr.github.io/code/EMSFW>(不分大小寫，或使用縮短網址v.gd/EMSFW）並同意讀取鏡頭。
+進入<https://Edit-Mr.github.io/code/EMSFW>(不分大小寫，或輸入縮短網址[is.gd/EMSFW](https://is.gd/EMSFW)也可以）並同意讀取鏡頭。如果忘記網址可以搜尋「毛哥EM」找到網站
 
 你會看到一個簡單的設定畫面。你可以點擊空白鍵來開啟/關閉這個畫面。
 
