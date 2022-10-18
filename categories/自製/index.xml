@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自製 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/categories/%E8%87%AA%E8%A3%BD/</link><description>Recent content in 自製 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>2022毛哥EM</copyright><lastBuildDate>Fri, 07 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/categories/%E8%87%AA%E8%A3%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>【視訊會議】EM-SFW - 鏡頭畫質的天花板！黑板不再顛倒/模糊/切割！</title><link>https://EM-Tec.github.io/post/em-sfw/</link><pubDate>Fri, 07 Oct 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/em-sfw/</guid><description>
-&lt;p>班上因為又有人確診又有人隔離又開始使用視訊會議，常常被反應黑板看不清楚。明明鏡頭很好、網路不錯、且畫質設定已經調到最高還是一樣。因此我做了一個簡單網站來顯示鏡頭畫面，用螢幕分享畫面的方式讓畫質明顯提升！且黑白不會左右顛倒，不用再去裝擴充外掛！&lt;/p></description></item></channel></rss>
+&lt;p>班上因為又有人確診又有人隔離又開始使用視訊會議，常常被反應黑板看不清楚。明明鏡頭很好、網路不錯、且畫質設定已經調到最高還是一樣。因此我做了一個簡單網站來顯示鏡頭畫面，用螢幕分享畫面的方式讓畫質明顯提升！且黑白不會左右顛倒，不用再去裝擴充外掛！&lt;/p>
+&lt;p>&lt;figure>
+&lt;picture>
+&lt;img
+loading="lazy"
+decoding="async"
+alt="效果比較"
+class="image_figure image_external image_unprocessed"
+src="https://EM-Tec.github.io/images/EM-SFW-compare.png"
+/>
+&lt;/picture>
+&lt;/figure>
+&lt;/p></description></item></channel></rss>
