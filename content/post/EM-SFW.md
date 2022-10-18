@@ -20,6 +20,8 @@ shareImage = "https://em-tec.github.io/images/thumbnails/EM-SFW.jpg"
 
 班上因為又有人確診又有人隔離又開始使用視訊會議，常常被反應黑板看不清楚。明明鏡頭很好、網路不錯、且畫質設定已經調到最高還是一樣。因此我做了一個簡單網站來顯示鏡頭畫面，用螢幕分享畫面的方式讓畫質明顯提升！且黑白不會左右顛倒，不用再去裝擴充外掛！
 
+![效果比較](https://EM-Tec.github.io/images/EM-SFW-compare.png)
+
 <!--more-->
 
 <!--more-->
@@ -30,17 +32,19 @@ shareImage = "https://em-tec.github.io/images/thumbnails/EM-SFW.jpg"
 * 程式類型:免費開源網站
 * 網站位置:[毛哥EM的基地](https://Edit-Mr.github.io/code/EM-SFW)
 * 縮短網址：[is.gd/EMSFW](https://is.gd/EMSFW)
-{{% /notice %}}
+  {{% /notice %}}
 
 ## 使用教學
 
-進入<https://Edit-Mr.github.io/code/EMSFW>(不分大小寫，或輸入縮短網址[is.gd/EMSFW](https://is.gd/EMSFW)也可以）並同意讀取鏡頭。如果忘記網址可以搜尋「毛哥EM」找到網站
+進入<https://Edit-Mr.github.io/code/EMSFW>(不分大小寫，或輸入縮短網址[is.gd/EMSFW](https://is.gd/EMSFW)也可以）並同意讀取鏡頭。如果忘記網址可以搜尋「EM-SFW」或「毛哥EM」找到網站
 
-你會看到一個簡單的設定畫面。你可以點擊空白鍵來開啟/關閉這個畫面。
+你會看到一個簡單的設定畫面。你可以點擊`z`來開啟/關閉這個畫面。
 
 ![EM-SFW介面](https://EM-Tec.github.io/images/EM-SFW.png)
 
 接著到視訊會議軟體分享螢幕畫面。選擇分享分頁且不用分享音訊（因為也沒有）即可。
+
+![分享分頁](https://EM-Tec.github.io/images/EM-SFW-share1.png)
 
 ### 超出畫面隱藏
 
