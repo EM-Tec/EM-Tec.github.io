@@ -126,5 +126,9 @@ git clone
 ```
 ghp_5xcCouSaccQcDw87FRFL6B0IaX0nzJ4MdWaK
 ```
+在每次需要上傳時貼上這串密碼就好了。
 
+## 密碼好麻煩 用SSH
+
+SSH像是一個信物。我們生成一個SSH，並告訴Github說只要有拿這個東西就有權限做哪裡像，
 假設你想要確定是否和Github的內容是一樣的，點擊fetch它就會幫你自動比較。點擊後上面寫的數字就是不同檔案的數量。再次點擊pull就會將這兩個版本合併了。
