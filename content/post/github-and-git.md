@@ -55,7 +55,7 @@ Github的單位是`使用者/倉庫/檔案`。我們會在電腦裡放一個資�
 
 底下我們來實際嘗試下載和上傳檔案
 
-# 複製下來（clone)
+# 基本設定及clone
 ## 使用Github Destop（限電腦，以PC做示範）
 
 {{% notice info "Gitub Destop" %}}
@@ -72,14 +72,26 @@ Github Destop可以讓你有按鈕可以按，不用打指令也可以使用git�
 登入完後他會請你選擇一個專案來clone。沒錯就是剛才講的複製下載檔案。預設位置會放到你的`文件資料夾/Github/專案名`裡面。按下`Ctrl+Shift+E`即可直接打開資料夾。
 
 ## 使用Git（所有裝置適用）
+
+如果電腦裡沒有git可以上網搜尋git來下載。
+
+下載完請打開任意終端機（如cmd）並輸入這兩個指令。就是剛才寄包裹所說的寄信人：
+
+```
 git config --global user.name "<使用者名字>"
 git config --global user.email "<電子信箱>"
+```
 
-git init
-在要建立數據庫的目錄裡執行init命令。
-git add .
-git commit -m
-git remote add origin git@github.com/EM-Tec/EM-Tec.github.io
+這個指令只需要打一次就可以了。如果需要更改就再輸入一次指令即可。
+
+使用git來下載檔案非常簡單。只需要輸入`git clone <url>`就完成了。
+比如說我想下載Wiwi官大為做的NICE BASEBALL來用鋼琴玩打棒球：
+
+```
+git clone 
+```
+
+# 上傳檔案
 
 接著我們來嘗試建立一個檔案。請在專案資料夾裡面點擊右鍵，建立一個文字檔案，並命名為`index.html`。當你在網址中沒有指定要讀取那個檔案名時會自動導到那個資料夾的`index.html`
 
@@ -101,6 +113,18 @@ git remote add origin git@github.com/EM-Tec/EM-Tec.github.io
 相信你一定把最後一行文字刪了。你可以用瀏覽器打開看看這個網站（HTML檔），你會發現HTML只不過是一個要用瀏覽器打開的word檔而已！
 
 # 上傳到Github
-現在我們來將它上傳到Github吧。回到Github Destop或你的終端機（確認是在讀取你的終端機資料夾），你會發現它知道你新增了一個檔案。
+現在我們來將它上傳到Github吧。回到Github Destop或你的終端機（確認是在你的專案），Github Destop上你會發現它知道你新增了一個檔案。而git需要先輸入`git add .`才會比較你有沒有更動檔案。那個`.`代表所有的檔案。而如果你只要打包某些檔案可以直接輸入檔名如`git add index.html`或指定副檔名如`git add .html`。
 
-我們在左下角那個**小**的輸入框打入這次你做的事，或是你可以發現它預設給你打了一個訊息，懶得打直接按Commit也可以。打包完之後我們可以上傳囉。點擊push就好了，是不是超級簡單w。假設你想要確定是否和Github的內容是一樣的，點擊fetch它就會幫你自動比較。點擊後上面寫的數字就是不同檔案的數量。再次點擊pull就會將這兩個版本合併了。
+我們在左下角那個**小**的輸入框打入這次你做的事（使用git請打指令`git commit -m '<訊息>`），或是你可以發現它預設給你打了一個訊息，懶得打直接按Commit也可以。
+
+打包完之後我們可以上傳囉。點擊push就好了（指令為`git push`），是不是超級簡單w。如果使用終端機且沒有設定SSH會叫你輸入Github的帳號密碼。且如果你輸入你真的密碼可能會有兩步驟驗證的問題，所以在這裡我們有兩個辦法解決。
+
+## 辦一個密碼
+
+到Github的設定生成一個看起來像亂碼的密碼。大概長這樣
+
+```
+ghp_5xcCouSaccQcDw87FRFL6B0IaX0nzJ4MdWaK
+```
+
+假設你想要確定是否和Github的內容是一樣的，點擊fetch它就會幫你自動比較。點擊後上面寫的數字就是不同檔案的數量。再次點擊pull就會將這兩個版本合併了。

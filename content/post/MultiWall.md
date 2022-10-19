@@ -7,9 +7,9 @@ tags = ["Windows"]
 categories = [
     "軟體分享",
 ]
-thumbnail = "images/thumbnails/MultiWall.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/MultiWall.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/MultiWall.jpg"
+thumbnail = "images/thumbnails/MultiWall.webp"
+featureImage = "https://em-tec.github.io/images/thumbnails/MultiWall.webp"
+shareImage = "https://em-tec.github.io/images/thumbnails/MultiWall.webp"
 +++
 使用多個螢幕可以大大的增加工作效率。比如說在開直播時可以在遊戲全螢幕時同時做OBS畫面切換或是查看聊天室。
 但是你是否有發現所有螢幕的桌布都只能設定一樣的。而如果你像我一樣兩個螢幕比例不同的話，其中一張比例會直接跑掉，十分的影響美觀。
