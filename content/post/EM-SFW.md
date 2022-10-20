@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 +++
 author = "毛哥EM"
 title = "【視訊會議】EM-SFW - 鏡頭畫質的天花板！黑板不再顛倒/模糊/切割！"
@@ -143,4 +142,3 @@ shareImage = "https://em-tec.github.io/images/thumbnails/EM-SFW.jpg"
 如果你覺得這個免費的網站有幫助到你請分享讓更多人可以有更好的線上上課體驗，讓沒有理由不認真上課
 
 {{% /notice %}}
->>>>>>> 7718872f0b02ba78ce90e83f71d5a42167e6260e
