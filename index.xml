@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毛哥EM資訊密技</title><link>https://EM-Tec.github.io/</link><description>Recent content on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>2022毛哥EM</copyright><lastBuildDate>Fri, 07 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>【視訊會議】EM-SFW - 鏡頭畫質的天花板！黑板不再顛倒/模糊/切割！</title><link>https://EM-Tec.github.io/post/em-sfw/</link><pubDate>Fri, 07 Oct 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/em-sfw/</guid><description>
-&lt;p>班上因為又有人確診又有人隔離又開始使用視訊會議，常常被反應黑板看不清楚。明明鏡頭很好、網路不錯、且畫質設定已經調到最高還是一樣。因此我做了一個簡單網站來顯示鏡頭畫面，用螢幕分享畫面的方式讓畫質明顯提升！且黑白不會左右顛倒，不用再去裝擴充外掛！&lt;/p>
-&lt;p>&lt;figure>
-&lt;picture>
-&lt;img
-loading="lazy"
-decoding="async"
-alt="效果比較"
-class="image_figure image_external image_unprocessed"
-src="https://EM-Tec.github.io/images/EM-SFW-compare.png"
-/>
-&lt;/picture>
-&lt;/figure>
-&lt;/p></description></item><item><title>【C++】常見題目解答</title><link>https://EM-Tec.github.io/post/sysh_cpp/</link><pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/sysh_cpp/</guid><description>
+&lt;p>班上因為又有人確診又有人隔離又開始使用視訊會議，常常被反應黑板看不清楚。明明鏡頭很好、網路不錯、且畫質設定已經調到最高還是一樣。因此我做了一個簡單網站來顯示鏡頭畫面，用螢幕分享畫面的方式讓畫質明顯提升！且黑白不會左右顛倒，不用再去裝擴充外掛！&lt;/p></description></item><item><title>【C++】常見題目解答</title><link>https://EM-Tec.github.io/post/sysh_cpp/</link><pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/sysh_cpp/</guid><description>
 &lt;p>最後更新：10/6 我整理出C++題目常見的題目並寫出我認為的最佳解(取自西苑高一電腦課)。也有提供一些減少程式碼的常用技巧。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看&lt;/p></description></item><item><title>【pdftk】萬能PDF工具！一行指令合併 旋轉 提取</title><link>https://EM-Tec.github.io/post/pdftk/</link><pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/pdftk/</guid><description>
 &lt;p>用PDF Toolkit (pdftk)一行指令完成各種PDF處裡！&lt;/p></description></item><item><title>【終端機】輕鬆更改SSH的驗證碼passpharase</title><link>https://EM-Tec.github.io/post/change-ssh-passphrase/</link><pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/change-ssh-passphrase/</guid><description>
 &lt;p>SSH是一種簡單的登入方式。以我來說在使用git來上傳檔案到Github時，因為我在手機生成並設定好了ssh，不用每次上傳都需要輸入帳號和全是亂碼的驗證密碼。

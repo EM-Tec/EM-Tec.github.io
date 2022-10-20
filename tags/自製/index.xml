@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>自製 on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/%E8%87%AA%E8%A3%BD/</link><description>Recent content in 自製 on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>2022毛哥EM</copyright><lastBuildDate>Fri, 07 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/%E8%87%AA%E8%A3%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>【視訊會議】EM-SFW - 鏡頭畫質的天花板！黑板不再顛倒/模糊/切割！</title><link>https://EM-Tec.github.io/post/em-sfw/</link><pubDate>Fri, 07 Oct 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/em-sfw/</guid><description>
-&lt;p>班上因為又有人確診又有人隔離又開始使用視訊會議，常常被反應黑板看不清楚。明明鏡頭很好、網路不錯、且畫質設定已經調到最高還是一樣。因此我做了一個簡單網站來顯示鏡頭畫面，用螢幕分享畫面的方式讓畫質明顯提升！且黑白不會左右顛倒，不用再去裝擴充外掛！&lt;/p>
-&lt;p>&lt;figure>
-&lt;picture>
-&lt;img
-loading="lazy"
-decoding="async"
-alt="效果比較"
-class="image_figure image_external image_unprocessed"
-src="https://EM-Tec.github.io/images/EM-SFW-compare.png"
-/>
-&lt;/picture>
-&lt;/figure>
-&lt;/p></description></item><item><title>【GAS】複製貼上讓試算表變身成網頁表格 秀爆你的客戶朋友！</title><link>https://EM-Tec.github.io/post/create-site-for-sheet/</link><pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/create-site-for-sheet/</guid><description>
+&lt;p>班上因為又有人確診又有人隔離又開始使用視訊會議，常常被反應黑板看不清楚。明明鏡頭很好、網路不錯、且畫質設定已經調到最高還是一樣。因此我做了一個簡單網站來顯示鏡頭畫面，用螢幕分享畫面的方式讓畫質明顯提升！且黑白不會左右顛倒，不用再去裝擴充外掛！&lt;/p></description></item><item><title>【GAS】複製貼上讓試算表變身成網頁表格 秀爆你的客戶朋友！</title><link>https://EM-Tec.github.io/post/create-site-for-sheet/</link><pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/create-site-for-sheet/</guid><description>
 &lt;p>直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。那我們就來幫試算表包個糖衣吧&lt;/p></description></item><item><title>【網頁&amp;捷徑】旌旗教會週報下載器</title><link>https://EM-Tec.github.io/post/banner_weekly_downloader/</link><pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/banner_weekly_downloader/</guid><description>
 &lt;p>當時在製作的時候正是疫情爆發的時間，教會聚會全面改成線上，且只有提供週報的圖片檔，因此製作了一個可以下載週報的網站。即使現在疫情已經過去，我還是習慣使用這它&lt;/p></description></item><item><title>【GAS】自製點名系統</title><link>https://EM-Tec.github.io/post/frog_check_in/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/frog_check_in/</guid><description>
 &lt;p>大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。&lt;/p></description></item><item><title>【捷徑】一鍵下載網頁所有照片</title><link>https://EM-Tec.github.io/post/shortcut-save_images/</link><pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/shortcut-save_images/</guid><description>
