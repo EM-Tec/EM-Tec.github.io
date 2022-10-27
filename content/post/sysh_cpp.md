@@ -18,7 +18,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 
 關於有人問我是誰，選單有各種連結。
 
-**目前只更新到421**
+**目前只更新到426**
 {{% /notice %}}
 
 # 小提示
@@ -1039,6 +1039,20 @@ int main() {
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
 
 ```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = 1; o <= i; o++) cout << o;
+    cout << endl;
+  }
+
+  return 0;
+}
 ```
 
 # 423
@@ -1046,6 +1060,21 @@ int main() {
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
 
 ```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = n; o > 0; o--)
+      if (o > i) cout << o;
+    cout << endl;
+  }
+
+  return 0;
+}
 ```
 
 # 424
@@ -1053,17 +1082,61 @@ int main() {
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
 
 ```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = 1; o <= n; o++)
+      if (o > n - i) cout << o;
+    cout << endl;
+  }
+
+  return 0;
+}
 ```
 # 425
 
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
 
 ```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = 1; o <= n; o++)
+      if (o > n - i) cout << o;
+    cout << endl;
+  }
+
+  return 0;
+}
 ```
 # 426
 
 請製作一個程式，輸入一個整數n，列印出2~n之間的所有質數(包含2、n)
 
 ```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int i, a, b = 0;
+  cin >> a;
+  for (int o = 2; o <= a; o++) {
+    b = 0;
+    for (i = 2; i < o; i++)
+      if (o % i == 0) b = 1;
+    if (b == 0) cout << o << " ";
+  }
+  return 0;
+}
 ```
 這些應該夠你們用幾週了，剩下的有空再繼續更新。
