@@ -18,7 +18,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 
 關於有人問我是誰，選單有各種連結。
 
-**目前只更新到412**
+**目前只更新到417**
 {{% /notice %}}
 
 # 小提示
@@ -846,28 +846,71 @@ int main() {
 
 請製作一個程式，輸入一個整數x，再輸入一個整數y，檢查y是否為x的因數，輸出1或0
 
-```
+```c++
+#include<iostream>
+using namespace std;
+int main() {
+  int a,b;
+  cin>>a>>b;
+    if(a%b==0) cout<<1; else cout<<0;
+  return 0;
+}
 ```
 
 # 414
 
 請製作一個程式，輸入一個整數n，求其所有因數
 
-```
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int i,a;
+  cin>>a;
+  for (i = 1; i <= a; i++) {
+    if(a%i==0)   cout << i<<" ";
+
+  }
+  return 0;
+}
 ```
 
 # 415
 
 請製作一個程式，輸入一個整數，求因數數量
 
-```
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int i,a,b=0;
+  cin>>a;
+  for (i = 1; i <= a; i++) 
+    if(a%i==0)   b++;
+  cout<<b;
+  return 0;
+}
 ```
 
 # 416
 
 請製作一個程式，輸入一個整數，判斷其是質數還是合數
 
-```
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int i,a,b=0;
+  cin>>a;
+  for (i = 1; i <= a; i++) 
+    if(a%i==0)   b++;
+if(b==2) cout<<"質數"; else
+  cout<<"合數";
+  return 0;
+}
 ```
 
 # 417
@@ -875,67 +918,82 @@ int main() {
 請製作一個程式，輸入一個整數n，列出費式數列n項  
 1 1 2 3 5 8 13 21……
 
-```
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int a, b = 0, x = 0, y = 1, z, o;
+  cin >> a;
+  for (o = 0; o < a; o++) {
+    z = x;
+    x = x + y;
+    y = z;
+    cout << x << " ";
+  }
+
+  return 0;
+}
 ```
 
 # 418
 
 請製作一個程式，使用者輸入兩個數字，使用輾轉相除法，求兩數最大公因數
 
-```
+```c++
 ```
 
 # 419
 
 請製作一個程式，使用者輸入一個整數n，求質因數分解
 
-```
+```c++
 ```
 
 # 420
 
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的星星直角三角形
 
-```
+```c++
 ```
 
 # 421
 
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的反星星直角三角形
 
-```
+```c++
 ```
 
 # 422
 
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
 
-```
+```c++
 ```
 
 # 423
 
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
 
-```
+```c++
 ```
 
 # 424
 
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
 
-```
+```c++
 ```
 # 425
 
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
 
-```
+```c++
 ```
 # 426
 
 請製作一個程式，輸入一個整數n，列印出2~n之間的所有質數(包含2、n)
 
-```
+```c++
 ```
 這些應該夠你們用幾週了，剩下的有空再繼續更新。
