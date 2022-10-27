@@ -8,6 +8,7 @@ categories = ["Development"]
 thumbnail=  "images/thumbnails/notes.png"
 featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
+
 +++
 
 最後更新：10/6 我整理出C++題目常見的題目並寫出我認為的最佳解(取自西苑高一電腦課)。也有提供一些減少程式碼的常用技巧。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
