@@ -9,7 +9,6 @@ categories = [ "網站分享","軟體分享" ]
 thumbnail = "images/thumbnails/github-and-git.jpeg"
 featureImage = "https://em-tec.github.io/images/thumbnails/github-and-git.jpeg"
 shareImage = "https://em-tec.github.io/images/thumbnails/github-and-git.jpeg"
-draft  = true
 toc = true
 +++
 這一篇文章我會用簡單好理解的方式讓你學會基本的使用Github和Git。且[複製貼上就能成為工程師]()系列所搭建的網站都可以免費架設在Github
