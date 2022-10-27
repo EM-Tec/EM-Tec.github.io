@@ -18,7 +18,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 
 關於有人問我是誰，選單有各種連結。
 
-**目前只更新到417**
+**目前只更新到421**
 {{% /notice %}}
 
 # 小提示
@@ -941,6 +941,26 @@ int main() {
 請製作一個程式，使用者輸入兩個數字，使用輾轉相除法，求兩數最大公因數
 
 ```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a, b, t;
+
+    while( cin >> a >> b )
+    {
+        while( b!=0 )
+        {
+            t = b;
+            b = a%b;
+            a = t;
+        }
+        cout << a << endl;
+    }
+
+    return 0;
+}
 ```
 
 # 419
@@ -948,6 +968,26 @@ int main() {
 請製作一個程式，使用者輸入一個整數n，求質因數分解
 
 ```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n,i;
+    cin >> n;
+    i = 2;
+    while( n > 1 ){
+        while( n%i == 0 ){
+            cout << i;
+            n = n/i;
+                if(n!=1) cout<<"*";
+        }
+        i = i+1;
+    }
+    cout << endl;
+
+    return 0;
+}
 ```
 
 # 420
@@ -955,6 +995,20 @@ int main() {
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的星星直角三角形
 
 ```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = 0; o < i; o++) cout << "*";
+    cout << endl;
+  }
+
+  return 0;
+}
 ```
 
 # 421
@@ -962,6 +1016,22 @@ int main() {
 請製作一個程式，輸入一個正整數n，列印出底為n、高為n的反星星直角三角形
 
 ```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  for (int i = 0; i <= n; i++) {
+    for (int a = 0; a < i; a++) cout << " ";
+    for (int o = 0; o < n - i; o++) cout << "*";
+    cout << endl;
+  }
+
+  return 0;
+}
 ```
 
 # 422
