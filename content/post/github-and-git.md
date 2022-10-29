@@ -12,7 +12,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/github-and-git.jpeg"
 draft  = true
 toc = true
 +++
-這一篇文章我會用簡單好理解的方式讓你學會基本的使用Github和Git。且[複製貼上就能成為工程師]()系列所搭建的網站都可以免費架設在Github
+這一篇文章我會用簡單好理解的方式讓你學會基本的使用Github和Git。且*複製貼上就能成為工程師*系列所搭建的網站都可以免費架設在Github
 
 # Github是什麼
 Github可以說是程式的雲端硬碟或IG。註冊帳號就可以上傳檔案，可以自己決定要不要讓別人看到。當然也可以留言、按讚（星星）、或轉發改編。
