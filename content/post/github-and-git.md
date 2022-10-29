@@ -139,3 +139,23 @@ ghp_5xcCouSaccQcDw87FRFL6B0IaX0nzJ4MdWaK
 SSH像是一個信物。我們生成一個SSH，並告訴Github說只要有拿這個東西就有權限做哪些事。如果你是使用Github Destop的話上傳時不用輸入密碼。因為Github自動幫你生成了SSH並存在你的帳號。
 
 如何設定可以先參考[這篇文章](https://cynthiachuang.github.io/Generating-a-Ssh-Key-and-Adding-It-to-the-Github/)或是[官方文件](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+## 衝突！？
+
+假如你編輯了檔案，但是在你還沒上傳時別人已經改了內容（新增/編輯/刪除檔案）這個時候你就沒辦法上傳（push）了。我們會看到這串訊息
+```
+! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:EM-Tec/EM-Tec.github.io.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+我們必須要先pull最新的版本下來。不過在我們使用`git pull`指令前我們需要告訴git要怎麼處理檔案
+* 合併：`git config pull.rebase false`
+* 不管那個版本：`git config pull.rebase true`
+* 放棄剛才編輯的：`git config pull.ff only`
+
+我們可以用`git config --global`而不是`git config`來告訴git不管哪個專案都要這樣處理。
