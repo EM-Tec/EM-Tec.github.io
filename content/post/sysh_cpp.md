@@ -8,57 +8,18 @@ categories = ["Development"]
 thumbnail=  "images/thumbnails/notes.png"
 featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
+
 +++
 
 最後更新：10/6 我整理出C++題目常見的題目並寫出我認為的最佳解(取自西苑高一電腦課)。也有提供一些減少程式碼的常用技巧。如果解不出來到想砸電腦或想只到更簡單的方法可以來看看
 <!--more-->
-{{% notice note "沒事都來西苑高中C語言程式教學營隊" %}}
-快來報名西苑高中C語言程式教學營隊!完全免費！附午餐！
-<https://docs.google.com/forms/d/e/1FAIpQLSdXEOR8OvjXlZVseeq5A4re5a_05a95uGBqGqI5WLzRfWSXQw/viewform?usp=sf_link>
-學長姐將帶你走入真正需要用文字編輯的程式語言，
 
-快來加入我們吧，從最基礎的c語言帶你認識
-
-這也是真正職場上能用到的語言喔
-
-寫得好直接畢業即就業，心動不如馬上報名，全程參加者發予證書，報名額滿為止。
-
-課程大綱：
-
-1. 程式語言簡介
-2. 編程環境安裝&介紹
-3. C語言基礎介紹
-4. 基礎教學
-5. 進階教學
-6. 編寫計算機程式
-7. 程式語言的運用
-8. 物聯網實際應用
-
-講師:資訊志工教學組(高二，三學生)
-
-地點:西苑高中圖書館五樓
-
-對象:西苑國中部二三年級學生，高中部一年級學生
-
-課程時間:10/16(日)09:00-1600(共7小時)
-
-費用:免費，提供午餐
-
-
-有任何問題均可聯絡西苑高中圖書館！
-
-即時資訊及錄取通知都由mail發送 請隨時關注信箱！！
-
-主辦單位:西苑高中資訊志工教學組(學生團體)
-
-指導單位:西苑高中圖書館
-{{% /notice %}}
 {{% notice warning "警告" %}}
 網站終於搶救成功啦!這兩天來更新!這裡的程式僅供參考，請不要偷懶直接複製貼上，小考你不會過的。
 
 關於有人問我是誰，選單有各種連結。
 
-**目前只更新到410**
+**目前只更新到426**
 {{% /notice %}}
 
 # 小提示
@@ -835,5 +796,348 @@ int main() {
   return 0;
 }
 ```
+### 411
 
+請製作一個程式，將1~548701487的整數中篩選出94或87的倍數，
+* 計算有多少個
+* 計算這些數的總和
+
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int i, a = 0, b = 0;
+  for (i = 1; i <= 548701487; i++) {
+    if (i % 87 == 0 || i % 94 == 0) {
+      a++;
+      b += i;
+    }
+  }
+  cout << a << endl << b;
+  return 0;
+}
+```
+
+### 412
+
+請製作一個程式，輸入一個整數n，計算1~n的整數中(n<10000)，出現過多少次5  
+例如2345含有一次5，5555含有四次5
+
+```c++
+#include<iostream>
+
+#include<math.h>
+
+using namespace std;
+int main() {
+  int i, o, a, b = 0, c;
+  cin >> a;
+  for (i = 1; i <= a; i++) {
+    for (o = 0; o <= 5; o++) {
+      c = i / pow(10, o);
+      if (c % 10 == 5) b++;
+    }
+  }
+  cout << b;
+  return 0;
+}
+```
+# 413
+
+請製作一個程式，輸入一個整數x，再輸入一個整數y，檢查y是否為x的因數，輸出1或0
+
+```c++
+#include<iostream>
+using namespace std;
+int main() {
+  int a,b;
+  cin>>a>>b;
+    if(a%b==0) cout<<1; else cout<<0;
+  return 0;
+}
+```
+
+# 414
+
+請製作一個程式，輸入一個整數n，求其所有因數
+
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int i,a;
+  cin>>a;
+  for (i = 1; i <= a; i++) {
+    if(a%i==0)   cout << i<<" ";
+
+  }
+  return 0;
+}
+```
+
+# 415
+
+請製作一個程式，輸入一個整數，求因數數量
+
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int i,a,b=0;
+  cin>>a;
+  for (i = 1; i <= a; i++) 
+    if(a%i==0)   b++;
+  cout<<b;
+  return 0;
+}
+```
+
+# 416
+
+請製作一個程式，輸入一個整數，判斷其是質數還是合數
+
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int i,a,b=0;
+  cin>>a;
+  for (i = 1; i <= a; i++) 
+    if(a%i==0)   b++;
+if(b==2) cout<<"質數"; else
+  cout<<"合數";
+  return 0;
+}
+```
+
+# 417
+
+請製作一個程式，輸入一個整數n，列出費式數列n項  
+1 1 2 3 5 8 13 21……
+
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int a, b = 0, x = 0, y = 1, z, o;
+  cin >> a;
+  for (o = 0; o < a; o++) {
+    z = x;
+    x = x + y;
+    y = z;
+    cout << x << " ";
+  }
+
+  return 0;
+}
+```
+
+# 418
+
+請製作一個程式，使用者輸入兩個數字，使用輾轉相除法，求兩數最大公因數
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a, b, t;
+
+    while( cin >> a >> b )
+    {
+        while( b!=0 )
+        {
+            t = b;
+            b = a%b;
+            a = t;
+        }
+        cout << a << endl;
+    }
+
+    return 0;
+}
+```
+
+# 419
+
+請製作一個程式，使用者輸入一個整數n，求質因數分解
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n,i;
+    cin >> n;
+    i = 2;
+    while( n > 1 ){
+        while( n%i == 0 ){
+            cout << i;
+            n = n/i;
+                if(n!=1) cout<<"*";
+        }
+        i = i+1;
+    }
+    cout << endl;
+
+    return 0;
+}
+```
+
+# 420
+
+請製作一個程式，輸入一個正整數n，列印出底為n、高為n的星星直角三角形
+
+```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = 0; o < i; o++) cout << "*";
+    cout << endl;
+  }
+
+  return 0;
+}
+```
+
+# 421
+
+請製作一個程式，輸入一個正整數n，列印出底為n、高為n的反星星直角三角形
+
+```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  for (int i = 0; i <= n; i++) {
+    for (int a = 0; a < i; a++) cout << " ";
+    for (int o = 0; o < n - i; o++) cout << "*";
+    cout << endl;
+  }
+
+  return 0;
+}
+```
+
+# 422
+
+請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
+
+```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = 1; o <= i; o++) cout << o;
+    cout << endl;
+  }
+
+  return 0;
+}
+```
+
+# 423
+
+請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
+
+```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = n; o > 0; o--)
+      if (o > i) cout << o;
+    cout << endl;
+  }
+
+  return 0;
+}
+```
+
+# 424
+
+請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
+
+```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = 1; o <= n; o++)
+      if (o > n - i) cout << o;
+    cout << endl;
+  }
+
+  return 0;
+}
+```
+# 425
+
+請製作一個程式，輸入一個正整數n，列印出底為n、高為n的數字三角形
+
+```c++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+  for (int i = 0; i <= n; i++) {
+    for (int o = 1; o <= n; o++)
+      if (o > n - i) cout << o;
+    cout << endl;
+  }
+
+  return 0;
+}
+```
+# 426
+
+請製作一個程式，輸入一個整數n，列印出2~n之間的所有質數(包含2、n)
+
+```c++
+#include<iostream>
+
+using namespace std;
+int main() {
+  int i, a, b = 0;
+  cin >> a;
+  for (int o = 2; o <= a; o++) {
+    b = 0;
+    for (i = 2; i < o; i++)
+      if (o % i == 0) b = 1;
+    if (b == 0) cout << o << " ";
+  }
+  return 0;
+}
+```
 這些應該夠你們用幾週了，剩下的有空再繼續更新。

@@ -9,10 +9,13 @@ categories = [ "網站分享","軟體分享" ]
 thumbnail = "images/thumbnails/github-and-git.jpeg"
 featureImage = "https://em-tec.github.io/images/thumbnails/github-and-git.jpeg"
 shareImage = "https://em-tec.github.io/images/thumbnails/github-and-git.jpeg"
-draft  = true
 toc = true
 +++
 這一篇文章我會用簡單好理解的方式讓你學會基本的使用Github和Git。且*複製貼上就能成為工程師*系列所搭建的網站都可以免費架設在Github
+
+<!--more-->
+
+這篇文章拖很久，8月就在寫了一直沒空更新
 
 # Github是什麼
 Github可以說是程式的雲端硬碟或IG。註冊帳號就可以上傳檔案，可以自己決定要不要讓別人看到。當然也可以留言、按讚（星星）、或轉發改編。
@@ -90,6 +93,7 @@ git config --global user.email "<電子信箱>"
 ```
 git clone 
 ```
+假設你想要確定是否和Github的內容是一樣的，點擊fetch(`git fetch`)它就會幫你自動比較。點擊後上面寫的數字就是不同檔案的數量。再次點擊pull(`git pull`)就會將這兩個版本合併了。
 
 # 上傳檔案
 
@@ -113,22 +117,25 @@ git clone
 相信你一定把最後一行文字刪了。你可以用瀏覽器打開看看這個網站（HTML檔），你會發現HTML只不過是一個要用瀏覽器打開的word檔而已！
 
 # 上傳到Github
+
 現在我們來將它上傳到Github吧。回到Github Destop或你的終端機（確認是在你的專案），Github Destop上你會發現它知道你新增了一個檔案。而git需要先輸入`git add .`才會比較你有沒有更動檔案。那個`.`代表所有的檔案。而如果你只要打包某些檔案可以直接輸入檔名如`git add index.html`或指定副檔名如`git add .html`。
 
 我們在左下角那個**小**的輸入框打入這次你做的事（使用git請打指令`git commit -m '<訊息>`），或是你可以發現它預設給你打了一個訊息，懶得打直接按Commit也可以。
 
 打包完之後我們可以上傳囉。點擊push就好了（指令為`git push`），是不是超級簡單w。如果使用終端機且沒有設定SSH會叫你輸入Github的帳號密碼。且如果你輸入你真的密碼可能會有兩步驟驗證的問題，所以在這裡我們有兩個辦法解決。
 
-## 辦一個密碼
+## Git - 辦一個密碼
 
 到Github的設定生成一個看起來像亂碼的密碼。大概長這樣
 
 ```
 ghp_5xcCouSaccQcDw87FRFL6B0IaX0nzJ4MdWaK
 ```
-在每次需要上傳時貼上這串密碼就好了。
+
+在每次需要輸入密碼時請貼上這串密碼
 
 ## 密碼好麻煩 用SSH
 
-SSH像是一個信物。我們生成一個SSH，並告訴Github說只要有拿這個東西就有權限做哪裡像，
-假設你想要確定是否和Github的內容是一樣的，點擊fetch它就會幫你自動比較。點擊後上面寫的數字就是不同檔案的數量。再次點擊pull就會將這兩個版本合併了。
+SSH像是一個信物。我們生成一個SSH，並告訴Github說只要有拿這個東西就有權限做哪些事。如果你是使用Github Destop的話上傳時不用輸入密碼。因為Github自動幫你生成了SSH並存在你的帳號。
+
+如何設定可以先參考[這篇文章](https://cynthiachuang.github.io/Generating-a-Ssh-Key-and-Adding-It-to-the-Github/)或是[官方文件](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
