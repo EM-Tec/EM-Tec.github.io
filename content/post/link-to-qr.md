@@ -22,6 +22,12 @@ QR Code是分享網站連結常用的方法。適合在印刷上面方便用讀�
 * 類型:免費網站工具
 * 連結:[link-to-qr.com](https//link-to-qr.com/)
 {{% /notice %}}
+<https://www.google.com.tw>
+
+<https://m.youtube.com>
+
+<https://cn.pornhub.com>
+
 進入網站後可以先在文字框裡輸入網址。我以我製作的旌旗青年週報下載器做為示範
 
 ![網頁](https://EM-Tec.github.io/images/link-to-qr-header.png)
