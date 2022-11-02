@@ -8,6 +8,7 @@ categories = ["Development"]
 thumbnail=  "images/thumbnails/notes.png"
 featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
+toc = true
 
 +++
 
