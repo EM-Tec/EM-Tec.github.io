@@ -1210,7 +1210,28 @@ int main() {
 請製作一個程式，使用者輸入一個正整數n，代表接下來共有n個整數，利用泡沫排序法零式，將最大值移至最後方。
 
 ```c++
+#include<iostream>
 
+using namespace std;
+int main() {
+  int a, i, j, b;
+  cin >> a;
+  int A[a];
+  for (i = 0; i < a; i++) {
+    cin >> j;
+    A[i] = j;
+  }
+  for (i = 0; i < a; i++) {
+    if (A[i] > A[i + 1]) {
+      b = A[i];
+      A[i] = A[i + 1];
+      A[i + 1] = b;
+    }
+    cout << A[i] << " ";
+  }
+
+  return 0;
+}
 ```
 
 # 505
@@ -1218,7 +1239,30 @@ int main() {
 請製作一個程式，使用者輸入一個正整數n，代表接下來共有n個整數，利用泡沫排序法由小到大排序。
 
 ```c++
+#include<iostream>
 
+using namespace std;
+int main() {
+  int a, i, j, b;
+  cin >> a;
+  int A[a];
+  for (i = 0; i < a; i++) {
+    cin >> j;
+    A[i] = j;
+  }
+  for (j = 0; j < a - 1; j++) {
+    for (i = 0; i < a; i++) {
+      if (A[i] > A[i + 1]) {
+        b = A[i];
+        A[i] = A[i + 1];
+        A[i + 1] = b;
+      }
+    }
+
+  }
+  for (j = 0; j < a; j++) cout << A[j] << " ";
+  return 0;
+}
 ```
 
 # 506
