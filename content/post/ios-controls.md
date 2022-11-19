@@ -12,6 +12,8 @@ shareImage = "https://em-tec.github.io/images/thumbnails/ios-controls.jpg"
 
 ios的控制中心相較於安卓的開/關複雜許多，這篇文章我將快速介紹這些符號的功能以及如何正確開啟個人熱點別人才收得到。
 
+<!-- more -->
+
 如果看到控制中心選項只有四個要長按才會叫出六個完整選項。
 
 ## 首先最重要的！如下開啟個人熱點別人才收得到？
@@ -60,6 +62,6 @@ ios的控制中心相較於安卓的開/關複雜許多，這篇文章我將快�
 
 接著到捷徑建立一個自動化操作。條件就是當專注模式被開啟，動作就是關閉藍牙/Wi-Fi。執行前不用詢問，要不要通知就看個人了
 
-![建立自動化操作](https://em-tec.github.io/images/ios-controls-shortcuts.jpg)
+![建立自動化操作](https://em-tec.github.io/images/ios-controls-shortcuts.jpeg)
 
 當然你不想用專注模式想放一個按鈕在主畫面也可以
