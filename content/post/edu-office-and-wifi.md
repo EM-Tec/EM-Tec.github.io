@@ -22,6 +22,6 @@ categories = [
 
 ## 微軟 Office 365 教育版
 
-到[微軟 Office 365 教育版雲端服務啟用網站(https://o365.k12cc.tw/)啟用Office365。登入即可使用。Office的網站是<https://www.office.com/>
+到[微軟 Office 365 教育版雲端服務啟用網站](https://o365.k12cc.tw/)啟用Office365。登入即可使用。Office的網站是<https://www.office.com/>
 
 建立檔案即可線上編輯共用。共用鍵在右上角藍色按鈕。可輸入共用者Email或直接複製連結
