@@ -61,8 +61,8 @@ categories = [
 
 #### iPhone & iPad / Windows 10 & 11
 
-1.「設定」→「Wi-Fi」，找到「eduroam」訊號
-2.如果帳密正確，ios加入後可能會出現憑證的畫面，按「信任」就OK了
+1. 「設定」→「Wi-Fi」，找到「eduroam」訊號
+2. 如果帳密正確，ios加入後可能會出現憑證的畫面，按「信任」就OK了
 
 #### Android
 
