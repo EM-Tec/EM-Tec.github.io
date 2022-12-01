@@ -2,8 +2,7 @@
 author = "毛哥EM"
 title = "【學生免費】Wifi&Office365教育版"
 date = "2022-12-01"
-description = "有了MultiWall，你不但可以幫不同的螢幕設定不同的桌布，還可以讓一張背景橫跨多個桌布來達到延伸的效果"
-tags = ["Windows"]
+description = "台灣學生在在學期間於全台皆可使用免費Wifi Eduroam還有Office365。這裡提供完整的操作說明"
 categories = [
     "網站分享","線上教學"
 ]
