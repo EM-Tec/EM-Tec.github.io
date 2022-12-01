@@ -2,7 +2,7 @@
 author = "毛哥EM"
 title = "【學生】免費全球學校Wifi & Office365教育版"
 date = "2022-12-01"
-description = "台灣學生在在學期間於全台皆可使用免費Wifi Eduroam還有Office365。這裡提供完整的操作說明"
+description = "你知道學生在在學期間於全世界皆可使用免費Wifi Eduroam還有Office365嗎?這裡提供完整的操作說明! 這是一個知道的人不會願意告訴你的祕密..."
 categories = [
     "網站分享","線上教學"
 ]
