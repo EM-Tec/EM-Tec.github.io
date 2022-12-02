@@ -6,6 +6,9 @@ description = "你知道學生在在學期間於全世界皆可使用免費Wifi 
 categories = [
     "網站分享","線上教學"
 ]
+thumbnail = "images/thumbnails/edu-office-and-wifi.webp"
+featureImage = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.webp"
+shareImage = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.webp"
 +++
 
 你知道學生在在學期間於全世界皆可使用免費Wifi Eduroam還有Office365嗎?這裡提供完整的操作說明! 這是一個知道的人不會願意告訴你的祕密...
@@ -49,7 +52,7 @@ categories = [
 
 ### 連接Wi-Fi
 
-我們學校有一些地方連得到有些地方連不到。圖一圖二我是確定可以的
+我們學校有一些地方連得到有些地方連不到，圖一圖二我是確定可以的。要教室的無線基地台是**方形**的才能連eduroam喔
 
 {{% notice info "Eduroam" %}}
 
