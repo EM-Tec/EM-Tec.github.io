@@ -30,7 +30,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/EM-SFW.jpg"
 * 程式類型:免費開源網站
 * 網站位置:[毛哥EM的基地](https://Edit-Mr.github.io/code/EM-SFW)
 * 縮短網址：[is.gd/EMSFW](https://is.gd/EMSFW)
-  {{% /notice %}}
+{{% /notice %}}
 
 ## 使用教學
 
