@@ -3,7 +3,6 @@ author = "毛哥EM"
 title = "【Remove.bg】讓AI幫你一鍵去背"
 date = "2022-01-06"
 description = "介紹Remove.bg這個超讚的去被網站，並講解如何使用它提供的Api來製作捷徑，使你能夠一鍵去被"
-featured = true
 tags = ["ios捷徑"]
 series = ["複製貼上就能成為工程師"]
 categories = [

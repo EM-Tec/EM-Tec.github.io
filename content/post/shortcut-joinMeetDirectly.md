@@ -3,7 +3,6 @@ author = "毛哥EM"
 title = "【捷徑】快速進入當節課堂的Meet（備份）"
 date = "2021-06-04"
 description = "快速進入當節課堂的Meet，再也不用怕忘記課表"
-featured = true
 tags = ["自製",
     "衛道中學",
     "Github",

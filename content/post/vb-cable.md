@@ -3,7 +3,6 @@ author = "毛哥EM"
 title = "【Zoom】是個超讚綠幕!輕鬆去背到OBS"
 date = "2021-08-14"
 description = "使用OBS攝取Zoom的視窗。"
-featured = true
 tags = [
     "OBS",  "Windows"
 ]
