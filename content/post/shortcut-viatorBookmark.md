@@ -3,7 +3,6 @@ author = "毛哥EM"
 title = "【捷徑】衛道網頁書籤"
 date = "2021-06-04"
 description = "快速連結到衛道的網頁或檔案"
-featured = true
 tags = [ "自製","ios捷徑",
     "衛道中學",
     "Github",
