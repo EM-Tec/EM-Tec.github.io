@@ -23,7 +23,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/win-battery-life.webp"
 powercfg /batteryreport /output "battery.html" && battery.html
 ```
 
-呃對，就這樣，我縮的很簡單吧
+呃對，就這樣，我簡化的很簡單吧
 
 在「已安裝電池」(Installed Battery)下會給出筆記型電腦所配的鋰電池的設計容量(Design Capacity)和當前實際容量(Full Charge Capacity)，最下方還有循環充電次數(Cycle Count)。 
 
