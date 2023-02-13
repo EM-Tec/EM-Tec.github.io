@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "【終端機】快速上手 Vim"
-date = "2022-02-13"
+date = "2023-02-13"
 description = "如果您正在尋求一款快速、高效和功能強大的文本編輯器，那麼 Vim 可能是您的最佳選擇。"
 categories = ["軟體分享"]
 tags = ["終端機"]

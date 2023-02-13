@@ -13,7 +13,7 @@ categories = [
 
 ]
 series = ["線上教學"]
-thumbnail = "images/thumbnails/EM-SFW.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/EM-SFW.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/EM-SFW.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/EM-SFW.jpg"
 +++

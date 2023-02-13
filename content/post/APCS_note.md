@@ -9,6 +9,7 @@ featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
 
 +++
+
 這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀
 <!--more-->
 {{% notice note "好久不見!" %}}
