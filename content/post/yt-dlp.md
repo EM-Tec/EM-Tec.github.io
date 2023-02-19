@@ -1,11 +1,11 @@
 +++
-author = “毛哥EM”
-title = “【yt-dlp】Youtube-dl進化!最強Youtube下載器“
-date = “2023-01-28”
-description = “還在慢慢用線上工具處裡PDF問題嗎？用PDF Toolkit (pdftk)一行指令完成各種PDF處裡！”
-categories = [“軟體分享”]
+author = "毛哥EM"
+title = "【yt-dlp】Youtube-dl進化!最強Youtube下載器"
+date = "2023-01-28"
+description = "還在慢慢用線上工具處裡PDF問題嗎？用PDF Toolkit (pdftk)一行指令完成各種PDF處裡！"
+categories = ["軟體分享"]
 draft = true
-tags = [“Terminal”,“Windows”,“Android”]
+tags = ["Terminal","Windows","Android"]
 +++
 
 市面上的線上Youtube下載器又慢又爛，還有一堆廣告，播放清單太長下載不了。相反的，yt-dlp可以滿足你所有的需求：畫質音質沒有限制、幾乎支援所有影音格式、可以下載整份影片清單、mp3可以加入歌曲封面和專輯資訊、支援字幕、影片縮圖。而且更猛的是，他不只可以下載Youtube的影片，甚至連Facebook、Twitter、Pornhub等地方上的影片都可以下載！
