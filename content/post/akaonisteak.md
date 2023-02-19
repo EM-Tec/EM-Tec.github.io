@@ -39,4 +39,6 @@ shareImage = "https://em-tec.github.io/images/akaonisteak-lock.jpg"
 
 強制停止之後你的世界就會變得清淨許多，你可以開啟App了。回主畫面會自動開啟點餐畫面，因此如果要選APP可以使用搜尋功能。
 
+![開啟YouTube](https://EM-Tec.github.io/images/akaonisteak-success.jpeg)
+
 希望這篇文章對你有所幫助，也希望可以讓赤鬼的客量上升（真的很好吃）。如果你覺得這篇文章有幫助到你歡迎在[Instagram](https://instagram.com/em.tec.blog)或[Google新聞](https://news.google.com/s/CBIwgtnWzKAB?sceid=TW:zh-Hant&sceid=TW:zh-Hant&r=11&oc=1)追蹤毛哥EM資訊密技
