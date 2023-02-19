@@ -5,9 +5,9 @@ date = "2023-02-13"
 description = "如果您正在尋求一款快速、高效和功能強大的文本編輯器，那麼 Vim 可能是您的最佳選擇。"
 series = ["別說我教的系列"]
 tags = ["Android"]
-thumbnail = "images/akaonisteak-lock.jpg"
-featureImage = "https://em-tec.github.io/images/akaonisteak-lock.jpg"
-shareImage = "https://em-tec.github.io/images/akaonisteak-lock.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/akaonisteak.webp"
+featureImage = "https://em-tec.github.io/images/thumbnails/akaonisteak.webp"
+shareImage = "https://em-tec.github.io/images/thumbnails/akaonisteak.webp"
 
 +++
 赤鬼牛排店之前是使用服務鈴，現在是使用 Samsung Galaxy 的平板進行點餐。想必會有*可愛的小朋友*拿它來看影片或玩遊戲，而赤鬼基於安全考量後來加了應用程式鎖，而這篇文章就要教你如何破解它開啟你想開的軟體
