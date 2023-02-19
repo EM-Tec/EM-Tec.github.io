@@ -5,9 +5,9 @@ date = "2023-02-13"
 description = "如果您正在尋求一款快速、高效和功能強大的文本編輯器，那麼 Vim 可能是您的最佳選擇。"
 categories = ["軟體分享"]
 tags = ["終端機"]
-thumbnail = "images/thumbnails/notes.png"
-featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
-shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
+thumbnail = "https://em-tec.github.io/images/thumbnails/vim.webp"
+featureImage = "https://em-tec.github.io/images/thumbnails/vim.webp"
+shareImage = "https://em-tec.github.io/images/thumbnails/vim.webp"
 
 +++
 
