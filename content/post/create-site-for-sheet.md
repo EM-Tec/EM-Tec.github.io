@@ -221,9 +221,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/create-site-for-sheet.j
              </li> 
              資料載入中 
          </ul> 
-         <p><a href="https://www.facebook.com/Sabo9335">薩波FB</a> · <a 
-                 href="https://instagram.com/sabooo_9335?igshid=YmMyMTA2M2Y=">薩波IG</a> · <a 
-                 href="https://discord.gg/ve9ERWVEPR">橘子牌太空船</a><br />Made by <a href="https://github.com/Edit-Mr">EDM</a> with❤</p>
+         <p><a href=""></a> · Facebook<a href="https://instagram.com/">Instagram</a><br />Made by <a href="https://github.com/Edit-Mr">Edit Mr.</a> with❤</p>
      </div> 
  </body>
 ```
