@@ -25,8 +25,7 @@ toc = true
 
 ### LINE bot 
   
- 至[Line Developers](https://developers.line.biz/console/) => 新增或選取Provider => Create a new channel => Message API。設定環境變數 `LINEBOT_SECRET` 及 `LINEBOT_ACCESS_TOKEN`。 
- > * Secret在Basic settings，Channel access token (long-lived)在Messaging API 
+ 至[Line Developers](https://developers.line.biz/console/) => 新增或選取Provider => Create a new channel => Message API。
  > * Messaging API 底下的 Webhook 等一下我們要填入，非常重要。
   
 ### 生成Line Notify仗權
