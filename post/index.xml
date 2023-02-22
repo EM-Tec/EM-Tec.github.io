@@ -40,7 +40,19 @@ Page bundles are an optional way to organize page resources within Hugo. You can
 &lt;p>QR Code是分享網站連結常用的方法。適合在印刷上面方便用讀者進入網頁，不用一個一個字照著打。
 而製作一個好看的QR Code不但可以讓畫面更好看，還可以增進使用者掃描的意願。而其中我覺得最好看的QR Code生成器就是LINK to QR。&lt;/p></description></item><item><title>【網頁&amp;捷徑】旌旗教會週報下載器</title><link>https://EM-Tec.github.io/post/banner_weekly_downloader/</link><pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/banner_weekly_downloader/</guid><description>
 &lt;p>當時在製作的時候正是疫情爆發的時間，教會聚會全面改成線上，且只有提供週報的圖片檔，因此製作了一個可以下載週報的網站。即使現在疫情已經過去，我還是習慣使用這它&lt;/p></description></item><item><title>【GAS】用Line Bot&amp;Line Notify轉發群組訊息給自己</title><link>https://EM-Tec.github.io/post/line2notify/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/line2notify/</guid><description>
-&lt;p>你是否有群組充滿著垃圾訊息？用Line Bot&amp;amp;Line Notify轉發重要訊息給自己！不用程式經驗，複製貼上就好了！&lt;/p></description></item><item><title>【GAS】自製點名系統</title><link>https://EM-Tec.github.io/post/frog_check_in/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/frog_check_in/</guid><description>
+&lt;p>你是否有群組充滿著垃圾訊息？用Line Bot&amp;amp;Line Notify轉發重要訊息給自己！不用程式經驗，複製貼上就好了！&lt;/p>
+&lt;p>&lt;figure>
+&lt;picture>
+&lt;img
+loading="lazy"
+decoding="async"
+alt="某群組充斥著垃圾訊息"
+class="image_figure image_external image_unprocessed"
+src="https://em-tec.github.io/images/line2notify-why.jpg"
+/>
+&lt;/picture>
+&lt;/figure>
+&lt;/p></description></item><item><title>【GAS】自製點名系統</title><link>https://EM-Tec.github.io/post/frog_check_in/</link><pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/frog_check_in/</guid><description>
 &lt;p>大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。&lt;/p></description></item><item><title>【MultiWall】讓不同螢幕放不同桌布</title><link>https://EM-Tec.github.io/post/multiwall/</link><pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/multiwall/</guid><description>
 &lt;p>使用多個螢幕可以大大的增加工作效率。比如說在開直播時可以在遊戲全螢幕時同時做OBS畫面切換或是查看聊天室。
 但是你是否有發現所有螢幕的桌布都只能設定一樣的。而如果你像我一樣兩個螢幕比例不同的話，其中一張比例會直接跑掉，十分的影響美觀。&lt;/p>
