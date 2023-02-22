@@ -23,7 +23,7 @@ toc = true
 
 機器人在群組收到訊息，過濾不要的，再讓Line Notfy轉傳訊息到群組或私訊給你。
 
-### LINE bot 
+### LINE bot 
   
  至[Line Developers](https://developers.line.biz/console/) => 新增或選取Provider => Create a new channel => Message API。
  > * Messaging API 底下的 Webhook 等一下我們要填入，非常重要。
