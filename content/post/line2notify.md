@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "【GAS】用Line Bot&Line Notify轉發群組訊息給自己"
-date = "2021-10-07"
+date = "2023-02-22"
 description = "你是否有群組充滿著垃圾訊息？用Line Bot&Line Notify轉發重要訊息給自己！"
 featured = true
 tags = [
