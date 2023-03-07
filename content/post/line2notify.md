@@ -15,10 +15,14 @@ categories = [
 ]
 toc = true
 +++
+
 你是否有群組充滿著垃圾訊息？用Line Bot&Line Notify轉發重要訊息給自己！不用程式經驗，複製貼上就好了！
 
-![某群組充斥著垃圾訊息](https://em-tec.github.io/images/line2notify-why.jpg)
 <!--more-->
+
+![某群組充斥著垃圾訊息](https://em-tec.github.io/images/line2notify-why.jpg)
+
+
 ## 原理
 
 機器人在群組收到訊息，過濾不要的，再讓Line Notfy轉傳訊息到群組或私訊給你。
