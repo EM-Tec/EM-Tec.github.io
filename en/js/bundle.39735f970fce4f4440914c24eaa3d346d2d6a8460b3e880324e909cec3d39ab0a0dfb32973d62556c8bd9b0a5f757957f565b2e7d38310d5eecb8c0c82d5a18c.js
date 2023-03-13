@@ -6,8 +6,10 @@ const featuredImageClass = 'image_featured';
 const imageScalableClass = 'image-scalable';
 const scaleImageClass = 'image-scale';
 const pageHasLoaded = 'DOMContentLoaded';
-const imageAltClass = 'img_alt'
+const imageAltClass = 'img_alt';
 
+
+const defaultSiteLanguage = 'zh-tw';
 const baseURL = 'https://EM-Tec.github.io/';
 const searchFieldClass = '.search_field';
 const searchClass = '.search';
@@ -889,6 +891,9 @@ function fileClosure(){
         // Insert caption
         image.insertAdjacentHTML('afterend', desc.outerHTML);
       }
+
+      // Persist modified alt to image element
+      image.alt = alt
     });
 
     hljs.initHighlightingOnLoad();
