@@ -20,7 +20,7 @@ toc = true
 
 <!--more-->
 
-![某群組充斥著垃圾訊息](https://em-tec.github.io/images/line2notify-why.jpg)
+![某群組充斥著垃圾訊息](https://em-tec.github.io/images/line2notify-why.webp)
 
 
 ## 原理
