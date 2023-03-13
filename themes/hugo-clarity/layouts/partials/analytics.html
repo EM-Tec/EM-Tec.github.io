@@ -3,16 +3,18 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', '{{ . }}');
 </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9975357988525791"
+  crossorigin="anonymous"></script>
 {{- end -}}
 
 {{- with $config.baidu_analytics }}
 <script>
   var _hmt = _hmt || [];
-  (function() {
+  (function () {
     var hm = document.createElement("script");
     hm.src = "https://hm.baidu.com/hm.js?{{ . }}";
     var s = document.getElementsByTagName("script")[0];
@@ -24,8 +26,8 @@
 {{ $plausible := $config.plausible_analytics }}
 {{- if $plausible.enable }}
 <script async defer data-domain="{{ $plausible.websiteDomain }}"
-src='https://{{ default "plausible.io" $plausible.plausibleDomain }}/js/{{ default "plausible" $plausible.scritpName }}.js'>
-</script>
+  src='https://{{ default "plausible.io" $plausible.plausibleDomain }}/js/{{ default "plausible" $plausible.scritpName }}.js'>
+  </script>
 {{- end }}
 
 {{- $matomo := $config.matomo_analytics }}
@@ -40,14 +42,17 @@ src='https://{{ default "plausible.io" $plausible.plausibleDomain }}/js/{{ defau
   _paq.push(["setDoNotTrack", true]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//{{ $matomo.matomoDomain }}/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
+  (function () {
+    var u = "//{{ $matomo.matomoDomain }}/";
+    _paq.push(['setTrackerUrl', u + 'matomo.php']);
     _paq.push(['setSiteId', '{{ default 1 $matomo.matomoSiteID }}']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript'; g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
   })();
 </script>
-<noscript><p><img src="//{{ $matomo.matomoDomain }}/matomo.php?idsite={{ default 1 $matomo.matomoSiteID }}&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<noscript>
+  <p><img src="//{{ $matomo.matomoDomain }}/matomo.php?idsite={{ default 1 $matomo.matomoSiteID }}&amp;rec=1"
+      style="border:0;" alt="" /></p>
+</noscript>
 <!-- End Matomo Code -->
 {{- end }}
