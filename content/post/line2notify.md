@@ -54,20 +54,33 @@ Line Notify是個比較冷門但是非常好用的工具。我們可以透過他
 請建立一個新的專案並貼上以下內容。記得貼上記得貼上Line Notify Token。
 
 ```js
+// 定義一個名為 'doPost' 的函數，該函數帶有一個名為 'e' 的參數。
 function doPost(e) {
+  
+  // 從傳入的 POST 請求中解析出文本消息。只要是傳給機器人的訊息都會被解析出來。
   var message = JSON.parse(e.postData.contents).events[0].message.text;
+  
+  // 從傳入的 POST 請求中解析出使用者 ID。
   var id = JSON.parse(e.postData.contents).events[0].source.userId;
+  
+  // 如果沒有 ID，則返回。你可以在這裡加入你的過濾條件。
   if (!id) return;
+  
+  // 設置 Line Notify API 的權杖。
   var token = "YOUR_LINE_NOTIFY_TOKEN";
+  
+  // 設置 POST 請求的選項。
   var options = {
     "method": "post",
     "payload": {
-      "message": id + "\n" + message
+      "message": id + "\n" + message // 這裡是要傳送的訊息，我們第一行放了發送者的id，第二行放了訊息本身。可以自行修改。
     },
     "headers": {
       "Authorization": "Bearer " + token
     }
   };
+  
+  // 發送 POST 請求到 Line Notify API。會傳給剛才設定的權杖指定的群組或私人訊息。
   UrlFetchApp.fetch("https://notify-api.line.me/api/notify", options);
 }
 ```
