@@ -36,7 +36,7 @@ series = ["別說我教的系列"]
             observer.disconnect();
             if (channelName.innerText == '錫蘭Ceylan') {
                 var subscriberCountText = subCount.innerText;
-                var replacedText = subscriberCountText.replace("萬", "億").replace("万", "亿");
+                var replacedText = subscriberCountText.replace("萬", "兆").replace("万", "兆");
                 subCount.innerText = replacedText;
             }
         }
