@@ -1,8 +1,8 @@
 +++
 author = "毛哥EM"
 title = "【GAS】從頭到尾建立表單網站：使用GitHub Pages和Google Sheets存儲數據"
-date = "2022-08-14"
-description = "直接把整個試算表連結發給別人除了要載入很久且會出現一堆不需要的按鍵，整個畫面很醜很沒有質感。而且如果你把其他隱私的資料也放在裡面，都會被一次看光光。那我們就來幫試算表包個糖衣吧"
+date = "2023-03-24"
+description = "本文將詳細介紹如何使用GitHub Pages建立靜態網站，以及如何使用Google Sheets作為數據儲存庫來收集和管理表單數據。跟隨本文的指導，您可以輕鬆地建立一個美觀實用的表單網站，並且可以方便地收集和管理您所需的數據。"
 featured = true
 tags = [ "自製", "HTML", "CSS", "JavaScript", "Github", "GAS" ]
 series = ["複製貼上就能成為工程師"]
@@ -21,22 +21,15 @@ draft = true
 
 在此過程中，使用Google Sheets作為數據儲存庫也是非常方便的。這樣做的好處在於，可以輕鬆地收集、存儲和管理來自不同來源的數據，並進行進一步的分析。
 
-我們來做一個超簡單的小網頁讓它自己去表格抓你要的資料來顯示。我們會寫一些程式(HTML,CSS,Js）不過如果你不會也沒關系w只要跟著步驟複製貼上就可以了。
-
-{{% notice info "薩波委託進度" %}}
-
-開發者:毛哥EM(我)
-類型:網站
-網址:[毛哥EM的基地](https://Edit-Mr.github.io/code/sabooo) {{% /notice %}}
-
 ## 架一個網站！
-
-你可以使用任何一個可以給你存放網站代碼的地方，比如說[Github](https://github.io)。
+今天我要來幫西苑高中的網頁設計營隊做一個報名網頁。我們先來看一下我們要做的網頁。
 
 我從[Codepen](https://codepen.io/)上找到了一個很好看的表格模板來做修改。它在螢幕尺寸太窄的時候會用不同的版面來顯示，保持使用者體驗。你也可以找其他的模板或者是自己建立一個。
 
+你可以使用任何一個可以給你存放網站代碼的地方，比如說[Github](https://github.io)。你可以觀看我的這個教學來學習如何使用Github Pages來建立一個網站。[【Github】從頭到尾建立網站：使用Github Pages和Github Desktop](https://em-tec.github.io/post/create-site-with-github-pages/)
 
-我在網站上增加了一點文字、顏色(CSS)、超連結(`<a>`)、還有圖片、縮圖。以及簡單的出場動畫(animate.css)<s>來炫技</s>。
+
+
 
 ## 後端 GAS! GAS!
 好了前端做好了接下來我們來建另一個網站讓剛才那個網站來這裡讀取資料。為了方便起見我們在給資料的時候直接給一個做好的表格讓網站貼上。
