@@ -105,7 +105,7 @@ git clone
 <!DOCTYPE html>
 <head>
  <meta charset="utf-8" />
- <title>主選單 - 大眼蛙教練點名系統</title>
+ <title>歡迎來到我的網站</title>
 </head>
 <body>
   <h1>歡迎來到我的網站</h1>
