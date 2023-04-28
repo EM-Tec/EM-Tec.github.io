@@ -3,7 +3,6 @@ author = "毛哥EM"
 title = "【新網站】EM's Notes"
 date = "2022-10-29"
 description = "一個我存放筆記的地方"
-featured = true
 tags = [  "自製"
 ]
 categories = [
