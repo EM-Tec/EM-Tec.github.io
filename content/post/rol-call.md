@@ -384,7 +384,7 @@ https://script.google.com/macros/s/AKfycbzxqGIMBbLkCka2aveltdVHYtdG-k_X98qzSd_V9
 
 這樣你的網頁就建立完成且可以使用了。如果你想客製化顏色的話可以修改CSS。比如說如果你想改標題你可以修改[第13行](https://github.com/Edit-Mr/roll-call/blob/b694aec4381906980277b202fbc7909c95e2c544/index.html#L13)
 
-```
+```css
 color: var(--nord7)
 ```
 你可以改成任何顏色，例如：`color: red`，或是`color: #ff0000`，或是`color: rgb(255, 0, 0)`。
