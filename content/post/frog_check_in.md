@@ -22,6 +22,12 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 +++
 大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。
 <!--more-->
+{{% notice info "大眼蛙教練點名系統" %}}
+這篇文章出乎意料地幫助到許多人，因此我在2023年重新寫了一次，比上次更容易製作和操作，也更好看一些(我覺得啦)。
+
+建議閱讀這篇文章: <https://em-tec.github.io/post/rol-call/>
+{{% /notice %}}
+
 ![首頁](https://EM-Tec.github.io/images/frog_check_in-home.png)
 {{% notice info "大眼蛙教練點名系統" %}}
 
