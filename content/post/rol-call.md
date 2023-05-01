@@ -17,9 +17,9 @@ categories = [
     "製作教學"
 ]
 toc = true
-thumbnail = "images/thumbnails/roll-call.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/roll-call.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/roll-call.jpg"
+thumbnail = "images/thumbnails/roll-call.webp"
+featureImage = "https://em-tec.github.io/images/thumbnails/roll-call.webp"
+shareImage = "https://em-tec.github.io/images/thumbnails/roll-call.webp"
 +++
 
 本文將教授如何使用程式製作一個簡單的點名網頁。透過這個點名系統，你可以方便地管理你的學生出席狀況，並且隨時查詢歷史出席紀錄。我們將使用 Google Apps Script, GitHub 和 Google Sheets 來建立這個點名系統。**我敢保證即使你完全不會程式也可以在5分鐘內完成**。本文會詳細說明從建立 Google Sheets 到部屬網頁的步驟，並提供完整的程式碼和演示網頁。
