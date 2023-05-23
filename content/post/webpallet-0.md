@@ -2,8 +2,7 @@
 author = "毛哥EM"
 title = "EP.0 歡迎來到網棧"
 date = "2023-05-01"
-description = "本文將教授如何使用程式製作一個簡單的點名網頁。透過這個點名系統，你可以方便地管理你的學生出席狀況，並且隨時查詢歷史出席紀錄。我們將使用 Github, Google Apps Script 和 Google Sheets 來建立這個點名系統，不需要太高深的編程技巧，任何人都可以學會。本文會詳細說明從建立 Google Sheets 到撰寫 Apps Script 的步驟，並提供完整的程式碼和演示網頁。"
-featured = true
+description = "哈囉大家好，我是毛哥EM，歡迎來到網棧。這是毛哥EM資訊密技的全新系列，我們將討論各種網頁設計的技術與技巧。"
 tags = [
 "自製", 
     "HTML",
