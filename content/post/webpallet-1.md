@@ -16,7 +16,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 
 哈囉大家好，我是毛哥EM，歡迎來到網棧。今天我們要來聊聊什麼是網站
 
-<!-- more -->
+<!--more-->
 
 {{< youtube lOecpIqOjjY >}}
 

@@ -21,7 +21,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 
 哈囉大家好，我是毛哥EM，歡迎來到網棧。這是毛哥EM資訊密技的全新系列，我們將討論各種網頁設計的技術與技巧。
 
-<!-- more -->
+<!--more-->
 
 {{< youtube oBIl0DzXujw >}}
 
