@@ -23,6 +23,8 @@ shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 
 <!-- more -->
 
+{{< youtube oBIl0DzXujw >}}
+
 在前面的五集中，我會講解什麼是網頁，並快速帶大家認識HTML、CSS、JavaScript，還有如何架設網站。接下來我深入討論每一個細節，以及如何做出各種效果與功能。
 
 每週一早上六點，我會在YouTube和各大Podcast平台不定時更新。如果你喜歡文字版歡迎到毛哥EM資訊密技閱讀，也歡迎在Instagram和Google新聞追蹤毛哥EM資訊密技。

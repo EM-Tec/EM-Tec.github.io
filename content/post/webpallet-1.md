@@ -18,6 +18,8 @@ shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 
 <!-- more -->
 
+{{< youtube lOecpIqOjjY >}}
+
 相信大家看過Word檔對吧，Word檔是要用Microsoft Word打開的文件，副檔名是.docx
 
 而網頁是一個要透過「瀏覽器」開啟的文件，副檔名通常是.html
