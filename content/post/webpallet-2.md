@@ -14,7 +14,7 @@ featureImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 +++
 
-哈囉大家好，我是毛哥EM，歡迎來到網棧。今天我要讓你5分鐘學會所有常用的HTML語法
+哈囉大家好，我是毛哥EM，歡迎來到網棧。今天我要讓你5分鐘學會所有常用的HTML語法。
 
 <!--more-->
 
