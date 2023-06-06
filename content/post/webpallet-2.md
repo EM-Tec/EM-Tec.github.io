@@ -26,8 +26,6 @@ HTML叫做超文本標記語言(Hyper Text Markup Language)。故名思義就是
 
 首先這是一段文字。如果你想要讓它成為粗體的話請你在兩邊加入 `<b>` 和 `</b>`。就像word一樣，B代表了bold。那麼我們把隔壁幾個鄰居也搬過來吧
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d21870a3-33cd-4924-8446-eb0fcdd6bbe8/Untitled.png)
-
 `<i>`是斜體(Italic)、 `<u>` 是底線(Underline)、而 `<s>` 是劃掉(Strike)。不過這幾個都只是好看而已，對於瀏覽器來說沒什麼意義，因此我比較建議你使用 `<strong>` 來增加重要性，而語氣轉折或想區別強調文字時使用 `<em>` (emphasis)。
 
 今天假設你建立了一個 `<h1>` 元素，代表標題(header)，但是你還想增加一個屬性告訴瀏覽器說這是一個中文的標題，這時你可以這樣打: `<h1 lang="zh-TW">` 意思是說這是一段繁體中文的標題。前面這一串我們叫做開始標記，後面的 `</h1>`叫做結束標記。lang叫做屬性，而zh-TW是屬性質。
