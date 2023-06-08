@@ -20,17 +20,15 @@ shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 
 {{< youtube lOecpIqOjjY >}}
 
-HTML叫做超文本標記語言(Hyper Text Markup Language)。故名思義就是標記一下文字，目的是讓**瀏覽器知道這個是什麼**。比如說Google想知道網站標題會去找裡面的`<h1>`；而給盲人用的語音閱讀器在看到`<stronge>`會加重語氣。主要功能不是為了裝飾文字喔，裝飾文字是CSS的工作（下禮拜就來講）
+HTML叫做超文本標記語言(Hyper Text Markup Language)。故名思義就是標記一下文字，要記得HTML主要功能不是為了裝飾，目的是讓**瀏覽器知道這個是什麼**。比如說Google想知道網站標題會去找裡面的`<h1>`；而給盲人用的語音閱讀器在看到`<stronge>`會加重語氣。裝飾文字是CSS的工作，下禮拜就來講）
 
 不過讓我們先來實際寫寫看HTML再來慢慢探討這些大道理。首先請你再瀏覽器輸入`pen.new`。輸入之後你會看到三個輸入框方別讓你輸入HTML,CSS,和JavaScript，還有底下的預覽區域。這個網站叫做CodePen，是一個可以讓大家互相分享網頁作品的網站。平常做網站時可以來這裡尋找靈感，或是參考別人的作法。
 
 首先這是一段文字。如果你想要讓它成為粗體的話請你在兩邊加入 `<b>` 和 `</b>`。就像word一樣，B代表了bold。那麼我們把隔壁幾個鄰居也搬過來吧
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d21870a3-33cd-4924-8446-eb0fcdd6bbe8/Untitled.png)
-
 `<i>`是斜體(Italic)、 `<u>` 是底線(Underline)、而 `<s>` 是劃掉(Strike)。不過這幾個都只是好看而已，對於瀏覽器來說沒什麼意義，因此我比較建議你使用 `<strong>` 來增加重要性，而語氣轉折或想區別強調文字時使用 `<em>` (emphasis)。
 
-今天假設你建立了一個 `<h1>` 元素，代表標題(header)，但是你還想增加一個屬性告訴瀏覽器說這是一個中文的標題，這時你可以這樣打: `<h1 lang="zh-TW">` 意思是說這是一段繁體中文的標題。前面這一串我們叫做開始標記，後面的 `</h1>`叫做結束標記。lang叫做屬性，而zh-TW是屬性質。
+今天假設你建立了一個 `<h1>` 元素，代表一級標題(header)，但是你還想增加一個屬性告訴瀏覽器說這是一個中文的標題，這時你可以這樣打: `<h1 lang="zh-TW">` 意思是說這是一段繁體中文的標題。前面這一串我們叫做開始標記，後面的 `</h1>`叫做結束標記。lang叫做屬性，而zh-TW是屬性質。
 
 HTML就是這樣建立一個又一個地”元素” (element) 。因為寫HTML時你需要一直重複打大於小於符號很麻煩，你知道工程師都是很懶的，所以Сергей Чикуёнок發明了emmet。假如說你想建立一個`<h1>`元素你只需要打`h1`然後按`tab`就可以了。
 
@@ -61,7 +59,7 @@ H<sup>+</sup> CO<sub>2</sub>
 
 ## 空白 換行
 
-也許你有發現，在HTML中一個以上的tab、空格、換行都視為一個空格，因此你可以自由地排版保持程式的簡潔。但是如果你想要換行的話，你可以使用`<br>`元素換行。而如果你想要插入一個空白的話，你可以使用`&nbsp;`。
+也許你有發現，在HTML中一個以上的tab、空格、換行都視為一個空格，因此你可以自由地排版保持程式的簡潔。但是如果你想要換行的話，你可以使用`<br>`元素換行，`<hr>`插入分隔線(Horizontal Rule)。而如果你想要插入一個空白的話，你可以使用`&nbsp;`。
 
 ```html
 橫線<hr />
@@ -173,7 +171,7 @@ H<sup>+</sup> CO<sub>2</sub>
 
 ## 圖片
 
-如果你想要插入圖片，你可以使用`<img>` (iamge)元素，並在`src` (source)屬性中指定圖片的來源，`alt`屬性中填入圖片的敘述。如果圖片無法顯示時就會使用這個替代文字，而Google也會透過這個文字了解圖片內容。
+如果你想要插入圖片，你可以使用`<img>` (image)元素，並在`src` (source)屬性中指定圖片的來源，`alt`( alternative text)屬性中填入圖片的敘述。如果圖片無法顯示時就會使用這個替代文字，而Google也會透過這個文字了解圖片內容。
 
 ```html
 <img src="來源" alt="文字敘述">
@@ -183,7 +181,7 @@ H<sup>+</sup> CO<sub>2</sub>
 比如說這個是從Google首頁抓下來的圖片，我們可以這樣寫:
 
 ```html
-<img src="<https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png>" alt="Google">
+<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
 
 ```
 
