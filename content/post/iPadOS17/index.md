@@ -4,9 +4,9 @@ title = "iPadOS 17 真實心得 官方沒講的秘密，質感體驗的大升級
 date = "2023-06-09"
 description = ""
 tags = ["ios"]
-thumbnail = "https://upload.wikimedia.org/wikipedia/commons/9/96/IOS_17_logo.png"
-featureImage = "https://upload.wikimedia.org/wikipedia/commons/9/96/IOS_17_logo.png"
-shareImage = "https://upload.wikimedia.org/wikipedia/commons/9/96/IOS_17_logo.png"
+thumbnail = "https://em-tec.github.io/post/ipados17/6.webp"
+featureImage = "https://em-tec.github.io/post/ipados17/6.webp"
+shareImage = "https://em-tec.github.io/post/ipados17/6.webp"
 usePageBundles = true
 toc = true
 aliases = ["hugo-page-bundles"]
@@ -15,6 +15,8 @@ aliases = ["hugo-page-bundles"]
 iOS17, iPadOS17在6/6號發佈，隔天就開放給我們使用了，可以說是最快的一次。這一次的更新不是炫砲的功能，而是質感的大提升。滿滿的細節升級享受絲滑的體驗，發布會Ai不提但滿滿的都是人工智慧和深度學習。
 
 <!--more-->
+
+![iPadOS 17 Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/IPadOS_17_logo.png/170px-IPadOS_17_logo.png)
 
 毛哥我這兩天很忙，使用我M1 iPad Pro的量非常大。從文書處裡到影片剪輯都有使用到。因此經過了所有功能完整的體驗，我來跟大家分享一下我的心得。*如果你看到其他部落格或YouTuber提到的功能我沒提到那就是明明之前就有了，~~看他在唬爛~~。*
 
