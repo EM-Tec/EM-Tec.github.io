@@ -9,6 +9,7 @@ featureImage = "https://upload.wikimedia.org/wikipedia/commons/9/96/IOS_17_logo.
 shareImage = "https://upload.wikimedia.org/wikipedia/commons/9/96/IOS_17_logo.png"
 usePageBundles = true
 toc = true
+aliases = ["hugo-page-bundles"]
 +++
 
 iOS17, iPadOS17在6/6號發佈，隔天就開放給我們使用了，可以說是最快的一次。這一次的更新不是炫砲的功能，而是質感的大提升。滿滿的細節升級享受絲滑的體驗，發布會Ai不提但滿滿的都是人工智慧和深度學習。
