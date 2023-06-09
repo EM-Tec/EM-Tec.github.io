@@ -3,7 +3,6 @@ author = "毛哥EM"
 title = "所有iOS & iPadOS 17 Beta問題整理"
 date = "2023-06-08"
 description = ""
-categories = ["筆記"]
 tags = ["ios"]
 thumbnail = "https://upload.wikimedia.org/wikipedia/commons/9/96/IOS_17_logo.png"
 featureImage = "https://upload.wikimedia.org/wikipedia/commons/9/96/IOS_17_logo.png"
