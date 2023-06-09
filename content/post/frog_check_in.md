@@ -3,7 +3,6 @@ author = "毛哥EM"
 title = "【GAS】自製點名系統"
 date = "2021-10-07"
 description = "使用Google sheet 試算表表單串接api。介紹、使用說明與製作教學"
-featured = true
 tags = [
 "自製", 
     "HTML",
@@ -23,6 +22,12 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 +++
 大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。
 <!--more-->
+{{% notice info "大眼蛙教練點名系統" %}}
+這篇文章出乎意料地幫助到許多人，因此我在2023年重新寫了一次，比上次更容易製作和操作，也更好看一些(我覺得啦)。
+
+建議閱讀這篇文章: <https://em-tec.github.io/post/rol-call/>
+{{% /notice %}}
+
 ![首頁](https://EM-Tec.github.io/images/frog_check_in-home.png)
 {{% notice info "大眼蛙教練點名系統" %}}
 
@@ -181,7 +186,13 @@ function debug() {
 編號 | 姓名 | 時間 |剩餘課堂數
 ----|----|----|----|
 1 | 測試先生 | 2021/10/10 22:46:00 | 10
+ ![GAS快速教學](https://em-tec.github.io/images/gas.jpg)
 
+做好了之後點擊執行▶️，你會需要授予你的程式讀取資料的權限。因為你寫的程式沒有被Google驗證過所以會顯示不安全，但我相信你不會把你的帳號搞爆，對吧
+
+接下來我們要部署它，讓它成為一個網站來讓我們抓。這裡選擇網頁應用程式，所有人都以你的身份讀取。按下部署就可以囉
+
+這裡我們把部署的網址複製起來。如果要做修改除了按儲存之外要記得重新部署成新版本才會更新喔
 {{% notice notice "小叮嚀" %}}
 若發布後還有做修改，既得要再次發布且要發布為新版本。
 {{% /notice %}}

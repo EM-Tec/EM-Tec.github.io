@@ -3,7 +3,6 @@ author = "毛哥EM"
 title = "【網頁&捷徑】旌旗教會週報下載器"
 date = "2021-12-01"
 description = "輕鬆下載當天或之前的週報"
-featured = true
 tags = [  "自製",
     "Github",
     "JSON",
