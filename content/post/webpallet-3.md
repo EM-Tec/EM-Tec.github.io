@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "EP.3 CSS教學 10分鐘完結"
+title = "EP.3 10分鐘 基本CSS教學"
 date = "2023-06-12"
 description = "今天我要讓你10分鐘學會所有常用的CSS語法"
 tags = [
@@ -211,7 +211,6 @@ background-attachment: local; /* 一起動 */
 
 漸層的邏輯可以參考我的[網頁漸層指引](https://www.instagram.com/p/Cn99VUIvbLf/)(然後你可以順便按讚追蹤)
 
-<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Cn99VUIvbLf/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/Cn99VUIvbLf/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">在 Instagram 查看這則貼文</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/Cn99VUIvbLf/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">毛哥EM資訊密技（@em.tec.blog）分享的貼文</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
 
 語法可以直接寫多個顏色，在空白後寫佔的比例。
 
@@ -369,7 +368,7 @@ inline往右，block往下
 
 # sticky
 
-以自己為基準，卡在那裡，但sticky元素仍然in flow，元素佔位會保留
+以自己為基準，卡在那裡，但sticky元素仍然in flow，元素佔位會保留。
 
 ![](https://media.giphy.com/media/LRs2BIsDx1WjzSdIAJ/giphy.gif)
 
@@ -425,7 +424,7 @@ img {
 
 ## transition 轉場
 
-當元素因為各種原因改變屬性質，比如說javascript改的或著是因為元素被點擊等等。
+當元素因為各種原因改變屬性質，比如說javascript改的或著是因為元素被點擊等等。會在指定時間平滑的切換過去，做出簡單的動畫。
 
 ``` css
 transition: 屬性 轉換時間 延遲執行動畫的時間 速度;
@@ -437,6 +436,8 @@ transition: padding .3s 0s, background-color 1s 1s; // 可以各別設定，用�
 任何屬性都可以設定transition，比如說文字段落滑過要變色也可以。
 
 ## overflow
+
+假設元素超過了框框的大小。可能是父原素的大小有可能是超過了螢幕的大小。這時候我們可以使用overflow屬性來決定要怎麼處理。最常用的是hidden隱藏、auto自動還有scroll，也就是顯示滾動軸。
 
 ```css
 /* Keyword values */
@@ -450,20 +451,75 @@ overflow: hidden visible;
 ```
 
 ## Media
+
+Media可以告訴瀏覽器在不同的螢幕大小該如何呈現。這個是基本的語法。
+
 ```css
 @media screen and (條件) and (條件)...{ // 判斷式，用在screen螢幕的媒體
-}
-
-// 舉例
-@media screen and (min-width: 768px){ // why 設定768px?  i pad 的解析度1024*768
-    // 表768px以上的尺寸 樣式如何呈現(桌機)
 }
 ```
 
 
+語法有很多不同的寫法，我決定教你一個雖然是最近出來，但是絕對是最好理解的屬性。
+
+```css
+@media (height > 600px) {
+h1{
+font-size:2em;
+}
+```
+
+他的意思是說假設螢幕寬度大於600像素，那麼大標題就要以正常字體的兩倍大顯示。
+
+## 偽類
+
+偽類可以讓我們針對特定的元素狀態或條件應用樣式，這使得我們可以更好地控制和美化網頁的外觀。
+
+在CSS中，偽類以冒號（:）開頭，並在選擇器後面添加。它們可以根據元素的特定狀態或其他條件應用樣式，例如當滑鼠懸停在元素上方時，或當元素是其父元素的第一個子元素時。
+
+以下是一些常見的CSS偽類：
+
+* `:hover`：當滑鼠懸停在元素上方時應用的樣式。這是一個常見的偽類，常用於添加互動效果，例如當滑鼠懸停在按鈕上時改變其背景顏色。
+* `:active`：當元素被激活時應用的樣式。通常用於按下按鈕或鏈接時，以顯示按下效果。
+* `:visited`：應用於已訪問過的連結的樣式。這使得訪問過的連結可以與未訪問的連結區分開來。
+* `:first-child`：選擇父元素的第一個子元素。這使得我們可以針對列表中的第一個元素或表格中的第一列應用特定的樣式。
+* `:nth-child()`：選擇父元素中特定位置的子元素。這個偽類允許我們按照一定的模式選擇元素，例如 :nth-child(2n) 可以選擇所有偶數位置的元素。
+
+比如說你想要元素在滑鼠放在上面時往上移一點，有選牌得感覺，你可以這樣打
+
+```css
+.card:hover{
+  transform: translateX(-10px);
+}
+ 
+這只是偽類的一小部分，還有其他更多的偽類可供使用。使用偽類，我們可以根據特定的條件和狀態來微調網頁的樣式，使其更具交互性和吸引力。
+
+
+## 偽元素
+
+最後我們來談談偽元素
+跟偽類的差異在於，偽類是基於真實存在的元素去選取不存在的class，而偽類則是基於存在的元素，創出一個虛擬的元素。它的選擇符是::雙冒號。
+
+直接看範例，你們就懂了
+
+```html
+<p>大家好</p>
+```
+
+```css
+p::before {
+  content: ”哈囉“;
+}
+
+```
+
+哈囉大家好
+
+沒錯就是這麼簡單，通常我們會拿它來做視覺效果。比如說在開啟新分頁的超連結旁邊放一個小小的箭頭符號。
+
 ## 總結
 
-好啦，今天我們介紹了許多不同的HTML元素。這些已經是最常用的元素了，如果你想知道更多的元素，可以到[MDN](https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element)查詢。下一週我們要來介紹CSS來裝飾我們的網頁。
+好啦，今天我們介紹了許多不同的CSS屬性。這些已經是最常用的屬性了，但礙於篇幅我們有一些沒有講的很詳細。如果你想知道更多的屬性，可以到[MDN](https://developer.mozilla.org/zh-TW/docs/Web/CSS)查詢。下一週我們要來介紹如何使用VSCode這個酷酷的「整合式開發環境」。
 
 每週一早上六點，我們會在YouTube和各大Podcast平台不定時更新。如果你喜歡文字版，也歡迎在Instagram和Google新聞追蹤毛哥EM資訊密技。
 我是毛哥EM，讓我們下週再見！
