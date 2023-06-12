@@ -225,7 +225,7 @@ background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
 ```
 
 <img src=https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient/linear-gradient.png style="width:300px;display:inline;" />
-<img src=https://i.imgur.com/XUupJaf.png style="width:300px;display:inline;" />
+![](https://i.imgur.com/XUupJaf.png)
 
 ## border
 
