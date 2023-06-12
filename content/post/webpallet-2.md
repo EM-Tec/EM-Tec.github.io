@@ -18,7 +18,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 
 <!--more-->
 
-{{< youtube lOecpIqOjjY >}}
+{{< youtube 3NV8ZQtfQm0 >}}
 
 HTML叫做超文本標記語言(Hyper Text Markup Language)。故名思義就是標記一下文字，要記得HTML主要功能不是為了裝飾，目的是讓**瀏覽器知道這個是什麼**。比如說Google想知道網站標題會去找裡面的`<h1>`；而給盲人用的語音閱讀器在看到`<stronge>`會加重語氣。裝飾文字是CSS的工作，下禮拜就來講）
 

@@ -16,8 +16,6 @@ shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 
 <!--more-->
 
-{{< youtube lOecpIqOjjY >}}
-
 CSS的功能是來裝飾HTML的，因此這部影片假設你已經會使用Codepen和HTML了，如果還沒有的話建議你先去看EP.2 十分鐘完結HTML喔。有一些部分可能比較難理解，但我相信你只要多練習幾次就可以了。
 
 
