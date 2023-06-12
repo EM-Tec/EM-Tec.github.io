@@ -272,10 +272,6 @@ box-sizing:border-box;  // 把寬度範圍指定給整個邊框到邊框之間�
 
 假設 width:300px, padding 就算加了 20px, border 加了4px，寬度依舊是300px。
 
-### box
-
-![box](https://i.imgur.com/vxm8vFhm.png)
-
 ## display
 
 CSS的Display屬性可以改變元素對外所參與的佈局環境（outer display type），白話文就是元素怎麼排。
