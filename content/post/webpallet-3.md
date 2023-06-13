@@ -16,8 +16,6 @@ shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 
 <!--more-->
 
-{{< youtube lOecpIqOjjY >}}
-
 CSS的功能是來裝飾HTML的，因此這部影片假設你已經會使用Codepen和HTML了，如果還沒有的話建議你先去看EP.2 十分鐘完結HTML喔。有一些部分可能比較難理解，但我相信你只要多練習幾次就可以了。
 
 
@@ -227,7 +225,7 @@ background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
 ```
 
 <img src=https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient/linear-gradient.png style="width:300px;display:inline;" />
-<img src=https://i.imgur.com/XUupJaf.png style="width:300px;display:inline;" />
+![](https://i.imgur.com/XUupJaf.png)
 
 ## border
 
@@ -273,10 +271,6 @@ box-sizing:border-box;  // 把寬度範圍指定給整個邊框到邊框之間�
 所以在 block 元素中只要設定 box-sizing:border-box; 就不用另外再計算padding、border 的寬度造成 width 賦予的值不直覺。
 
 假設 width:300px, padding 就算加了 20px, border 加了4px，寬度依舊是300px。
-
-### box
-
-![box](https://i.imgur.com/vxm8vFhm.png)
 
 ## display
 
