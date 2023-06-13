@@ -20,7 +20,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 
 {{< youtube 3NV8ZQtfQm0 >}}
 
-HTML叫做超文本標記語言(Hyper Text Markup Language)。故名思義就是標記一下文字，要記得HTML主要功能不是為了裝飾，目的是讓**瀏覽器知道這個是什麼**。比如說Google想知道網站標題會去找裡面的`<h1>`；而給盲人用的語音閱讀器在看到`<stronge>`會加重語氣。裝飾文字是CSS的工作，下禮拜就來講）
+HTML叫做超文本標記語言(Hyper Text Markup Language)。故名思義就是標記一下文字，要記得HTML主要功能不是為了裝飾，目的是讓**瀏覽器知道這個是什麼**。比如說Google想知道網站標題會去找裡面的`<h1>`；而給盲人用的語音閱讀器在看到`<strong>`會加重語氣。裝飾文字是CSS的工作，下禮拜就來講）
 
 不過讓我們先來實際寫寫看HTML再來慢慢探討這些大道理。首先請你再瀏覽器輸入`pen.new`。輸入之後你會看到三個輸入框方別讓你輸入HTML,CSS,和JavaScript，還有底下的預覽區域。這個網站叫做CodePen，是一個可以讓大家互相分享網頁作品的網站。平常做網站時可以來這裡尋找靈感，或是參考別人的作法。
 
