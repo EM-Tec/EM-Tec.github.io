@@ -11,7 +11,10 @@ tags = [
 
 用PDF Toolkit (pdftk)一行指令完成各種PDF處裡！
 <!--more-->
-因為這是一個終端機用指令執行的套件，所以請開啟你的終端機(Terminal/Termux/Command)並用任意一個套件軟體安裝它。比如說mac可以用brew
+因為這是一個終端機用指令執行的套件，所以請開啟你的終端機(Terminal/Termux/Command)並用任意一個套件軟體安裝它。
+## Mac 安裝
+
+比如說mac可以用brew
 ```
 brew install pdftk
 ```
@@ -22,6 +25,8 @@ brew install pdftk
 * 軟體類型:終端機套件
 * 網址:[www.pdflabs.com](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
 {{% /notice %}}
+
+## 安卓安裝
 
 這裡提供安卓系統的安裝方法。請先到F-Droid下載Termux來模擬終端機。你可以直接下載apk或先下載F-Droid再下載。記得不要去Google Play下載，會有問題。
 
@@ -37,6 +42,26 @@ brew install pdftk
 ```
 pkg update && pkg upgrade && pkg install pdftk && termux-setup-storage
 ```
+
+## Windows 安裝
+
+windows使用者可以先安裝Chocolatey。方法是用管理員身分開啟PowerShell，接著輸入這兩串指令。
+
+```bat
+Set-ExecutionPolicy AllSigned
+```
+輸入完按enter
+```bat
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+輸入完按enter，如果問你要不要繼續就按`A`然後enter。安裝pdftl請輸入
+
+```bat
+choco install pdftk
+```
+輸入完按enter，如果問你要不要繼續就按`A`然後enter即可。
+
 # 使用教學
 請先移動到存放檔案的資料夾。比如說你是使用Termux想到你的下載資料夾
 
