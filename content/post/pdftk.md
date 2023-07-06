@@ -83,8 +83,12 @@ pdftk new.pdf cat 1-96 98-end output new1.pdf
 * 1-endE 表示整篇文件所有頁面都旋轉 90 度
 
 ## 90 度旋轉 PDF 檔案的第一頁
+
+選轉方向可以選 "north" "south" "east" "west" "left" "right" 或 "down"
+
+記得要寫旋轉的頁面在關鍵字前
 ```
-pdftk  in.pdf cat 1E  2-end  output  out.pdf
+pdftk  in.pdf cat 1right  2-end  output  out.pdf
 ```
 
 ## 旋轉整個文件 180 度
