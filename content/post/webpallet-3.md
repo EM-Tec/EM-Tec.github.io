@@ -133,16 +133,16 @@ font-size: 10%; /* %在不同時候的意思不太一樣，但原則上就是你
   
 ```css
 h1 {
-  color: red; //顏色
-  font-size:1em; //字體大小
-  letter-spacing: 10px; //字體間距
-  line-height: 1.5; //行高。通常會用數字代表正常高的倍數 
-  font-weight: 500; //字體粗細，數字最大900，越大越重，預設
-  text-decoration:underline; //底線，最長是用none來把超連結醜醜的底線移除
-  font-style:italic; //斜體
-  Opacity:0.5; //不透明度
-  text-align:center; //文字對齊方向
-  font-family:arial, sans-serif; //字體，如果第一個沒有就依序往後
+  color: red; /*顏色*/
+  font-size:1em; /*字體大小*/
+  letter-spacing: 10px; /*字體間距*/
+  line-height: 1.5; /*行高。通常會用數字代表正常高的倍數 */
+  font-weight: 500; /*字體粗細，數字最大900，越大越重，預設*/
+  text-decoration:underline; /*底線，最長是用none來把超連結醜醜的底線移除*/
+  font-style:italic; /*斜體*/
+  Opacity:0.5; /*不透明度*/
+  text-align:center; /*文字對齊方向*/
+  font-family:arial, sans-serif; /*字體，如果第一個沒有就依序往後*/
 }
 ```
 
