@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "VS Code 與你值得擁有的擴充功能"
+title = "VS Code 教學與你值得擁有的擴充功能"
 date = "2023-07-31"
 description = "今天我要讓你學會使用VS Code建造網案與你值得擁有的擴充功能"
 tags = [
