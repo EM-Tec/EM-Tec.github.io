@@ -12,7 +12,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/twitter-logo.webp"
 +++
 
 引言：
-大家都認識 Twitter 的藍色小鳥，但近期的 Logo 更改卻引起了不少爭議，許多用戶都不喜歡 iPhone 和 iPad 上面的 X。若你也是其中一員，別擔心！我將向大家介紹一個全網唯一且不需捷徑跳轉的方法，讓你在 iOS 設備上將 Twitter 換回原本的 Logo，而且這個方法不會有煩人的通知逼你再看一次Logo，甚至可以把原本的X軟體直接刪除。讓我們一步步來看如何實現吧！
+大家都認識 Twitter 的藍色小鳥，但近期的 Logo 更改卻引起了不少爭議，許多用戶都不喜歡 iPhone 和 iPad 上面的 X。若你也是其中一員，別擔心！我將向大家介紹一個全網唯一且不需捷徑跳轉的方法，讓你在 iOS 設備上將 Twitter 換回原本的 Logo，而且這個方法不會有煩人的通知強迫你再看一次 Logo，甚至可以把原本的X軟體直接刪除。讓我們一步步來看如何實現吧！
 
 ## 安裝教學
 
@@ -30,11 +30,11 @@ shareImage = "https://em-tec.github.io/images/thumbnails/twitter-logo.webp"
 
 ![開啟設定](https://em-tec.github.io/images/twitter-logo-setting.webp)
 
-請你點選安裝，上面會警告這個描述檔沒有經過簽署，因為是我自己臨時做的。只要你是從我的GitHub頁面下載的且作者是Edit Mr.就不用擔心。如果你想確認的話可以點擊More Details查看描述檔內容。
+請你點選安裝，上面會警告這個描述檔沒有經過簽署，因為是我自己臨時做的。只要你是從我的 GitHub 頁面下載的且作者是 Edit Mr. 就不用擔心。如果你想確認的話可以點擊 More Details 查看描述檔內容。
 
 ![點擊安裝](https://em-tec.github.io/images/twitter-logo-.webp) 
 
-3. 安裝好之後你就會看到你的主畫面出現藍色小鳥 Logo了！沒錯就是那麼簡單。點擊後就會直接顯示網頁版的Twitter，因此你也可以直接刪除原本的X軟體。我個人認為在iPad上面比App還好用呢!排版更有效利用空間。
+3. 安裝好之後你就會看到你的主畫面出現藍色小鳥 Logo了！沒錯就是那麼簡單。點擊後就會直接顯示網頁版的 Twitter ，因此你也可以直接刪除原本的X軟體，釋放手機空間。我個人認為在iPad上面比 App 還好用呢!排版更有效利用空間。而且在App會被要求用 email 登入，在這個版本甚至可以使用 Google 或 Apple 等方式。
 
 ![實際畫面](https://em-tec.github.io/images/twitter-logo-.webp)
 
