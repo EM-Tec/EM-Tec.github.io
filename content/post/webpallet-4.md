@@ -12,7 +12,7 @@ featureImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 +++
 
-哈囉大家好，我是毛哥EM，歡迎來到網棧。今天我要帶你安裝 VS Code 來撰寫並預覽你的HTML網站，還會分享你值得擁有的擴充功能。
+哈囉大家好，我是毛哥EM，歡迎來到網棧。 
 
 在我們開始之前讓我先簡單介紹什麼是VSCode。VSCode是一個整合式開發環境Integrated Development Environment（簡稱IDE）。因為寫程式需要同時用到很多工具，包括寫程式的文字編輯器，終端機，瀏覽器等。這時如果你有一個軟體可以做到所有的功能，還可以在需要其他功能時直接下載擴充，是不是十分的方便！
 
