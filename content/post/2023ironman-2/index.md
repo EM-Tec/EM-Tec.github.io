@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "# Day2 如何打的更快 | Emmet & 預測輸入"
+title = "Day2 如何打的更快 | Emmet & 預測輸入"
 date = "2023-09-16"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
@@ -137,7 +137,7 @@ align-item: center;
 
 你也許有看過有人打 `w100` 來生成 `width: 100px` ，不過預設的px單位可以說是越來越少用。它的原理和上面一樣就是你先打值也是可以的，比如說你想要 H1 標題變成預設字體三倍大，你可以打 `fz3re`。
 
-![2023-08-30 16-29-40.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea45c91a-7dad-4e9c-b6c4-355a67e0cb8e/2023-08-30_16-29-40.gif)
+![打fz2re就可以了](https://em-tec.github.io/post/2023ironman-1/fz.gif)
 
 打fz是因為不管是 fo 變 font: optional, fn 變 font: none, ft 變 font-stretch: normal, fs 變 font-style: italic, fi 變 font: inherit, fe 變 font-emphasize
 
