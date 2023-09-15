@@ -10,7 +10,7 @@ categories = [""]
 
 # Day1 相見歡 - 庫就不酷嗎？
 
-哈囉大家好我是毛哥EM，歡迎來到**【不用庫 也能酷 - 玩'轉 CSS & Js 特效 】**
+哈囉大家好我是毛哥EM，歡迎來到 **【不用庫 也能酷 - 玩'轉 CSS & Js 特效 】**
 
 在這30天裡面我會先帶大家複習一些許多人搞不懂但很重要的語法，接者將揭開如何以最精簡的代碼，實現從簡單到複雜的特效，讓元素變得生動有趣。同時，我們也將挑戰自己，使用純JavaScript實現無需依賴庫的互動，從而提高網站效能和速度。
 
@@ -26,7 +26,7 @@ categories = [""]
 
 然而並不只是機器生成的程式碼才有載入問題，在現代網頁函式庫的使用也是非常氾濫的。像是明明只是顯示號碼牌的網頁還要套 Bootstrap，因為懶得打 `document.querySelector()`而安裝 jQuery，甚至打開 [Awwwards](https://www.awwwards.com/) 隨便找一個得獎的網站都要放一個載入動畫，似乎在洗腦你好的網站就是要等待的。
 
-![Untitled](https://em-tec.github.io/post/2023ironman-1/loading.webp)
+![Loading](https://em-tec.github.io/post/2023ironman-1/loading.webp)
 
 也許是我這個剛要升上高二的菜鳥不太會用函式庫，但自己做除了載入更快以外和可自訂性也比較高。只要熟悉效果後面的原理自己做是不會比較慢的。
 
@@ -43,7 +43,7 @@ categories = [""]
 }
 ```
 
-![Untitled](https://em-tec.github.io/post/2023ironman-1/car.webp)
+![車車](https://em-tec.github.io/post/2023ironman-1/car.webp)
 
 我使用Animate.CSS想要製作一個車開進來的效果，只需要加入一個class就可以了…
 
@@ -51,7 +51,7 @@ https://codepen.io/edit-mr/pen/bGObqWq
 
 等等我們的定位怎麼跑掉啦? 仔細一看原來 Animate.css 也是使用 `transform` 屬性來製作動畫，所以我們互相衝突了。
 
-![Untitled](https://em-tec.github.io/post/2023ironman-1/animation-transform.webp)
+![屬性衝突](https://em-tec.github.io/post/2023ironman-1/animation-transform.webp)
 
 當然你可以為了使用 Animate.css 所有的 CSS 都不使用 `transform` 屬性，但其實自己寫也沒有多麻煩喔，你只需要先把我們原本的 `left: 50` 改成出發點 `0` ，製作動畫 `@keyframes drive { to { left: 50% }` ，然後套用到車子上就可以了。同時你對於車要動多快，加速度，時間點都可以自由地掌握。
 
