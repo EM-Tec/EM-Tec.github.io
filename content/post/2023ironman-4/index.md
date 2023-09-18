@@ -36,10 +36,10 @@ transition: background 4s ease-in-out 1s;
 
 每一個屬性都可以分開設定，但真的不用跟自己過意不去。有興趣的連結下收
 
-- `[transition-delay](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay)`
-- `[transition-duration](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration)`
-- `[transition-property](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property)`
-- `[transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)`
+- [transition-delay](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay)
+- [transition-duration](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration)
+- [transition-property](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property)
+- [transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
 
 每一個屬性都可以分開設定，也可以省略一些屬性不寫。比如說
 
@@ -65,6 +65,41 @@ transition: background .5s; /* 是不是看起來超舒服! */
 
 https://codepen.io/edit-mr/pen/mdaPYLv
 
+![按鈕範例](https://em-tec.github.io/post/2023ironman-4/button.webp)
+
+```html
+<a href="">按鈕</a>
+```
+```css
+a:hover {
+  background-color: #ffffff4a;
+  transform: scale(1.2);
+}
+
+a {
+  transition: transform 0.3s ease-out;
+  /* 以下只是裝飾 */
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 5em;
+  border: #fff solid 5px;
+  padding: 1rem;
+  text-align: center;
+  width: 3em;
+}
+
+body {
+  background: #000;
+  min-height: 100svh;
+  /*   昨天講的置中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+```
 > 記得設定 `display:none` 不會有淡出效果，請用 `opacity:0;` 然後 `pointer-event: none;` 以防止誤觸。
 > 
 
@@ -72,6 +107,39 @@ https://codepen.io/edit-mr/pen/mdaPYLv
 
 https://codepen.io/edit-mr/pen/RwEamev
 
+![Width Transition](https://em-tec.github.io/post/2023ironman-4/width.gif)
+
+```css
+a::after {
+  transition: width .5s ease-out;
+  content: "";
+  height: 2px;
+  display: block;
+  background: red;
+  width: 0em;
+}
+a:hover::after,a:active::after {
+  width: 100%;
+}
+/* 以下只是裝飾 */
+a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 5em;
+  text-align: center;
+  cursor: pointer;
+}
+body {
+  background: #000;
+  min-height: 100svh;
+  /*   昨天講的置中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
 ## @keyframes
 
 要使用 keyframes 我們需要先建立一個動畫，再套用到元素上。他的語法是
@@ -134,6 +202,7 @@ animation: drive 3s forwards;
 ```
 
 https://codepen.io/edit-mr/pen/NWeKpjj
+![drive 3s forwards](https://em-tec.github.io/post/2023ironman-4/car.gif)
 
 CSS Animation 的語法如下
 
