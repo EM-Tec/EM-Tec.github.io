@@ -5,7 +5,9 @@ date = "2023-09-19"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-
+thumbnail = "images/ironman2023.webp"
+featureImage = "https://em-tec.github.io/images/ironman2023.webp"
+shareImage = "https://em-tec.github.io/images/ironman2023.webp"
 +++
 
 # Day5 載入中… Animation-delay
@@ -14,7 +16,7 @@ categories = [""]
 
 https://codepen.io/edit-mr/pen/YzdzvdV
 
-![Alt text](loading.gif)
+![Alt text](https://em-tec.github.io/post/2023ironman-5/loading.gif)
 
 可以看出來每個方塊的縮放速度是一樣的，只是越往右下就越有延遲對吧。昨天我們學到可以在 `animation` 設定延遲，其實也可以在 `animation-delay` 個別設定。讓我們來一步步用前面幾天學到的知識做出這個動畫吧。
 
@@ -22,7 +24,7 @@ https://codepen.io/edit-mr/pen/YzdzvdV
 
 在想要怎麼切板時可以尋找找齊排列的矩形來群組。以下是我想到的切版方式。
 
-![cut](cut.webp)
+![cut](https://em-tec.github.io/post/2023ironman-5/cut.webp)
 
 不知道這樣你知道如何下手了嗎?
 
@@ -86,7 +88,7 @@ main {
 
 這樣就有靜態的外觀了
 
-![這樣就有靜態的外觀了](layout.webp)
+![這樣就有靜態的外觀了](https://em-tec.github.io/post/2023ironman-5/layout.webp)
 
 方塊得動畫我們設成
 
@@ -126,7 +128,7 @@ animation: 1.5s ease-in-out infinite zoom;
 
 你就會得到一個同時縮放的動畫。我們希望它可以有海浪滾動的感覺，所以越右下角延遲應該要越大。
 
-![越右下角延遲應該要越大](rainbow.webp)
+![越右下角延遲應該要越大](https://em-tec.github.io/post/2023ironman-5/rainbow.webp)
 
 我們在 HTML 用行內 CSS 個別設定元素的延遲就可以了。可以使用 Emmet 生成再微調。
 
@@ -157,7 +159,7 @@ animation: 1.5s ease-in-out infinite zoom;
 
 這樣就能夠做出最上面的動畫啦! 如果你跟我一樣使用 Firefox Developer Edition，在偵錯工具可以看到動畫時間軸曲線。
 
-![動畫時間軸](f12.webp)
+![動畫時間軸](https://em-tec.github.io/post/2023ironman-5/f12.webp)
 
 再來一個小練習吧，來做一個圓圈載入 loading 動畫
 
@@ -165,11 +167,11 @@ animation: 1.5s ease-in-out infinite zoom;
 
 https://codepen.io/edit-mr/pen/LYMZeZE?editors=1100
 
-![有點像 Windows10更新動畫](spin.gif)
+![有點像 Windows10更新動畫](https://em-tec.github.io/post/2023ironman-5/spin.gif)
 
 有點像 Windows 更新動畫。首先我們先來製作圓圈。我畫了一張圖希望讓你更好理解。
 
-![Alt text](spin.webp)
+![Alt text](https://em-tec.github.io/post/2023ironman-5/spin.webp)
 
 我們把一個正方形放在畫面中間，並在裡面放入一個圓形。只要讓正方形旋轉裡面的圓形就會做圓周運動。我們只需要多疊幾個，並設定動畫的延遲及持續時間即可做出這個動畫。
 

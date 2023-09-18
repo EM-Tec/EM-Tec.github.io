@@ -5,7 +5,9 @@ date = "2023-09-17"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-
+thumbnail = "images/ironman2023.webp"
+featureImage = "https://em-tec.github.io/images/ironman2023.webp"
+shareImage = "https://em-tec.github.io/images/ironman2023.webp"
 +++
 
 當你拿到一張設計圖要照著做出來你的第一反應是什麼呢？是直接套 bootstrap 再說嗎？但我幾乎所有的切版**只要是整齊能畫出網格的，我都會使用flex。**而這個網格也不一定是正方形，只要是矩形就可以了。

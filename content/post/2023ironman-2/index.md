@@ -5,7 +5,9 @@ date = "2023-09-16"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-
+thumbnail = "images/ironman2023.webp"
+featureImage = "https://em-tec.github.io/images/ironman2023.webp"
+shareImage = "https://em-tec.github.io/images/ironman2023.webp"
 +++
 
 記得我在國一寫HTML的時候，傻傻的在那裡打小於、h1、大於、標題、小於、斜線、大於。我的朋友甚至發現了一個偷吃步就是先打好一堆大於小於，然後再填空。
