@@ -133,11 +133,13 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 
 https://codepen.io/edit-mr/pen/ZEVWaqq
 
+![flex-grow](https://em-tec.github.io/post/2023ironman-3/flex-grow.webp)
+
 你可以使用 **`order`** 屬性來設定順序，前到後放入整數，支援負值。但我從來沒有用到過，都是直接在 HTML 改，不過還是提供給大家。
 
 如果你不熟悉 flex 的話你可以到 **[Flexbox Froggy](https://flexboxfroggy.com/#zh-tw)** 這個網站，用遊戲的方式了解 flex。(然後提示是可以直接按，不用慢慢輸入喔)
 
-![Untitled](https://em-tec.github.io/post/2023ironman-3/4e100bd9-9c13-41cc-9bb7-23730299d59d/Untitled.png)
+![Untitled](https://em-tec.github.io/post/2023ironman-3/froggy.webp)
 
 你也可以使用今天所學到的語法複製一個 Google 的網頁。重點在排版所以按鍵的陰影和顏色可以直接打開開發者工具查看喔。我先做了一個範例提供大家參考，也能實現搜尋功能。如果有任何問題也歡迎留言。
 
