@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CSS on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/css/</link><description>Recent content in CSS on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Mon, 18 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/css/index.xml" rel="self" type="application/rss+xml"/><item><title>Day4 自己動! @keyframes 與 Transition</title><link>https://EM-Tec.github.io/post/2023ironman-4/</link><pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-4/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CSS on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/css/</link><description>Recent content in CSS on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/css/index.xml" rel="self" type="application/rss+xml"/><item><title>載入中… Animation-delay</title><link>https://EM-Tec.github.io/post/2023ironman-5/</link><pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-5/</guid><description>
+Day5 載入中… Animation-delay 假設你今天想製作這個載入動畫…
+https://codepen.io/edit-mr/pen/YzdzvdV
+可以看出來每個方塊的縮放速度是一樣的，只是越往右下就越有延遲對吧。昨天我們學到可以在 animation 設定延遲，其實也可以在 animation-delay 個別設定。讓我們來一步步用前面幾天學到的知識做出這個動畫吧。
+用 flex 切版 在想要怎麼切板時可以尋找找齊排列的矩形來群組。以下是我想到的切版方式。
+不知道這樣你知道如何下手了嗎?
+我們先寫HTML。emmet縮寫如下。
+1main&amp;gt;(.left&amp;gt;(.wheelBox&amp;gt;.wheel*2)+.box&amp;gt;div*25)+.right&amp;gt;.wheel*3 2&amp;lt;!-- 外框裡面 左邊 裝滾輪 裡面兩個 再一個裝按鈕 25個 右邊 三個滾輪--&amp;gt; CSS 設定一下寬高、形狀、與排列方式
+提示: border-radius 設定大於等於 50% 即可生成圓形
+1.box div, 2.wheel { 3 background-color: #000; 4} 5body { 6 height: 100vh; 7 display: flex; 8 justify-content: center; 9 align-items: center; 10} 11main { 12 width: 300px; 13 border: 4px solid #000; 14 display: flex; 15 border-radius: 20px; 16 padding: 10px; 17} 18.</description></item><item><title>Day4 自己動! @keyframes 與 Transition</title><link>https://EM-Tec.github.io/post/2023ironman-4/</link><pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-4/</guid><description>
 今天我們要來玩玩 CSS 動畫。CSS動畫有兩種:
 @keyframes - 動作效果 transition - 轉場效果 我們今天都拿 PowerPoint 來舉例，雖然感覺現在的學生都快只認識 Canva 了(順帶一提 Canva 就是 CSS 動畫)
 你可以想像 @Keyframes 是 PowerPoint的動畫
