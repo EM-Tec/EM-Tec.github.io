@@ -1,16 +1,14 @@
 +++
 author = "毛哥EM"
-title = "載入中… Animation-delay"
+title = "Day5 載入中… Animation-delay"
 date = "2023-09-19"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
-tags = ["HTML", "CSS", "JS"]
+tags = ["HTML", "CSS"]
 categories = [""]
 thumbnail = "images/ironman2023.webp"
 featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
-
-# Day5 載入中… Animation-delay
 
 假設你今天想製作這個載入動畫…
 
