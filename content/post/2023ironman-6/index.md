@@ -41,7 +41,7 @@ position: 屬性
 來一個範例讓大家分辨它們不同的效果
 
 https://codepen.io/edit-mr/pen/rNoYOKZ
-![範例](sunny.webp)
+![範例](https://em-tec.github.io/post/2023ironman-6/sunny.webp)
 
 ```html
 <div class="sun">Fixed</div>

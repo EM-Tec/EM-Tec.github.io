@@ -28,7 +28,7 @@ filter: blur(5px);
 
 > 冷知識：正方形 blur 可以變圓形
 
-![Blur](blur.webp)
+![Blur](https://em-tec.github.io/post/2023ironman-7/blur.webp)
 
 ### 2. 亮度（Brightness）
 
