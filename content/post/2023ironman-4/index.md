@@ -6,8 +6,8 @@ series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
 thumbnail = "images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023.webp"
+featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
 今天我們要來玩玩 CSS 動畫。CSS動畫有兩種:
