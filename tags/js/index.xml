@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JS on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/js/</link><description>Recent content in JS on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/js/index.xml" rel="self" type="application/rss+xml"/><item><title>Day1 相見歡 - 庫就不酷嗎？</title><link>https://EM-Tec.github.io/post/2023ironman-1/</link><pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-1/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JS on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/js/</link><description>Recent content in JS on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Sun, 17 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/js/index.xml" rel="self" type="application/rss+xml"/><item><title>Day3 用 Flex 切遍天下</title><link>https://EM-Tec.github.io/post/2023ironman-3/</link><pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-3/</guid><description>
+當你拿到一張設計圖要照著做出來你的第一反應是什麼呢？是直接套 bootstrap 再說嗎？但我幾乎所有的切版**只要是整齊能畫出網格的，我都會使用flex。**而這個網格也不一定是正方形，只要是矩形就可以了。
+什麼意思呢？假設 Google 拿了一張首頁的設計圖給我要我照著做出來（假設）
+那麼我會先看出來整個頁面被包在一個和螢幕一樣大的 flex 方框，垂直排列。而排完剩餘的空間全部給一個空白的方框。而上面的 nav 目錄方框裡面分左右兩個方框，靠兩側對齊。
+當然這沒有正確答案，但你可以發現其實只用 flex 就可以完成所有的切版作業了。因此讓我們先來認識他的基本語法吧。
+Flex 基本語法 要使用 flex 很簡單，在 HTML 請你用一個箱子包住幾個元素。比如說我建立一個 &amp;lt;section&amp;gt; 包著幾個 &amp;lt;div&amp;gt; ，並設個背景顏色方便查看，同時附上昨天學到的快捷鍵。
+1&amp;lt;!-- section&amp;gt;div*4 --&amp;gt; 2&amp;lt;section&amp;gt; 3 &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; 4 &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; 5 &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; 6 &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; 7&amp;lt;/section&amp;gt; 1section { 2 background: #191d88; /* bg #191d88 */ 3 padding: 5px; /* p5 */ 4} 5 6div { 7 width: 100px; /* w100 */ 8 height: 100px; /* h100 */ 9 background: #ffc436; /* bg #ffc436 */ 10 margin: 20px; /* m20 */ 11} 因為 div 是區塊元素 (display: block) 所以元素都會換行，而這很重要因為這樣我們才能設定他的寬高。但如果我們加上 display: flex 就可以讓他們並排。</description></item><item><title>Day2 如何打的更快 | Emmet &amp; 預測輸入</title><link>https://EM-Tec.github.io/post/2023ironman-2/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-2/</guid><description>
+記得我在國一寫HTML的時候，傻傻的在那裡打小於、h1、大於、標題、小於、斜線、大於。我的朋友甚至發現了一個偷吃步就是先打好一堆大於小於，然後再填空。
+既然HTML 和 CSS 都長那樣，這種繁瑣的操作早就可以交給電腦來解決。所以今天我要和你分享如何使用 Emmet 快速的打 HTML 以及 CSS
+Emmet 可以做什麼呢？比如說我們想要建立一個一級標題，我們只需要先輸入 h1 再按下 Tab 即可，所有的標籤都可以這樣做。
+不過 emmet 不只是幫你省打兩個大於小於的時間，他還有很多的語法可以供你使用。這裡我寫出幾個我最常使用的技巧。
+基本 HTML5 架構 - ! 只要按下驚嘆號並按下 tab 就會自動生成一個基本的 HTML5 架構，非常方便。
+添加class - . 比如說我想建立一個 img 圖片元素，並加上一個 class 叫做 avatar，我只需要打
+1img.avatar 即可生成 &amp;lt;img *src*=&amp;quot;&amp;quot; *alt*=&amp;quot;&amp;quot; *class*=&amp;quot;avatar&amp;quot;&amp;gt;。而如果要建立的是一個div元素，因為平常大家太長用 div 了，直接打 .avatar 就可以了
+包在裡面 - &amp;gt; 比如說我想要建立一個 li 清單包著一個超連結 a 元素，那麼只需要打
+1li&amp;gt;a 即可生成 &amp;lt;li&amp;gt;&amp;lt;a *href*=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;。可以無限往下包
+以及 - + 就跟 CSS 選取器 + 一樣，就是加在後面。比如說標題後面常接文章，我們就可以打
+1h2+p 生成 &amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;</description></item><item><title>Day1 相見歡 - 庫就不酷嗎？</title><link>https://EM-Tec.github.io/post/2023ironman-1/</link><pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-1/</guid><description>
 Day1 相見歡 - 庫就不酷嗎？ 哈囉大家好我是毛哥EM，歡迎來到 【不用庫 也能酷 - 玩'轉 CSS &amp;amp; Js 特效 】
 在這30天裡面我會先帶大家複習一些許多人搞不懂但很重要的語法，接者將揭開如何以最精簡的代碼，實現從簡單到複雜的特效，讓元素變得生動有趣。同時，我們也將挑戰自己，使用純JavaScript實現無需依賴庫的互動，從而提高網站效能和速度。
 基本上如果你有追蹤且照著順序讀下來大部分的內容都會滿輕鬆的。而如果你是一位大神的話也歡迎沒事來逛逛，搞不好你會找到你沒聽過的各種冷知識喔w
