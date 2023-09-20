@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毛哥EM資訊密技</title><link>https://EM-Tec.github.io/</link><description>Recent content on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Sun, 17 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Day3 用 Flex 切遍天下</title><link>https://EM-Tec.github.io/post/2023ironman-3/</link><pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-3/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毛哥EM資訊密技</title><link>https://EM-Tec.github.io/</link><description>Recent content on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Wed, 20 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Day6 你怎在這? 攻克 Position</title><link>https://EM-Tec.github.io/post/2023ironman-6/</link><pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-6/</guid><description>
+在使用 CSS 做網站時幾乎一定會使用到 position 屬性，不過你真的知道它的原理和使用方式嗎？雖然乍看之下感覺很複雜但其實超簡單，你只需要幾分鐘就能完全理解了。
+語法 1position: 屬性 Static - 該怎樣就怎樣 預設屬性，該在哪裡在哪裡，區塊元素佔整排，行內元素繼續往右。
+通常不需要特別設定，除非其他 CSS 把他設定到別的然後你想要改回來。
+Relative - 解鎖偏移（相對位置） 設定成 relative 的元素可以解鎖使用 top, bottom, left, right 屬性，讓它看起來往某個地方移動一點點。但是還是佔據原本的位置。
+Absolute - 在哪都行（相對位置） 設定成 absolute 的元素會變成像是一張貼紙一樣貼在網頁上，所以原本的位置不在佔據。你一樣可以使用 top, bottom, left, right 屬性來定位元素。它定位的位置（也就是設定 top:0; left:0; 最左上角的位置）會變成外面不是 position: static 的元素。最常見的使用方法是先在外面使用 relative，然後裡面放入 absolute 就可以完成置中等各種定位。
+Fixed - 卡在畫面上 設定 Fixed 的元素會直接以螢幕的左上角為定位點進行定位，並且無論怎麼滾動畫面都會待在哪裡。最常見的使用時機是網頁右下角回到最上面的按鈕，或者是煩人的分享按鈕。
+範例 來一個範例讓大家分辨它們不同的效果
+https://codepen.io/edit-mr/pen/rNoYOKZ 1&amp;lt;div class=&amp;#34;sun&amp;#34;&amp;gt;Fixed&amp;lt;/div&amp;gt; 2&amp;lt;div class=&amp;#34;cloud&amp;#34;&amp;gt;Static&amp;lt;/div&amp;gt; 3&amp;lt;div class=&amp;#34;cloud relative&amp;#34;&amp;gt;Relative&amp;lt;/div&amp;gt; 4&amp;lt;div class=&amp;#34;building&amp;#34;&amp;gt;Relative 5 &amp;lt;div class=&amp;#34;roof&amp;#34;&amp;gt;Absolute&amp;lt;/div&amp;gt; 6&amp;lt;/div&amp;gt; 1body { 2 background: lightblue; 3 text-align: center; 4 font-weight: 800; 5} 6.</description></item><item><title>Day5 載入中… Animation-delay</title><link>https://EM-Tec.github.io/post/2023ironman-5/</link><pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-5/</guid><description>
+假設你今天想製作這個載入動畫…
+https://codepen.io/edit-mr/pen/YzdzvdV
+可以看出來每個方塊的縮放速度是一樣的，只是越往右下就越有延遲對吧。昨天我們學到可以在 animation 設定延遲，其實也可以在 animation-delay 個別設定。讓我們來一步步用前面幾天學到的知識做出這個動畫吧。
+用 flex 切版 在想要怎麼切板時可以尋找找齊排列的矩形來群組。以下是我想到的切版方式。
+不知道這樣你知道如何下手了嗎?
+我們先寫HTML。emmet縮寫如下。
+1main&amp;gt;(.left&amp;gt;(.wheelBox&amp;gt;.wheel*2)+.box&amp;gt;div*25)+.right&amp;gt;.wheel*3 2&amp;lt;!-- 外框裡面 左邊 裝滾輪 裡面兩個 再一個裝按鈕 25個 右邊 三個滾輪--&amp;gt; CSS 設定一下寬高、形狀、與排列方式
+提示: border-radius 設定大於等於 50% 即可生成圓形
+1.box div, 2.wheel { 3 background-color: #000; 4} 5body { 6 height: 100vh; 7 display: flex; 8 justify-content: center; 9 align-items: center; 10} 11main { 12 width: 300px; 13 border: 4px solid #000; 14 display: flex; 15 border-radius: 20px; 16 padding: 10px; 17} 18.</description></item><item><title>Day4 自己動! @keyframes 與 Transition</title><link>https://EM-Tec.github.io/post/2023ironman-4/</link><pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-4/</guid><description>
+今天我們要來玩玩 CSS 動畫。CSS動畫有兩種:
+@keyframes - 動作效果 transition - 轉場效果 我們今天都拿 PowerPoint 來舉例，雖然感覺現在的學生都快只認識 Canva 了(順帶一提 Canva 就是 CSS 動畫)
+你可以想像 @Keyframes 是 PowerPoint的動畫
+而且是一載入網頁就執行。當然我們可以透過 JavaScript 來指定執行的時間(比如說滾動到元素的時候)
+而Transition是轉場裡面的轉化效果
+當元素的外觀因為各種原因 CSS 被改變(比如說滑鼠滑過，JavaScript 設定，打開 F12 亂搞)，會平滑的轉換過去。我們先來講 Transition 因為他比較簡單。語法如下
+1transition: 要改的屬性 持續時間 速度曲線 延遲; 2transition: background 4s ease-in-out 1s; 每一個屬性都可以分開設定，但真的不用跟自己過意不去。有興趣的連結下收
+transition-delay transition-duration transition-property transition-timing-function 每一個屬性都可以分開設定，也可以省略一些屬性不寫。比如說
+1transition: background 1s; 你可以在後面用逗號分隔其他元素
+1transition: background 1s, color 2s; 秒數也可以用毫秒 ms，但我習慣使用秒因為比較短。如果是零點幾零可以省略。比如說以下幾個都是一樣效果
+1transition: background 500ms; 2transition: background 0.5s; 3transition: background .5s; /* 是不是看起來超舒服!</description></item><item><title>Day3 用 Flex 切遍天下</title><link>https://EM-Tec.github.io/post/2023ironman-3/</link><pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-3/</guid><description>
 當你拿到一張設計圖要照著做出來你的第一反應是什麼呢？是直接套 bootstrap 再說嗎？但我幾乎所有的切版**只要是整齊能畫出網格的，我都會使用flex。**而這個網格也不一定是正方形，只要是矩形就可以了。
 什麼意思呢？假設 Google 拿了一張首頁的設計圖給我要我照著做出來（假設）
 那麼我會先看出來整個頁面被包在一個和螢幕一樣大的 flex 方框，垂直排列。而排完剩餘的空間全部給一個空白的方框。而上面的 nav 目錄方框裡面分左右兩個方框，靠兩側對齊。
