@@ -1,24 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JS on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/js/</link><description>Recent content in JS on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/js/index.xml" rel="self" type="application/rss+xml"/><item><title>Day7 幫我開濾鏡 filter</title><link>https://EM-Tec.github.io/post/2023ironman-7/</link><pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-7/</guid><description>
-CSS 的濾鏡屬性是一個非常實用且可以瞬間讓一個網頁看起來很厲害的功能。讓你可以以各種方式修改和調整圖像和元素的呈現方式，也可以讓元素模糊，或者是直接改變圖示顏色等等。今天我們將深入探討CSS filter 屬性，解釋其各種功能以及如何使用它來創建引人注目的效果。
-現在，讓我們來看一些CSS filter 屬性的常見用法：
-1. 模糊（Blur） 模糊效果可以用來模糊圖像或元素，創建出柔和的背景效果或是陰影效果。你可以通過調整模糊半徑的值來控制模糊的程度，例如：
-1/* 模糊半徑為5像素 */ 2filter: blur(5px); 冷知識：正方形 blur 可以變圓形
-2. 亮度（Brightness） 這不用解釋吧，讓它變更明亮或更暗。值為100%時保持原樣，大於100%將增加亮度，小於100%則減少亮度，例如：
-1/* 增加亮度至150% */ 2filter: brightness(150%); 3. 對比度（Contrast） 對比度效果可以增加或減少圖像的對比度，使畫面更鮮明或柔和。值為100%時保持原樣，大於100%將增加對比度，小於100%則減少對比度，例如：
-1/* 增加對比度至200% */ 2filter: contrast(200%); 4. 灰度（Grayscale） 灰度效果將圖像轉換為灰階，使其變成黑白圖像。值為100%時完全灰階，0%時保持原色，例如：
-1/* 轉換為完全灰階 */ 2filter: grayscale(100%); 5. 反轉顏色（Invert） 反轉顏色效果可以將圖像的顏色反轉，使白色變為黑色，黑色變為白色。值為100%時完全反轉，0%時保持原色，例如：
-1/* 完全反轉顏色 */ 2filter: invert(100%); 6. 飽和度（Saturate） 飽和度效果可以讓畫面更加鮮豔或更加淡化。值為100%時保持原飽和度，大於100%增加飽和度，小於100%減少飽和度，例如：
-1/* 增加飽和度至200% */ 2filter: saturate(200%); 7. 色彩轉換（Hue-rotate） 旋轉圖像的色相。它的值以度數表示，例如：
-1/* 旋轉色相90度 */ 2filter: hue-rotate(90deg); 8. 透明度（Opacity） 透明度效果控制圖像或元素的不透明度。值為0時完全透明，1時完全不透明，例如：
-1/* 使元素變得半透明 */ 2filter: opacity(0.</description></item><item><title>Day1 相見歡 - 庫就不酷嗎？</title><link>https://EM-Tec.github.io/post/2023ironman-1/</link><pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-1/</guid><description>
-Day1 相見歡 - 庫就不酷嗎？ 哈囉大家好我是毛哥EM，歡迎來到 【不用庫 也能酷 - 玩'轉 CSS &amp;amp; Js 特效 】
-在這30天裡面我會先帶大家複習一些許多人搞不懂但很重要的語法，接者將揭開如何以最精簡的代碼，實現從簡單到複雜的特效，讓元素變得生動有趣。同時，我們也將挑戰自己，使用純JavaScript實現無需依賴庫的互動，從而提高網站效能和速度。
-基本上如果你有追蹤且照著順序讀下來大部分的內容都會滿輕鬆的。而如果你是一位大神的話也歡迎沒事來逛逛，搞不好你會找到你沒聽過的各種冷知識喔w
-無論你是前端初學者還是經驗豐富的開發者，這個系列都將帶給你嶄新的思維。帶你製作令人驚艷的網站。
-背景 第一天來講一下為什麼我要來寫這個系列。我從小學三年級開始玩 Wix（類似 WordPress 或 Google Site 的視覺化網頁編輯器），做網頁就像做簡報一樣拉一拉就好了。不過做出來的網頁預設載入了一大堆厚重的函式庫，明明只是淡入淡出還需要GSAP。，載入6、7秒都算正常發揮。當時雖然不會 HTML 但按 F12 也能看出機器生成的程式碼又臭又長。加上 Wix 網站會有很醜的廣告橫幅，裡面充滿了各種付費解鎖功能，還有 RWD 非常難弄，讓我決定從此走向手刻這條不歸路…
-然而並不只是機器生成的程式碼才有載入問題，在現代網頁函式庫的使用也是非常氾濫的。像是明明只是顯示號碼牌的網頁還要套 Bootstrap，因為懶得打 document.querySelector()而安裝 jQuery，甚至打開 Awwwards 隨便找一個得獎的網站都要放一個載入動畫，似乎在洗腦你好的網站就是要等待的。
-也許是我這個剛要升上高二的菜鳥不太會用函式庫，但自己做除了載入更快以外和可自訂性也比較高。只要熟悉效果後面的原理自己做是不會比較慢的。
-用庫就不酷了嗎? 然而不一定所有東西都是手刻才是最好的選擇。比如像是顯示 3D 模型的 three.js、手機擴增實境功能的 ar.js 都不是自己能夠輕鬆手刻的。現成的函式庫除了幫你省時以外大多瀏覽器相容性都不錯。你可以根據你自己開發和學習的成本取的一個甜蜜點。**做網站的方式千百種，只要能傳遞資訊和給使用者好體驗就是好網站。**不過對於簡單單一功能的函式庫，或是只需要大函式庫裡面的單一功能，那麼自己寫除了能省去學習及開發成本，也能避免一些衝突的問題。比如說這是一台車，並用以下程式把它致中。
-1.car{ 2 position: absolute; 3 left: 50%; 4 top: 50%; 5 transform: translate(-50%, -50%); 6} 我使用Animate.CSS想要製作一個車開進來的效果，只需要加入一個class就可以了…
-https://codepen.io/edit-mr/pen/bGObqWq
-等等我們的定位怎麼跑掉啦? 仔細一看原來 Animate.css 也是使用 transform 屬性來製作動畫，所以我們互相衝突了。</description></item></channel></rss>
+&lt;p>CSS 的濾鏡屬性是一個非常實用且可以瞬間讓一個網頁看起來很厲害的功能。讓你可以以各種方式修改和調整圖像和元素的呈現方式，也可以讓元素模糊，或者是直接改變圖示顏色等等。今天我們將深入探討CSS filter 屬性，解釋其各種功能以及如何使用它來創建引人注目的效果。&lt;/p></description></item><item><title>Day1 相見歡 - 庫就不酷嗎？</title><link>https://EM-Tec.github.io/post/2023ironman-1/</link><pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-1/</guid><description>
+&lt;p>哈囉大家好我是毛哥EM，歡迎來到 &lt;strong>【不用庫 也能酷 - 玩'轉 CSS &amp;amp; Js 特效 】&lt;/strong>&lt;/p>
+&lt;p>在這30天裡面我會先帶大家複習一些許多人搞不懂但很重要的語法，接者將揭開如何以最精簡的代碼，實現從簡單到複雜的特效，讓元素變得生動有趣。同時，我們也將挑戰自己，使用純JavaScript實現無需依賴庫的互動，從而提高網站效能和速度。&lt;/p></description></item></channel></rss>
