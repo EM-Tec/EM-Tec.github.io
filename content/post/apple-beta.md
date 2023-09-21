@@ -5,7 +5,7 @@ date = "2023-01-17"
 description = "iOS、iPadOS、還有所有Apple的系統在正式發布之前都會向部分的使用者提供搶先版(Beta Version)讓使用者體驗，來蒐集回饋包括問題回報或是功能建議。這篇文章會教你如何加入和離開Apple的Beta計畫"
 tags = ["iOS"
 ]
-thumbnail = "/images/thumbnails/apple-beta.webp"
+thumbnail = "https://em-tec.github.io/images/thumbnails/apple-beta.webp"
 featureImage = "https://em-tec.github.io/images/thumbnails/apple-beta.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/apple-beta.webp"
 +++

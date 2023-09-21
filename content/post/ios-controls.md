@@ -5,7 +5,7 @@ date = "2022-11-19"
 description = ""
 categories = ["筆記"]
 tags = ["ios","捷徑"]
-thumbnail = "images/thumbnails/ios-controls.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/ios-controls.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/ios-controls.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/ios-controls.jpg"
 +++

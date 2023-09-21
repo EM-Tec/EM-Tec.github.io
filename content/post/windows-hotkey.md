@@ -7,7 +7,7 @@ tags = [
     "Windows"
 ]
 
-thumbnail = "images/thumbnails/windows-hotkey.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/windows-hotkey.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/windows-hotkey.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/windows-hotkey.jpg"
 +++

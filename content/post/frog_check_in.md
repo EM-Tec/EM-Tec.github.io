@@ -16,7 +16,7 @@ categories = [
     "製作教學"
 ]
 toc = true
-thumbnail = "images/thumbnails/frog_check_in.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 +++

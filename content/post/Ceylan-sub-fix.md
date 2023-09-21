@@ -6,7 +6,7 @@ description = "大家都知道，錫蘭的 YouTube 訂閱數因為某些原因�
 categories = ["軟體分享"]
 tags = ["YouTube","自製"]
 series = ["別說我教的系列"]
-thumbnail = "images/thumbnails/Ceylan-sub-fix.webp"
+thumbnail = "https://em-tec.github.io/images/thumbnails/Ceylan-sub-fix.webp"
 featureImage = "https://em-tec.github.io/images/thumbnails/Ceylan-sub-fix.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/Ceylan-sub-fix.webp"
 +++

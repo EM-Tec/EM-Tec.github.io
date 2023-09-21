@@ -7,7 +7,7 @@ tags = ["ios捷徑"]
 series = ["複製貼上就能成為工程師"]
 categories = [
 "網站分享","API分享","捷徑分享"]
-thumbnail = "images/thumbnails/remove-bg.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
 +++

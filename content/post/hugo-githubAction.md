@@ -6,7 +6,7 @@ description = "寫完文章直接上傳，讓Github自動幫您生成網站！"
 tags = ["Github","Hugo"]
 series = ["複製貼上就能成為工程師"]
 categories = [ "製作教學" ]
-thumbnail = "images/thumbnails/hugo-githubAction.jpeg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/hugo-githubAction.jpeg"
 featureImage = "https://em-tec.github.io/images/thumbnails/hugo-githubAction.jpeg"
 shareImage = "https://em-tec.github.io/images/thumbnails/hugo-githubAction.jpeg"
 +++

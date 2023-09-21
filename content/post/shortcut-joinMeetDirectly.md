@@ -14,7 +14,7 @@ categories = [
 
 ]
 series = ["線上教學"]
-thumbnail = "images/thumbnails/shortcut-joinMeetDirectly.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg"
 +++

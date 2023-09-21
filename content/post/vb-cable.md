@@ -9,7 +9,7 @@ tags = [
 categories = [
 "軟體分享",
 ]
-thumbnail = "images/thumbnails/vb-cable.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/vb-cable.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/vb-cable.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/vb-cable.jpg"
 +++

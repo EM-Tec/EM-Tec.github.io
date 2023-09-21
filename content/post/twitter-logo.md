@@ -5,7 +5,7 @@ date = "2023-08-05"
 description = "我自製了一個描述檔可以建立一個書籤在主畫面。是全網唯一沒有捷徑跳轉的方法。"
 tags = ["自製"]
 categories = ["軟體分享"]
-thumbnail = "images/thumbnails/twitter-logo.webp"
+thumbnail = "https://em-tec.github.io/images/thumbnails/twitter-logo.webp"
 featureImage = "https://em-tec.github.io/images/thumbnails/twitter-logo.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/twitter-logo.webp"
 +++

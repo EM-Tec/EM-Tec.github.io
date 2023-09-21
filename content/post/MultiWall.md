@@ -7,7 +7,7 @@ tags = ["Windows"]
 categories = [
     "軟體分享",
 ]
-thumbnail = "images/thumbnails/MultiWall.webp"
+thumbnail = "https://em-tec.github.io/images/thumbnails/MultiWall.webp"
 featureImage = "https://em-tec.github.io/images/thumbnails/MultiWall.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/MultiWall.webp"
 +++

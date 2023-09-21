@@ -9,7 +9,7 @@ tags = [
     "JavaScript",
 ]
 series = ["網棧"]
-thumbnail = "images/thumbnails/webpallet.webp"
+thumbnail = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 featureImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
 +++

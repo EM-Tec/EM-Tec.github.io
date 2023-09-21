@@ -7,7 +7,7 @@ description = "超方便的網址縮短服務"
 categories = [
     "網站分享",
 ]
-thumbnail = "images/thumbnails/is-gd.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/is-gd.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/is-gd.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/is-gd.jpg"
 +++

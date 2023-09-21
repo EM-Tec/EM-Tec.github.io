@@ -12,7 +12,7 @@ categories = [
     "捷徑分享",
    
 ]
-thumbnail = "images/thumbnails/shortcut-viatorBookmark.md.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.md.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.md.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.md.jpg"
 +++

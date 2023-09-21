@@ -17,7 +17,7 @@ categories = [
     "製作教學"
 ]
 toc = true
-thumbnail = "images/thumbnails/roll-call.webp"
+thumbnail = "https://em-tec.github.io/images/thumbnails/roll-call.webp"
 featureImage = "https://em-tec.github.io/images/thumbnails/roll-call.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/roll-call.webp"
 +++

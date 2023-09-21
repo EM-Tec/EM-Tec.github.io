@@ -4,7 +4,7 @@ title = "【開源】快速免費啟用Office及Windows"
 date = "2023-01-19"
 description = "無須安裝軟體，使用PowerShell快速免費啟用Office及Windows"
 tags = [ "windows" ,"Github"]
-thumbnail = "images/thumbnails/massgrave.webp"
+thumbnail = "https://em-tec.github.io/images/thumbnails/massgrave.webp"
 featureImage = "https://em-tec.github.io/images/thumbnails/massgrave.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/massgrave.webp"
 +++

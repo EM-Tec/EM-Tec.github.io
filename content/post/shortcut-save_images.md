@@ -9,7 +9,7 @@ tags = ["自製",
 categories = [
     "捷徑分享",
 ]
-thumbnail = "images/thumbnails/shortcut-save_images.JPG"
+thumbnail = "https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG"
 featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG"
 shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG"
 +++

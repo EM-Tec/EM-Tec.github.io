@@ -6,7 +6,7 @@ description = "你知道學生在在學期間於全世界皆可使用免費Wifi 
 categories = [
     "網站分享","線上教學"
 ]
-thumbnail = "images/thumbnails/edu-office-and-wifi.webp"
+thumbnail = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.webp"
 featureImage = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.webp"
 +++

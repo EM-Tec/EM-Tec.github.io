@@ -5,7 +5,7 @@ date = "2022-08-19"
 description = "這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀"
 categories = ["筆記"]
 tags = ["終端機","Termux"]
-thumbnail = "images/thumbnails/change-ssh-passpharase.jpeg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/change-ssh-passpharase.jpeg"
 featureImage = "https://em-tec.github.io/images/thumbnails/change-ssh-passpharase.jpeg"
 shareImage = "https://em-tec.github.io/images/thumbnails/change-ssh-passpharase.jpeg"
 +++

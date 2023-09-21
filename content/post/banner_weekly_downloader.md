@@ -12,7 +12,7 @@ categories = [
     "網站分享",
 "捷徑分享"
 ]
-thumbnail = "images/thumbnails/banner_weekly_downloader.jpg"
+thumbnail = "https://em-tec.github.io/images/thumbnails/banner_weekly_downloader.jpg"
 featureImage = "https://em-tec.github.io/images/thumbnails/banner_weekly_downloader.jpg"
 shareImage = "https://em-tec.github.io/images/thumbnails/banner_weekly_downloader.jpg"
 +++

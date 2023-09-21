@@ -4,7 +4,7 @@ title = "【Win11】取得電池報告！查看健康度、充電次數、歷史
 date = "2022-12-03"
 description = "無須依靠第三方軟體，輕鬆取得電池的使用記錄和資訊"
 tags = [ "windows" ]
-thumbnail = "images/thumbnails/win-battery-life.webp"
+thumbnail = "https://em-tec.github.io/images/thumbnails/win-battery-life.webp"
 featureImage = "https://em-tec.github.io/images/thumbnails/win-battery-life.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/win-battery-life.webp"
 +++
