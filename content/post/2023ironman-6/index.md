@@ -11,7 +11,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
 在使用 CSS 做網站時幾乎一定會使用到 position 屬性，不過你真的知道它的原理和使用方式嗎？雖然乍看之下感覺很複雜但其實超簡單，你只需要幾分鐘就能完全理解了。
-
+<!--more-->
 ## 語法
 
 ```css

@@ -14,6 +14,8 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 偷偷告訴你，這個效果只需要一行 CSS就可以做到。`background-attachment` 屬性可以用來控制背景圖片的滾動方式。在這篇文章中，我們將詳細介紹這個屬性以及如何使用它來實現不同的效果。
 
+<!--more-->
+
 ## 什麼是 `background-attachment` ？
 
 `background-attachment` 是 CSS 中用於控制背景圖片滾動行為的屬性。它有三個可能的值：

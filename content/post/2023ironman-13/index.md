@@ -12,6 +12,8 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 昨天的內容是不是有一點燒腦?沒關係，今天來點輕鬆的，只有一行 JavaScript。不管是在線上的文書軟體、製作網站的網站、或甚至是 iOS StandBy 都會有顏色選單。今天我們就來做一個極簡的吧，還要加上自訂顏色的功能。
 
+<!--more-->
+
 ![Alt text](final.webp)
 
 ## 顏色選單 HTML

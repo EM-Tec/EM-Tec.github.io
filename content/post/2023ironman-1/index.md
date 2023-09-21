@@ -10,11 +10,11 @@ featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
-# Day1 相見歡 - 庫就不酷嗎？
-
 哈囉大家好我是毛哥EM，歡迎來到 **【不用庫 也能酷 - 玩'轉 CSS & Js 特效 】**
 
 在這30天裡面我會先帶大家複習一些許多人搞不懂但很重要的語法，接者將揭開如何以最精簡的代碼，實現從簡單到複雜的特效，讓元素變得生動有趣。同時，我們也將挑戰自己，使用純JavaScript實現無需依賴庫的互動，從而提高網站效能和速度。
+
+<!--more-->
 
 基本上如果你有追蹤且照著順序讀下來大部分的內容都會滿輕鬆的。而如果你是一位大神的話也歡迎沒事來逛逛，搞不好你會找到你沒聽過的各種冷知識喔w
 

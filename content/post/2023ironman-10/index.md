@@ -12,6 +12,8 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 > 這是我高一在學校吃肉蛋吐司時想到的做法，因此此篇文章假設你已熟悉國小數學。
 
+<!--more-->
+
 跑馬燈雖然在現代乍看之下是一個又醜又過時的設計，但是如果應用的好的話其實是非常有質感且時尚的。
 
 ![2023-09-11 12-46-01.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/7251cc97-c0ab-435b-8997-29dab63809e7/672efda9-5b66-46f2-81b1-a236e0a8b149/2023-09-11_12-46-01.gif)

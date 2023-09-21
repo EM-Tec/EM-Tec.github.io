@@ -11,7 +11,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
 假設你今天想製作這個載入動畫…
-
+<!--more-->
 https://codepen.io/edit-mr/pen/YzdzvdV
 
 ![Alt text](https://em-tec.github.io/post/2023ironman-5/loading.gif)
