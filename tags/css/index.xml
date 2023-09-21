@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CSS on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/css/</link><description>Recent content in CSS on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/css/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://EM-Tec.github.io/post/2023ironman-7/</link><pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-7/</guid><description>
-Day7 幫我開濾鏡 filter CSS 的濾鏡屬性是一個非常實用且可以瞬間讓一個網頁看起來很厲害的功能。讓你可以以各種方式修改和調整圖像和元素的呈現方式，也可以讓元素模糊，或者是直接改變圖示顏色等等。今天我們將深入探討CSS filter 屬性，解釋其各種功能以及如何使用它來創建引人注目的效果。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CSS on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/css/</link><description>Recent content in CSS on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/css/index.xml" rel="self" type="application/rss+xml"/><item><title>Day7 幫我開濾鏡 filter</title><link>https://EM-Tec.github.io/post/2023ironman-7/</link><pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-7/</guid><description>
+CSS 的濾鏡屬性是一個非常實用且可以瞬間讓一個網頁看起來很厲害的功能。讓你可以以各種方式修改和調整圖像和元素的呈現方式，也可以讓元素模糊，或者是直接改變圖示顏色等等。今天我們將深入探討CSS filter 屬性，解釋其各種功能以及如何使用它來創建引人注目的效果。
 現在，讓我們來看一些CSS filter 屬性的常見用法：
 1. 模糊（Blur） 模糊效果可以用來模糊圖像或元素，創建出柔和的背景效果或是陰影效果。你可以通過調整模糊半徑的值來控制模糊的程度，例如：
 1/* 模糊半徑為5像素 */ 2filter: blur(5px); 冷知識：正方形 blur 可以變圓形
@@ -9,7 +9,8 @@ Day7 幫我開濾鏡 filter CSS 的濾鏡屬性是一個非常實用且可以瞬
 1/* 轉換為完全灰階 */ 2filter: grayscale(100%); 5. 反轉顏色（Invert） 反轉顏色效果可以將圖像的顏色反轉，使白色變為黑色，黑色變為白色。值為100%時完全反轉，0%時保持原色，例如：
 1/* 完全反轉顏色 */ 2filter: invert(100%); 6. 飽和度（Saturate） 飽和度效果可以讓畫面更加鮮豔或更加淡化。值為100%時保持原飽和度，大於100%增加飽和度，小於100%減少飽和度，例如：
 1/* 增加飽和度至200% */ 2filter: saturate(200%); 7. 色彩轉換（Hue-rotate） 旋轉圖像的色相。它的值以度數表示，例如：
-1/* 旋轉色相90度 */ 2filter: hue-rotate(90deg); 8. 透明度（Opacity） 透明度效果控制圖像或元素的不透明度。值為0時完全透明，1時完全不透明，例如：</description></item><item><title>Day6 你怎在這? 攻克 Position</title><link>https://EM-Tec.github.io/post/2023ironman-6/</link><pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-6/</guid><description>
+1/* 旋轉色相90度 */ 2filter: hue-rotate(90deg); 8. 透明度（Opacity） 透明度效果控制圖像或元素的不透明度。值為0時完全透明，1時完全不透明，例如：
+1/* 使元素變得半透明 */ 2filter: opacity(0.</description></item><item><title>Day6 你怎在這? 攻克 Position</title><link>https://EM-Tec.github.io/post/2023ironman-6/</link><pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-6/</guid><description>
 在使用 CSS 做網站時幾乎一定會使用到 position 屬性，不過你真的知道它的原理和使用方式嗎？雖然乍看之下感覺很複雜但其實超簡單，你只需要幾分鐘就能完全理解了。
 語法 1position: 屬性 Static - 該怎樣就怎樣 預設屬性，該在哪裡在哪裡，區塊元素佔整排，行內元素繼續往右。
 通常不需要特別設定，除非其他 CSS 把他設定到別的然後你想要改回來。
