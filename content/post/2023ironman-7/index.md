@@ -72,7 +72,7 @@ filter: invert(100%);
 
 ### 6. 飽和度（Saturate）
 
-飽和度效果允許您調整圖像的飽和度，使其更加鮮豔或更加淡化。值為100%時保持原飽和度，大於100%增加飽和度，小於100%減少飽和度，例如：
+飽和度效果可以讓畫面更加鮮豔或更加淡化。值為100%時保持原飽和度，大於100%增加飽和度，小於100%減少飽和度，例如：
 
 ```css
 /* 增加飽和度至200% */
@@ -129,6 +129,36 @@ filter: grayscale(50%) brightness(150%) blur(3px);
 ### 11. 自定義濾鏡
 
 除了上述內置的濾鏡效果，您還可以使用自定義的 SVG 濾鏡效果。這需要定義一個 SVG 濾鏡元素，然後將其引用到 filter 屬性中。這個就有一點複雜了，不在本文的討論範圍，但提供了更高度可定制性，有興趣的話可以自己研究看看。
+
+### 用一個顏色製作漸層
+finter 在製作漸層很實用，可以讓你只需要選擇一個顏色就能生成不錯看的漸層。
+
+https://codepen.io/edit-mr/pen/GRPyNYY
+
+![相疊](https://em-tec.github.io/post/2023ironman-7/gradient.webp)
+
+
+```css
+:root {
+  --color: blue;
+}
+
+body {
+  background: var(--color);
+  min-height: 100svh;
+  margin: 0;
+}
+body::after {
+  display: block;
+  width: 100%;
+  height: 100svh;
+  content: "";
+  background: linear-gradient(var(--color), transparent);
+  filter: hue-rotate(-60deg) brightness(3);
+}
+```
+
+你可以看到我先設定了背景顏色，接著建立一個偽元素，並且設定他的背景為漸層。一半是設定的顏色，一半是透明。接著使用 filter 來調整顏色，我讓亮度高一點然後色相旋轉一下讓顏色淺一點。這樣就能夠做出漸層的效果囉。
 
 這些都是 CSS filter 屬性的一些常見和進階功能。通過組合這些效果，你可以為網站的元素創建出各種視覺效果，無論是圖像處理還是動畫，都能夠實現。我們會在之後的文章繼續講你可以怎麼玩 filter 屬性。
 
