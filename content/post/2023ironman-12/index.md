@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "Day12 Js 滾動視差 甚麼都能滾(ft. 國中數學)"
-date = "2023-10-16"
+date = "2023-09-26"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]

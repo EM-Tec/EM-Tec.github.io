@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = ""
-date = "2023-10-16"
+date = "2023-09-27"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
@@ -120,6 +120,81 @@ function changeFontColor(c) {
 }
 ```
 
+這樣就完成啦
+
+https://codepen.io/edit-mr/pen/abPVWBJ
+```html
+<h1>顏色選單</h1>
+<div class="color-picker">
+  <div class="color-option" style="background-color: #7aaaf1" onclick="changeFontColor('#7aaaf1')"></div>
+  <div class="color-option" style="background-color: #8683ff" onclick="changeFontColor('#8683ff')"></div>
+  <div class="color-option" style="background-color: #e683bc" onclick="changeFontColor('#e683bc')"></div>
+  <div class="color-option" style="background-color: #ff788c" onclick="changeFontColor('#ff788c')"></div>
+  <div class="color-option" style="background-color: #ff8d7b" onclick="changeFontColor('#ff8d7b')"></div>
+  <div class="color-option" style="background-color: #f8d175" onclick="changeFontColor('#f8d175')"></div>
+  <div class="color-option" style="background-color: #9ac78f" onclick="changeFontColor('#9ac78f')"></div>
+  <div class="color-option" style="background-color: #7dc4ca" onclick="changeFontColor('#7dc4ca')"></div>
+  <div class="color-option" style="background-color: #FFFFFF" onclick="changeFontColor('#FFFFFF')"></div>
+  <div class="color-option" style="background-color: #565c6a" onclick="changeFontColor('#565c6a')"></div>
+  <div class="color-option" style="background-color: #6b5762" onclick="changeFontColor('#6b5762')"></div>
+  <div class="color-option" id="color"> <input type="color" onchange="document.getElementById('color').style.backgroundColor=this.value;changeFontColor(this.value)"></div>
+</div>
+```
+```css
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100svh;
+  overflow: hidden;
+  font-family: system-ui;
+}
+
+.color-picker {
+  display: flex;
+  justify-content: center;
+  background: #ffffff55;
+  border-radius: 2.5vmax;
+  gap: 0.5vmax;
+  padding: 0.5vmax 1vmax;
+  box-shadow: 0 0.3vmax 1vmax #00000022;
+}
+
+.color-option {
+  width: 2.5vmax;
+  height: 2.5vmax;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.color-option:hover {
+  box-shadow: 0 0 1vmax #ffdb4d55;
+}
+
+.color-picker input[type="color"] {
+  width: 5vw;
+  height: 5vw;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#color::after {
+  content: "+";
+  font-size: 0.5em;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+```
+```js
+const changeFontColor = (a) => document.body.style.background = a;
+```
 以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。
