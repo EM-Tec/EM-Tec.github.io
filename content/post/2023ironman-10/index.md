@@ -14,13 +14,12 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 <!--more-->
 
-跑馬燈雖然在現代乍看之下是一個又醜又過時的設計，但是如果應用的好的話其實是非常有質感且時尚的。
+傳統跑馬燈雖然在現代乍看之下是一個又醜又過時的設計，但是如果應用的好的話其實是非常有質感且蠻有趣的。裝飾效果多大於實際用途。
 
-![2023-09-11 12-46-01.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/7251cc97-c0ab-435b-8997-29dab63809e7/672efda9-5b66-46f2-81b1-a236e0a8b149/2023-09-11_12-46-01.gif)
-
+![Alt text](<2023-09-11 12-46-01.gif>)
 這是我幫朋友製作的個人網頁，裡面使用跑馬燈搭配旋轉效果。卡頓是因為 GIF 的緣故，如果想看原始網頁可以到[這裡](https://furryart-tw.github.io/artist/Maple/)。
 
-如果要你做跑馬燈你會怎麼做呢？如果你是一個有年紀的工程師的話應該使用過 `<marquee>` 吧，然而這是一個已經被淘汰的語法，且能設定的語法有限。如果你是一個現代的工程師應該有想過使用 `@keyframes` 動畫吧。但是這樣會遇到幾個問題。首先是跑完不會連續，會有一段空白的時間。但是如果說多疊幾個你怎麼知道需要幾個？萬一內容很短又在電競超長曲面螢幕怎麼辦？還有一個最大的問題，我們知道速率的公式是距離除以時間對吧？
+如果要你做跑馬燈你會怎麼做呢？如果你是一個有年紀的工程師的話應該使用過 `<marquee>` 吧，然而這是一個還沒正式啟用就已經被淘汰的語法，且能設定的屬性有限。如果你是一個現代的工程師應該有想過使用 `@keyframes` 動畫吧。但是這樣會遇到幾個問題。首先是跑完不會連續，會有一段空白的時間。但是如果說多疊幾個你怎麼知道需要幾個？萬一內容很短又在電競超長曲面螢幕怎麼辦？還有一個最大的問題，我們知道速率的公式是距離除以時間對吧？
 
 $$
 V=\frac{s}{t}
@@ -32,7 +31,7 @@ $$
 
 首先我們來切一個簡單的版面出來
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7251cc97-c0ab-435b-8997-29dab63809e7/f1f66d1c-deb6-4143-851a-d700c49827b5/Untitled.png)
+![簡單切版](layout.png)
 
 ```html
 <div class="marquee">
@@ -81,14 +80,15 @@ body {
   }
   to {
     transform: translateX(-100%)
-  ｝
+  }
+}
 ```
 
 ## 自動生成新的
 
 我們什麼時候會需要一個新的跑馬燈呢？是在一個跑馬燈整條都出現在畫面上，要開始有空白的時候。我們只需要算好時間什麼時候需要插入新的，跑馬燈要跑多久才會跑，跑完之後把它刪掉就可以了（讓 Dom 乾淨一點，不要塞滿一堆撞在一起的殘骸）。
 
-![marquee.svg](https://prod-files-secure.s3.us-west-2.amazonaws.com/7251cc97-c0ab-435b-8997-29dab63809e7/f26e0130-8bd1-4356-ab6b-e40013a730ac/marquee.svg)
+![生成邏輯](marquee.svg)
 
 ### 速率
 
@@ -129,7 +129,6 @@ var loopTime = element_width / v; //每 delay 秒放入一個新的
 setTimeout(() => {
         marquee.removeChild(marqueeBox);
       }, time * 1000 + 1000);
-    }
 ```
 
 ### 生成函式
@@ -152,11 +151,11 @@ setInterval(newMaquee, loopTime);
 
 有一個小問題就是元素之前沒有距離。我們只需要在 `setInterval` 把 loopTime 設定久一點就可以了
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7251cc97-c0ab-435b-8997-29dab63809e7/b9c9ac7f-f814-4c9a-be15-a6e91a3dc18f/Untitled.png)
+![Alt text](space.webp)
 
 再一個問題，就是在速率算出來之前第一個已經先跑了幾步了，所以我們可以在計算完之後再開始動畫
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7251cc97-c0ab-435b-8997-29dab63809e7/91c6cf2d-3f2e-416c-b623-b0bfd99b1beb/Untitled.png)
+![Alt text](first.webp)
 
 ```css
 element.style.animation = `marquee ${time}ms forwards linear`;
@@ -164,11 +163,13 @@ element.style.animation = `marquee ${time}ms forwards linear`;
 
 最後一個問題，如果有人沒事更改視窗大小理論上時間要重算，不然會變這樣…
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7251cc97-c0ab-435b-8997-29dab63809e7/02c442eb-dea7-4388-8fff-4a686338eba2/Untitled.png)
+![擠在一起](resize.webp)
 
 所以把速率計算都丟入函式內，整理一下樣式，完整程式碼如下。
 
 https://codepen.io/edit-mr/pen/YzdZdKv
+![跑馬燈成果](final.gif)
+
 
 ```html
 <div class="marquee">
@@ -207,10 +208,11 @@ body {
   }
   to {
     transform: translateX(-100%);
-  ｝
+  }
+}
 ```
 
-```jsx
+```js
 var v = 110 / 1000;
 var element = document.querySelector(".element");
 var element_width = element.offsetWidth;
