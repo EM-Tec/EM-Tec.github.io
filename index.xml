@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>毛哥EM資訊密技</title><link>https://EM-Tec.github.io/</link><description>Recent content on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Mon, 25 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Day11 說滾不是真的要你滾 - 背景滾動視差</title><link>https://EM-Tec.github.io/post/2023ironman-11/</link><pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-11/</guid><description>
 &lt;p>你有看過這種頁面往下滾，但圖片位置沒有往下的效果嗎？&lt;/p>
-&lt;p>偷偷告訴你，這個效果只需要一行 CSS就可以做到。&lt;code>background-attachment&lt;/code> 屬性可以用來控制背景圖片的滾動方式。在這篇文章中，我們將詳細介紹這個屬性以及如何使用它來實現不同的效果。&lt;/p></description></item><item><title>Day10 永無止境跑馬燈 - 不同螢幕 相同速度</title><link>https://EM-Tec.github.io/post/2023ironman-10/</link><pubDate>Sun, 24 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-10/</guid><description>
+&lt;p>&lt;figure>
+&lt;picture>
+&lt;img
+loading="lazy"
+decoding="async"
+alt="background-attachment:fixed"
+class="image_figure image_internal image_unprocessed"
+src="scrolling.gif"
+/>
+&lt;/picture>
+&lt;/figure>
+&lt;/p>
+&lt;p>這是舊版的毛哥EM資訊密技黑歷史。偷偷告訴你，這個效果只需要一行 CSS就可以做到。&lt;code>background-attachment&lt;/code> 屬性可以用來控制背景圖片的滾動方式。在這篇文章中，我們將詳細介紹這個屬性以及如何使用它來實現不同的效果。&lt;/p></description></item><item><title>Day10 永無止境跑馬燈 - 不同螢幕 相同速度</title><link>https://EM-Tec.github.io/post/2023ironman-10/</link><pubDate>Sun, 24 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-10/</guid><description>
 &lt;blockquote>
 &lt;p>這是我高一在學校吃肉蛋吐司時想到的做法，因此此篇文章假設你已熟悉國小數學。&lt;/p>
 &lt;/blockquote></description></item><item><title>Day9 給你五彩斑斕的黑: mix-blend-mode</title><link>https://EM-Tec.github.io/post/2023ironman-9/</link><pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-9/</guid><description>
