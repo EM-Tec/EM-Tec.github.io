@@ -12,7 +12,9 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 你有看過這種頁面往下滾，但圖片位置沒有往下的效果嗎？
 
-偷偷告訴你，這個效果只需要一行 CSS就可以做到。`background-attachment` 屬性可以用來控制背景圖片的滾動方式。在這篇文章中，我們將詳細介紹這個屬性以及如何使用它來實現不同的效果。
+![background-attachment:fixed](scrolling.gif)
+
+這是舊版的毛哥EM資訊密技黑歷史。偷偷告訴你，這個效果只需要一行 CSS就可以做到。`background-attachment` 屬性可以用來控制背景圖片的滾動方式。在這篇文章中，我們將詳細介紹這個屬性以及如何使用它來實現不同的效果。
 
 <!--more-->
 
@@ -40,6 +42,8 @@ body {
 }
 
 ```
+
+![background-attachment:fixed](scrolling.gif)
 
 這將使背景圖片保持固定，而內容將在其上滾動，創建出一種動態的效果。
 
