@@ -10,7 +10,7 @@ featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
-你有看過這種頁面往下滾，但圖片沒有變的效果嗎？
+你有看過這種頁面往下滾，但圖片位置沒有往下的效果嗎？
 
 偷偷告訴你，這個效果只需要一行 CSS就可以做到。`background-attachment` 屬性可以用來控制背景圖片的滾動方式。在這篇文章中，我們將詳細介紹這個屬性以及如何使用它來實現不同的效果。
 
@@ -18,10 +18,10 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 ## 什麼是 `background-attachment` ？
 
-`background-attachment` 是 CSS 中用於控制背景圖片滾動行為的屬性。它有三個可能的值：
+`background-attachment` 是 CSS 中用於控制背景圖片滾動行為的屬性。它有三個值：
 
-1. `scroll`（滾動）：這是默認值，背景圖片將隨著頁面的滾動而移動。這意味著當頁面滾動時，背景圖片會被視為固定的。
-2. `fixed`（固定）：當你設置此值時，背景圖片將保持固定在視口的某個位置，不隨頁面的滾動而移動。這可以創建一種視差滾動效果，使背景圖片保持在原地，而內容文字或元素則滾動過它。
+1. `scroll`（滾動）：這是默認值，背景圖片將隨著頁面的滾動而移動。
+2. `fixed`（固定）：背景圖片將保持固定在視口的某個位置，不隨頁面的滾動而移動。這可以創建一種視差滾動效果，使背景圖片保持在原地，而內容文字或元素則滾動過它。
 3. `local`（本地）：它會使背景圖片隨著元素的內容滾動而移動，而不是整個頁面。有點像屬於那個框框的背景。這個值在大部分情況下比較少見。
 
 ## 飯粒範例
@@ -55,8 +55,6 @@ body {
 
 ```
 
-這將使背景圖片與頁面的滾動同步，創建一種比較傳統的網頁設計效果。
-
 ### 使用 `local` 值
 
 最後，如果你想要在某個元素內部創建一個背景圖片，並且希望它隨著該元素的滾動而移動，你可以使用 `local` 值。這個值通常應用於具有自己的滾動區域的元素，例如 `div` 或 `section`。
@@ -70,6 +68,11 @@ body {
 ```
 
 這將使背景圖片與 `.container` 元素的內容滾動同步，而不是整個頁面。
+
+來個大範例
+<https://codepen.io/edit-mr/pen/rNodVbV>
+
+![飯粒範例](https://em-tec.github.io/post/2023ironman-11/scroll.gif)
 
 總之，`background-attachment` 屬性是一個強大的工具，可以用來控制背景圖片的滾動方式，從而實現不同的視覺效果。雖然實際功能不大但可以給人一種出乎意料且不會那麼死板的感覺。
 
