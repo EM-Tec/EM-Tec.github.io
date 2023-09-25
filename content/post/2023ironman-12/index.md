@@ -24,7 +24,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 我們在製作滾動視差效果是會希望**一個元素的某一個屬性會隨著時間變化**。我們希望當我們輸入一個數字（也就是滾動的量）的時候得出一個計算結果。
 
-![假裝電腦在聊天](chat.webp)
+![假裝電腦在聊天](https://em-tec.github.io/post/2023ironman-12/chat.webp)
 
 這種東西取得兩個數值之間的關係叫做甚麼呢?沒錯我們要來建立一個函式。而最簡單且最常用的函式應該就是直線方程了。
 
@@ -38,7 +38,7 @@ $$
 - 接著求出 Y 截距，就可以得出直線方程式。
 - 因為通常到了終點之後，我們不會希望他還在繼續耗資源計算和定位到螢幕畫面千里之外。所以在起點前和終點後都不要再管它了。
 
-![Desmos 示意圖](desmos.png)
+![Desmos 示意圖](https://em-tec.github.io/post/2023ironman-12/desmos.png)
 
 希望這張圖能夠幫助你理解，如果不行的話國中數學課本翻一下。
 
@@ -59,7 +59,7 @@ transform: translate(10px, 0);
 
 JavaScript 只需要監聽滾動事件，並在距離範圍套入公式並修改 CSS 就可以了。
 
-```jsx
+```js
 const element = document.getElementById("element");
 window.addEventListener("scroll", function () {
 const scrollY = window.scrollY;
@@ -71,7 +71,7 @@ if(scrollY<100) element.style.transform = `translateY(${scrollY * 1.4 + 10}px)`;
 
 https://codepen.io/edit-mr/pen/vYvZagX
 
-![Alt text](boom.gif)
+![Alt text](https://em-tec.github.io/post/2023ironman-12/boom.gif)
 
 ```html
 <h1>引爆炸彈</h1>
@@ -103,7 +103,7 @@ div {
 }
 ```
 
-```jsx
+```js
 const element = document.getElementById("element");
 window.addEventListener("scroll", function () {
   const scrollY = window.scrollY;
@@ -122,7 +122,7 @@ window.addEventListener("scroll", function () {
 
 首先先簡單的切版。左邊的假文是為了讓你可以比較能感覺到往下滾動。
 
-![簡單的切版](layout.webp)
+![簡單的切版](https://em-tec.github.io/post/2023ironman-12/layout.webp)
 
 ```html
 <div></div>
@@ -170,7 +170,7 @@ transform: translateX(50vw) rotate(90deg);
 
 最後寫上 JavaScript 來實現他。數值有點需要憑感覺，可以自己觀察移動距離和速度調整看看。
 
-```jsx
+```js
 const planet = document.querySelector("div");
 window.addEventListener("scroll", function () {
   const scrollY = window.scrollY;
@@ -182,7 +182,7 @@ window.addEventListener("scroll", function () {
 
 https://codepen.io/edit-mr/pen/gOZRQex
 
-![Alt text](spin.gif)
+![Final](https://em-tec.github.io/post/2023ironman-12/spin.gif)
 
 能夠變的與玩的實在太多了，使用這個方法在每一個屬性都可以套用。歡迎在評論區留下你看到的好網站與你自己的創作。
 

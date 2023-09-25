@@ -26,7 +26,9 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
   ![Alt text](checkbox-range.webp)
 * checkbox 無法設定背景顏色
 
-因此我們需要用其他元素來做開關的外觀。可以讓 checkbox 隱藏在 HTML 較前面的部分，然後用其他元素來控制 checkbox 的狀態。而能夠遠端遙控 checkbox 的元素叫做 `label` 。我們可以用 `label` 來控制 checkbox 的狀態。只需要點擊 `label` checkbox 也會感覺到。
+問題那麼多，因此我們只需要input幫我們掛名存狀態，然後把它藏在角落裡面就好了。
+
+我們需要用其他元素來做開關的外觀。可以讓 checkbox 隱藏在 HTML 較前面的部分，然後用其他元素來控制 checkbox 的狀態。而能夠遠端遙控 checkbox 的元素叫做 `label` 。我們可以用 `label` 來控制 checkbox 的狀態。只需要點擊 `label` checkbox 也會感覺到。
 HTML 如下，我想用這個開關來控制背景顏色。
 
 ```html
@@ -68,23 +70,37 @@ body {
   z-index: -1;
   background: #444444;
 }
+label::after {
+  position: absolute;
+  left: 0.15rem;
+  top: 0.15rem;
+  content: "";
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: #fff;
+  pointer-events: none;
+}
 ```
-![Alt text](toggle.webp)
+
+![基本版面](layout.webp)
 
 這樣你會得到一個非常簡單的版面。而按鈕是在整格綠色範圍都可以點選的。
 
-接著我們讓按鈕被勾選時，背景顏色漸變成白色。
+接著我們讓按鈕被勾選時，背景顏色漸變成白色。我們為了讓元素可以抓到勾選框的狀況，`<input>`需要被放在所有元素的前面。因為我們有選擇器
 
 ```css
-.toggle input:checked ~ .light {
+input:checked + label {
+  background: #34c85a;
+}
+input:checked + label::after {
+  left: 1.65rem;
+}
+input:checked ~ .light {
   background: #fff;
 }
-
-input {
-  opacity: 0;
-}
 ```
-為了讓裡面的圈圈有辦法定位，我們把 toggle 的 position 設定為 relative ，然後把 light 的 position 設定為 fixed 。這樣 light 填滿整個螢幕了。
+
 
 ```css
 以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。

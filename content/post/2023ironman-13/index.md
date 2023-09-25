@@ -123,6 +123,9 @@ function changeFontColor(c) {
 這樣就完成啦
 
 https://codepen.io/edit-mr/pen/abPVWBJ
+
+![Final](final.gif)
+
 ```html
 <h1>顏色選單</h1>
 <div class="color-picker">
