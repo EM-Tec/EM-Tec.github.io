@@ -54,6 +54,7 @@ label {
   background: #e9e9eb;
   border-radius: 1rem;
   position: relative;
+  cursor:pointer;
 }
 body {
   display: flex;
@@ -85,9 +86,9 @@ label::after {
 
 ![基本版面](layout.webp)
 
-這樣你會得到一個非常簡單的版面。而按鈕是在整格綠色範圍都可以點選的。
+這樣你會得到一個非常簡單的版面。而按鈕是在框框範圍都可以點選的。
 
-接著我們讓按鈕被勾選時，背景顏色漸變成白色。我們為了讓元素可以抓到勾選框的狀況，`<input>`需要被放在所有元素的前面。因為我們有選擇器
+接著我們讓按鈕被勾選時，背景顏色漸變成白色。我們為了讓元素可以抓到勾選框的狀況，`<input>`需要被放在所有元素的前面。因為我們有選擇器`+`選擇後面的一個元素，`~`選擇所有後面的元素。
 
 ```css
 input:checked + label {
@@ -101,8 +102,72 @@ input:checked ~ .light {
 }
 ```
 
+最後成果如下
+
+https://codepen.io/edit-mr/pen/KKbZjOq
+
+![開關成果](final.gif)
+
+```html
+<input type="checkbox" id="switch">
+<label class="toggle" for="switch"></label>
+<div class="light"></div>
+```
 
 ```css
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+*,
+label::after {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s;
+}
+#switch {
+  display: none;
+}
+label {
+  width: 3.5rem;
+  height: 2rem;
+  background: #e9e9eb;
+  border-radius: 1rem;
+  position: relative;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+}
+.light {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: #444444;
+}
+label::after {
+  position: absolute;
+  left: 0.15rem;
+  top: 0.15rem;
+  content: "";
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: #fff;
+  pointer-events: none;
+}
+
+input:checked + label {
+  background: #34c85a;
+}
+input:checked + label::after {
+  left: 1.65rem;
+}
+input:checked ~ .light {
+  background: #fff;
+}
+```
+以上就是我今天的分享，你可以根據你的喜好增加陰影或其他動畫效果。歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。
