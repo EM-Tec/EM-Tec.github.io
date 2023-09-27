@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = ""
+title = "Day13 今天我想來點… 顏色選單"
 date = "2023-09-27"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
