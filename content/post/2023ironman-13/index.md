@@ -14,7 +14,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 <!--more-->
 
-![Alt text](final.webp)
+![顏色選單成果](https://em-tec.github.io/post/2023ironman-13/final.webp)
 
 ## 顏色選單 HTML
 
@@ -41,7 +41,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 ## CSS
 
-![簡單的 CSS](button.webp)
+![簡單的 CSS](https://em-tec.github.io/post/2023ironman-13/button.webp)
 
 ```css
 body {
@@ -124,7 +124,7 @@ function changeFontColor(c) {
 
 https://codepen.io/edit-mr/pen/abPVWBJ
 
-![Final](final.gif)
+![顏色選單成果](https://em-tec.github.io/post/2023ironman-13/final.gif)
 
 ```html
 <h1>顏色選單</h1>
