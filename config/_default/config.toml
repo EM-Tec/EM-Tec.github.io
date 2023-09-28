@@ -21,3 +21,5 @@ series = "series"
 
 [outputs]
   home = ["HTML", "RSS","JSON"]
+
+  enableSearch = true
