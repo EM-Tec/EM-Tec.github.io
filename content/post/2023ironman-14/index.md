@@ -11,7 +11,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 在手機開關的設定裡面通常不是 checkbox ，而是這種 toggle 開關。因為比較好看，且更有開關的感覺。
 
-![iPhone Wi-Fi 設定開關](switch.webp)
+![iPhone Wi-Fi 設定開關](https://em-tec.github.io/post/2023ironman-14/switch.webp)
 
 ## 原理
 
@@ -84,7 +84,7 @@ label::after {
 }
 ```
 
-![基本版面](layout.webp)
+![基本版面](https://em-tec.github.io/post/2023ironman-14/layout.webp)
 
 這樣你會得到一個非常簡單的版面。而按鈕是在框框範圍都可以點選的。
 
@@ -106,7 +106,7 @@ input:checked ~ .light {
 
 https://codepen.io/edit-mr/pen/KKbZjOq
 
-![開關成果](final.gif)
+![開關成果](https://em-tec.github.io/post/2023ironman-14/final.gif)
 
 ```html
 <input type="checkbox" id="switch">

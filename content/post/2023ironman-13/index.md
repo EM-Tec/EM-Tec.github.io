@@ -18,7 +18,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 ## 顏色選單 HTML
 
-首先我們來簡單切版一下。畫面中只有標題和選單。選單裡面放一堆顏色，然後再放一個自訂顏色的輸入框。這裡我們使用了一個 input type="color" 的輸入框包在裡面，這個輸入框可以讓使用者選擇顏色，而且是原生的，不需要任何 JavaScript。當元素被點擊時，我們就把顏色傳給 JavaScript 更改背景。
+首先我們來簡單切版一下。畫面中只有標題和選單。選單裡面放一堆顏色，然後再放一個自訂顏色的輸入框。這裡我們使用了一個 `input type="color"` 的輸入框包在裡面，這個輸入框可以讓使用者選擇顏色，而且是原生的，不需要任何 JavaScript。當元素被點擊時，我們就把顏色傳給 JavaScript 更改背景。
 
 ```html
 <h1>顏色選單</h1>
@@ -37,7 +37,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
   <div class="color-option" id="color"> <input type="color" onchange="document.getElementById('color').style.backgroundColor=this.value;changeColor(this.value)"></div>
 </div>
 ```
-輸入框被點擊並選擇顏色之後會觸發 onchange 事件。我們會把顏色傳給 changeColor() 這個函式更改背景，順便把自己的顏色也改成相同顏色。我們來加上一點簡單的 CSS。
+輸入框被點擊並選擇顏色之後會觸發 onchange 事件。我們會把顏色傳給 `changeColor()` 這個函式更改背景，順便把自己的顏色也改成相同顏色。我們來加上一點簡單的 CSS。
 
 ## CSS
 
@@ -106,7 +106,7 @@ body {
 
 ## JS
 
-最後讓我們建立一個 changeColor() 函式，這個函式會把傳進來的顏色設定成背景顏色。
+最後讓我們建立一個 `changeColor()` 函式，這個函式會把傳進來的顏色設定成背景顏色。
 
 ```js
 const changeFontColor = c => document.body.style.background = c;
