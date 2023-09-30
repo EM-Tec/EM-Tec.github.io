@@ -10,13 +10,19 @@ featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
-# 切版
+今天我們要來製作一個時鐘。不使用圖片，只使用 CSS 來繪製。
+
+## HTML
+
+首先是 HTML，非常老實。一個時鐘，裡面3個指針，兩個中間的裝飾軸圓圈，以及12個數字。度數和數字分別用 CSS 變數和 HTML 屬性存放。當然你要都用 CSS 也可以，我只是想示範怎麼使用。
+
+
 ```html
 <div class="clock">
   <div class="hour-hand"></div>
   <div class="minute-hand"></div>
   <div class="second-hand"></div>
-  <div class="clockCenter"></div>
+  <div class="clockCenter"></dv>
   <div class="clockCenterCenter"></div>
   <div class="digit" style="--deg: 0;" data-digit="12"></div>
   <div class="digit" style="--deg: 30;" data-digit="1"></div>
@@ -32,6 +38,156 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
   <div class="digit" style="--deg: 330;" data-digit="11"></div>
 </div>
 ```
+
+## CSS
+
+CSS要怎麼畫出時鐘呢？我們會需要幫這個  `div` 添加幾個漸層。
+
+### 時間刻度 - conic-gradient
+
+為了方便大家比較我把圖放在一起。
+
+![](https://em-tec.github.io/post/2023ironman-16/conic.webp)
+
+
+`conic-gradient` 的語法和其他漸層語法很相似。繞一圈跑，可以設定開始和結束的角度，沒寫角度就自動平分。比如說第一個：
+
+
+```css
+div {
+  width: 150px;
+  height: 150px;
+  background: conic-gradient(blue, red);
+}
+```
+
+
+如果你這樣打會得到一個錐形。和 `linear-graient` 的圖形原理相同，就是不給他過度的區域。
+
+
+```css
+.one {
+  background: conic-gradient(blue 0 15deg, red 15deg);
+}
+```
+
+設定開始結束角度就可以改成 `repeating-conic-gradient` 讓他重複。記得是 `repeating` 不是 `repeat` 喔～
+
+```css
+.two {
+  background: repeating-conic-gradient(blue 0 15deg, red 15deg 30deg);
+}
+```
+
+
+最後把角度條寫一點就可以囉～
+
+```css
+.three {
+  background: repeating-conic-gradient(blue 0 1deg, red 0 30deg);
+}
+```
+
+### 圓形 radial-gradient
+
+`radial-gradient` 會從裡到外。一樣原理，不給他地方漸層就會出現圓形。~~讓他原形畢露~~
+
+![](https://em-tec.github.io/post/2023ironman-16/radial.webp)
+
+
+```css
+div {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(red, blue);
+}
+.circle {
+  background: radial-gradient(red 50%, blue 50%);
+}
+```
+
+這樣就可以把時鐘中間的部分挖出來囉。
+
+### 旋轉時間
+
+這個也蠻有趣的。首先在時鐘的中間放一個 `div`，用為元素在右邊放數字。
+
+![](https://em-tec.github.io/post/2023ironman-16/prompt.webp)
+
+
+```html
+<main>
+  <div class=“no”></div>
+</main>
+```
+
+```css
+main {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: lightblue;
+  position: relative;
+}
+
+.no {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  background: pink;
+}
+.no::after {
+  font-size: 3rem;
+  content: “5”;
+  display: block;
+  transform: translateX(200px);
+}
+```
+
+旋轉方塊裡面裡面數字也會跟著轉。
+
+![](https://em-tec.github.io/post/2023ironman-16/spin.webp)
+
+```css
+.no {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  background: pink;
+  transform: rotate(60deg);
+}
+```
+
+不過這樣數字就歪了！沒事，偽元素轉回來就好了。
+
+![](https://em-tec.github.io/post/2023ironman-16/spinback.webp)
+
+```css
+.no::after {
+  font-size: 3rem;
+  content: “5”;
+  display: block;
+  transform: translateX(200px) rotate(-60deg);
+}
+```
+
+你會發現因為我們剛才所有元素定位點都是靠上對齊所以有點偏移，沒關係最後再校正回歸就可以了。
+
+### 指針
+
+指針就跟剛才的粉紅正方形一樣，只是長一點而已。選轉定位點記得放在中間上面喔，這樣才能指對方向。
+
+```css
+  transform-origin: center center;
+```
+
+### 在一起
+
+把以上所以的和在一起吧。  
 
 ```css
 body {
@@ -127,10 +283,42 @@ body {
   transition: transform 0.2s;
 }
 ```
-![Alt text](spin.gif)
+
+## JavaScript
+
+JavaScript 沒有什麼難的。就是小學數學題算時鐘走幾度。比如說秒針一分鐘走一圈，所以一秒走360除以60等於6度。
+
+需要注意一下的是因為指針的定位點在中間上面，所以一開始是在6點鐘方向。你可以把指針改成從中間下面對齊，或著是度數直接加半圈。
+
+```js
+const hourHand = document.querySelector(”.hour-hand“);
+const minuteHand = document.querySelector(”.minute-hand“);
+const secondHand = document.querySelector(”.second-hand“);
+function updateClock() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  const hourRotation = ((hours % 12) * 360) / 12 + ((minutes / 60) * 360) / 12 + 180;
+  const minuteRotation = ((minutes % 60) * 360) / 60 + ((seconds / 60) * 360) / 60 + 180;
+  const secondRotation = ((seconds % 60) * 360) / 60 + 180;
+  hourHand.style.transform = `rotate(${hourRotation}deg) translateY(18px)`;
+  minuteHand.style.transform = `rotate(${minuteRotation}deg) translateY(20px)`;
+  secondHand.style.transform = `rotate(${secondRotation}deg) translateY(-18px)`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+```
+正當你以為終於結束的時候，你無意間看到了這個畫面…
+
+![](https://em-tec.github.io/post/2023ironman-16/spin.gif)
+
+結果對了，方法錯了。因為角度降回180，結果他還真的轉回去。
+
 ![](https://media.tenor.com/R5IECfIf34YAAAAd/fish-spinning.gif)
 
-
+想要讓他一直轉下去就要提醒他莫忘初衷，把之前轉的度數都加進去即可。
 
 ```js
 const hourHand = document.querySelector(".hour-hand");
@@ -149,7 +337,7 @@ function updateClock() {
     180 +
     hours * 360;
   const secondRotation =
-    ((seconds % 60) * 360) / 60 + 180 + hours * minutes * 360;
+    ((seconds % 60) * 360) / 60 + 180 + （hours * 60 + minutes） * 360;
   hourHand.style.transform = `rotate(${hourRotation}deg) translateY(18px)`;
   minuteHand.style.transform = `rotate(${minuteRotation}deg) translateY(20px)`;
   secondHand.style.transform = `rotate(${secondRotation}deg) translateY(-18px)`;
@@ -158,7 +346,12 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 ```
+終於成功啦！
 
 https://codepen.io/edit-mr/pen/wvRXMLG
 
-![Final](final.gif)
+![Final](https://em-tec.github.io/post/2023ironman-16/final.gif)
+
+以上就是我今天的分享。我有看到有人是算了第一個角度之後就每秒固定加上去度數。不過萬一你有延遲或者是卡頓他的時間就會跑掉了，所以我還是建議每次都重新抓時間做計算。歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+
+我是毛哥EM，讓我們明天再見。
