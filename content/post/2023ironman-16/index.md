@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "Day16 今天我想來...欸現在幾點? - CSS畫時鐘"
+title = "Day16 今天我想來...欸現在幾點? - CSS畫出 iOS 時鐘"
 date = "2023-09-30"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
@@ -10,7 +10,9 @@ featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
-今天我們要來製作一個時鐘。不使用圖片，只使用 CSS 來繪製。
+今天我們要來製作一個時鐘。不使用圖片，只使用 CSS 來繪製。我的目標是可以做出類似於 Apple iOS17 StandBy 的時鐘效果。
+
+![](https://em-tec.github.io/post/2023ironman-16/StandBy.webp)
 
 ## HTML
 
@@ -346,7 +348,7 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 ```
-終於成功啦！
+終於成功啦！有個87%像吧w
 
 https://codepen.io/edit-mr/pen/wvRXMLG
 
