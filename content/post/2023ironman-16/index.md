@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
-title = "今天我想來...欸現在幾點? - CSS畫時鐘"
-date = "2023-10-16"
+title = "Day16 今天我想來...欸現在幾點? - CSS畫時鐘"
+date = "2023-09-30"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
