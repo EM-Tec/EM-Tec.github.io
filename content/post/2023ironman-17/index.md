@@ -1,12 +1,13 @@
 +++
 author = "毛哥EM"
 title = "Day17 純CSS波浪進度條"
-date = "2023-09-31"
+date = "2023-10-01"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
 thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
 featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+draft = true
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
@@ -69,7 +70,7 @@ https://codepen.io/edit-mr/pen/JjwBbgg
 
 可以看出我有疊第二個，並且微調顏色圓角，並稍微延遲，讓他看起來不要過度整齊。
 
-```htlm
+```html
 <main>
   <div></div>
   <div class=“second”></div>
@@ -78,7 +79,7 @@ https://codepen.io/edit-mr/pen/JjwBbgg
 ```
 
 ```css
-body {
+body { 
   overflow: hidden;
   display: flex;
   justify-content: center;
