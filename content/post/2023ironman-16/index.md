@@ -26,7 +26,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
   <div class="hour-hand"></div>
   <div class="minute-hand"></div>
   <div class="second-hand"></div>
-  <div class="clockCenter"></dv>
+  <div class="clockCenter"></div>
   <div class="clockCenterCenter"></div>
   <div class="digit" style="--deg: 0;" data-digit="12"></div>
   <div class="digit" style="--deg: 30;" data-digit="1"></div>

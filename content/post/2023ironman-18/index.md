@@ -10,7 +10,7 @@ featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
-今天我們要使用純 CSS 實現 DVD 反彈動畫，讓大家認識 `steps()` 以及 `animation-composition` 屬性的使用方式，並提供這個實用的應用技巧。(應該吧...)
+今天我們要使用純 CSS 實現 DVD 反彈動畫，讓大家認識 `steps()` 以及 `animation-composition` 屬性的使用方式，並提供這個實用的應用。(應該吧...)
 
 <!--more-->
 
@@ -117,11 +117,15 @@ div {
 
 ![](https://em-tec.github.io/post/2023ironman-18/both.gif)
 
+呼~救回來了，但是我們的動畫還沒有變色，我們來加上變色的動畫。
+
 #### 變色動畫
 
-呼~救回來了，但是我們的動畫還沒有變色，我們來加上變色的動畫。我們使用 `filter` 屬性來實現，`filter` 屬性有一個 `hue-rotate()` 函式，可以讓顏色旋轉，我們使用 `hue-rotate(360deg)` 來讓顏色旋轉一圈，就可以讓顏色變回原本的顏色了，讓所有顏色都可以跑過一次。
+我們使用 `filter` 屬性來實現，`filter` 屬性有一個 `hue-rotate()` 函式，可以讓顏色旋轉，我們使用 `hue-rotate(360deg)` 來讓顏色旋轉一圈，就可以讓顏色變回原本的顏色了，讓所有顏色都可以跑過一次。
 
 > 顏色改變的動畫長度記得要是平移動畫長度的倍數，才可以在撞牆時剛好變色。
+
+> 複習: [Day7 幫我開濾鏡 filter](https://ithelp.ithome.com.tw/articles/10323423)
 
 ```css
 div{
