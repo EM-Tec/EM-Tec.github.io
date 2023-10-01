@@ -13,11 +13,14 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 以往製作波浪效果不是使用 GIF 就是借助貝茲曲線。貝茲曲線就是 Ai 或是 Vectornator (現在叫做Curve) 裡面的鋼筆工具。隨便拉都會有波浪的感覺，且使用 SVG或 JavaScript Canvas 都不難實現。
 
+![](https://em-tec.github.io/post/2023ironman-17/curve.webp)
 
 然而在 CSS 實現貝茲曲線一直都沒有一個優雅的方法。我在這個中秋連假和家人一起到墾丁露營，我一邊看著大海海浪一邊喝著椰子水思考這個問題…
 
 
 突然我注意到，你看椰子是不是看起來很圓，但又不是很圓。像極了圓角 `border-radius` 接近50%但又還沒達到。
+
+![](https://em-tec.github.io/post/2023ironman-17/coconut.webp)
 
 ```html
 <div></div>
@@ -41,6 +44,8 @@ body {
 
 如果把它轉起來的話…
 
+![](https://em-tec.github.io/post/2023ironman-17/spin.gif)
+
 ```css
 div {
   width: 300px;
@@ -61,6 +66,8 @@ div {
 
 https://codepen.io/edit-mr/pen/dywjOyw
 
+![](https://em-tec.github.io/post/2023ironman-17/wave.gif)
+
 
 這裡關於置中我想補充一個點，就是因為我們已經在使用 `transform: rotate()` 屬性旋轉，所以我沒有用 `translate()`來置中。因為我們知道寬度是150vw，所以只需要把多出來的50vw切一半丟到左邊就可以了。
 
@@ -68,7 +75,9 @@ https://codepen.io/edit-mr/pen/dywjOyw
 
 https://codepen.io/edit-mr/pen/JjwBbgg
 
-可以看出我有疊第二個，並且微調顏色圓角，並稍微延遲，讓他看起來不要過度整齊。
+![](https://em-tec.github.io/post/2023ironman-17/final.gif)
+
+可以看出我有疊第二個，並且微調顏色圓角，並稍微延遲，讓他看起來不要過度整齊。外框是先疊一層白色 `border`，再一層藍色 `outline`。最後再加上一個文字，就完成了。
 
 ```html
 <main>
