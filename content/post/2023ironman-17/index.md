@@ -12,6 +12,9 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 以往製作波浪效果不是使用 GIF 就是借助貝茲曲線。貝茲曲線就是 Ai 或是 Vectornator (現在叫做Curve) 裡面的鋼筆工具。隨便拉都會有波浪的感覺，且使用 SVG或 JavaScript Canvas 都不難實現。
 
+<!--more-->
+
+
 ![](https://em-tec.github.io/post/2023ironman-17/curve.webp)
 
 然而在 CSS 實現貝茲曲線一直都沒有一個優雅的方法。我在這個中秋連假和家人一起到墾丁露營，我一邊看著大海海浪一邊喝著椰子水思考這個問題…
