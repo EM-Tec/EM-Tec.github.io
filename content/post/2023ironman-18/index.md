@@ -28,13 +28,12 @@ HTML，簡單
 
 ### 版面
 
-CSS 我們先不放背景圖片，用正方形就好了。用這種大藍色整個味道都出來了XD
+CSS 我們先不放背景圖片，用正方形就好了。用這種深藍色整個味道都出來了XD。`<body>` 設定 `overflow: hidden;` 是因為有時候反彈時會撞出滾動條，看起來不是很舒服。
 
 ![](https://em-tec.github.io/post/2023ironman-18/square.webp)
 
 ```css
 body {
-  display: flex;
   background: #000;
   overflow: hidden;
 }
@@ -191,7 +190,6 @@ div{
 ```
 ```css
 body {
-  display: flex;
   background: #000;
   overflow: hidden;
 }
