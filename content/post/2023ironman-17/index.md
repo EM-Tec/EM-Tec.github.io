@@ -7,7 +7,6 @@ tags = ["HTML", "CSS", "JS"]
 categories = [""]
 thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
 featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-draft = true
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
@@ -17,6 +16,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 然而在 CSS 實現貝茲曲線一直都沒有一個優雅的方法。我在這個中秋連假和家人一起到墾丁露營，我一邊看著大海海浪一邊喝著椰子水思考這個問題…
 
+![](https://em-tec.github.io/post/2023ironman-17/beach.webp)
 
 突然我注意到，你看椰子是不是看起來很圓，但又不是很圓。像極了圓角 `border-radius` 接近50%但又還沒達到。
 
