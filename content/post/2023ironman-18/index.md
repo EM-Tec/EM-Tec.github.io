@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "Day18 純 CSS DVD 反彈動畫"
-date = "2023-10-01"
+date = "2023-10-02"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]

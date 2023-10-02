@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "Day17 純CSS波浪進度條"
+title = "Day17 css.wav 純CSS波浪進度條"
 date = "2023-10-01"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
@@ -73,6 +73,8 @@ https://codepen.io/edit-mr/pen/dywjOyw
 
 
 這裡關於置中我想補充一個點，就是因為我們已經在使用 `transform: rotate()` 屬性旋轉，所以我沒有用 `translate()`來置中。因為我們知道寬度是150vw，所以只需要把多出來的50vw切一半丟到左邊就可以了。
+
+![](https://em-tec.github.io/post/2023ironman-17/why25.svg)
 
 最後來多疊幾個，然後裝飾一下它。成果如下：
 
