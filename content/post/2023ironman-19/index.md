@@ -12,7 +12,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 今天我們要來認識 CSS 選擇器 `:target` 並做出以下效果
 
-![純 CSS 做出圖片 Lightbox](final.gif)
+![純 CSS 做出圖片 Lightbox](https://em-tec.github.io/post/2023ironman-19/final.gif)
 
 Lightbox 我認為只適合拿來展示照片。因為他會打亂整個你滾動的方向，必須要去找那個叉叉。要顯示更多文字有太多更好的做法了，比如說展開摺疊或著是滑動到另外一個位置。不過今天的作法你想要展示甚麼都可以。
 
@@ -34,7 +34,7 @@ div:target{
 }
 ```
 
-![:target 範例](target.gif)
+![:target 範例](https://em-tec.github.io/post/2023ironman-19/target.gif)
 ## 實作
 
 那我們就裝飾一下這個版面和 Lightbox 就好啦!先從維基共享資源抓幾張圖片。
@@ -148,7 +148,7 @@ div:target ~ section {
 最終成果如下:
 https://codepen.io/edit-mr/pen/jOXpJXX
 
-![純 CSS 做出圖片 Lightbox](final.gif)
+![純 CSS 做出圖片 Lightbox](https://em-tec.github.io/post/2023ironman-19/final.gif)
 
 ```html
 <div id="one"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Domestic_cat_in_the_grass.JPG/640px-Domestic_cat_in_the_grass.JPG" alt=""></div>
