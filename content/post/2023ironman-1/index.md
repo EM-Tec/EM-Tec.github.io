@@ -67,4 +67,4 @@ https://codepen.io/edit-mr/pen/bGObqWq
 
 如果你認同我的想法的話歡迎追蹤這個系列，也歡迎在 Instagram 和 Google 新聞追蹤毛哥EM資訊密技。而如果你不會HTML和CSS但因為某種原因你讀到這裡的話，歡迎訂閱我新開的YouTube頻道：網棧。
 
-我是毛哥EM，讓我們明天再見
+我是毛哥EM，讓我們明天再見。
