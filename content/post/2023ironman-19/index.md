@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "Day19 純 CSS 做出討人厭的彈出式 Lightbox"
+title = "Day19 純 CSS 做出彈出式 Lightbox"
 date = "2023-10-03"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]

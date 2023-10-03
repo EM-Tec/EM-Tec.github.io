@@ -1,0 +1,161 @@
++++
+author = "毛哥EM"
+title = "動畫該用 CSS 還是 JS 做？"
+date = "2023-10-16"
+series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
+tags = ["HTML", "CSS", "JS"]
+categories = [""]
+thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
+featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
++++
+
+今天是第二十一天，2/3的路程已經走完了。這個系列明明是叫【不用庫 也能酷 - 玩轉 CSS & Js 特效】，JavaScript 是來湊關鍵字的嗎?今天就來聊聊為甚麼使用純 CSS 做動畫如此吸引人。
+
+## 對手進場
+
+### CSS `transition` 和 `@keyframes`
+
+就性能上來說兩者基本上沒有區別，所以我們都歸於 CSS 動畫。你可以根據使用情境來選擇使用哪一種。比如說滑鼠互動可以使用 `transition`，出場動畫可以使用 `@keyframes`。
+
+>　複習：[Day4 自己動! @keyframes 與 Transition](https://ithelp.ithome.com.tw/articles/10321376)
+
+### JavaScript `requestAnimationFrame()`
+
+`requestAnimationFrame()` 會在瀏覽器畫下一幀繪制之前調用。因此比設定固定時間重繪的 `setTimeout()` 或 `setInterval()`效率高得多。開發人員可以通過簡單地改變元素的樣式（或者更新畫布繪制等等）來創建動畫。
+
+> 備註: 不管是 CSS 動畫還是 JavaScript 動畫，如果你離開當前頁面，動畫就會停止。比如說 [Day10 永無止境跑馬燈 - 不同螢幕 相同速度](https://ithelp.ithome.com.tw/articles/10326819) 的跑馬燈就是如此。
+> 
+> 如果你想要在背景執行動畫，可以使用 [Web Worker](https://developer.mozilla.org/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)。
+
+## 就是要對決
+
+我這裡使用 FireFox Developer Edition 來測試，因為它在 CSS Debug 有很多很棒的功能。而今天我們要讓他幫助我們看到動畫的 FPS。
+
+> 用 Firefox 還有一個原因是他在隱私權保護方面抓得很緊，所以在 Firefox 上面能用基本上 Chromium 都不會有太大問題。
+
+首先請你先到<about:config>，然後把 `gfx.webrender.debug.profiler` 設為 `true`。
+
+![](warn.webp)
+
+
+gfx.webrender.debug.profiler
+
+接下來是暖暖包時間，我們要來翻滾1000個 `<div>` 正方形。你可以自行貼上以下程式碼，然後點擊切換按鈕來切換動畫方式。
+
+```html
+<div id="header">
+  <button id="toggle-button">切换</button>
+  <span id="type">CSS Animation</span>
+</div>
+<div id="box-container"></div>
+```
+
+```css
+#header {
+  position: sticky;
+  top: 0.5rem;
+  margin: 0 0.5rem;
+  z-index: 100;
+  background-color: lightgreen;
+}
+
+#box-container {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  gap: 15px;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+.css-animation {
+  animation: animate 6s linear 0s infinite alternate;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0) rotate(0deg) scale(0.6);
+  }
+  100% {
+    transform: translateX(500px) rotate(360deg) scale(1.4);
+  }
+}
+```
+```js
+const boxes = [];
+const button = document.getElementById("toggle-button");
+const boxContainer = document.getElementById("box-container");
+const animationType = document.getElementById("type");
+
+// create boxes
+for (let i = 0; i < 1000; i++) {
+  const div = document.createElement("div");
+  div.classList.add("css-animation");
+  div.classList.add("box");
+  boxContainer.appendChild(div);
+  boxes.push(div.style);
+}
+
+let toggleStatus = true;
+let rafId;
+button.addEventListener("click", () => {
+  if (toggleStatus) {
+    animationType.textContent = " requestAnimationFrame";
+    for (const child of boxContainer.children) {
+      child.classList.remove("css-animation");
+    }
+    rafId = window.requestAnimationFrame(animate);
+  } else {
+    window.cancelAnimationFrame(rafId);
+    animationType.textContent = " CSS animation";
+    for (const child of boxContainer.children) {
+      child.classList.add("css-animation");
+    }
+  }
+  toggleStatus = !toggleStatus;
+});
+
+const duration = 6000;
+const translateX = 500;
+const rotate = 360;
+const scale = 1.4 - 0.6;
+let start;
+function animate(time) {
+  if (!start) {
+    start = time;
+    rafId = window.requestAnimationFrame(animate);
+    return;
+  }
+
+  const progress = (time - start) / duration;
+  if (progress < 2) {
+    let x = progress * translateX;
+    let transform;
+    if (progress >= 1) {
+      x = (2 - progress) * translateX;
+      transform = `translateX(${x}px) rotate(${
+        (2 - progress) * rotate
+      }deg) scale(${0.6 + (2 - progress) * scale})`;
+    } else {
+      transform = `translateX(${x}px) rotate(${progress * rotate}deg) scale(${
+        0.6 + progress * scale
+      })`;
+    }
+
+    for (const box of boxes) {
+      box.transform = transform;
+    }
+  } else {
+    start = null;
+  }
+  rafId = window.requestAnimationFrame(animate);
+}
+```
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+
+我是毛哥EM，讓我們明天再見。
