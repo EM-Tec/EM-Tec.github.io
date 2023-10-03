@@ -16,7 +16,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 在我們討論之前，我們先來看看瀏覽器的渲染流程。這裡我畫了一張可愛的小圖
 
-![瀏覽器渲染流程](css3_gpu_speedup.svg)
+![瀏覽器渲染流程](https://em-tec.github.io/post/2023ironman-20/css3_gpu_speedup.svg)
 
 * **JavaScript**: JavaScript 實現動畫效果，DOM 元素操作等。
 * **Style（計算樣式）**: 決定每個 DOM 元素應該套用什麼 CSS 規則。

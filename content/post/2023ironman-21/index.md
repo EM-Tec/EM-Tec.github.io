@@ -34,14 +34,21 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 > 用 Firefox 還有一個原因是他在隱私權保護方面抓得很緊，所以在 Firefox 上面能用基本上 Chromium 都不會有太大問題。
 
-首先請你先到<about:config>，然後把 `gfx.webrender.debug.profiler` 設為 `true`。
+首先請你先到<about:config>，他很貼心請你要小心，選擇接受風險並繼續即可。
 
 ![](warn.webp)
 
 
-gfx.webrender.debug.profiler
+請你搜尋gfx.webrender.debug.profiler-ui
 
-接下來是暖暖包時間，我們要來翻滾1000個 `<div>` 正方形。你可以自行貼上以下程式碼，然後點擊切換按鈕來切換動畫方式。
+*  `gfx.webrender.debug.profiler-ui` 設為 `FPS`，
+*  `gfx.webrender.debug.profiler-ui` 設為 `true` (點擊加號)。
+
+> 記得先設成 `FPS` 再設成 `true`，不然整個畫面會被資訊轟炸，比 Minecraft 的 F3 還要誇張好幾倍。
+
+![](config.webp)
+
+接下來是暖暖包時間，我們要來翻滾1000個 `<div>` 正方形。你可以自行貼上以下程式碼，或是用[我的](https://em-tec.github.io/post/2023ironman-21/test.html)。然後點擊切換按鈕來切換動畫方式。
 
 ```html
 <div id="header">
@@ -156,6 +163,35 @@ function animate(time) {
   rafId = window.requestAnimationFrame(animate);
 }
 ```
+
+### CSS `transition` 和 `@keyframes`
+
+可以看到 FPS 穩定在 60 左右。
+
+![](css.webp)
+
+### JavaScript `requestAnimationFrame()`
+
+可以看到 FPS 掉到 30 左右。
+
+![](js.webp)
+
+## なに？為甚麼？
+
+原因就是使用 CSS 動畫的時候他 Call out 給 GPU 幫忙做硬體加速。而使用 JavaScript 動畫的時候他只能靠 CPU。
+
+> 複習: Day20 GPU! 啟動! - 淺談 CSS3 硬體加速
+
+![瀏覽器渲染流程](https://em-tec.github.io/post/2023ironman-20/css3_gpu_speedup.svg)
+
+JavaScript 的 `requestAnimationFrame()` 會引起 reflow（重新布局），整個流程需要再跑一次。而 CSS 的 `transition` 和 `@keyframes` 只需要單獨稍微調整一下動畫的圖層就好了。
+
+## JavaScript: 我存在的意義是甚麼?
+
+雖然 CSS3 十分強大，但還是有很多效果是只能透過 JavaScript 實現，或著是使用 JavaScript 實現會更加方便。如果是有複雜的數學邏輯或著是需要互動的動畫，使用 JavaScript 都會比較簡單。
+
+明天我們就來玩玩 JavaScript 的特效吧。
+
 以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。
