@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "Day19 純 CSS 做出 Lightbox"
+title = "Day19 純 CSS 做出討人厭的彈出式 Lightbox"
 date = "2023-10-03"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
@@ -10,11 +10,11 @@ featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
-今天我們要來認識 CSS 選擇器 `:target` 並做出以下效果
+最討厭的廣告就是彈出式 Lightbox 廣告了，他會突然跳出來，然後你要去找那個超小的叉叉關掉他。今天我們不是要重現煩人的廣告，而是要來認識 CSS 選擇器 `:target` 並做出以下效果。
 
 ![純 CSS 做出圖片 Lightbox](https://em-tec.github.io/post/2023ironman-19/final.gif)
 
-Lightbox 我認為只適合拿來展示照片。因為他會打亂整個你滾動的方向，必須要去找那個叉叉。要顯示更多文字有太多更好的做法了，比如說展開摺疊或著是滑動到另外一個位置。不過今天的作法你想要展示甚麼都可以。
+我們來用 Lightbox 看貓貓
 
 ## 認識 :taget
 
