@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "動畫該用 CSS 還是 JS 做？"
-date = "2023-10-16"
+date = "2023-10-21"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
@@ -10,7 +10,7 @@ featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 
-今天是第二十一天，2/3的路程已經走完了。這個系列明明是叫【不用庫 也能酷 - 玩轉 CSS & Js 特效】，JavaScript 是來湊關鍵字的嗎?今天就來聊聊為甚麼使用純 CSS 做動畫如此吸引人。
+今天是第二十一天，已經走完2/3的路程，我媽還以為我早被淘汰了。這個系列明明是叫【不用庫 也能酷 - 玩轉 CSS & Js 特效】，但 Js 出現了幾篇?有五篇嗎?難道 JavaScript 是來湊關鍵字的嗎?今天就來聊聊為甚麼使用純 CSS 做效果如此吸引人。
 
 ## 對手進場
 
@@ -180,11 +180,13 @@ function animate(time) {
 
 原因就是使用 CSS 動畫的時候他 Call out 給 GPU 幫忙做硬體加速。而使用 JavaScript 動畫的時候他只能靠 CPU。
 
-> 複習: Day20 GPU! 啟動! - 淺談 CSS3 硬體加速
+> 複習: [Day20 GPU! 啟動! - 淺談 CSS3 硬體加速](https://ithelp.ithome.com.tw/articles/10333947)
 
 ![瀏覽器渲染流程](https://em-tec.github.io/post/2023ironman-20/css3_gpu_speedup.svg)
 
 JavaScript 的 `requestAnimationFrame()` 會引起 reflow（重新布局），整個流程需要再跑一次。而 CSS 的 `transition` 和 `@keyframes` 只需要單獨稍微調整一下動畫的圖層就好了。
+
+你可以測試一下，關閉硬體加速功能(不用拔顯卡，到 config 關就可以了)之後兩者的 FPS 理論上就會差不多了。
 
 ## JavaScript: 我存在的意義是甚麼?
 
