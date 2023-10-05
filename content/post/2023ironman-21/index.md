@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "Day21 動畫該用 CSS 還是 JS 做？"
+title = "Day21 就是要對決 - CSS 和 JS 動畫，哪個更絲滑？"
 date = "2023-10-05"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
