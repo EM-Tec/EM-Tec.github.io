@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "Day 22 JavaScript 乱薍覼釠亂碼效果"
-date = "2023-10-16"
+date = "2023-10-6"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
