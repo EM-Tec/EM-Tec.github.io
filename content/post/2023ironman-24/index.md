@@ -14,12 +14,15 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 https://codepen.io/edit-mr/pen/poqqoLr
 
+![成果](final.gif)
+
 然後你可以應用做出一些很酷的效果:
 
 ## 原理
 
 原理其實很簡單。要讓兩個東西之間相連只需要模糊就會糊在一起了。
 
+![blur](blur.webp)
 
 ```html
 <div class="box">
@@ -54,8 +57,74 @@ https://codepen.io/edit-mr/pen/poqqoLr
 }
 ```
 
+然後增加對比讓中間模糊的部分更明顯:
 
+![增加對比讓中間模糊的部分更明顯](contrast.webp)
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+```css
+.box {
+  position: relative;
+  height: 100vh;
+  background-color: #fff;
+    filter: contrast(20);
+}
+```
+
+最後讓它動起來
+```css
+.box {
+  position: relative;
+  height: 500px;
+  filter: contrast(20);
+  background-color: #fff;
+}
+.circle-big,
+.circle-small {
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: 2s infinite move alternate;
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  transform: translatex(20px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle-big {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  animation-delay: -2s;
+}
+
+@keyframes move {
+  from {
+    transform: translate(calc(-50% + 100px), -50%);
+  }
+  to {
+    transform: translate(calc(-50% - 100px), -50%);
+  }
+}
+
+```
+
+好，結束。
+
+![成果](final.gif)
+
+你可以自由應用在你的網頁上。以下是幾個範例:
+
+來源: https://codepen.io/Chokcoco
+![Alt text](175032541-260a9239-32cb-4d9d-89cb-c19ab25e1228.gif) 
+![Alt text](231435913-2d1a28e5-bc1b-404a-ac2d-9d0542a42836.gif)
+
+ ![Alt text](<註解 2023-10-08 120233.png>)
+
+連結: https://codepen.io/YusukeNakaya/pen/vvEqVx
+![Alt text](<2023-10-08 12-00-35.gif>) 
+
+這個效果明天會使用到，你可以來猜猜看。我剩下六天了，接下來原則上都是蠻重要的內容，要來完成一些很常見的版面和許多人習慣直接套庫的東西。以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。
