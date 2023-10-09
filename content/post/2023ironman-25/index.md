@@ -337,8 +337,6 @@ https://codepen.io/edit-mr/pen/NWeeYRq
 ![相黏效果](final.gif)
 
 ```css
-
-```css
 body {
   overflow: hidden;
   font-family: system-ui;
