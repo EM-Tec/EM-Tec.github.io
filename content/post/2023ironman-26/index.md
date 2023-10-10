@@ -24,7 +24,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 https://codepen.io/edit-mr/pen/ExGrxjX
 
-![getBoundingClientRect()](getBoundingClientRect.webp)
+![getBoundingClientRect()](https://em-tec.github.io/post/2023ironman-26/getBoundingClientRect.webp)
 
 > **為甚麼不要等整個元素顯示出來在觸發動畫?**  
 > 因為如果元素很長，可能到半個畫面都空白之後他才出現會很奇怪。所以我們只要有任何一部分有顯示在畫面上就可以觸發動畫了，這樣滾動起來會比較順暢。  
@@ -37,7 +37,7 @@ https://codepen.io/edit-mr/pen/ExGrxjX
 
 > 叫做 ed 是因為英文過去式常常加上 ed，想說蠻直覺野蠻短的。如果你有更好的主意也可以改成其他名字。
 
-![簡單的版面](layout.webp)
+![簡單的版面](https://em-tec.github.io/post/2023ironman-26/layout.webp)
 
 ```html
 <h1 class="aos">Animate On Scroll</h1>
@@ -100,7 +100,7 @@ document.addEventListener("scroll", addClassToVisibleElements);
 addClassToVisibleElements();
 ```
 
-![淡入動畫](fade.gif)
+![淡入動畫](https://em-tec.github.io/post/2023ironman-26/fade.gif)
 
 ok 成功，我們來多做幾個更浮誇的動畫。
 
@@ -156,11 +156,11 @@ ok 成功，我們來多做幾個更浮誇的動畫。
 }
 ```
 
-好啦成果如下，你可以試著滾動一下頁面看看。今天這幾行程式碼就一次取代了 [Animate.css](https://animate.style/)、[WOW.js](https://wowjs.uk/)、[AOS](https://michalsnik.github.io/aos/)、[ScrollReveal](https://scrollrevealjs.org/) 這些函式庫，讓你享有更簡單更高的自訂性。
+好啦成果如下，你可以試著滾動一下頁面看看。今天這幾行程式碼就一次取代了 [Animate.css](https://animate.style/)、[WOW.js](https://wowjs.uk/)、[AOS](https://michalsnik.github.io/aos/)、[ScrollReveal](https://scrollrevealjs.org/) 這些函式庫，而且還有更簡單更高的自訂性。
 
 https://codepen.io/edit-mr/pen/rNoPBZe
 
-![所有效果](final.gif)
+![所有效果](https://em-tec.github.io/post/2023ironman-26/final.gif)
 
 ```html
 <h1 class="aos slideIn">Animate On Scroll</h1>
