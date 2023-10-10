@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/post/</link><description>Recent content in Posts on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Mon, 09 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Day25 有料的 CSS 漢堡選單</title><link>https://EM-Tec.github.io/post/2023ironman-25/</link><pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-25/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/post/</link><description>Recent content in Posts on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Day26 不要躲在下面動! Animate On Scroll 自己做</title><link>https://EM-Tec.github.io/post/2023ironman-26/</link><pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-26/</guid><description>
+我們都知道 CSS 動畫可以用 @keyframes 來做，但是他們都是馬上就觸發的。就算元素還沒有出現在畫面上，動畫也已經開始了。
+如果要做出滾動到某個位置才觸發的動畫，就需要用到 JavaScript 來偵測滾動位置，然後再加上 CSS 動畫。沒錯，JavaScript 回來了。
+原理 我們要做的是當元素出現在畫面上時，才觸發動畫。所以我們要偵測元素是否出現在畫面上。
+我們可以用 getBoundingClientRect() 來取得元素相對於螢幕的位置，然後再用 window.innerHeight 來取得畫面的高度，就可以知道元素是否出現在畫面上了。
+這裡是一個我做的範例。你可以看到當元素的上方超出畫面時top就會變負值。當元素的下方超出畫面時bottom的值會大於螢幕高度。那麼我們只需要有任何一部分有顯示在畫面上就可以觸發動畫了。
+https://codepen.io/edit-mr/pen/ExGrxjX
+為甚麼不要等整個元素顯示出來在觸發動畫?
+因為如果元素很長，可能到半個畫面都空白之後他才出現會很奇怪。所以我們只要有任何一部分有顯示在畫面上就可以觸發動畫了，這樣滾動起來會比較順暢。
+如果你想要的話可以自己改成等整個元素顯示出來再觸發動畫，或是設置一些延遲時間以及增加動畫長度。後者我比較推薦。
+實作 先打點簡單的內容。我們幫需要動畫的內容加上 aos 這個 class。這樣我們只要偵測這些元素是否出現在畫面上。如果有的話就加上 ed 這個 class。這樣我們就可以用 CSS 來做動畫了。
+叫做 ed 是因為英文過去式常常加上 ed，想說蠻直覺野蠻短的。如果你有更好的主意也可以改成其他名字。
+1&amp;lt;h1 class=&amp;#34;aos&amp;#34;&amp;gt;Animate On Scroll&amp;lt;/h1&amp;gt; 2&amp;lt;p class=&amp;#34;aos&amp;#34;&amp;gt; 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, mollitia magni nemo eius obcaecati aliquam ex nisi maiores. Autem hic illo quas amet ipsam. Eos tempore repellat sint illum tenetur!</description></item><item><title>Day25 有料的 CSS 漢堡選單</title><link>https://EM-Tec.github.io/post/2023ironman-25/</link><pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/2023ironman-25/</guid><description>
 我們今天要來做幾份漢堡選單。
 原理和 Day14 今天我想來點… 純 CSS 的開關 一樣，都是用 input 的 checkbox 來儲存狀態好讓其他元素可以抓到。而他本身的狀態使用 label 來遠端遙控。
 我先不要一次跳太多步驟。這是一個基本還未完成的版面。
