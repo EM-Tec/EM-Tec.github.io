@@ -243,11 +243,11 @@ HTML 加上圖片
 <!-- ... -->
 ```
 
-iT 邦幫忙的作法是把右邊的選單用 `transform:translate()` 往左平移遮住它。
+iT 邦幫忙的作法是把右邊的選單用 `transform:translate()` 往左平移遮住它。我把上面的選單設成半透明讓你看。
 
-!
+![半透明看選單移動效果](cover.gif)
 
-這個方法很不錯，但我們直接用 width 控制就好了。
+這個方法很不錯，但我今天想和你分享另外一個做法。就是直接使用 width 控制。
 
 ```css
 nav > div > img {
@@ -262,9 +262,15 @@ nav > div > img {
 }
 ```
 
-`object-fit` 可以讓圖片填滿容器，`object-position` 可以讓圖片往左對齊。這樣就可以做到圖片從左邊滑出來的效果。
+`object-fit` 可以讓圖片填滿容器，而不會變形。`object-position` 可以讓圖片往左對齊而不是中間。這樣就可以做到圖片從左邊滑出來的效果。
 
+## 成果
 
+成果如下
+
+https://codepen.io/edit-mr/pen/WNLPYON
+
+![成果](final.gif)
 
 以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
