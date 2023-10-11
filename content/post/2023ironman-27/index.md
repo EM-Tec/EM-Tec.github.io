@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "Day 27 iT 邦幫忙::一起幫忙製作導覽列，拯救第27天"
-date = "2023-10-16"
+date = "2023-10-11"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
