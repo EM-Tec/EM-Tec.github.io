@@ -157,7 +157,7 @@ function scrollToCurrentIndex() {
 }
 ```
 
-來寫一個函式來控制按鈕的可見度。如果 currentIndex 為0，表示目前是第一張圖片。因為 `false` 是 0 所以我們直接把透明度設為 0+false，這樣可以一個 if else。如果 currentIndex 等於最後一張圖片的索引，就會隱藏向前按鈕。因為"是"第一章圖片是 true 所以加上 `!` 變成 false，透明度就是 `0+false=0`。如果不是第一張圖片就是 true，透明度就是 `0+true=1`。
+來寫一個函式來控制按鈕的可見度。如果 currentIndex 為0，表示目前是第一張圖片。因為 `false` 是 0 所以我們直接把透明度設為 0+false，這樣可以少寫兩行 if else。如果 currentIndex 等於最後一張圖片的索引，就會隱藏向前按鈕。因為"是"第一章圖片是 true 所以加上 `!` 變成 false，透明度就是 `0+false=0`。如果不是第一張圖片就是 true，透明度就是 `0+true=1`。
 
 ```js
 const hideButton = () => {
