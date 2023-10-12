@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
-title = "Day28 純 JavaScript Slider"
-date = "2023-10-16"
+title = "Day28 純 JavaScript Slider (ft.  CSS scroll-snap-type)"
+date = "2023-10-12"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
