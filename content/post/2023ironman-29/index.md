@@ -156,6 +156,8 @@ filter: blur(30px);
 
 加上一點內陰影讓他看起來更有立體感。
 
+![](earth.webp)
+
 ```css
 .earth {
   position: absolute;
