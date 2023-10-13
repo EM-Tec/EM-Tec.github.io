@@ -9,8 +9,6 @@ thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
 featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
-![](https://em-tec.github.io/images/ironman2023-banner.webp)
-
 相信大家對於這個頁面都不陌生吧。這是我們2023 iThome 鐵人賽的首頁。我覺得他的粒子特效和地球很酷，所以我們今天就來看看怎麼做吧。
 
 ![](https://em-tec.github.io/post/2023ironman-29/original.webp)
