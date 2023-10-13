@@ -11,9 +11,11 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 +++
 相信大家對於這個頁面都不陌生吧。這是我們2023 iThome 鐵人賽的首頁。我覺得他的粒子特效和地球很酷，所以我們今天就來看看怎麼做吧。
 
+![](original.webp)
 
 以下是今天我們的目標。為了版面乾淨我省略了上面的文字，只留下熊俠、標題、粒子特效、和地球。且為了讓他不要太長我有稍微縮小了一點。
 
+![](final.gif)
 
 ## HTML 架構
 
