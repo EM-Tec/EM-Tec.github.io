@@ -51,7 +51,7 @@ Office 雖然目前有提供免費線上版，且學校都有提供 Office365，
 irm https://massgrave.dev/get | iex
 ```
 
-這樣就進到軟體介面了。我們要啟用 office 所以請按鍵盤上的 4，然後點擊 2 來啟用 office。
+這樣就進到軟體介面了。我們要啟用 office 所以請按鍵盤上的 4，然後點擊 2 來啟用 office。如果你要啟用 Windows 可以按 4，如果失敗其他的選項也可以試試看。
 
 ![軟體畫面。貼上完指令記得按 enter](https://EM-Tec.github.io/images/massgrave.webp)
 
