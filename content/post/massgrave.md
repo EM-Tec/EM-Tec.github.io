@@ -9,7 +9,7 @@ featureImage = "https://em-tec.github.io/images/thumbnails/massgrave.webp"
 shareImage = "https://em-tec.github.io/images/thumbnails/massgrave.webp"
 +++
 
-Office雖然目前有提供免費線上版，且學校都有提供Office365，但是都一定要使用線上版。除了十分不方便以外許多操作也都受到限制。因此這一篇文章我要來和大家分享一個可以安全啟動Office的工具，同時也可以啟用Windows。適用於所有版本，包括最新的Office 2022及Office 365。
+Office雖然目前有提供免費線上版，且學校都有提供 Office365，但是都一定要使用線上版。除了十分不方便以外許多操作也都受到限制。因此這一篇文章我要來和大家分享一個可以安全啟動Office的工具，同時也可以啟用Windows。適用於所有版本，包括最新的Office 2022及Office 365。
 
 <!--more-->
 
@@ -19,16 +19,24 @@ Office雖然目前有提供免費線上版，且學校都有提供Office365，�
 
 安裝完之後會提示你可以免費試用或提供金鑰。當然如果你有的話就不會讀這篇文章了，因此我們先關閉軟體，並以**使用者管理員身分**打開PowerShell。
 
+![開啟 PowerShell](https://EM-Tec.github.io/images/open-powershell.webp)
+
 接著輸入這一串指令並按enter來打開這個軟體:
 
 ```bat
 irm https://massgrave.dev/get | iex
 ```
 
-這樣就進到軟體介面了。我們要啟用office所以請按鍵盤上的3
+這樣就進到軟體介面了。我們要啟用office所以請按鍵盤上的4，然後點擊2來啟用office。
 
-接著按下數字等幾秒就啟動完成了。可以點擊0回到主選單並離開軟體（當然也可以按x）
+![軟體畫面。貼上完指令記得按 enter](https://EM-Tec.github.io/images/massgrave.webp)
+
+等幾秒就如果出現綠色的
+
+```Product activation successful```
+
+就代表啟動完成了。可以點擊0回到主選單並離開軟體（當然也可以直接關閉視窗）
 
 再次打開 Office 軟體你就會發現驗證畫面不見了！到關於介面會看到已經成功啟動了。
 
-如果授權到期了只需要再次執行指令就可以囉。
+如果又出現錯誤說授權到期了只需要再次執行指令就可以囉。
