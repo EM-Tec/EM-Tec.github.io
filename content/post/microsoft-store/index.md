@@ -4,6 +4,9 @@ title = "如何不透過 Microsoft Store 安裝 Microsoft Store 的應用程式"
 date = "2023-12-05"
 tags = ["終端機", "Windows"]
 categories = [""]
+thumbnail = "https://em-tec.github.io/images/thumbnails/microsoft-store.webp"
+featureImage = "https://em-tec.github.io/images/thumbnails/microsoft-store.webp"
+shareImage = "https://em-tec.github.io/images/thumbnails/microsoft-store.webp"
 +++
 
 Microsoft Store 是 Windows 內建的應用程式商店。理論上它應該是一個很方便的東西，能夠安全的下載應用程式。但是實際上他的 Bug 很多，很多時候會因為一些奇怪的原因無法使用。最常見的就是 Windows Update 的錯誤會導致 Microsoft Store 無法使用。因此這篇文章將會教你如何不透過 Microsoft Store 安裝 Microsoft Store 的應用程式。
