@@ -37,7 +37,13 @@ Office 雖然目前有提供免費線上版，且學校都有提供 Office365，
 
 安裝完之後會提示你可以免費試用或提供金鑰。當然如果你有的話就不會讀這篇文章了，因此我們先關閉軟體，並以**使用者管理員身分**打開 PowerShell。
 
+## 步驟 2: 打開 PowerShell
+
+請以**使用者管理員身分**打開 PowerShell。你可以在開始選單中找到它，或是在任何地方按下`Win+X`並選擇`Windows 終端機 (管理員)`。
+
 ![開啟 PowerShell](https://EM-Tec.github.io/images/open-powershell.webp)
+
+## 步驟 3: 輸入指令
 
 接著輸入這一串指令並按 enter 來打開這個軟體:
 
