@@ -64,3 +64,5 @@ irm https://massgrave.dev/get | iex
 再次打開 Office 軟體你就會發現驗證畫面不見了！到關於介面會看到已經成功啟動了。
 
 如果又出現錯誤說授權到期了只需要再次執行指令就可以囉。
+
+歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)。如果你有任何問題，都可以在 IG 留言或私訊我。
