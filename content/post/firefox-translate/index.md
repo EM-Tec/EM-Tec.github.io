@@ -44,6 +44,8 @@ javascript:window.location.href=`https://translate.google.com.tw/translate?sl=au
 
 現在，我們就可以使用這個書籤來翻譯網站了。你可以到任意外國語言的網站並點擊剛剛新增的書籤，就會自動翻譯網站了。
 
+![成果](final.gif)
+
 ## 結論
 
 透過這個方法，我們可以在 FireFox 上一鍵翻譯網站。而且因為沒有使用擴充功能，所以不會有隱私問題，也不會影響你電腦的性能。
