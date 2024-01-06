@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "FireFox 如何翻譯網站?"
+title = "Firefox 如何翻譯網站?"
 date = "2023-12-31"
 tags = ["Firefox", "自製"]
 categories = ["網站分享", "製作教學"]
@@ -9,7 +9,7 @@ featureImage = ""
 shareImage = ""
 +++
 
-FireFox 有著卓越的性能及隱私保護，加上他有許多實用的開發者工具，一直是我的愛用的瀏覽器。然而，FireFox 目前還沒有內建中文翻譯功能，因此，今天我要來和你分享如何不透過擴充功能，只需要透過「書籤」就能夠在 FireFox 一鍵翻譯網站。
+Firefox 有著卓越的性能及隱私保護，加上他有許多實用的開發者工具，一直是我的愛用的瀏覽器。然而，Firefox 目前還沒有內建中文翻譯功能，因此，今天我要來和你分享如何不透過擴充功能，只需要透過「書籤」就能夠在 Firefox 一鍵翻譯網站。
 
 
 <!--more-->
@@ -48,6 +48,6 @@ javascript:window.location.href=`https://translate.google.com.tw/translate?sl=au
 
 ## 結論
 
-透過這個方法，我們可以在 FireFox 上一鍵翻譯網站。而且因為沒有使用擴充功能，所以不會有隱私問題，也不會影響你電腦的性能。
+透過這個方法，我們可以在 Firefox 上一鍵翻譯網站。而且因為沒有使用擴充功能，所以不會有隱私問題，也不會影響你電腦的性能。
 
 希望這篇文章能夠幫助到你。如果你有任何問題都可以在 IG 留言，也歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)。
