@@ -10,6 +10,8 @@ shareImage = ""
 draft = true
 +++
 
+<!-- @format -->
+
 ## 前言
 
 你有沒有在遠端想要控制電腦，但是電腦沒有開機? 或著是享受一回到家電腦已經開好了的爽快。於是你研究如何使用 Wake On Lan，但是發現一定要用有線網路不能用 Wi-Fi? 看不到狀態就算了有時候還會失效?
@@ -38,10 +40,10 @@ draft = true
 
 ## 需要的材料
 
-* ESP32
-* 杜邦線
-* 電晶體
-* 麵包板
+-   ESP32
+-   杜邦線
+-   電晶體
+-   麵包板
 
 當然，你可以使用任意你手邊可連接 Wi-Fi 的開發板，不過需要自行修改程式喔。
 
@@ -69,7 +71,6 @@ draft = true
 
 這樣硬體組裝的部分，ESP32 建議可以放在主機裡面，然後找洞讓供電的 USB 線通過即可。
 
-
 也是最難的部分已經完成囉。
 
 ## 燒錄程式
@@ -77,11 +78,16 @@ draft = true
 接下來我們要來把城市燒錄至 ESP32
 
 1. 請先從官網下載並安裝 Arduino IDE，點開一直下一步即可。
-2. 在開始燒錄之前我們要先來安裝 ESP32 驅動函式庫和 Homekit 函式庫。
-3. 請你開啟軟體點擊左上角的「檔案」，並選擇「偏好設置」。在下面有一排可以讓你自行輸入函式庫網址的輸入框，請你貼上以下網址:
-4. 接著，請你進入 BOARDS MANAGER 並搜尋 esp32。安裝 Espressif 開發的的 ESP-32 套件。
-5. 接著，請你點擊左邊第三個的圖書標誌並搜尋 HomeSpan 並安裝。
+2. 在開始燒錄之前我們要先來安裝 ESP32 驅動函式庫和 Homekit 函式庫。請你開啟軟體點擊左上角的「檔案」，並選擇「偏好設置」。
+   ![Alt text](openper.webp)
+3. 在下面有一排可以讓你自行輸入函式庫網址的輸入框，請你貼上以下網址:
+   ![Alt text](url.webp)
+4. 請你進入 BOARDS MANAGER 並搜尋 esp32。安裝 Espressif 開發的的 ESP-32 套件。
+   ![Alt text](driver.jpg)
+5. 請點擊左邊第三個的圖書標誌並搜尋 HomeSpan 並安裝。
+   ![Alt text](homespan.webp)
 6. 貼上以下程式碼:
+
 ```ino
 #include "HomeSpan.h"
 
@@ -151,12 +157,15 @@ void loop() {
   homeSpan.poll();
 }
 ```
+
 7. 設定 COM Port，請你點擊左上角的輸入選擇，接著選擇你的 ESP32 的 COM Port。你可以把 ESP-32 拔掉再插上來看看哪個消失再出現就是了。
-8. 最後，請你點擊左上角的「上傳」按鈕，並等待燒錄完成即可。如果上傳失敗請點擊 ESP32 上面的 BOOT 按鈕，拔掉重新插上電源並再次上傳。
+   ![Alt text](com.webp)
+8. 最後，請你點擊左上角的「上傳」按鈕 (往右的箭頭)，並等待燒錄完成即可。如果上傳失敗請點擊 ESP32 上面的 BOOT 按鈕，拔掉重新插上電源並再次上傳。
 
 ## 設定
 
 ### 設定 Wi-Fi
+
 還沒有完喔，先不要急著把電腦關機測試，我們還需要設定一下 Wi-Fi 才能使用。
 
 請你點擊右上角的放大鏡開啟 Serial Port，並確定傳輸速率是 115200。如果你有看到出現一些文字代表你已經成功了。
@@ -183,4 +192,4 @@ void loop() {
 
 {{% /notice %}}
 
-希望這篇文章能夠幫助到你。如果你有任何問題都可以在 IG 留言，也歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)。
+希望這篇文章能夠幫助到你。如果你有任何問題都可以在 IG 留言，也歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥 EM 資訊密技](https://em-tec.github.io/)。
