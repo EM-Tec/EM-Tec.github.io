@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "用 iPhone 開機電腦和查看狀態 - 使用 ESP32 加入 Homekit"
-date = "2024-01-10"
+date = "2024-01-09"
 tags = ["iOS", "自製","Arduino","ESP32",]
 categories = ["製作教學"]
 thumbnail = ""
