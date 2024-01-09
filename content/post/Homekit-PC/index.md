@@ -1,13 +1,12 @@
 +++
 author = "毛哥EM"
 title = "用 iPhone 開機電腦和查看狀態 - 使用 ESP32 加入 Homekit"
-date = "2024-01-05"
-tags = ["iOS", "自製"]
+date = "2024-01-10"
+tags = ["iOS", "自製","Arduino","ESP32",]
 categories = ["製作教學"]
 thumbnail = ""
 featureImage = ""
 shareImage = ""
-draft = true
 +++
 
 <!-- @format -->
@@ -17,6 +16,8 @@ draft = true
 你有沒有在遠端想要控制電腦，但是電腦沒有開機? 或著是享受一回到家電腦已經開好了的爽快。於是你研究如何使用 Wake On Lan，但是發現一定要用有線網路不能用 Wi-Fi? 看不到狀態就算了有時候還會失效?
 
 今天，我就要來和你分享如何使用 ESP32 加入 Homekit，讓你可以透過 iPhone 開機電腦和查看狀態。
+
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F676807707915952&width=500&show_text=false&height=655&appId" width="500" height="655" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
 <!--more-->
 
@@ -51,7 +52,7 @@ draft = true
 
 首先，請你確認主機板上面的腳位。可以查詢主機板的說明書，或者是直接看上面的文字標示。以我的老電腦 ASUS B150 pro 為例。PWR_LED 就是電源的指示燈 (Power LED)，PWR_SW 和 RESET 分邊是開關機鍵 (Power Switch) 與重新開機鍵。
 
-![這是](b150.webp)
+![](b150.webp)
 
 ### 拔下原本杜邦線
 
@@ -61,21 +62,33 @@ draft = true
 
 拔下來之後我們用公對公的杜邦線依序把電腦上的接口連接到麵包板上，接下來比較好操作。
 
+![拔下原本杜邦線、連結電腦接口至麵包板](wire.webp)
+
 #### 連接 LED 指示燈
 
 我們先插電源指示燈，因為比較簡單。只需與原本的 led 並排接到 esp32 上面即可。
+
+![LED 線路](led.png)
 
 #### 連接開機與重開機按鍵
 
 首先請確認你的電晶體腳位，不同的型號方向不太一樣。接著按照圖片的方式完成接線即可。當 ESP-32 輸出高電壓時按鈕就會通路，相當於按下按鈕。
 
+![佈線](pc_bb.png)
+
+實際接線不會用到這麼多的杜邦線，我有盡量都用直角和不要重疊壤他看起來比較清楚。綠色板子左到右分別代表開機按鈕、GND、重開機按鈕、GND、電源指示燈、指示燈 GND。ESP32 上到下分別是插 14、12、13、GND。
+
+兩顆按鈕的 GND 有可能是共用的。如果你的電腦開機後按鈕失效，理論上把兩顆按鈕的 GND 連接在一起。
+
 這樣硬體組裝的部分，ESP32 建議可以放在主機裡面，然後找洞讓供電的 USB 線通過即可。
 
-也是最難的部分已經完成囉。
+![成果](power.webp)
+
+最難的部分已經完成囉。
 
 ## 燒錄程式
 
-接下來我們要來把城市燒錄至 ESP32
+接下來我們要來把程式燒錄至 ESP32:
 
 1. 請先從官網下載並安裝 Arduino IDE，點開一直下一步即可。
 2. 在開始燒錄之前我們要先來安裝 ESP32 驅動函式庫和 Homekit 函式庫。請你開啟軟體點擊左上角的「檔案」，並選擇「偏好設置」。
@@ -176,7 +189,12 @@ void loop() {
 
 請你在 iPhone 或 iPad 開啟家庭 APP，接著點擊右上角的 + 號，新增裝置。選擇我沒有條碼，並輸入 8 位數的 PIN 碼。
 
-這樣就完成囉!
+```
+466-37-726
+```
+這樣就完成囉!你可以編輯程式來添加更多功能或修改 pin 碼。
+
+![新增至 HomeKit](homekit.webp)
 
 ## 結論
 
