@@ -1,7 +1,7 @@
 +++
 author = "毛哥EM"
 title = "教學：將學校行事曆輕鬆加入Apple日曆"
-date = "2024-1-12"
+date = "2024-01-12"
 tags = ["iOS", "自製"]
 categories = ["製作教學"]
 +++
