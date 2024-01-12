@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arduino on 毛哥EM資訊密技</title><link>https://EM-Tec.github.io/tags/arduino/</link><description>Recent content in Arduino on 毛哥EM資訊密技</description><generator>Hugo -- gohugo.io</generator><copyright>毛哥EM</copyright><lastBuildDate>Tue, 09 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://EM-Tec.github.io/tags/arduino/index.xml" rel="self" type="application/rss+xml"/><item><title>用 iPhone 開機電腦和查看狀態 - 使用 ESP32 加入 Homekit</title><link>https://EM-Tec.github.io/post/homekit-pc/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://EM-Tec.github.io/post/homekit-pc/</guid><description>
-&lt;!-- @format -->
-&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>你有沒有在遠端想要控制電腦，但是電腦沒有開機? 或著是享受一回到家電腦已經開好了的爽快。於是你研究如何使用 Wake On Lan，但是發現一定要用有線網路不能用 Wi-Fi? 看不到狀態就算了有時候還會失效?&lt;/p></description></item></channel></rss>
