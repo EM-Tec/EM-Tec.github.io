@@ -4,15 +4,14 @@ title = "教學：將學校行事曆輕鬆加入Apple日曆"
 date = "2024-1-12"
 tags = ["iOS", "自製"]
 categories = ["網站分享", "製作教學"]
-thumbnail = ""
-featureImage = ""
-shareImage = 
-draft = true
+thumbnail = “https://em-tec.github.io/images/subscribe-alendar.webp”
+featureImage = “https://em-tec.github.io/images/subscribe-alendar.webp”
+shareImage = “https://em-tec.github.io/images/subscribe-alendar.webp”
 +++
 
 
 
-在這篇部落格文章中，我要教你如何將 Google 行事曆輕鬆加入你的Apple日曆中，方便你隨時掌握校園或者活動動態。讓我們開始吧！
+在這篇文章中，我要教你如何將 Google 行事曆輕鬆加入你的Apple日曆中，方便你隨時掌握校園或者活動動態。讓我們開始吧！
 
 <!—more—>
 
