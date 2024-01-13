@@ -4,9 +4,9 @@ title = "教學：將學校行事曆輕鬆加入Apple日曆"
 date = "2024-01-12"
 tags = ["iOS", "自製"]
 categories = ["網站分享", "製作教學"]
-thumbnail = “https://em-tec.github.io/images/subscribe-alendar.webp”
-featureImage = “https://em-tec.github.io/images/subscribe-alendar.webp”
-shareImage = “https://em-tec.github.io/images/subscribe-alendar.webp”
+thumbnail = "https://em-tec.github.io/images/subscribe-alendar.webp"
+featureImage = "https://em-tec.github.io/images/subscribe-alendar.webp"
+shareImage = "https://em-tec.github.io/images/subscribe-alendar.webp"
 +++
 
 
