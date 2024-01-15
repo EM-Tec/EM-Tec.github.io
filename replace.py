@@ -19,13 +19,13 @@ def replace_text_in_file(file_path, old_text, new_text):
 def process_files_in_directory(directory, old_text, new_text):
     for root, dirs, files in os.walk(directory):
         for file in files:
-            if file.endswith('.toml'):
+            if file.endswith('.toml') or file.endswith('.md'):
                 file_path = os.path.join(root, file)
                 replace_text_in_file(file_path, old_text, new_text)
 
 # Replace the old and new text accordingly
-old_text = 'https://www.instagram.com/em.tec.blog'
-new_text = 'https://www.instagram.com/emtech.cc'
+old_text = 'EM-Tec.github.io'
+new_text = 'emtech.cc'
 
 # Specify the root directory where you want to start the replacement
 root_directory = 'D:\GayHub\EM-Tec.github.io'
