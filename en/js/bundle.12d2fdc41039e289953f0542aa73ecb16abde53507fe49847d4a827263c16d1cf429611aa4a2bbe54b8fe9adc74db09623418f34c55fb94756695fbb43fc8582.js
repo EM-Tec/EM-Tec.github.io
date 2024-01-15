@@ -10,7 +10,7 @@ const imageAltClass = 'img_alt';
 
 
 const defaultSiteLanguage = 'zh-tw';
-const baseURL = 'https://EM-Tec.github.io/';
+const baseURL = 'https://emtech.cc/';
 const searchFieldClass = '.search_field';
 const searchClass = '.search';
 const goBackClass = 'button_back';
