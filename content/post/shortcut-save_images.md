@@ -9,9 +9,9 @@ tags = ["自製",
 categories = [
     "捷徑分享",
 ]
-thumbnail = "https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG"
-featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG"
-shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-save_images.JPG"
+thumbnail = "https://emtech.cc/images/thumbnails/shortcut-save_images.JPG"
+featureImage = "https://emtech.cc/images/thumbnails/shortcut-save_images.JPG"
+shareImage = "https://emtech.cc/images/thumbnails/shortcut-save_images.JPG"
 +++
 只要透過這個捷徑即可一鍵下載網頁中的指定或所有照片。只需要分享網頁並選擇此捷徑即會自動下載並詢問要儲存的照片，選擇後會儲存到相簿。
 
@@ -49,5 +49,5 @@ shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-save_images.JP
 
 {{% notice tip "小提醒" %}}
 
-* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://em-tec.github.io/post/shortcut-untrusted_shortcut/)提供的方法。
+* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://emtech.cc/post/shortcut-untrusted_shortcut/)提供的方法。
 {{% /notice %}}

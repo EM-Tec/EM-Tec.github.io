@@ -5,9 +5,9 @@ date = "2023-10-10"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 我們都知道 CSS 動畫可以用 `@keyframes` 來做，但是他們都是馬上就觸發的。就算元素還沒有出現在畫面上，動畫也已經開始了。
@@ -24,7 +24,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 https://codepen.io/edit-mr/pen/ExGrxjX
 
-![getBoundingClientRect()](https://em-tec.github.io/post/2023ironman-26/getBoundingClientRect.webp)
+![getBoundingClientRect()](https://emtech.cc/post/2023ironman-26/getBoundingClientRect.webp)
 
 > **為甚麼不要等整個元素顯示出來在觸發動畫?**  
 > 因為如果元素很長，可能到半個畫面都空白之後他才出現會很奇怪。所以我們只要有任何一部分有顯示在畫面上就可以觸發動畫了，這樣滾動起來會比較順暢。  
@@ -37,7 +37,7 @@ https://codepen.io/edit-mr/pen/ExGrxjX
 
 > 叫做 ed 是因為英文過去式常常加上 ed，想說蠻直覺野蠻短的。如果你有更好的主意也可以改成其他名字。
 
-![簡單的版面](https://em-tec.github.io/post/2023ironman-26/layout.webp)
+![簡單的版面](https://emtech.cc/post/2023ironman-26/layout.webp)
 
 ```html
 <h1 class="aos">Animate On Scroll</h1>
@@ -100,7 +100,7 @@ document.addEventListener("scroll", addClassToVisibleElements);
 addClassToVisibleElements();
 ```
 
-![淡入動畫](https://em-tec.github.io/post/2023ironman-26/fade.gif)
+![淡入動畫](https://emtech.cc/post/2023ironman-26/fade.gif)
 
 ok 成功，我們來多做幾個更浮誇的動畫。
 
@@ -160,7 +160,7 @@ ok 成功，我們來多做幾個更浮誇的動畫。
 
 https://codepen.io/edit-mr/pen/rNoPBZe
 
-![所有效果](https://em-tec.github.io/post/2023ironman-26/final.gif)
+![所有效果](https://emtech.cc/post/2023ironman-26/final.gif)
 
 ```html
 <h1 class="aos slideIn">Animate On Scroll</h1>
@@ -255,6 +255,6 @@ document.addEventListener("scroll", addClassToVisibleElements);
 addClassToVisibleElements();
 ```
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

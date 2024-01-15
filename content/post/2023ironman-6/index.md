@@ -5,9 +5,9 @@ date = "2023-09-20"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 在使用 CSS 做網站時幾乎一定會使用到 position 屬性，不過你真的知道它的原理和使用方式嗎？雖然乍看之下感覺很複雜但其實超簡單，你只需要幾分鐘就能完全理解了。
@@ -41,7 +41,7 @@ position: 屬性
 來一個範例讓大家分辨它們不同的效果
 
 https://codepen.io/edit-mr/pen/rNoYOKZ
-![範例](https://em-tec.github.io/post/2023ironman-6/sunny.webp)
+![範例](https://emtech.cc/post/2023ironman-6/sunny.webp)
 
 ```html
 <div class="sun">Fixed</div>
@@ -117,6 +117,6 @@ CSS Position 在網頁設計中當然不只是這樣畫畫，他是非常實用�
 
 這些只是我列出幾個常見的使用方法，我們不管是在前面幾天或者是接下來的文章都一直會使用 position 語法，因此熟悉這篇文章的內容非常重要。
 
-如果還是不清楚或是需要範例都歡迎提出，也歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+如果還是不清楚或是需要範例都歡迎提出，也歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

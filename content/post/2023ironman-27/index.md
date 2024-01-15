@@ -5,9 +5,9 @@ date = "2023-10-11"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 今天我們要來製作 iT 邦幫忙首頁的導覽列。我們先來看看原本的網站。
@@ -189,7 +189,7 @@ aside {
 * `<aside>` 裡面的背景是用 `linear-gradient` 做的。先是背景灰色，然後是藍色、白色。感覺像是分成不同元素但為了方便就用一個漸層充當。
 * 設定 `max-width: 1170px` 再加上 `margin: 0 auto` 來讓版面置中。
 
-其他的沒什麼特別的。如果看不懂的話可以複習 [Day3 用 Flex 切遍天下](https://em-tec.github.io/post/2023ironman-3/)
+其他的沒什麼特別的。如果看不懂的話可以複習 [Day3 用 Flex 切遍天下](https://emtech.cc/post/2023ironman-3/)
 
 ## JavaScript
 
@@ -272,6 +272,6 @@ https://codepen.io/edit-mr/pen/WNLPYON
 
 ![成果](final.gif)
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

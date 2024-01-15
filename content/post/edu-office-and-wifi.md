@@ -6,9 +6,9 @@ description = "你知道學生在在學期間於全世界皆可使用免費Wifi 
 categories = [
     "網站分享","線上教學"
 ]
-thumbnail = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.webp"
-featureImage = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.webp"
-shareImage = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.webp"
+thumbnail = "https://emtech.cc/images/thumbnails/edu-office-and-wifi.webp"
+featureImage = "https://emtech.cc/images/thumbnails/edu-office-and-wifi.webp"
+shareImage = "https://emtech.cc/images/thumbnails/edu-office-and-wifi.webp"
 +++
 
 你知道學生在在學期間於全世界皆可使用免費Wifi Eduroam還有Office365嗎?這裡提供完整的操作說明! 這是一個知道的人不會願意告訴你的祕密...
@@ -37,7 +37,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.web
 記得Office的帳號是`自訂英文@ms.edu.tw`而不是`自訂英文@mail.edu.tw`喔!
 
 建立檔案即可線上編輯共用。共用鍵在右上角藍色按鈕。可輸入共用者Email或直接複製連結
-![共用](https://EM-Tec.github.io/images/edu-office-share.png)
+![共用](https://emtech.cc/images/edu-office-share.png)
 
 ### 在自己電腦上登入(Windows)
 
@@ -45,10 +45,10 @@ shareImage = "https://em-tec.github.io/images/thumbnails/edu-office-and-wifi.web
 
 請到內建軟體Office登入學校帳號。
 
-![登入學校帳號](https://EM-Tec.github.io/images/edu-office-new.png)
-![選擇學校](https://EM-Tec.github.io/images/edu-office-school.png)
-![輸入帳號:自訂英文@ms.edu.tw](https://EM-Tec.github.io/images/edu-office-mail.png)
-![會跳轉到教育雲，輸入帳密](https://EM-Tec.github.io/images/edu-office-login.png)
+![登入學校帳號](https://emtech.cc/images/edu-office-new.png)
+![選擇學校](https://emtech.cc/images/edu-office-school.png)
+![輸入帳號:自訂英文@ms.edu.tw](https://emtech.cc/images/edu-office-mail.png)
+![會跳轉到教育雲，輸入帳密](https://emtech.cc/images/edu-office-login.png)
 
 ### 連接Wi-Fi
 

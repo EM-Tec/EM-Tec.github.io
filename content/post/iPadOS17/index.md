@@ -4,9 +4,9 @@ title = "iPadOS 17 真實心得 官方沒講的秘密，質感體驗的大升級
 date = "2023-06-09"
 description = ""
 tags = ["ios"]
-thumbnail = "https://em-tec.github.io/post/ipados17/6.webp"
-featureImage = "https://em-tec.github.io/post/ipados17/6.webp"
-shareImage = "https://em-tec.github.io/post/ipados17/6.webp"
+thumbnail = "https://emtech.cc/post/ipados17/6.webp"
+featureImage = "https://emtech.cc/post/ipados17/6.webp"
+shareImage = "https://emtech.cc/post/ipados17/6.webp"
 usePageBundles = true
 toc = true
 aliases = ["hugo-page-bundles"]
@@ -30,7 +30,7 @@ iOS17, iPadOS17在6/6號發佈，隔天就開放給我們使用了，可以說�
 
 首先是鎖定畫面的更新，這次的更新移植了iOS16的自訂功能，讓鎖定畫面變得更加的有質感。
 
-首先是鎖定畫面的小工具，小工具的位置會由上往下排，但是我比較喜歡在中間的感覺所以我自己寫了點程式做了個透明小工具(之後再來出教學，你們每周盯我更新[網棧](https://em-tec.github.io/series/%E7%B6%B2%E6%A3%A7/)真的有夠累)。
+首先是鎖定畫面的小工具，小工具的位置會由上往下排，但是我比較喜歡在中間的感覺所以我自己寫了點程式做了個透明小工具(之後再來出教學，你們每周盯我更新[網棧](https://emtech.cc/series/%E7%B6%B2%E6%A3%A7/)真的有夠累)。
 
 ![鎖定畫面自訂](1.webp)
 
@@ -151,11 +151,11 @@ PDF可以以小、中、大顯示，且點擊簽名按鈕不只可以簽名，�
 
 
 {{% notice info "我也要玩iOS17!" %}}
-如果你也想要跟我~~一起受災~~可以參考我寫的[這片文章](https://em-tec.github.io/post/apple-beta/)。
+如果你也想要跟我~~一起受災~~可以參考我寫的[這片文章](https://emtech.cc/post/apple-beta/)。
 {{% /notice %}}
 
 {{% notice info "我遇到問題" %}}
-我有整理翻譯[官方釋出錯誤及解決分案](https://em-tec.github.io/post/ios17-problem/)提供參考
+我有整理翻譯[官方釋出錯誤及解決分案](https://emtech.cc/post/ios17-problem/)提供參考
 {{% /notice %}}
 
 如果你覺得這篇文章有幫助到你歡迎在[Instagram](https://instagram.com/em.tec.blog)或[Google新聞](https://news.google.com/s/CBIwgtnWzKAB?sceid=TW:zh-Hant&sceid=TW:zh-Hant&r=11&oc=1)追蹤毛哥EM資訊密技。如果你有任何問題，歡迎直接到毛哥EM資訊密技的Instagram私訊我，我很樂意協助解決你的問題。

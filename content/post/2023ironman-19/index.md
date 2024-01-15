@@ -5,14 +5,14 @@ date = "2023-10-03"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 最討厭的廣告就是彈出式 Lightbox 廣告了，他會突然跳出來，然後你要去找那個超小的叉叉關掉他。今天我們不是要重現煩人的廣告，而是要來認識 CSS 選擇器 `:target` 並做出以下效果。
 
-![純 CSS 做出圖片 Lightbox](https://em-tec.github.io/post/2023ironman-19/final.gif)
+![純 CSS 做出圖片 Lightbox](https://emtech.cc/post/2023ironman-19/final.gif)
 
 我們來用 Lightbox 看貓貓
 
@@ -34,7 +34,7 @@ div:target{
 }
 ```
 
-![:target 範例](https://em-tec.github.io/post/2023ironman-19/target.gif)
+![:target 範例](https://emtech.cc/post/2023ironman-19/target.gif)
 ## 實作
 
 那我們就裝飾一下這個版面和 Lightbox 就好啦!先從維基共享資源抓幾張圖片。
@@ -148,7 +148,7 @@ div:target ~ section {
 最終成果如下:
 https://codepen.io/edit-mr/pen/jOXpJXX
 
-![純 CSS 做出圖片 Lightbox](https://em-tec.github.io/post/2023ironman-19/final.gif)
+![純 CSS 做出圖片 Lightbox](https://emtech.cc/post/2023ironman-19/final.gif)
 
 ```html
 <div id="one"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Domestic_cat_in_the_grass.JPG/640px-Domestic_cat_in_the_grass.JPG" alt=""></div>
@@ -222,6 +222,6 @@ div:target ~ section {
 }
 ```
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

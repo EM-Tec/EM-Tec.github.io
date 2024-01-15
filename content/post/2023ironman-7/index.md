@@ -5,9 +5,9 @@ date = "2023-09-21"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 CSS 的濾鏡屬性是一個非常實用且可以瞬間讓一個網頁看起來很厲害的功能。讓你可以以各種方式修改和調整圖像和元素的呈現方式，也可以讓元素模糊，或者是直接改變圖示顏色等等。今天我們將深入探討CSS filter 屬性，解釋其各種功能以及如何使用它來創建引人注目的效果。
@@ -26,7 +26,7 @@ filter: blur(5px);
 
 > 冷知識：正方形 blur 可以變圓形
 
-![Blur](https://em-tec.github.io/post/2023ironman-7/blur.webp)
+![Blur](https://emtech.cc/post/2023ironman-7/blur.webp)
 
 ### 2. 亮度（Brightness）
 
@@ -133,7 +133,7 @@ finter 在製作漸層很實用，可以讓你只需要選擇一個顏色就能�
 
 https://codepen.io/edit-mr/pen/GRPyNYY
 
-![相疊](https://em-tec.github.io/post/2023ironman-7/gradient.webp)
+![相疊](https://emtech.cc/post/2023ironman-7/gradient.webp)
 
 
 ```css
@@ -160,6 +160,6 @@ body::after {
 
 這些都是 CSS filter 屬性的一些常見和進階功能。通過組合這些效果，你可以為網站的元素創建出各種視覺效果，無論是圖像處理還是動畫，都能夠實現。我們會在之後的文章繼續講你可以怎麼玩 filter 屬性。
 
-歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

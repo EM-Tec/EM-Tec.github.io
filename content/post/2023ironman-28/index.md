@@ -5,9 +5,9 @@ date = "2023-10-12"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 今天我們要來製作Slider效果。不過要用一個你應該沒有看過有人這樣做但卻很簡單的方法。
 
@@ -240,6 +240,6 @@ https://codepen.io/edit-mr/pen/dywrReK
 ![成果](final.gif)
 
 
-以上就是我今天的分享，我們使用少許的程式碼就做出這個性能十分不錯的陽春 slider。你可以再加上一點裝飾，比如在底下放上顯示當前圖片的小圓點，或是加上自動播放。如果你有興趣可以自己試試看，抓取個數、移動的距離、以及移動的函數上面都有提供。 *也需這個系列出書之後就會提到呢!* 歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，我們使用少許的程式碼就做出這個性能十分不錯的陽春 slider。你可以再加上一點裝飾，比如在底下放上顯示當前圖片的小圓點，或是加上自動播放。如果你有興趣可以自己試試看，抓取個數、移動的距離、以及移動的函數上面都有提供。 *也需這個系列出書之後就會提到呢!* 歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

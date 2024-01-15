@@ -5,9 +5,9 @@ date = "2023-09-16"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 記得我在國一寫HTML的時候，傻傻的在那裡打小於、h1、大於、標題、小於、斜線、大於。我的朋友甚至發現了一個偷吃步就是先打好一堆大於小於，然後再填空。
@@ -22,7 +22,7 @@ Emmet 可以做什麼呢？比如說我們想要建立一個一級標題，我�
 
 只要按下驚嘆號並按下 tab 就會自動生成一個基本的 HTML5 架構，非常方便。
 
-![!](https://em-tec.github.io/post/2023ironman-2/!.gif)
+![!](https://emtech.cc/post/2023ironman-2/!.gif)
 
 ### 添加class - `.`
 
@@ -139,7 +139,7 @@ align-item: center;
 
 你也許有看過有人打 `w100` 來生成 `width: 100px` ，不過預設的px單位可以說是越來越少用。它的原理和上面一樣就是你先打值也是可以的，比如說你想要 H1 標題變成預設字體三倍大，你可以打 `fz3re`。
 
-![打fz2re就可以了](https://em-tec.github.io/post/2023ironman-2/fz.gif)
+![打fz2re就可以了](https://emtech.cc/post/2023ironman-2/fz.gif)
 
 打fz是因為不管是 fo 變 font: optional, fn 變 font: none, ft 變 font-stretch: normal, fs 變 font-style: italic, fi 變 font: inherit, fe 變 font-emphasize
 
@@ -147,6 +147,6 @@ align-item: center;
 
 你可以找你最常使用的幾款 CSS 語法記一下，再搭配 Copilot 就整個飛起來了。
 
-希望今天的分享對你有幫助，我自己還會搭配 Copilot 以及 Copilot Chat 一起使用，可以更進一步的提升你的效率。如果你們有興趣想聽船長是怎麼帶我飛的可以在留言去告訴我，也歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+希望今天的分享對你有幫助，我自己還會搭配 Copilot 以及 Copilot Chat 一起使用，可以更進一步的提升你的效率。如果你們有興趣想聽船長是怎麼帶我飛的可以在留言去告訴我，也歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

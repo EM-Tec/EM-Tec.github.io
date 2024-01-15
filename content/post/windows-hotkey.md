@@ -7,9 +7,9 @@ tags = [
     "Windows"
 ]
 
-thumbnail = "https://em-tec.github.io/images/thumbnails/windows-hotkey.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/windows-hotkey.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/windows-hotkey.jpg"
+thumbnail = "https://emtech.cc/images/thumbnails/windows-hotkey.jpg"
+featureImage = "https://emtech.cc/images/thumbnails/windows-hotkey.jpg"
+shareImage = "https://emtech.cc/images/thumbnails/windows-hotkey.jpg"
 +++
 想要加快工作效率，減少滑鼠的使用是個最直接的方法。這裡我提供了一些我常用但是很少人知道的快捷鍵供大家參考。
 

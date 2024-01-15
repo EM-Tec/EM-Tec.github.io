@@ -5,9 +5,9 @@ date = "2023-09-29"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 昨天我們做了一個開關，那麼我們今天就來做一個選單吧！
@@ -15,7 +15,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 <!--more-->
 
 
-![成果](https://em-tec.github.io/post/2023ironman-15/final.gif)
+![成果](https://emtech.cc/post/2023ironman-15/final.gif)
 
 這個雖然是一種 `radio` 選單，但對於選擇數字這種有連續性，或著是比較短的文字，使用這種風格都是一種不錯的選擇。可以讓版面更乾淨，也比下拉式選單或著是傳統的radio都更方便操作。重點是不用寫一行 JavaScript，只要純 CSS 就可以完成。
 
@@ -51,7 +51,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 CSS 的部分我想要製作使用新擬物化設計 Neumorphism，或是說 Soft UI 的風格。有點像 iPhone3 擬物化設計跟 iPhone5 之後現代扁平化設計結合。有很明顯得陰影但又很有質感。
 
-![](https://em-tec.github.io/post/2023ironman-15/example.webp)
+![](https://emtech.cc/post/2023ironman-15/example.webp)
 
 來源: [Payment App (Neumorphism)](https://codepen.io/sdbrannum/pen/PowKRGj)
 
@@ -180,8 +180,8 @@ body {
 
 https://codepen.io/edit-mr/pen/LYMmQOE
 
-![顏色選擇成果](https://em-tec.github.io/post/2023ironman-15/final.gif)
+![顏色選擇成果](https://emtech.cc/post/2023ironman-15/final.gif)
 
-以上就是我今天的分享，你可以根據你的喜好增加陰影或其他動畫效果。歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，你可以根據你的喜好增加陰影或其他動畫效果。歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

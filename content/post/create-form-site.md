@@ -8,9 +8,9 @@ tags = [ "自製", "HTML", "CSS", "JavaScript", "Github", "GAS" ]
 series = ["複製貼上就能成為工程師"]
 categories = [ "製作教學" ]
 toc = true
-thumbnail = "https://em-tec.github.io/images/thumbnails/create-site-for-sheet.jpeg"
-featureImage = "https://em-tec.github.io/images/thumbnails/create-site-for-sheet.jpeg"
-shareImage = "https://em-tec.github.io/images/thumbnails/create-site-for-sheet.jpeg"
+thumbnail = "https://emtech.cc/images/thumbnails/create-site-for-sheet.jpeg"
+featureImage = "https://emtech.cc/images/thumbnails/create-site-for-sheet.jpeg"
+shareImage = "https://emtech.cc/images/thumbnails/create-site-for-sheet.jpeg"
 draft = true
 +++
 
@@ -26,7 +26,7 @@ draft = true
 
 我從[Codepen](https://codepen.io/)上找到了一個很好看的表格模板來做修改。它在螢幕尺寸太窄的時候會用不同的版面來顯示，保持使用者體驗。你也可以找其他的模板或者是自己建立一個。
 
-你可以使用任何一個可以給你存放網站代碼的地方，比如說[Github](https://github.io)。你可以觀看我的這個教學來學習如何使用Github Pages來建立一個網站。[【Github】從頭到尾建立網站：使用Github Pages和Github Desktop](https://em-tec.github.io/post/create-site-with-github-pages/)
+你可以使用任何一個可以給你存放網站代碼的地方，比如說[Github](https://github.io)。你可以觀看我的這個教學來學習如何使用Github Pages來建立一個網站。[【Github】從頭到尾建立網站：使用Github Pages和Github Desktop](https://emtech.cc/post/create-site-with-github-pages/)
 
 
 
@@ -36,7 +36,7 @@ draft = true
 
 我們先看一下試算表。在這裡我們可以看到每一行資料有5項，其中我希望第5項的資料可以放在付款狀態後面。現在請你先請你複製這個試算表的ID，也就是網址`https://docs.google.com/spreadsheets/d/`和`/`之間那一串(如`1fjX-prGu0hfb65LCQkrktWa-JavvjSz7tWMmYWAb7RA`)。等一下會用到。
 
-![再看一次試算表](https://em-tec.github.io/images/gas.jpg)
+![再看一次試算表](https://emtech.cc/images/gas.jpg)
 
 我們會使用GAS(Google App Script)來建立網頁應用程式來讀取表格資料。
 
@@ -83,7 +83,7 @@ function doGet(){
   }
 ```
 
- ![GAS快速教學](https://em-tec.github.io/images/gas.jpg)
+ ![GAS快速教學](https://emtech.cc/images/gas.jpg)
 
 做好了之後點擊執行▶️，你會需要授予你的程式讀取資料的權限。因為你寫的程式沒有被Google驗證過所以會顯示不安全，但我相信你不會把你的帳號搞爆，對吧。
 

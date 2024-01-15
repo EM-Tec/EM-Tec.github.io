@@ -12,9 +12,9 @@ tags = [
     "GAS"
 ]
 series = ["網棧"]
-thumbnail = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
-featureImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
-shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
+thumbnail = "https://emtech.cc/images/thumbnails/webpallet.webp"
+featureImage = "https://emtech.cc/images/thumbnails/webpallet.webp"
+shareImage = "https://emtech.cc/images/thumbnails/webpallet.webp"
 +++
 
 # EP.0 歡迎來到網棧

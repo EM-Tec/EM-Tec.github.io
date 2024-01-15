@@ -1,6 +1,6 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
-baseurl = "https://EM-Tec.github.io/"  # Include trailing slash /
+baseurl = "https://emtech.cc/"  # Include trailing slash /
 # title = "毛哥EM資訊秘技"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
 copyright = "毛哥EM"
 # canonifyurls = true

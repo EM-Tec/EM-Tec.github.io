@@ -12,9 +12,9 @@ categories = [
     "捷徑分享",
    
 ]
-thumbnail = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.md.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.md.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark.md.jpg"
+thumbnail = "https://emtech.cc/images/thumbnails/shortcut-viatorBookmark.md.jpg"
+featureImage = "https://emtech.cc/images/thumbnails/shortcut-viatorBookmark.md.jpg"
+shareImage = "https://emtech.cc/images/thumbnails/shortcut-viatorBookmark.md.jpg"
 +++
 只須點一下即可快速連結到衛道的網頁或檔案
 
@@ -32,6 +32,6 @@ shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-viatorBookmark
 原理其實也很簡單，就是先Get一個我預先放在Github的JSON檔案來查看我設定好的連結，再用選單讓你選。如果你選擇的是網頁的話會用Chrome來打開它；如果是檔案的話會直接下再並開啟預覽。
 {{% notice tip "小提醒" %}}
 
-* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://em-tec.github.io/post/shortcut-untrusted_shortcut/)提供的方法。
+* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://emtech.cc/post/shortcut-untrusted_shortcut/)提供的方法。
 * 你也可以用Siri執行這個捷徑。
 {{% /notice %}}

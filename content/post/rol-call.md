@@ -17,16 +17,16 @@ categories = [
     "製作教學"
 ]
 toc = true
-thumbnail = "https://em-tec.github.io/images/thumbnails/roll-call.webp"
-featureImage = "https://em-tec.github.io/images/thumbnails/roll-call.webp"
-shareImage = "https://em-tec.github.io/images/thumbnails/roll-call.webp"
+thumbnail = "https://emtech.cc/images/thumbnails/roll-call.webp"
+featureImage = "https://emtech.cc/images/thumbnails/roll-call.webp"
+shareImage = "https://emtech.cc/images/thumbnails/roll-call.webp"
 +++
 
 本文將教授如何使用程式製作一個簡單的點名網頁。透過這個點名系統，你可以方便地管理你的學生出席狀況，並且隨時查詢歷史出席紀錄。我們將使用 Google Apps Script, GitHub 和 Google Sheets 來建立這個點名系統。**我敢保證即使你完全不會程式也可以在5分鐘內完成**。本文會詳細說明從建立 Google Sheets 到部屬網頁的步驟，並提供完整的程式碼和演示網頁。
 
 <!--more-->
 
-> 我在兩年前曾經寫過一篇[【GAS】自製點名系統](https://em-tec.github.io/post/frog_check_in/)，出乎意料地幫助到許多人，所以我決定重新寫一次，比上次更容易製作和操作，也更好看一些(我覺得啦)。
+> 我在兩年前曾經寫過一篇[【GAS】自製點名系統](https://emtech.cc/post/frog_check_in/)，出乎意料地幫助到許多人，所以我決定重新寫一次，比上次更容易製作和操作，也更好看一些(我覺得啦)。
 
 ## 範例網頁
 
@@ -44,7 +44,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/roll-call.webp"
 
 請打開我建立的這個[範例文件](https://docs.google.com/spreadsheets/d/1m0F6pOejN-ldKFIrFwssmoEPB3EPDmSQJKEPr9T88-E/edit?usp=sharing)並建立副本
 
-![建立副本](https://em-tec.github.io/images/post/rol-call-new.webp)
+![建立副本](https://emtech.cc/images/post/rol-call-new.webp)
 
 這樣Google Sheet就做好了。請複製這個文件的ID，我們稍後會用到。ID就是網址中的一長串字母和數字，比如說這個試算表:
 
@@ -70,7 +70,7 @@ function doGet(e){let t=e.parameter,a=SpreadsheetApp.openById(id).getSheets();sw
 https://script.google.com/macros/s/AKfycbzxqGIMBbLkCka2aveltdVHYtdG-k_X98qzSd_V9MHDxWaOYXFwZgE3rRHDzCakzTxs/exec
 ```
 
-![部屬網頁應用程式](https://em-tec.github.io/images/gas.jpg)
+![部屬網頁應用程式](https://emtech.cc/images/gas.jpg)
 
 ## 步驟三：建立網頁
 
@@ -351,7 +351,7 @@ https://script.google.com/macros/s/AKfycbzxqGIMBbLkCka2aveltdVHYtdG-k_X98qzSd_V9
                 <div class="search"><input type="text"><button>新增</button></div>
             </div>
         </section>
-        <footer><a href="edit-mr.github.io/">毛哥EM</a>製作 | <a href="https://em-tec.github.io/post/roll-call">教學</a>
+        <footer><a href="edit-mr.github.io/">毛哥EM</a>製作 | <a href="https://emtech.cc/post/roll-call">教學</a>
         </footer>
     </main>
     <script>
@@ -376,7 +376,7 @@ https://script.google.com/macros/s/AKfycbzxqGIMBbLkCka2aveltdVHYtdG-k_X98qzSd_V9
 
 然後再到你的倉庫裡面，點擊Settings，然後點擊左邊的Pages，把Branch改成main，然後按下Save，就完成了！
 
-![Github Pages設定](https://em-tec.github.io/images/roll-call-pages.webp)
+![Github Pages設定](https://emtech.cc/images/roll-call-pages.webp)
 
 好啦，現在你的網頁就完成了！你可以到網址`https://你的Github帳號.github.io/倉庫名稱`來使用你的網頁。
 

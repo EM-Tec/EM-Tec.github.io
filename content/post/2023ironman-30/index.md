@@ -5,9 +5,9 @@ date = "2023-10-14"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 不知不覺，三十天的鐵人賽就要結束了。一開始還覺得時間很漫長，但到了二十幾天之後我開始發現時間不多了，十分珍惜每一次能夠和大家分享的機會。
@@ -20,11 +20,11 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 在接下來的十幾天，我們製作了許多令人驚豔的效果。每一天專案的背後都會放入一些實用的思維，語法的應用，以及一些小技巧。希望用效果的視覺包裝可以讓大家更容易理解與覺得有趣，並且能夠在未來的開發中運用。
 
-![](https://em-tec.github.io/post/2023ironman-18/final.gif)
+![](https://emtech.cc/post/2023ironman-18/final.gif)
 
 而到了第二十天的【[Day20 GPU! 啟動! - 淺談 CSS3 硬體加速](https://ithelp.ithome.com.tw/articles/10333947)】 我們開始探討在技術上的選擇，以及如何讓網頁的動畫更加順暢，並帶出更多較為複雜的效果。 
 
-![](https://em-tec.github.io/post/2023ironman-22/final.gif)
+![](https://emtech.cc/post/2023ironman-22/final.gif)
 
 >　[Day 22 JavaScript 乱薍覼釠亂碼效果](https://ithelp.ithome.com.tw/articles/10335389)
 
@@ -32,7 +32,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 而到昨天我們回到了鐵人賽的頁面，並用我們所學的語法重現了 header 的太空效果。
 
-![](https://em-tec.github.io/post/2023ironman-29/final.gif)
+![](https://emtech.cc/post/2023ironman-29/final.gif)
 
 身為一個高二的普通學生，平常能寫文章的時間真的有限，但是我還是盡量讓每一天的文章可以新鮮有趣，並且能夠讓新手容易閱讀，但老手又不會覺得無聊，保留一點深度。雖然這三十天裡沒有人留言或是 Like，但希望路過的你們能夠找到點你要的東西，或至少得到些快樂。
 
@@ -42,7 +42,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 這三十天的內容可以說是我對於我這一年來做的大小專案的回顧。有一些最後有成功發布，有一些效果在計畫在過程中就被捨棄了。每一個特效的背後都有一個故事，可能是數天燒腦的 Debug，~~或著是我和甲方溝通的血與淚~~。比如說【[Day5 載入中… Animation-delay](https://ithelp.ithome.com.tw/articles/10322369)】的鍵盤特效是今年 DaptKey 團隊送我的快捷鍵盤，我回禮的使用心得文章加上這個載入特效。
 
-![](https://em-tec.github.io/post/2023ironman-5/loading.gif)
+![](https://emtech.cc/post/2023ironman-5/loading.gif)
 
 ### 平常寫文章的流程
 
@@ -71,11 +71,11 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 最後是有好幾篇文章我有畫示意圖，大部分是使用 Adobe Illustrator 繪製，也有一些在 iPhone 上完成是使用 Procreate 以及 Curve (前 Vectornator) 繪製。
 
-![混和模式比較](https://em-tec.github.io/post/2023ironman-9/mix.webp)
+![混和模式比較](https://emtech.cc/post/2023ironman-9/mix.webp)
 
 > [Day9 給你五彩斑斕的黑: mix-blend-mode](https://ithelp.ithome.com.tw/articles/10325681) - 混和模式比較
 
-![永無止境跑馬燈原理](https://em-tec.github.io/post/2023ironman-10/marquee.svg)
+![永無止境跑馬燈原理](https://emtech.cc/post/2023ironman-10/marquee.svg)
 
 > [Day10 永無止境跑馬燈 - 不同螢幕 相同速度](https://ithelp.ithome.com.tw/articles/10326819)
 
