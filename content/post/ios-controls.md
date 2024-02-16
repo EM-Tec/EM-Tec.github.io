@@ -5,9 +5,9 @@ date = "2022-11-19"
 description = ""
 categories = ["筆記"]
 tags = ["ios","捷徑"]
-thumbnail = "https://em-tec.github.io/images/thumbnails/ios-controls.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/ios-controls.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/ios-controls.jpg"
+thumbnail = "https://emtech.cc/images/thumbnails/ios-controls.jpg"
+featureImage = "https://emtech.cc/images/thumbnails/ios-controls.jpg"
+shareImage = "https://emtech.cc/images/thumbnails/ios-controls.jpg"
 +++
 
 ios的控制中心相較於安卓的開/關複雜許多，這篇文章我將快速介紹這些符號的功能以及如何正確開啟個人熱點別人才收得到。
@@ -62,6 +62,6 @@ ios的控制中心相較於安卓的開/關複雜許多，這篇文章我將快�
 
 接著到捷徑建立一個自動化操作。條件就是當專注模式被開啟，動作就是關閉藍牙/Wi-Fi。執行前不用詢問，要不要通知就看個人了
 
-![建立自動化操作](https://em-tec.github.io/images/ios-controls-shortcuts.jpeg)
+![建立自動化操作](https://emtech.cc/images/ios-controls-shortcuts.jpeg)
 
 當然你不想用專注模式想放一個按鈕在主畫面也可以

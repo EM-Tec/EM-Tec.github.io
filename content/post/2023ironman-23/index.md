@@ -5,9 +5,9 @@ date = "2023-10-07"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 今天我們會提到幾個不同的原理。你可以像生菜沙拉一樣自己條配。
@@ -190,6 +190,6 @@ div {
 }
 ```
 
-好的有點噁心，今天的漸層夠了，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+好的有點噁心，今天的漸層夠了，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

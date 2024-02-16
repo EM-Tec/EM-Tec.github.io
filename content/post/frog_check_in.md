@@ -16,19 +16,19 @@ categories = [
     "製作教學"
 ]
 toc = true
-thumbnail = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
+thumbnail = "https://emtech.cc/images/thumbnails/frog_check_in.jpg"
+featureImage = "https://emtech.cc/images/thumbnails/frog_check_in.jpg"
+shareImage = "https://emtech.cc/images/thumbnails/frog_check_in.jpg"
 +++
 大眼蛙教練的課程是以堂數做計算，也就是來一次算一次，而不是一段時間。因此每次學生上課都需要簽到，最後還需要人工來統計。因此我做了一個簡單的點名系統，讓電腦來做統計和計算的工作。
 <!--more-->
 {{% notice info "大眼蛙教練點名系統" %}}
 這篇文章出乎意料地幫助到許多人，因此我在2023年重新寫了一次，比上次更容易製作和操作，也更好看一些(我覺得啦)。
 
-建議閱讀這篇文章: <https://em-tec.github.io/post/rol-call/>
+建議閱讀這篇文章: <https://emtech.cc/post/rol-call/>
 {{% /notice %}}
 
-![首頁](https://EM-Tec.github.io/images/frog_check_in-home.png)
+![首頁](https://emtech.cc/images/frog_check_in-home.png)
 {{% notice info "大眼蛙教練點名系統" %}}
 
 * 開發者:毛哥EM(我)
@@ -40,10 +40,10 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 
 ### 新增學生
 
-![新增學生](https://EM-Tec.github.io/images/frog_check_in-add.png)
+![新增學生](https://emtech.cc/images/frog_check_in-add.png)
 輸入名稱並按新增即可。<br />
 電腦會自動在Google Sheet建立好欄位。教練只需要到試算表設定學生的課程數就好了。如果沒有課了會用紅色表示，而未設定會被判斷為沒有課程。
-![試算表中的學生列表](https://EM-Tec.github.io/images/frog_check_in-student.PNG)
+![試算表中的學生列表](https://emtech.cc/images/frog_check_in-student.PNG)
 {{% notice warning "超重要提醒" %}}
 
 * 學生姓名不可以有空格，如果有空格會自動刪除
@@ -52,12 +52,12 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 
 ### 點名
 
-![點名畫面](https://EM-Tec.github.io/images/frog_check_in-check.png)
+![點名畫面](https://emtech.cc/images/frog_check_in-check.png)
 網站會從表單取得學生名單並顯示。只需要點擊名稱即可完成報到。
 
 完成報到後會使用Line Notify通知完成報到的學生和報到時間到指定的群組。
 
-![報到成功會提示你還剩下幾堂課](https://EM-Tec.github.io/images/frog_check_in-checked.png)
+![報到成功會提示你還剩下幾堂課](https://emtech.cc/images/frog_check_in-checked.png)
 {{% notice notice "提醒" %}}
 
 * 為了配合不同螢幕大小，沒有限制每行出現的學生數。盡可能多顯示一些，比較容易找到。
@@ -65,14 +65,14 @@ shareImage = "https://em-tec.github.io/images/thumbnails/frog_check_in.jpg"
 * 下方方框會顯示自開啟網頁後已完成報到的學生。
 {{% /notice %}}
 在試算表的「紀錄」可以看到之前學生的報到紀錄。當天的會以綠色做標記。
-![報到紀錄](https://EM-Tec.github.io/images/frog_check_in-record.png)
+![報到紀錄](https://emtech.cc/images/frog_check_in-record.png)
 {{% notice warning "超重要提醒" %}}
 * 如果要刪除記錄（如誤按到）請**務必**要「**刪除整列**」。不可留空
 {{% /notice %}}
 
 ### 查詢記錄
 
-![查詢毛宥恩的報到紀錄](https://EM-Tec.github.io/images/frog_check_in-search.png)
+![查詢毛宥恩的報到紀錄](https://emtech.cc/images/frog_check_in-search.png)
 如果要查詢之前報到的紀錄，請到查詢頁面並輸入姓名。
 
 ## 教學
@@ -186,7 +186,7 @@ function debug() {
 編號 | 姓名 | 時間 |剩餘課堂數
 ----|----|----|----|
 1 | 測試先生 | 2021/10/10 22:46:00 | 10
- ![GAS快速教學](https://em-tec.github.io/images/gas.jpg)
+ ![GAS快速教學](https://emtech.cc/images/gas.jpg)
 
 做好了之後點擊執行▶️，你會需要授予你的程式讀取資料的權限。因為你寫的程式沒有被Google驗證過所以會顯示不安全，但我相信你不會把你的帳號搞爆，對吧
 

@@ -5,9 +5,9 @@ date = "2023-09-26"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 > 以下內容是我高一在上公民課時體悟的數學大道理，和網路上大多的做法都不太一樣。這篇文章假設你已學會國中直線方程式。如果不會的話…我也沒辦法。
@@ -24,7 +24,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 我們在製作滾動視差效果是會希望**一個元素的某一個屬性會隨著時間變化**。我們希望當我們輸入一個數字（也就是滾動的量）的時候得出一個計算結果。
 
-![假裝電腦在聊天](https://em-tec.github.io/post/2023ironman-12/chat.webp)
+![假裝電腦在聊天](https://emtech.cc/post/2023ironman-12/chat.webp)
 
 這種東西取得兩個數值之間的關係叫做甚麼呢?沒錯我們要來建立一個函式。而最簡單且最常用的函式應該就是直線方程了。
 
@@ -38,7 +38,7 @@ $$
 - 接著求出 Y 截距，就可以得出直線方程式。
 - 因為通常到了終點之後，我們不會希望他還在繼續耗資源計算和定位到螢幕畫面千里之外。所以在起點前和終點後都不要再管它了。
 
-![Desmos 示意圖](https://em-tec.github.io/post/2023ironman-12/desmos.png)
+![Desmos 示意圖](https://emtech.cc/post/2023ironman-12/desmos.png)
 
 希望這張圖能夠幫助你理解，如果不行的話國中數學課本翻一下。
 
@@ -71,7 +71,7 @@ if(scrollY<100) element.style.transform = `translateY(${scrollY * 1.4 + 10}px)`;
 
 https://codepen.io/edit-mr/pen/vYvZagX
 
-![Alt text](https://em-tec.github.io/post/2023ironman-12/boom.gif)
+![Alt text](https://emtech.cc/post/2023ironman-12/boom.gif)
 
 ```html
 <h1>引爆炸彈</h1>
@@ -122,7 +122,7 @@ window.addEventListener("scroll", function () {
 
 首先先簡單的切版。左邊的假文是為了讓你可以比較能感覺到往下滾動。
 
-![簡單的切版](https://em-tec.github.io/post/2023ironman-12/layout.webp)
+![簡單的切版](https://emtech.cc/post/2023ironman-12/layout.webp)
 
 ```html
 <div></div>
@@ -182,10 +182,10 @@ window.addEventListener("scroll", function () {
 
 https://codepen.io/edit-mr/pen/gOZRQex
 
-![Final](https://em-tec.github.io/post/2023ironman-12/spin.gif)
+![Final](https://emtech.cc/post/2023ironman-12/spin.gif)
 
 能夠變的與玩的實在太多了，使用這個方法在每一個屬性都可以套用。歡迎在評論區留下你看到的好網站與你自己的創作。
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

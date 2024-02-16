@@ -12,9 +12,9 @@ categories = [
     "網站分享",
 "捷徑分享"
 ]
-thumbnail = "https://em-tec.github.io/images/thumbnails/banner_weekly_downloader.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/banner_weekly_downloader.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/banner_weekly_downloader.jpg"
+thumbnail = "https://emtech.cc/images/thumbnails/banner_weekly_downloader.jpg"
+featureImage = "https://emtech.cc/images/thumbnails/banner_weekly_downloader.jpg"
+shareImage = "https://emtech.cc/images/thumbnails/banner_weekly_downloader.jpg"
 +++
 當時在製作的時候正是疫情爆發的時間，教會聚會全面改成線上，且只有提供週報的圖片檔，因此製作了一個可以下載週報的網站。即使現在疫情已經過去，我還是習慣使用這它
 <!--more-->
@@ -36,7 +36,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/banner_weekly_downloade
 若你使用的是ios裝置，你可以使用我製作的捷徑腳本來快速獲取當天、上一次、或指定日期的週報。
 {{% notice tip "小提醒" %}}
 
-* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://em-tec.github.io/post/shortcut-untrusted_shortcut/)提供的方法。
+* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://emtech.cc/post/shortcut-untrusted_shortcut/)提供的方法。
 * 此網站及捷徑皆為開源項目，歡迎到[GitHub](https://github.com/Edit-Mr/Edit-Mr.github.io/tree/main/code/weekly)查看。
 * 你也可以用Siri執行這個捷徑。
 {{% /notice %}}

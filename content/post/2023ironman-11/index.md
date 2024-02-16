@@ -5,9 +5,9 @@ date = "2023-09-25"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 你有看過這種頁面往下滾，但圖片位置沒有往下的效果嗎？
@@ -77,12 +77,12 @@ body {
 來個大範例
 <https://codepen.io/edit-mr/pen/rNodVbV>
 
-![飯粒範例](https://em-tec.github.io/post/2023ironman-11/scroll.gif)
+![飯粒範例](https://emtech.cc/post/2023ironman-11/scroll.gif)
 
 總之，`background-attachment` 屬性是一個強大的工具，可以用來控制背景圖片的滾動方式，從而實現不同的視覺效果。雖然實際功能不大但可以給人一種出乎意料且不會那麼死板的感覺。
 
 不過這只是最基本的滾動視差，且只能應用在圖片上面。明天我們將要討論如何讓任何你想要的東西滾起來。
 
-希望這篇文章能幫助你更好地理解和應用這個屬性，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+希望這篇文章能幫助你更好地理解和應用這個屬性，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

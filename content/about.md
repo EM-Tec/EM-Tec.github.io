@@ -9,30 +9,21 @@ author = "毛哥EM"
 從小接觸3C，累積的大量的個人技巧及作品。許多超讚軟體或工具沒什麼中文資源，而英文許多也只有官方文件，根本不適合人類閱讀，因此決定創建部落格與大家以白話的方式分享，就算不懂程式也可輕鬆使用。文章從國中陸陸續續更新到現在。
 
 {{% notice note "版權宣告" %}}
-寫技術性文章十分不易，不像許多媒體滑滑DCard,PTT就可以複製出一篇文章。因此如果有引用我的文章或作品的話，希望能標明出處，我會十分感激的
+寫技術性文章十分不易，因此如果有引用我的文章或作品的話希望能標明出處，不勝感激。
 {{% /notice %}}
 
 ## 關於我
 
-哈囉，我是毛哥EM，一位數位創作者。 我喜歡用科技來表達自己，進行各種各樣的創作，比如繪畫、音樂、平面設計和網頁設計。 
+哈囉，我是毛哥EM，一位數位創作者。 我喜歡用科技進行各種各樣的創作，比如電繪、音樂、平面設計和網頁設計等。 
 
 ## 我的Github狀態
 
-我有兩個GitHub帳戶，這樣我可以將我的部落個網站和其他網頁作品分開來放。
-
-### Edit Mr
-
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Edit-Mr&show_icons=true&theme=radical" />
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Edit-Mr&theme=radical&layout=compact&exclude_lang=java+r" />
-  
-### EM-Tec
-
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=EM-Tec&show_icons=true&theme=radical" />
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=EM-Tec&theme=radical&layout=compact&exclude_lang=java+r" />
 
 ## 聯絡資訊
 
-歡迎合作、共筆、委託www
+歡迎合作、共筆。如果有任何問題或建議，歡迎聯絡我。
 
 - Email: elvismao.070512@gmail.com
-- Instergram: @em.tec.blog
+- Instergram: @emtech.cc

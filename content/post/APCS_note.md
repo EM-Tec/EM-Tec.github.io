@@ -4,9 +4,9 @@ title = "【重點整理】C語言"
 date = "2022-07-17"
 description = "這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀"
 categories = ["筆記"]
-thumbnail = "https://em-tec.github.io/images/thumbnails/notes.png"
-featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
-shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
+thumbnail = "https://emtech.cc/images/thumbnails/notes.png"
+featureImage = "https://emtech.cc/images/thumbnails/notes.png"
+shareImage = "https://emtech.cc/images/thumbnails/notes.png"
 
 +++
 

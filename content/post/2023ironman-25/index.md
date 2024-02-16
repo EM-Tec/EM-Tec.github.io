@@ -5,9 +5,9 @@ date = "2023-10-09"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 我們今天要來做幾份漢堡選單。
@@ -417,6 +417,6 @@ input:checked ~ .food div {
 
 背景顏色一定要記得設定，不然只會糊再一起沒有相黏效果。這是我 debug 半小時之後才想到的...
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

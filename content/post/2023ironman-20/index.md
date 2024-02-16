@@ -5,9 +5,9 @@ date = "2023-10-04"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 今天我們要來探討如何善用使用者的 GPU 資源，讓網頁的動畫更加順暢。我盡量讓內容簡單易懂，可以當一篇科普文章閱讀。
@@ -16,7 +16,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 在我們討論之前，我們先來看看瀏覽器的渲染流程。這裡我畫了一張可愛的小圖
 
-![瀏覽器渲染流程](https://em-tec.github.io/post/2023ironman-20/css3_gpu_speedup.svg)
+![瀏覽器渲染流程](https://emtech.cc/post/2023ironman-20/css3_gpu_speedup.svg)
 
 * **JavaScript**: JavaScript 實現動畫效果，DOM 元素操作等。
 * **Style（計算樣式）**: 決定每個 DOM 元素應該套用什麼 CSS 規則。
@@ -85,6 +85,6 @@ GPU 厲害的是他會把在改變的元素獨立抽出來一個圖層，修改�
 
 或著是冬天快要到了，知道怎麼用安卓手機以及學校電腦製作暖暖包了吧w
 
-沒有在開玩笑，[這個](https://web.basemark.com/)就是一個不錯的暖暖包網頁。以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道:網棧](https://www.youtube.com/@webpallet)。
+沒有在開玩笑，[這個](https://web.basemark.com/)就是一個不錯的暖暖包網頁。以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道:網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

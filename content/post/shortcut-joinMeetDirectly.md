@@ -14,9 +14,9 @@ categories = [
 
 ]
 series = ["線上教學"]
-thumbnail = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirectly.jpg"
+thumbnail = "https://emtech.cc/images/thumbnails/shortcut-joinMeetDirectly.jpg"
+featureImage = "https://emtech.cc/images/thumbnails/shortcut-joinMeetDirectly.jpg"
+shareImage = "https://emtech.cc/images/thumbnails/shortcut-joinMeetDirectly.jpg"
 +++
 
 透過這個捷徑快速進入當節課堂的Meet，再也不用怕忘記課表
@@ -44,6 +44,6 @@ shareImage = "https://em-tec.github.io/images/thumbnails/shortcut-joinMeetDirect
 {{% notice tip "小提醒" %}}
 
 * 但是這是當時的課程所以現在無法運作，但你可以下載下來做修改。
-* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://em-tec.github.io/post/shortcut-untrusted_shortcut/)提供的方法。
+* 如果手機說無法加入不受信任的捷徑，請參考[這篇文章](https://emtech.cc/post/shortcut-untrusted_shortcut/)提供的方法。
 * 你也可以用Siri執行這個捷徑。
 {{% /notice %}}

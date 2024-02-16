@@ -9,9 +9,9 @@ tags = [
 categories = [
 "軟體分享",
 ]
-thumbnail = "https://em-tec.github.io/images/thumbnails/vb-cable.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/vb-cable.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/vb-cable.jpg"
+thumbnail = "https://emtech.cc/images/thumbnails/vb-cable.jpg"
+featureImage = "https://emtech.cc/images/thumbnails/vb-cable.jpg"
+shareImage = "https://emtech.cc/images/thumbnails/vb-cable.jpg"
 +++
 綠幕是拍片直播或視訊常用到的好幫手，因為它可以讓你輕鬆地去除掉背景。只需要在軟體中選擇綠幕顏色，並調整各種數據即可。但是如果沒有綠幕怎麼辦?這時可以使用電腦免費的視訊會議軟體Zoom達到一樣的效果。
 toc = true

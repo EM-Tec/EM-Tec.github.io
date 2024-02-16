@@ -5,14 +5,14 @@ date = "2023-09-28"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 在手機開關的設定裡面通常不是 checkbox ，而是這種 toggle 開關。因為比較好看，且更有開關的感覺。
 
-![iPhone Wi-Fi 設定開關](https://em-tec.github.io/post/2023ironman-14/switch.webp)
+![iPhone Wi-Fi 設定開關](https://emtech.cc/post/2023ironman-14/switch.webp)
 
 廢話不多說，今天就來把它做出來吧
 
@@ -88,7 +88,7 @@ label::after {
 }
 ```
 
-![基本版面](https://em-tec.github.io/post/2023ironman-14/layout.webp)
+![基本版面](https://emtech.cc/post/2023ironman-14/layout.webp)
 
 這樣你會得到一個非常簡單的版面。而按鈕是在框框範圍都可以點選的。
 
@@ -110,7 +110,7 @@ input:checked ~ .light {
 
 https://codepen.io/edit-mr/pen/KKbZjOq
 
-![開關成果](https://em-tec.github.io/post/2023ironman-14/final.gif)
+![開關成果](https://emtech.cc/post/2023ironman-14/final.gif)
 
 ```html
 <input type="checkbox" id="switch">
@@ -172,6 +172,6 @@ input:checked ~ .light {
   background: #fff;
 }
 ```
-以上就是我今天的分享，你可以根據你的喜好增加陰影或其他動畫效果。歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，你可以根據你的喜好增加陰影或其他動畫效果。歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

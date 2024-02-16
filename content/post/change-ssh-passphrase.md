@@ -5,9 +5,9 @@ date = "2022-08-19"
 description = "這是我自己學習的筆記，紀錄一些準備考試的重點，不適合新手閱讀"
 categories = ["筆記"]
 tags = ["終端機","Termux"]
-thumbnail = "https://em-tec.github.io/images/thumbnails/change-ssh-passpharase.jpeg"
-featureImage = "https://em-tec.github.io/images/thumbnails/change-ssh-passpharase.jpeg"
-shareImage = "https://em-tec.github.io/images/thumbnails/change-ssh-passpharase.jpeg"
+thumbnail = "https://emtech.cc/images/thumbnails/change-ssh-passpharase.jpeg"
+featureImage = "https://emtech.cc/images/thumbnails/change-ssh-passpharase.jpeg"
+shareImage = "https://emtech.cc/images/thumbnails/change-ssh-passpharase.jpeg"
 +++
 
 SSH是一種簡單的登入方式。以我來說在使用git來上傳檔案到Github時，因為我在手機生成並設定好了ssh，不用每次上傳都需要輸入帳號和全是亂碼的驗證密碼。

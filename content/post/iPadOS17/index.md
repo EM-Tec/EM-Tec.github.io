@@ -4,9 +4,9 @@ title = "iPadOS 17 真實心得 官方沒講的秘密，質感體驗的大升級
 date = "2023-06-09"
 description = ""
 tags = ["ios"]
-thumbnail = "https://em-tec.github.io/post/ipados17/6.webp"
-featureImage = "https://em-tec.github.io/post/ipados17/6.webp"
-shareImage = "https://em-tec.github.io/post/ipados17/6.webp"
+thumbnail = "https://emtech.cc/post/ipados17/6.webp"
+featureImage = "https://emtech.cc/post/ipados17/6.webp"
+shareImage = "https://emtech.cc/post/ipados17/6.webp"
 usePageBundles = true
 toc = true
 aliases = ["hugo-page-bundles"]
@@ -48,43 +48,12 @@ iOS 17, iPadOS 17 與在今年 6/6 號發佈，而隔天就開放 developer beta
 
 本來是想要測試人物微微遮住時鐘的偽立體效果，但是似乎插畫雖然在圖片長按可以去背但是在鎖定畫面上還是會被遮住，有點可惜。
 
-有趣的是內建的行星都不會突出，但是人物及動物則會。我認為應該是個暫時性的 Bug，因為在發布會上的 Demo影片中，行星也是會突出的。
-
-![](3.webp)
-
-你可以設定桌布在主畫面的模糊程度，避免背景太花俏導致看不清楚圖示。
-
-![](4.webp)
-
-## 計時器
-
-![](5.webp)
-
-在計時器中你現在可以點擊有上角的 ＋ 號同時新增多個計時器，且可以看到之前計時的歷史紀錄。
-
-計時器會以通知顯示。比起之前在時鐘下面小小的時間多出了互動的按鈕，也讓它變得更明顯。
-
-## 桌面 & 小工具Widget
-
-![最左邊的是更新前後右邊的兩個是更新後的畫面](7.webp)
-
-更新之後的APP名稱加上了陰影，在淺色背景中可以更清楚的看到。而Widget有可以有互動功能，不需要進到App中即可直接執行。位置也可以隨意擺放，不會自動對齊。
-
-不過APP還是會自動對齊，如果想要空白可以[參考這篇教學](https://www.instagram.com/p/CmB_Br2vrsk/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==)來建立透明小工具。
-
-## 輸入法優化
-
-現在語言切換會以圓形顯示，不會再像之前一樣長長的文字框出現在畫面正中間。整體使用不管是動畫還是位置都非常舒服，眼睛可以不用移開游標。而背景也會跟著App顏色主題做變化。
-
-注音輸入多了部首排序以及筆畫排序，可以更快速的找到想要的字，且輸入會自動預測語詞。英文甚至會提前顯示你可能要打的詞，不用再打完整個單字。
-
-![分別在Safari, Notion, 和提醒事項的打字效果](8.webp)
-
-## 備忘錄PDF優化
-
-PDF可以以小、中、大顯示，且點擊簽名按鈕不只可以簽名，甚至會自己判斷輸入框的大小，可以直接在上面輸入文字，點擊核取方塊也會自動打勾。如果沒有顯示也可以自己插入文字方塊，不過插入位置是以你按的位置為中心，所以容易稍微偏左。
-
-![](9.webp)
+有趣的是內建的行星都不會突出首先是鎖定畫面的小工具，小工具的位置會由上往下排，但是我比較喜歡在中間的感覺所以我自己使用 Scriptable 寫了點程式做了個透明小工具(之後再來出教學)。
+>>>>>>>+main
+的有夠累)。
+>首先是鎖定畫面的小工具，小工具的位置會由上往下排，但是我比較喜歡在中間的感覺所以我自己寫了點程式做了個透明小工具(之後再來出教學，你們每周盯我更新[網棧](https://emtech.cc/series/%E7%B6%B2%E6%A3%A7/)真的有夠累)。
+>>>>>>>-origin/main
+webp)
 
 ## 無邊記
 
@@ -157,7 +126,7 @@ PDF可以以小、中、大顯示，且點擊簽名按鈕不只可以簽名，�
 
 
 {{% notice info "我也要玩iOS17!" %}}
-如果你也想要跟我~~一起受災~~可以參考我寫的[這片文章](https://em-tec.github.io/post/apple-beta/)。
+如果你也想要跟我~~一起受災~~可以參考我寫的[這片文章](https://emtech.cc/post/apple-beta/)。
 {{% /notice %}}
 
 {{% notice info "我遇到軟體問題" %}}
