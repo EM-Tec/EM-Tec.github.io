@@ -1,6 +1,6 @@
 ---
 author = "毛哥EM"
-title = "Notion 資料庫如何免費批量輸出 PDF? 合併?"
+title = "Notion 資料庫如何免費批量輸出 PDF，並且合併?"
 date = "2024-02-22"
 series = ["別說我教的系列"]
 tags = ["Notion", "Python"]
@@ -8,7 +8,6 @@ categories = ["製作教學"]
 thumbnail = "https://www.notion.so/images/logo-ios.png"
 featureImage = "https://www.notion.so/images/logo-ios.png"
 shareImage = "https://www.notion.so/images/logo-ios.png"
-draft = true
 ---
 
 <!-- @format -->
@@ -50,13 +49,13 @@ Notion 是一個出色的筆記軟體，但是有一個問題是它的資料庫�
 
 ![複製整串網址](image-2.png)
 
-## 2. 取得 Space ID
+#### 2. 取得 Space ID
 
 請你對頭像點擊右鍵複製圖片連結，並填入 Google Colab 的 Secret。
 
 ![alt text](image-3.png)
 
-## 3. 取得 API Token
+#### 3. 取得 API Token
 
 請至 [Notion Developers](https://www.notion.so/my-integrations) 取得 API，輸入基本資料並選擇要應用的 Workspace。
 
@@ -70,17 +69,30 @@ Notion 是一個出色的筆記軟體，但是有一個問題是它的資料庫�
 
 ![alt text](image-7.png)
 
-## 4. 取得 Cookie
+#### 4. 取得 Cookie
 
 點擊 F12 (Cmd + Opt + I) 開啟開發者工具，進入開發者工具。選擇儲存空間，並複製 cookie `token_v2` 的值，以及 `file_token` 的值，並填入下方。
 
 ![alt text](image-6.png)
 
-# Notion! 啟動!
+## Notion! 啟動!
 
-可以點擊 `>` 縮小一鍵全部執行。再打開 console 察看進度。
+接下來你可以一步步點擊執行，並等待程式完成。程式完成後會在左邊的檔案區域看到一個 `combined_pdf.pdf`，這就是你的資料庫的所有文件合併成的 PDF。並且會有一個 PDF 資料夾。裡面都是你輸出的頁面，且按照檔案名稱命名。
 
+![執行](run.png)
 
+如果你不想要一步步執行，你也可以點擊 `>` 縮小一鍵全部執行。再打開 console 察看進度。
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥 EM 資訊密技](https://emtech.cc/)。
-我是毛哥 EM，讓我們明天再見。
+由於 Notion 生成 PDF 需要時間，因此你可能需要等待一段時間。不過不用擔心，如果程式執行時還沒下載好會自動等待 5 秒後再試一次，直到所有文件都下載完成。
+
+最後的合併 PDF 是可選的，程式可以幫你按照下載時間順序合併成 `combined_pdf.pdf`。如果你不需要合併，可以不用執行最後底下的程式。
+
+## 下載
+
+對檔案點兩下或點擊右鍵，並選擇下載即可保存到本地。
+
+![下載PDF](image-8.png)
+
+以上就是我今天的分享，希望能夠幫助正在努力的你。歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥 EM 資訊密技](https://emtech.cc/)，若有任何問題歡迎在在 Instagram 私訊我。
+
+我是毛哥 EM，讓我們下次再見。
