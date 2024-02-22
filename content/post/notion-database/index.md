@@ -1,4 +1,4 @@
----
++++
 author = "毛哥EM"
 title = "Notion 資料庫如何免費批量輸出 PDF，並且合併?"
 date = "2024-02-22"
@@ -8,7 +8,7 @@ categories = ["製作教學"]
 thumbnail = "https://www.notion.so/images/logo-ios.png"
 featureImage = "https://www.notion.so/images/logo-ios.png"
 shareImage = "https://www.notion.so/images/logo-ios.png"
----
++++
 
 <!-- @format -->
 
