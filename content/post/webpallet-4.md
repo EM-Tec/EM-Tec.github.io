@@ -7,9 +7,9 @@ tags = [
     "HTML",
 ]
 series = ["網棧"]
-thumbnail = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
-featureImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
-shareImage = "https://em-tec.github.io/images/thumbnails/webpallet.webp"
+thumbnail = "https://emtech.cc/images/thumbnails/webpallet.webp"
+featureImage = "https://emtech.cc/images/thumbnails/webpallet.webp"
+shareImage = "https://emtech.cc/images/thumbnails/webpallet.webp"
 +++
 
 哈囉大家好，我是毛哥EM，歡迎來到網棧。 

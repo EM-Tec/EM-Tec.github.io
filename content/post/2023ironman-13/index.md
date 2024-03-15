@@ -5,16 +5,16 @@ date = "2023-09-27"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 昨天的內容是不是有一點燒腦?沒關係，今天來點輕鬆的，只有一行 JavaScript。不管是在線上的文書軟體、製作網站的網站、或甚至是 iOS StandBy 都會有顏色選單。今天我們就來做一個極簡的吧，還要加上自訂顏色的功能。
 
 <!--more-->
 
-![顏色選單成果](https://em-tec.github.io/post/2023ironman-13/final.webp)
+![顏色選單成果](https://emtech.cc/post/2023ironman-13/final.webp)
 
 ## 顏色選單 HTML
 
@@ -41,7 +41,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 ## CSS
 
-![簡單的 CSS](https://em-tec.github.io/post/2023ironman-13/button.webp)
+![簡單的 CSS](https://emtech.cc/post/2023ironman-13/button.webp)
 
 ```css
 body {
@@ -124,7 +124,7 @@ function changeFontColor(c) {
 
 https://codepen.io/edit-mr/pen/abPVWBJ
 
-![顏色選單成果](https://em-tec.github.io/post/2023ironman-13/final.gif)
+![顏色選單成果](https://emtech.cc/post/2023ironman-13/final.gif)
 
 ```html
 <h1>顏色選單</h1>
@@ -198,6 +198,6 @@ body {
 ```js
 const changeFontColor = (a) => document.body.style.background = a;
 ```
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

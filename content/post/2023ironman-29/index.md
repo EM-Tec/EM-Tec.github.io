@@ -5,17 +5,17 @@ date = "2023-10-13"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 相信大家對於這個頁面都不陌生吧。這是我們2023 iThome 鐵人賽的首頁。我覺得他的粒子特效和地球很酷，所以我們今天就來看看怎麼做吧。
 
-![](https://em-tec.github.io/post/2023ironman-29/original.webp)
+![](https://emtech.cc/post/2023ironman-29/original.webp)
 
 以下是今天我們的目標。為了版面乾淨我省略了上面的文字，只留下熊俠、標題、粒子特效、和地球。且為了讓他不要太長我有稍微縮小了一點。
 
-![](https://em-tec.github.io/post/2023ironman-29/final.gif)
+![](https://emtech.cc/post/2023ironman-29/final.gif)
 
 ## HTML 架構
 
@@ -52,7 +52,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 > 官網在背景圖片設定 `background-size` 時因為被 `background` 屬性預設的 `auto` 值影響，所以使用了 `!important`，不過其實只需要打在後面就可以了。
 
-![](https://em-tec.github.io/post/2023ironman-29/header.webp)
+![](https://emtech.cc/post/2023ironman-29/header.webp)
 
 ```css
 header {
@@ -81,7 +81,7 @@ header img {
 
 我們先弄一個宇宙
 
-![](https://em-tec.github.io/post/2023ironman-29/space.webp)
+![](https://emtech.cc/post/2023ironman-29/space.webp)
 
 ```css
   background: #11377e;
@@ -91,7 +91,7 @@ header img {
 
 然後做一束高光，並進行定位。原理是先搞一個橢圓形
 
-![](https://em-tec.github.io/post/2023ironman-29/oval.webp)
+![](https://emtech.cc/post/2023ironman-29/oval.webp)
 
 ```css
 .horizon {
@@ -107,7 +107,7 @@ header img {
 
 然後再模糊一下
 
-![](https://em-tec.github.io/post/2023ironman-29/blur.webp)
+![](https://emtech.cc/post/2023ironman-29/blur.webp)
 
 ```css
 filter: blur(30px);
@@ -119,7 +119,7 @@ filter: blur(30px);
 
 再多加幾個光點
 
-![Alt text](https://em-tec.github.io/post/2023ironman-29/light.webp)
+![Alt text](https://emtech.cc/post/2023ironman-29/light.webp)
 
 ```css
 .horizon:before {
@@ -162,7 +162,7 @@ filter: blur(30px);
 
 加上一點內陰影讓他看起來更有立體感。
 
-![](https://em-tec.github.io/post/2023ironman-29/earth.webp)
+![](https://emtech.cc/post/2023ironman-29/earth.webp)
 
 ```css
 .earth {
@@ -181,7 +181,7 @@ filter: blur(30px);
 
 星空效果 iThome 沒有使用什麼 [particles.js](https://vincentgarreau.com/particles.js/)。我們打開 FireFox Dev Tools 的動畫分頁可以看出原來這是一個長150秒的往上移動 CSS 動畫。
 
-![](https://em-tec.github.io/post/2023ironman-29/firefox.webp)
+![](https://emtech.cc/post/2023ironman-29/firefox.webp)
 
 ```css
 @keyframes animStar {
@@ -212,7 +212,7 @@ filter: blur(30px);
 
 https://codepen.io/edit-mr/pen/OJrGmyW
 
-![](https://em-tec.github.io/post/2023ironman-29/final.gif)
+![](https://emtech.cc/post/2023ironman-29/final.gif)
 
 ```html
 <header>
@@ -890,6 +890,6 @@ section {
 }
 ```
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

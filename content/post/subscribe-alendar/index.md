@@ -1,19 +1,19 @@
 +++
 author = "毛哥EM"
-title = "教學：將學校行事曆輕鬆加入Apple日曆"
+title = "教學：將學校行事曆輕鬆加入 Apple 日曆"
 date = "2024-01-12"
 tags = ["iOS", "自製"]
 categories = ["網站分享", "製作教學"]
-thumbnail = "https://em-tec.github.io/images/thumbnails/subscribe-alendar.webp"
-featureImage = "https://em-tec.github.io/images/thumbnails/subscribe-alendar.webp"
-shareImage = "https://em-tec.github.io/images/thumbnails/subscribe-alendar.webp"
+thumbnail = "https://emtech.cc/images/thumbnails/subscribe-alendar.webp"
+featureImage = "https://emtech.cc/images/thumbnails/subscribe-alendar.webp"
+shareImage = "https://emtech.cc/images/thumbnails/subscribe-alendar.webp"
 +++
 
 
 
 在這篇文章中，我要教你如何將 Google 行事曆輕鬆加入你的Apple日曆中，方便你隨時掌握校園或者活動動態。讓我們開始吧！
 
-<!--more-->
+<!—more—>
 
 ### 步驟一：找到行事曆
 
@@ -63,4 +63,4 @@ https://calendar.google.com/calendar/ical/sysh.tc.edu.tw_iq8pt1qet88ps9ifm6l3cab
 
 ![完成 w100::img-medium](search.webp)
 
-希望這篇文章能夠幫助到你。如果你有任何問題都可以在 IG 留言，也歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)。
+希望這篇文章能夠幫助到你。如果你有任何問題都可以在 IG 留言，也歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)。

@@ -6,9 +6,9 @@ description = "簡單的git教學，輕鬆下載上傳檔案"
 series = ["複製貼上就能成為工程師"]
 tags = ["終端機","Git","Github"]
 categories = [ "網站分享","軟體分享" ]
-thumbnail = "https://em-tec.github.io/images/thumbnails/github-and-git.jpeg"
-featureImage = "https://em-tec.github.io/images/thumbnails/github-and-git.jpeg"
-shareImage = "https://em-tec.github.io/images/thumbnails/github-and-git.jpeg"
+thumbnail = "https://emtech.cc/images/thumbnails/github-and-git.jpeg"
+featureImage = "https://emtech.cc/images/thumbnails/github-and-git.jpeg"
+shareImage = "https://emtech.cc/images/thumbnails/github-and-git.jpeg"
 toc = true
 +++
 這一篇文章我會用簡單好理解的方式讓你學會基本的使用Github和Git。且*複製貼上就能成為工程師*系列所搭建的網站都可以免費架設在Github
@@ -110,7 +110,7 @@ git clone
 <body>
   <h1>歡迎來到我的網站</h1>
   <h2>我很開心</h2>
-  <p><a href="https://em-tec.github.io/">毛哥EM資訊密技</a>的範例程式</p>
+  <p><a href="https://emtech.cc/">毛哥EM資訊密技</a>的範例程式</p>
 </body>
 ```
 
@@ -145,7 +145,7 @@ SSH像是一個信物。我們生成一個SSH，並告訴Github說只要有拿�
 假如你編輯了檔案，但是在你還沒上傳時別人已經改了內容（新增/編輯/刪除檔案）這個時候你就沒辦法上傳（push）了。我們會看到這串訊息
 ```
 ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'github.com:EM-Tec/EM-Tec.github.io.git'
+error: failed to push some refs to 'github.com:EM-Tec/emtech.cc.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes

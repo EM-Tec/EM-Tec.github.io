@@ -5,9 +5,9 @@ description=  "西苑高一電腦課C++題目的最佳解。如果解不出來�
 date=  "2022-09-08"
 tags = ["C++"]
 categories = ["Development"]
-thumbnail = "https://em-tec.github.io/images/thumbnails/notes.png"
-featureImage = "https://em-tec.github.io/images/thumbnails/notes.png"
-shareImage = "https://em-tec.github.io/images/thumbnails/notes.png"
+thumbnail = "https://emtech.cc/images/thumbnails/notes.png"
+featureImage = "https://emtech.cc/images/thumbnails/notes.png"
+shareImage = "https://emtech.cc/images/thumbnails/notes.png"
 toc = true
 
 +++
@@ -28,7 +28,7 @@ toc = true
 當然如果你只是想看解答<s>然後像月同學一樣手機開超大聲打音遊</s>可以[點我跳到解答](#題目解答)
 
 {{% notice note "C語言" %}}
-如果你忘記C語言的語法想看看可以閱讀[這篇文章](https://em-tec.github.io/post/apcs_note/)，不過相信你學過C++就不會想要碰它了。
+如果你忘記C語言的語法想看看可以閱讀[這篇文章](https://emtech.cc/post/apcs_note/)，不過相信你學過C++就不會想要碰它了。
 {{% /notice %}}
 
 ## 減少程式碼的常用技巧

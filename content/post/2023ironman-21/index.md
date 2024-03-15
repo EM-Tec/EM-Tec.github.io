@@ -5,9 +5,9 @@ date = "2023-10-05"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS", "JS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 今天是第二十一天，已經走完2/3的路程，我媽還以為我早被淘汰了。這個系列明明是叫【不用庫 也能酷 - 玩轉 CSS & Js 特效】，但 Js 出現了幾篇?有五篇嗎?難道 JavaScript 是來湊關鍵字的嗎?今天就來聊聊為甚麼使用純 CSS 做效果如此吸引人。
@@ -48,7 +48,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 ![](config.webp)
 
-接下來是暖暖包時間，我們要來翻滾1000個 `<div>` 正方形。你可以自行貼上以下程式碼，或是用[我的](https://em-tec.github.io/post/2023ironman-21/test.html)。然後點擊切換按鈕來切換動畫方式。
+接下來是暖暖包時間，我們要來翻滾1000個 `<div>` 正方形。你可以自行貼上以下程式碼，或是用[我的](https://emtech.cc/post/2023ironman-21/test.html)。然後點擊切換按鈕來切換動畫方式。
 
 ```html
 <div id="header">
@@ -182,7 +182,7 @@ function animate(time) {
 
 > 複習: [Day20 GPU! 啟動! - 淺談 CSS3 硬體加速](https://ithelp.ithome.com.tw/articles/10333947)
 
-![瀏覽器渲染流程](https://em-tec.github.io/post/2023ironman-20/css3_gpu_speedup.svg)
+![瀏覽器渲染流程](https://emtech.cc/post/2023ironman-20/css3_gpu_speedup.svg)
 
 JavaScript 的 `requestAnimationFrame()` 會引起 reflow（重新布局），整個流程需要再跑一次。而 CSS 的 `transition` 和 `@keyframes` 只需要單獨稍微調整一下動畫的圖層就好了。
 
@@ -194,6 +194,6 @@ JavaScript 的 `requestAnimationFrame()` 會引起 reflow（重新布局），�
 
 明天我們就來玩玩 JavaScript 的特效吧。
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

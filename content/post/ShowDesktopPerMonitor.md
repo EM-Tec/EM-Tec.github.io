@@ -9,9 +9,9 @@ tags = [
 categories = [
     "軟體分享",
 ]
-thumbnail = "https://em-tec.github.io/images/thumbnails/ShowDesktopPerMonitor.JPG"
-featureImage = "https://em-tec.github.io/images/thumbnails/ShowDesktopPerMonitor.JPG"
-shareImage = "https://em-tec.github.io/images/thumbnails/ShowDesktopPerMonitor.JPG"
+thumbnail = "https://emtech.cc/images/thumbnails/ShowDesktopPerMonitor.JPG"
+featureImage = "https://emtech.cc/images/thumbnails/ShowDesktopPerMonitor.JPG"
+shareImage = "https://emtech.cc/images/thumbnails/ShowDesktopPerMonitor.JPG"
 +++
 使用多個螢幕可以使工作效率大幅提升。不過如果使用Win+D來隱藏視窗、會一次隱藏所有螢幕的所有的視窗。
 不過透過ShowDesktopPerMonitor可以模擬Win+D的隱藏視窗。除了可以分開螢幕控制以外，它的隱藏視窗是連工作列都看不到...（要怎麼使用就看你了！）

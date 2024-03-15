@@ -5,9 +5,9 @@ date = "2023-09-17"
 series = ["不用庫 也能酷 - 玩轉 CSS & Js 特效"]
 tags = ["HTML", "CSS"]
 categories = [""]
-thumbnail = "https://em-tec.github.io/images/ironman2023.webp"
-featureImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
-shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
+thumbnail = "https://emtech.cc/images/ironman2023.webp"
+featureImage = "https://emtech.cc/images/ironman2023-banner.webp"
+shareImage = "https://emtech.cc/images/ironman2023-banner.webp"
 +++
 
 當你拿到一張設計圖要照著做出來你的第一反應是什麼呢？是直接套 bootstrap 再說嗎？但我幾乎所有的切版**只要是整齊能畫出網格的，我都會使用flex。**而這個網格也不一定是正方形，只要是矩形就可以了。
@@ -16,7 +16,7 @@ shareImage = "https://em-tec.github.io/images/ironman2023-banner.webp"
 
 那麼我會先看出來整個頁面被包在一個和螢幕一樣大的 flex 方框，垂直排列。而排完剩餘的空間全部給一個空白的方框。而上面的 nav 目錄方框裡面分左右兩個方框，靠兩側對齊。
 
-![Google](https://em-tec.github.io/post/2023ironman-3/www.google.com_.png)
+![Google](https://emtech.cc/post/2023ironman-3/www.google.com_.png)
 
 當然這沒有正確答案，但你可以發現其實只用 flex 就可以完成所有的切版作業了。因此讓我們先來認識他的基本語法吧。
 
@@ -48,11 +48,11 @@ div {
 }
 ```
 
-![Untitled](https://em-tec.github.io/post/2023ironman-3/Untitled.webp)
+![Untitled](https://emtech.cc/post/2023ironman-3/Untitled.webp)
 
 因為 `div` 是區塊元素 (display: block) 所以元素都會換行，而這很重要因為這樣我們才能設定他的寬高。但如果我們加上 `display: flex` 就可以讓他們並排。
 
-![Untitled](https://em-tec.github.io/post/2023ironman-3/flex.webp)
+![Untitled](https://emtech.cc/post/2023ironman-3/flex.webp)
 
 我們把外面包著大家的藍色元素叫做外容器，裡面叫做內容器。我們可以在外容器的CSS設定裡面的東西怎麼排。
 
@@ -69,13 +69,13 @@ section{
 
 比如說我設成 `row-reverse` 就會從右到左排。
 
-![Untitled](https://em-tec.github.io/post/2023ironman-3/reverse.webp)
+![Untitled](https://emtech.cc/post/2023ironman-3/reverse.webp)
 
 ## 超過換行 **flex-wrap**
 
 如果不設定的話瀏覽器會硬擠成一排。
 
-![Untitled](https://em-tec.github.io/post/2023ironman-3/wrap.webp)
+![Untitled](https://emtech.cc/post/2023ironman-3/wrap.webp)
 
 你可以加上 `flex-wrap: wrap` 來解放他。所有值如下
 
@@ -103,13 +103,13 @@ flex-wrap: wrap-reverse; /* 換行但從下到上排 */
 justify-content: flex-start | flex-end | center | space-between | space-around;
 ```
 
-![Untitled](https://em-tec.github.io/post/2023ironman-3/justify.webp)
+![Untitled](https://emtech.cc/post/2023ironman-3/justify.webp)
 
 ## 垂直對齊 **align-items**
 
 你懂得，和上面相反。如果你設定 `flex-direction: column;` 就是水平對齊方向。
 
-![Untitled](https://em-tec.github.io/post/2023ironman-3/align-items.webp)
+![Untitled](https://emtech.cc/post/2023ironman-3/align-items.webp)
 
 `flex-start` 靠開始位置、 `flex-end` 靠結束位置、 `center` 致中、 `strech` 拉到一樣高、 `base-line` 會找文字的位置對齊。
 
@@ -121,7 +121,7 @@ justify-content: flex-start | flex-end | center | space-between | space-around;
 align-content: flex-start | flex-end | center | space-between | space-around | stretch;
 ```
 
-![Untitled](https://em-tec.github.io/post/2023ironman-3/align-content.webp)
+![Untitled](https://emtech.cc/post/2023ironman-3/align-content.webp)
 
 ## 內元件設定
 
@@ -135,19 +135,19 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 
 https://codepen.io/edit-mr/pen/ZEVWaqq
 
-![flex-grow](https://em-tec.github.io/post/2023ironman-3/flex-grow.webp)
+![flex-grow](https://emtech.cc/post/2023ironman-3/flex-grow.webp)
 
 你可以使用 **`order`** 屬性來設定順序，前到後放入整數，支援負值。但我從來沒有用到過，都是直接在 HTML 改，不過還是提供給大家。
 
 如果你不熟悉 flex 的話你可以到 **[Flexbox Froggy](https://flexboxfroggy.com/#zh-tw)** 這個網站，用遊戲的方式了解 flex。(然後提示是可以直接按，不用慢慢輸入喔)
 
-![Untitled](https://em-tec.github.io/post/2023ironman-3/froggy.webp)
+![Untitled](https://emtech.cc/post/2023ironman-3/froggy.webp)
 
 你也可以使用今天所學到的語法複製一個 Google 的網頁。重點在排版所以按鍵的陰影和顏色可以直接打開開發者工具查看喔。我先做了一個範例提供大家參考，也能實現搜尋功能。如果有任何問題也歡迎留言。
 
 > [範例網站](https://sysh-tech-volunteer.github.io/Web-Design-Camp/practice/google.html) | [原檔HTML](https://github.com/SYSH-Tech-Volunteer/Web-Design-Camp/blob/main/practice/google.html) | [原檔CSS](https://github.com/SYSH-Tech-Volunteer/Web-Design-Camp/blob/main/practice/google.css)
 > 
 
-以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
+以上就是我今天的分享，歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://emtech.cc/)，也歡迎訂閱我新開的[YouTube頻道：網棧](https://www.youtube.com/@webpallet)。
 
 我是毛哥EM，讓我們明天再見。

@@ -7,9 +7,9 @@ tags = ["Windows"]
 categories = [
     "軟體分享",
 ]
-thumbnail = "https://em-tec.github.io/images/thumbnails/MultiWall.webp"
-featureImage = "https://em-tec.github.io/images/thumbnails/MultiWall.webp"
-shareImage = "https://em-tec.github.io/images/thumbnails/MultiWall.webp"
+thumbnail = "https://emtech.cc/images/thumbnails/MultiWall.webp"
+featureImage = "https://emtech.cc/images/thumbnails/MultiWall.webp"
+shareImage = "https://emtech.cc/images/thumbnails/MultiWall.webp"
 +++
 使用多個螢幕可以大大的增加工作效率。比如說在開直播時可以在遊戲全螢幕時同時做OBS畫面切換或是查看聊天室。
 但是你是否有發現所有螢幕的桌布都只能設定一樣的。而如果你像我一樣兩個螢幕比例不同的話，其中一張比例會直接跑掉，十分的影響美觀。
@@ -33,12 +33,12 @@ shareImage = "https://em-tec.github.io/images/thumbnails/MultiWall.webp"
 ### 設定桌布
 
 建議開啟軟體之後先按下Detect來偵測桌面
-![偵測桌面](https://EM-Tec.github.io/images/MultiWall-detect.png)
+![偵測桌面](https://emtech.cc/images/MultiWall-detect.png)
 接著選擇模式:延伸圖片或分別用不同的圖片
-![選擇模式](https://EM-Tec.github.io/images/MultiWall-mode.png)
+![選擇模式](https://emtech.cc/images/MultiWall-mode.png)
 接著選取你電腦上的桌布或示範例圖庫
-![選取圖片](https://EM-Tec.github.io/images/MultiWall-browse.png)
+![選取圖片](https://emtech.cc/images/MultiWall-browse.png)
 你可以給圖片加上各種濾鏡或特效，但是我建議在導入軟體之前就先編輯好
 
 最後按下apply即可
-![Apply](https://EM-Tec.github.io/images/MultiWall-apply.png)
+![Apply](https://emtech.cc/images/MultiWall-apply.png)

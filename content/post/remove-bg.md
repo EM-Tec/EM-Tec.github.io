@@ -7,9 +7,9 @@ tags = ["ios捷徑"]
 series = ["複製貼上就能成為工程師"]
 categories = [
 "網站分享","API分享","捷徑分享"]
-thumbnail = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
-featureImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
-shareImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
+thumbnail = "https://emtech.cc/images/thumbnails/remove-bg.jpg"
+featureImage = "https://emtech.cc/images/thumbnails/remove-bg.jpg"
+shareImage = "https://emtech.cc/images/thumbnails/remove-bg.jpg"
 +++
 在這篇文章我要介紹Remove.bg這個超讚的去被網站，並講解如何使用它提供的Api來製作捷徑，使你能夠一鍵去被
 <!--more-->
@@ -24,7 +24,7 @@ shareImage = "https://em-tec.github.io/images/thumbnails/remove-bg.jpg"
 
 進入到網站後可以直接上傳照片。上傳完成後可以直接下載，也可以做一些編輯如手動去背（如果AI沒去好）、添加濾鏡、背景顏色等。
 
-![Remove.bg介面](https://EM-Tec.github.io/images/remove-bg-site.jpg)
+![Remove.bg介面](https://emtech.cc/images/remove-bg-site.jpg)
 
 ## ios捷徑（API）
 每次去背都要打卡網頁操作，如果量多的話十分不方便。好在他們有提供API，可以讓我們用捷徑腳本來簡化步驟。
@@ -45,17 +45,17 @@ API(Application Programming Interface)，中文叫做應用程式介面。你可
 
 Remove.bg提供每個帳號每個月50次的免費使用。對一般人來說已經很足夠了，但如果還需要更多的話可以升級方案<s>或再註冊一個帳號</s>
 
-![用捷徑去背](https://EM-Tec.github.io/images/remove-bg-api.jpg)
+![用捷徑去背](https://emtech.cc/images/remove-bg-api.jpg)
 
 加入捷徑後請輸入剛才得到的API Key。
 
-![Remove.bg介面](https://EM-Tec.github.io/images/remove-bg-shortcutsSetup.PNG)
+![Remove.bg介面](https://emtech.cc/images/remove-bg-shortcutsSetup.PNG)
 
 要使用時只需要分享圖片，並點選捷徑即可。是不是超方便的！
 
-![用捷徑去背](https://EM-Tec.github.io/images/remove-bg-shortcuts.jpg)
+![用捷徑去背](https://emtech.cc/images/remove-bg-shortcuts.jpg)
 
 ### 製作教學
 從官方文件可以看出我們呼叫API至少需要提供API Key、大小、圖片，並以`Post`的方式傳遞到`https://api.remove.bg/v1.0/removebg`。所以捷徑只需要照著填入並儲存把回傳的圖片即可。實際設定如下
 
-![捷徑動作](https://EM-Tec.github.io/images/remove-bg-shortcutsBlock.jpg)
+![捷徑動作](https://emtech.cc/images/remove-bg-shortcutsBlock.jpg)
