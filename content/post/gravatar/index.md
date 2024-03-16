@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "教學："
+title = "如何設定全球通用頭像 Gravatar？以 Jitsi 為例"
 date = "2024-03-15"
 tags = ["iOS"]
 categories = ["網站分享", "製作教學"]
@@ -37,11 +37,11 @@ shareImage = "https://gravatar.com/images/grav-logo-blue.svg"
 
 在 Jitsi 中你只需點擊設定並進入簡介分頁就可以輸入Gravatar 電子郵件。
 
-[Jitsi 設定 Gravatar](pc.png)
+![Jitsi 設定 Gravatar](pc.png)
 
 手機版也一樣。
 
-[手機版Jitsi 設定Gravatar](ios.png)
+![手機版Jitsi 設定Gravatar](ios.png)
 
 
 希望這篇文章能夠幫助到你。如果你有任何問題都可以在 IG 留言，也歡迎在 [Instagram](https://www.instagram.com/em.tec.blog) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥EM資訊密技](https://em-tec.github.io/)。
