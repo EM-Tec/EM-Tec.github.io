@@ -13,7 +13,7 @@ shareImage = "https://emtech.cc/images/thumbnails/subscribe-alendar.webp"
 
 在這篇文章中，我要教你如何將 Google 行事曆輕鬆加入你的Apple日曆中，方便你隨時掌握校園或者活動動態。讓我們開始吧！
 
-<!—more—>
+<!--more-->
 
 ### 步驟一：找到行事曆
 
