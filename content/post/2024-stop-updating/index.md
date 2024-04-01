@@ -7,7 +7,7 @@ categories = ["特別企劃"]
 
 <div style="font-family:Metropolis, system-ui!important;">
 
-毛哥EM資訊密技自 2020 開始於網路上分享資訊，至今已經有 4 年的時間。在這段時間裡，我嘗試利用有限的時間和精力，分享近期的專案與我認為實用的技巧。然而，由於個人原因，我決定停更一段時間。
+毛哥EM資訊密技自 2020 開始於網路上分享資訊，至今已經有 4 年的時間。在這段時間裡，我嘗試利用身為學生有限的時間和精力，分享近期的專案與我認為實用的技巧。然而，由於個人原因，我決定停更一段時間。
 
 </div>
 
@@ -15,13 +15,16 @@ categories = ["特別企劃"]
 
 <div style="font-family:Metropolis, system-ui!important;">
 
-非常感謝各位長期的支持，但由於[中電會](https://scaict.org/)的事務繁忙，[中電喵機器人](https://github.com/SCAICT/SCAICT-uwu)還在 beta 階段，官網從上一屆拖到這一屆，到現在 RWD 還沒弄好。所以我昨天把它弄得差不多了。
+非常感謝各位長期的支持，但由於[中電會](https://scaict.org/)的事務繁忙，[中電喵機器人](https://github.com/SCAICT/SCAICT-uwu)還在 beta 階段，官網從上一屆拖到這一屆，到現在 RWD 還沒弄好。
 
-對，就這樣。
+## 導火線
+
+毛哥EM資訊密技的內容以技術類文章為主，不像主流媒體能夠靠著聳動標題與八卦內容獲得大量流量，因此廣告收入近乎於 0。導致雖然 jf 金萱七分糖字體超級好看，但是我還是買不下手。因此讓我陷入了極度的憂鬱...
+
 
 </div>
 
-愚人節快樂！為了慶祝這個特別的日子，我把整個部落格除了這篇文章以外的所有字體都換成了 justfont 今天推出的[諧靈附體](https://github.com/justfont/AllPunType)。而具體情況就是:
+好了不鬧了，愚人節快樂！為了慶祝這個特別的日子，我把整個部落格除了這篇文章以外的所有字體都換成了 justfont 今天推出的[諧靈附體](https://github.com/justfont/AllPunType)。而具體情況就是:
 
 ![](https://raw.githubusercontent.com/justfont/AllPunType/main/assets/example1.png)
 
@@ -33,7 +36,7 @@ categories = ["特別企劃"]
 
 感覺不到痛苦嗎? 回到[首頁](/)看看吧。
 
-最後，再次祝大家愚人節快樂！
+最後感謝 justfont 推出這麼多優質的字體，祝大家愚人節快樂！
 
 </div>
 
