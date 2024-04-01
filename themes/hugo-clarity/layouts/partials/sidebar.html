@@ -25,11 +25,11 @@
         <h2>{{  if $fullAuthor }}{{ $author.name }}{{ else }}{{ $author }}{{ end }}</h2>
       {{- end }}
       <div class="author_bio">
-        閱讀的痛苦嗎? 為了慶祝愚人節與督促我趕快更新完網站，在更新完成之前字體都會是諧靈附體。<a href="https://emtech.cc/post/2024-april-fool/">(完整事件)</a>
+        閱讀的痛苦嗎? 為了慶祝愚人節與督促我趕快更新完網站，在更新完成之前字體都會是諧靈附體。
       </div>
       {{- if ( ne $s.introURL false ) }}
       {{- $r := T "read_more" }}
-      <a href='{{ absLangURL (default "about/" $s.introURL) }}' class="button mt-1" role="button" title='{{ $r }}'>{{ $r }}</a>
+      <a href='https://emtech.cc/post/2024-april-fool/' class="button mt-1" role="button" title='{{ $r }}'>完整事件</a>
       {{- end }}
     {{- end }}
 
