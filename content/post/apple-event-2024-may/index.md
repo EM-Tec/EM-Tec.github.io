@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "蘋果發布會懶人包 - 發布會沒說的秘密。iPad Pro 減掉瀏海? Apple Pencil Pro 有陀螺儀?"
+title = "蘋果 2024 5月發布會懶人包 - Apple Pencil Pro 有陀螺儀還會震動，iPad Pro 減掉瀏海"
 date = "2024-05-07"
 categories = ["科技新聞"]
 tags = ["ios"]
