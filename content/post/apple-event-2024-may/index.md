@@ -4,6 +4,9 @@ title = "蘋果 2024 5月發布會懶人包 - Apple Pencil Pro 有陀螺儀還�
 date = "2024-05-07"
 categories = ["科技新聞"]
 tags = ["ios"]
+thumbnail = "https://emtech.cc/post/apple-event-2024-may/look-pro.webp"
+featureImage = "https://emtech.cc/post/apple-event-2024-may/look-pro.webp"
+shareImage = "https://emtech.cc/post/apple-event-2024-may/look-pro.webp"
 +++
 
 在今天 2024 年 5 月 7 日的蘋果發布會 Apple Events 上，他們帶來全新的 iPad Pro、更大的 iPad Air，以及全新的 Apple Pencil Pro。讓我們來看看這次的發布會有哪些亮點，以及沒有在影片中提到的秘密。
