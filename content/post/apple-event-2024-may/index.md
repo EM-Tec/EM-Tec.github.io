@@ -20,7 +20,7 @@ tags = ["ios"]
 * Ultra Retina XDR 顯示器：OLED 一層不夠亮，所以蘋果疊了兩層 OLED。最高 1600 尼特亮度。
 * 支援 eSIM、Wi-Fi 6E、5G、藍牙 5.3。
 * USB： Thunderbolt 4 接口可以傳輸解析度最高可達 6K，還能連結各種儲存裝置。理論最高可達 40Gb/s。
-* Apple M4 晶片：3 奈米公藝，CPU 提升 50%，GPU 提升四倍，AI 加速器提升 70%，讓 iPad Pro 的性能更加強大。
+* Apple M4 晶片：3 奈米公藝，CPU 提升 50%，GPU 提升四倍，AI 加速器提升 70%。蘋果還有特別強調它的 NPU，這是一個專門處理 AI 的晶片，而且他們在 A11 就已經有了，性能也是所有 AI 筆電中最強的。
 * 材質：100% 再生鋁金屬。
 * 後鏡頭：1200 萬像素廣角相機，4K 的 ProRes 錄影。
 * 前鏡頭：橫向 1200 萬像素超廣角前置相機，原深感測相機系統。
@@ -60,6 +60,11 @@ tags = ["ios"]
 
 ![全新的巧控鍵盤](magic_keyboard.webp)
 
-這次的發布會真的蠻短的，以上就是我整理出來的重點。iPad Pro 技術上雖然的確是很有創意且突破，但我的 iPad Pro 第三代目前還堪用。而一直使用副場筆的我確實有被 Apple Pencil Pro 驚艷到。可以轉還會震動，不知道會不會開放給第三方 App 使用。讓我們期待著看到這些產品在市場上的表現。最後歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥 EM 資訊密技](https://emtech.cc/)。
+
+## 軟體
+
+新的 iOS 並沒有被發布，但是蘋果在發布會上展示了一些新的軟體功能。包括 Apple Pencil Pro 與 Procreate 的結合，Final Cut Pro 可以即時查看四台 iPhone 鏡頭畫面並進行焦距及光線調整等。且這次發布會蘋果開始會使用 AI 這個詞了。雖然蘋果在人工智慧或深度學習我認為一直都是不差的，但是大多是整合到功能和你的生活裡面讓你無法察覺，因此沒有那麼高調，不管是客製化聲音模型 (設定內建)、影片去被 (Final Cut Pro)、音樂分出不同樂器 (Logic Pro) 等等，搭配強大的 Apple silicon 晶片，其實都是 AI 的應用。
+
+以上就是我整理出來的重點，iPad Pro 技術上雖然的。確是很有創意且突破，但我的 iPad Pro 第三代目前還堪用。而一直使用副場筆的我確實有被 Apple Pencil Pro 驚艷到可以轉還會震動，不知道會不會開放給第三方 App 使用。讓我們期待著看到這些產品在市場上的表現。最後歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥 EM 資訊密技](https://emtech.cc/)。
 
 > 資料及圖片來源：[蘋果官網](https://www.apple.com/tw/)
