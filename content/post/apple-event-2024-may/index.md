@@ -12,6 +12,8 @@ tags = ["ios"]
 
 ## 全新 iPad Pro：超薄、超強
 
+![](look-pro.webp)
+
 今年的 iPad Pro 不僅在外觀上出奇地輕薄易攜，搭載了全新的 Apple M4 晶片(直接跳過 M3)，使其性能達到了新的高度。讓我們來看看這款iPad Pro的亮點：
 
 * 外觀設計：13 吋 iPad Pro 的厚度為 5.1 公釐，目前蘋果歷史以來最薄的產品，比 iPod 還薄。不過 11 吋 iPad Pro 的厚度為 5.3 公釐，稍微厚一點。
@@ -24,21 +26,31 @@ tags = ["ios"]
 * 前鏡頭：橫向 1200 萬像素超廣角前置相機，原深感測相機系統。
 * 支援 Apple Pencil Pro、Apple Pencil (USB-C)。
 
+![M4 晶片 亮點整理](m4.webp)
+
 ## iPad Air: 變大了
+
+![更大的 iPad Air](big-air.webp)
 
 * 有 11 吋與全新 13 吋 iPad Air
 * M2 晶片，與上一代相比，速度提升近 50%。
 * 支援 eSIM、Wi-Fi 6E、5G、藍牙 5.3。
 * 支援 Apple Pencil Pro、Apple Pencil (USB-C)。
 
+![iPad Air 亮點整理](air.webp)
+
 ## Apple Pencil Pro: 可以捏，可以轉，會震動
 
 *  捏它: 隨即打開新的面板，方便你快速切換工具、線條粗細與顏色。
+
+![捏它時會出現的工具列](pencil-menu.webp)
+
 *  轉它: 全新陀螺儀讓你轉動 Apple Pencil Pro，就可精準控制各式硬筆和筆刷工具。
 *  震動: 當你按它捏它時給你點感覺。
 *  懸浮功能: 以前覺得這個功能很雞肋，但是如果搭配陀螺儀會非常方便。想像你使用螢光筆或是水彩這種比較粗的筆刷，旋轉不同角度粗細和方向都不同，這時候懸浮功能就非常好用了。
 *  尋找我的 Apple Pencil Pro: 這麼貴又這麼容易掉，必須的。
-*  
+
+![Apple Aencil Pro 亮點整理](pencil.webp)
 
 ## 巧控鍵盤
 
@@ -46,4 +58,8 @@ tags = ["ios"]
 * 全新 14 鍵功能鍵
 * 觸控板加大，會震動
 
-這次的發布會真的蠻短的，以上就是我整理出來的重點。iPad Pro 技術上雖然的確是很有創意且突破，但我的 iPad Pro 第三代目前還堪用。而一直使用副場筆的我確實有被 Apple Pencil Pro 驚艷到。可以轉還會震動，不知道會不會開放給第三方 App 使用。讓我們期待著看到這些產品在市場上的表現。
+![全新的巧控鍵盤](magic_keyboard.webp)
+
+這次的發布會真的蠻短的，以上就是我整理出來的重點。iPad Pro 技術上雖然的確是很有創意且突破，但我的 iPad Pro 第三代目前還堪用。而一直使用副場筆的我確實有被 Apple Pencil Pro 驚艷到。可以轉還會震動，不知道會不會開放給第三方 App 使用。讓我們期待著看到這些產品在市場上的表現。最後歡迎在 [Instagram](https://www.instagram.com/emtech.cc) 和 [Google 新聞](https://news.google.com/publications/CAAqBwgKMKXLvgswsubVAw?ceid=TW:zh-Hant&oc=3)追蹤[毛哥 EM 資訊密技](https://emtech.cc/)。
+
+> 資料及圖片來源：[蘋果官網](https://www.apple.com/tw/)
