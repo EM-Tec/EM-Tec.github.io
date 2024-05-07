@@ -20,14 +20,16 @@ shareImage = "https://emtech.cc/post/apple-event-2024-may/look-pro.webp"
 今年的 iPad Pro 不僅在外觀上出奇地輕薄易攜，搭載了全新的 Apple M4 晶片(直接跳過 M3)，使其性能達到了新的高度。讓我們來看看這款iPad Pro的亮點：
 
 * **外觀設計：**13 吋 iPad Pro 的厚度為 5.1 公釐，目前蘋果歷史以來最薄的產品，比 iPod 還薄。不過 11 吋 iPad Pro 的厚度為 5.3 公釐，稍微厚一點。
-* **Ultra Retina XDR 顯示器：**OLED 一層不夠亮，所以蘋果疊了兩層 OLED。最高 1600 尼特亮度。
+* **Ultra Retina XDR 顯示器：**OLED 一層不夠亮，所以蘋果疊了兩層 OLED。最高 1600 尼特亮度。1TB和2TB版可升至奈米玻璃，減少眩光。
 * 支援 eSIM、Wi-Fi 6E、5G、藍牙 5.3。
 * **USB：**Thunderbolt 4 接口可以傳輸解析度最高可達 6K，還能連結各種儲存裝置。理論最高可達 40Gb/s。
 *** Apple M4 晶片：**3 奈米公藝，CPU 提升 50%，GPU 提升四倍，AI 加速器提升 70%。蘋果還有特別強調它的 NPU，這是一個專門處理 AI 的晶片，而且他們在 A11 就已經有了，性能也是所有 AI 筆電中最強的。
 * **材質：**100% 再生鋁金屬。
 * **後鏡頭：**1200 萬像素廣角相機，4K 的 ProRes 錄影。
 * **前鏡頭：**橫向 1200 萬像素超廣角前置相機，原深感測相機系統。
+* **容量：**256GB ~ 2TB 的儲存空間。
 * 支援 Apple Pencil Pro、Apple Pencil (USB-C)。
+* **顏色：**灰色、黑色
 
 ![M4 晶片 亮點整理](m4.webp)
 
@@ -39,6 +41,7 @@ shareImage = "https://emtech.cc/post/apple-event-2024-may/look-pro.webp"
 * M2 晶片，與上一代相比，速度提升近 50%。
 * 支援 eSIM、Wi-Fi 6E、5G、藍牙 5.3。
 * 支援 Apple Pencil Pro、Apple Pencil (USB-C)。
+* **顏色：**藍色、灰色、金色、粉色
 
 ![iPad Air 亮點整理](air.webp)
 
@@ -52,6 +55,8 @@ shareImage = "https://emtech.cc/post/apple-event-2024-may/look-pro.webp"
 *  **震動：**當你按它捏它時給你點感覺。
 *  **懸浮功能：**以前覺得這個功能很雞肋，但是如果搭配陀螺儀會非常方便。想像你使用螢光筆或是水彩這種比較粗的筆刷，旋轉不同角度粗細和方向都不同，這時候懸浮功能就非常好用了。
 *  **尋找我的 Pencil：**這麼貴又這麼容易掉，必須的。
+
+Apple Pencil Pro定價為4390元，Apple Pencil 2價格相同，不過Apple Pencil Pro只限定M4版本iPad Pro和M2版本iPad Air使用。
 
 ![Apple Aencil Pro 亮點整理](pencil.webp)
 
