@@ -4,9 +4,6 @@ title = "Tampermonkey 腳本 - 一鍵複製 GitHub 倉庫名"
 date = "2024-05-13"
 tags = ["Tampermonkey", "JavaScript"]
 categories = ["軟體分享"]
-thumbnail = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/1200px-TensorFlowLogo.svg.png"
-featureImage = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/1200px-TensorFlowLogo.svg.png"
-shareImage = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/1200px-TensorFlowLogo.svg.png"
 +++
 
 這個腳本能在 GitHub 頁面上添加一個按鈕，點擊後即可複製倉庫名（owner/repo）
