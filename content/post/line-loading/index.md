@@ -1,8 +1,8 @@
 +++
 author = "毛哥EM"
 title = "新 API! Line Messaging API 顯示思考中動畫"
-date = "2024-05-15"
-tags = ["JavaScript", "API","Gemini","line"]
+date = "2024-05-16"
+tags = ["JavaScript","GAS", "API","line"]
 categories = ["軟體分享"]
 +++
 
@@ -46,8 +46,6 @@ curl -v -X POST https://api.line.me/v2/bot/chat/loading/start \
 首先請你先建立一個 Line Bot，並取得 Channel Access Token。接著我們就可以開始實作了。
 
 > 請到 [Line Developers](https://developers.line.biz/console/) => 新增或選取Provider => Create a new channel => Message API。
-> 
-> 如果沒有建立過 Line Bot，可以參考 [這個 reels](https://www.instagram.com/reel/Cp9kNc9DWK1/) 的前 20 秒影片。
 
 
 ### 2. 建立 Google App Script

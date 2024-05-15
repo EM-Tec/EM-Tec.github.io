@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Taipei
     steps:
       - uses: actions/checkout@v2
         with:
