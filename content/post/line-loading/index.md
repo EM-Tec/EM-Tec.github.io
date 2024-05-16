@@ -1,6 +1,6 @@
 +++
 author = "毛哥EM"
-title = "新 API! Line Messaging API 顯示思考中動畫"
+title = "Line bot 新 API! Messaging API 顯示思考中動畫"
 date = "2024-05-16"
 tags = ["JavaScript","GAS", "API","line"]
 categories = ["軟體分享"]
