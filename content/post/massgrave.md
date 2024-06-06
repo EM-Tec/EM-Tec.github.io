@@ -47,6 +47,12 @@ Office 雖然目前有提供免費線上版，且學校都有提供 Office365，
 
 接著輸入這一串指令並按 enter 來打開這個軟體:
 
+```vat
+irm https://get.activated.win | iex
+```
+
+在 2024/8/31 以前你也可以打這一串。
+
 ```bat
 irm https://massgrave.dev/get | iex
 ```
