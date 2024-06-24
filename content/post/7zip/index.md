@@ -7,6 +7,9 @@ tags = [
     "7z",
 ]
 categories = ["軟體分享"]
+thumbnail = "https://emtech.cc/post/7zip/thumbnail.webp"
+featureImage = "https://emtech.cc/post/7zip/thumbnail.webp"
+shareImage = "https://emtech.cc/post/7zip/thumbnail.webp"
 +++
 
 在傳輸大量檔案時，壓縮和解壓縮檔案簡直是必備的救命技能。而其中我最喜歡的軟體就是 7z（7-Zip），因為使用起來非常簡單，且壓縮出來的檔案真的是有夠小。今天我要來和你分享如何在 Linux 終端機使用 7z 壓縮和解壓縮檔案。
