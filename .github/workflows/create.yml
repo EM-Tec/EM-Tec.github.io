@@ -1,9 +1,10 @@
 name: create
 
 on:
-  push:
-    branches:
-      - main  # 當main分支有push操作時
+  workflow_dispatch: 
+  # push:
+  #   branches:
+  #     - main  # 當main分支有push操作時
 
 jobs:
   deploy:
